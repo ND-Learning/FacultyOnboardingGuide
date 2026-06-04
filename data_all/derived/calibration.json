@@ -1,8 +1,8 @@
 {
   "_provenance": {
-    "source": "data_all/time_entries.csv (2,335 entries, 2053.0h, 2024-08-19..2026-06-02, ODL staff time)",
+    "source": "data_all/time_entries.csv (2,342 entries, 2063.8h, 2024-08-19..2026-06-04, ODL staff time)",
     "calibration_set": "25 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 21 of them with >=10h non-PM logging",
-    "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 2202, 'task_name': 103, 'none': 30}",
+    "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 2205, 'task_name': 103, 'none': 34}",
     "no_guessing": "blocks state 'not_calibratable' where data is insufficient"
   },
   "archetype_effort_hours": {
@@ -26,15 +26,15 @@
         "AI for the Notre Dame Community": 286.5,
         "Responsible and Ethical AI": 98.9,
         "ASCEND Engineering": 27.5,
-        "Virtual Borders": 75.8,
+        "Virtual Borders": 78.8,
         "The Qur’an and the Bible (Gabriel Reynolds)": 46.7,
         "MSAN II": 71.1,
         "ASCEND MCOB": 49.2,
         "Sprint 2025 - Digital Accessibility - Whitney James": 49.2,
         "Business for Humans | Sheedy Family Program": 38.8,
-        "FCTA - Physics I": 29.2,
+        "FCTA - Physics I": 34.7,
         "Sprint 2025 - Bringing Korean to Life - Yeonhee Yoon": 19.5,
-        "NEON - POS 30022 (Poly Sci)": 16.8,
+        "NEON - POS 30022 (Poly Sci)": 18.0,
         "C2D: Cybertraining for Chemical Data scientists": 16.5,
         "Travel Safety 101": 15.7
       },
@@ -44,7 +44,7 @@
         "p25": 21.5,
         "p50": 42.8,
         "p75": 65.6,
-        "p80": 73.0,
+        "p80": 74.2,
         "max": 286.5
       }
     },
@@ -180,12 +180,20 @@
     },
     "pm_share_where_both_logged": [
       {
-        "project": "The Qur’an and the Bible (Gabriel Reynolds)",
-        "pm_share_pct": 37.4
-      },
-      {
         "project": "Responsible and Ethical AI",
         "pm_share_pct": 64.5
+      },
+      {
+        "project": "AI for the Notre Dame Community",
+        "pm_share_pct": 36.1
+      },
+      {
+        "project": "ASCEND MCOB",
+        "pm_share_pct": 20.6
+      },
+      {
+        "project": "The Qur’an and the Bible (Gabriel Reynolds)",
+        "pm_share_pct": 37.4
       },
       {
         "project": "Radio Systems MVP",
@@ -196,16 +204,8 @@
         "pm_share_pct": 73.3
       },
       {
-        "project": "AI for the Notre Dame Community",
-        "pm_share_pct": 36.1
-      },
-      {
         "project": "Sprint 2025: Lab Prep: Visualizing Success",
         "pm_share_pct": 17.3
-      },
-      {
-        "project": "ASCEND MCOB",
-        "pm_share_pct": 20.6
       }
     ],
     "pm_share_pct": {
@@ -326,13 +326,14 @@
     }
   },
   "full_course_phase_mix": {
-    "basis": "pooled non-PM hours of 14 full-coverage full_course projects (841.3h)",
+    "basis": "pooled non-PM hours of 14 full-coverage full_course projects (851.0h)",
     "share_pct": {
-      "Production": 31.8,
-      "Post-Production": 22.0,
-      "Development/Build": 18.5,
-      "Pre-Production": 18.3,
-      "Design": 8.9,
+      "Production": 31.9,
+      "Post-Production": 21.7,
+      "Development/Build": 18.3,
+      "Pre-Production": 18.1,
+      "Design": 8.8,
+      "Other / unsorted": 0.6,
       "Discovery": 0.5
     }
   },
@@ -517,10 +518,10 @@
         "ape_pct": 183.0
       },
       {
-        "actual": 16.8,
+        "actual": 18.0,
         "pred_p50": 46.7,
         "in_iqr": false,
-        "ape_pct": 178.0
+        "ape_pct": 159.4
       },
       {
         "actual": 19.5,
@@ -535,10 +536,10 @@
         "ape_pct": 69.8
       },
       {
-        "actual": 29.2,
+        "actual": 34.7,
         "pred_p50": 46.7,
         "in_iqr": true,
-        "ape_pct": 59.9
+        "ape_pct": 34.6
       },
       {
         "actual": 38.8,
@@ -571,10 +572,10 @@
         "ape_pct": 45.4
       },
       {
-        "actual": 75.8,
+        "actual": 78.8,
         "pred_p50": 38.8,
         "in_iqr": false,
-        "ape_pct": 48.8
+        "ape_pct": 50.8
       },
       {
         "actual": 98.9,
@@ -589,7 +590,7 @@
         "ape_pct": 86.5
       }
     ],
-    "median_ape_pct": 60.3,
+    "median_ape_pct": 55.8,
     "iqr_coverage_pct": 42.9,
     "reading": "wide APE is expected -- it is the honest spread of a point guess; this is WHY the estimator must quote P25-P80 ranges, not points."
   }

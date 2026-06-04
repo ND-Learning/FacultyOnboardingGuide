@@ -1,11 +1,13 @@
 {
-  "_comment": "Copy to refresh_config.json and fill in. Tokens do NOT go here -- env vars or macOS keychain (see refresh.py header).",
+  "_comment": "Copy to refresh_config.json and fill in. Tokens do NOT go here -- env vars / macOS keychain / GitHub Actions secrets (see refresh.py header). Pull scope: EITHER asana_portfolio_gid, OR asana_workspace_gid + asana_team_gid (team mode re-discovers the team's project list live each run, so new projects are found automatically). Canvas section is optional -- without a CANVAS_TOKEN the publish step is skipped and the report tells you when to re-upload the bundle manually.",
   "data_dir": "data_all",
-  "asana_portfolio_gid": "FILL_ME — run: python3 asana_pull.py discover",
+  "asana_portfolio_gid": "",
+  "asana_workspace_gid": "228221773618853",
+  "asana_team_gid": "1204789220328717",
   "canvas": {
     "base_url": "https://canvas.nd.edu",
     "course_id": "148587",
-    "page_url": "FILL_ME — the page slug, e.g. plan-your-project-with-odl",
+    "page_url": "",
     "parent_folder_path": "Uploaded Media",
     "file_name": "ODL_Faculty_Onboarding_Guide.html"
   }

@@ -106,9 +106,17 @@ def main():
     # explain the situation in plain language instead of letting audit_rules
     # crash with a traceback. (The PII-safe handoff zip ships without data_all/
     # on purpose -- a fresh pull rebuilds it.)
+    # pull scope: a portfolio gid, OR live team discovery (workspace+team gids).
+    # Team mode re-lists the ODL Team's projects every run, so NEW projects are
+    # discovered automatically (a static gid file would silently miss them).
+    portfolio = (cfg.get("asana_portfolio_gid") or "").strip()
+    portfolio = portfolio if portfolio and "FILL" not in portfolio.upper() else ""
+    team_ws = (cfg.get("asana_workspace_gid") or "").strip()
+    team = (cfg.get("asana_team_gid") or "").strip()
+    have_scope = bool(portfolio or (team_ws and team))
     have_data = os.path.exists(os.path.join(data_dir, "time_entries.csv"))
     will_pull = (not args.skip_pull
-                 and (token("ASANA_TOKEN", "asana_token") and cfg.get("asana_portfolio_gid")))
+                 and token("ASANA_TOKEN", "asana_token") and have_scope)
     if not have_data and not will_pull:
         sys.exit(
             "\nNo data found ({}/time_entries.csv is missing) and this run will not "
@@ -124,10 +132,10 @@ def main():
         print("1. PULL: skipped (--skip-pull)")
     else:
         tok = token("ASANA_TOKEN", "asana_token")
-        portfolio = cfg.get("asana_portfolio_gid", "")
-        if not tok or not portfolio:
+        if not tok or not have_scope:
             print("1. PULL: skipped -- need ASANA_TOKEN (env or keychain 'asana_token') "
-                  "AND asana_portfolio_gid in refresh_config.json. "
+                  "AND a scope in refresh_config.json (asana_portfolio_gid, or "
+                  "asana_workspace_gid + asana_team_gid). "
                   "Recomputing from the existing pull instead.")
         else:
             # pull into a temp dir; only replace data_all/ inputs on success so
@@ -136,14 +144,40 @@ def main():
             if not args.dry_run:
                 shutil.rmtree(tmp, ignore_errors=True)
                 os.makedirs(tmp, exist_ok=True)
-            run([py, "asana_pull.py", "pull", "--portfolio", portfolio, "--out", tmp],
-                env={"ASANA_TOKEN": tok}, dry=args.dry_run)
+            if portfolio:
+                run([py, "asana_pull.py", "pull", "--portfolio", portfolio,
+                     "--out", tmp], env={"ASANA_TOKEN": tok}, dry=args.dry_run)
+            else:
+                # live team discovery -> gid file -> pull
+                print(f"\n$ asana_pull.py list-projects --team {team} (live discovery)")
+                if not args.dry_run:
+                    lp = subprocess.run(
+                        [py, "asana_pull.py", "list-projects",
+                         "--workspace", team_ws, "--team", team],
+                        cwd=HERE, env={**os.environ, "ASANA_TOKEN": tok},
+                        capture_output=True, text=True)
+                    gids = [ln.split()[0] for ln in lp.stdout.splitlines()
+                            if ln[:1].isdigit()]
+                    if lp.returncode != 0 or len(gids) < 5:
+                        sys.exit("team project listing failed or implausibly small "
+                                 f"({len(gids)} projects) -- keeping previous data.\n"
+                                 + lp.stderr[-500:])
+                    gid_file = os.path.join(tmp, "_team_gids.txt")
+                    with open(gid_file, "w") as f:
+                        f.write("\n".join(gids) + "\n")
+                    print(f"  discovered {len(gids)} projects in the team")
+                else:
+                    gid_file = "(dry-run)"
+                run([py, "asana_pull.py", "pull", "--project-file", gid_file,
+                     "--out", tmp], env={"ASANA_TOKEN": tok}, dry=args.dry_run)
             if not args.dry_run:
                 required = ["time_entries.csv", "tasks_raw.csv", "projects.csv"]
                 missing = [f for f in required if not os.path.exists(os.path.join(tmp, f))]
                 if missing:
                     sys.exit(f"pull incomplete (missing {missing}) -- keeping previous data")
                 for f in os.listdir(tmp):
+                    if f.startswith("_"):
+                        continue
                     shutil.move(os.path.join(tmp, f), os.path.join(data_dir, f))
                 shutil.rmtree(tmp, ignore_errors=True)
 
