@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ODL Interactive Process Guide — for Notre Dame Faculty</title>
+<style>
+  :root{
+    --navy:#0C2340; --gold:#C99700; --gold-soft:#f4ecd6; --gray:#f4f5f7;
+    --ink:#1f2937; --muted:#6b7280; --line:#e5e7eb; --good:#127a3d;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+       color:var(--ink);background:#fbfbfc;line-height:1.5}
+  a{color:var(--navy)}
+  header{background:linear-gradient(120deg,#0C2340,#16335c);color:#fff;padding:22px 28px;
+         box-shadow:0 2px 10px rgba(0,0,0,.15)}
+  header .wrap{max-width:1080px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+  header h1{font-size:21px;margin:0;letter-spacing:-.3px}
+  header p{margin:2px 0 0;font-size:13px;opacity:.8}
+  .pill{background:var(--gold);color:var(--navy);font-weight:700;font-size:12px;padding:5px 12px;border-radius:999px}
+  main{max-width:1080px;margin:0 auto;padding:28px 20px 60px}
+  h2{color:var(--navy);font-size:26px;margin:0 0 6px;letter-spacing:-.4px}
+  .lead{color:var(--muted);max-width:680px;margin:0 0 22px}
+  .step-label{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:30px 0 10px}
+  .grid{display:grid;gap:14px}
+  .types{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+  .sizes{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+  .card{background:#fff;border:2px solid var(--line);border-radius:14px;padding:18px;cursor:pointer;
+        transition:all .15s;text-align:left;font:inherit;color:inherit}
+  .card:hover{border-color:var(--gold);box-shadow:0 6px 18px rgba(201,151,0,.12);transform:translateY(-2px)}
+  .card.sel{border-color:var(--gold);background:var(--gold-soft);box-shadow:0 0 0 3px rgba(201,151,0,.18)}
+  .card h3{margin:0 0 4px;color:var(--navy);font-size:16px}
+  .card .d{font-size:13px;color:var(--muted)}
+  .card .big{font-size:30px;font-weight:800;color:var(--navy);opacity:.18;line-height:1}
+  .results{margin-top:34px;display:none}
+  .summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:8px 0 6px}
+  .stat{background:var(--navy);color:#fff;border-radius:16px;padding:20px 22px}
+  .stat .k{font-size:11px;text-transform:uppercase;letter-spacing:.1em;opacity:.7;font-weight:700}
+  .stat .v{font-size:30px;font-weight:800;margin-top:4px;letter-spacing:-.5px}
+  .stat .s{font-size:12px;opacity:.8;margin-top:2px}
+  .stat.gold{background:var(--gold-soft);color:var(--navy);border:1px solid #e7d9a8}
+  .stat.gold .k{opacity:.6}
+  .note{font-size:12.5px;color:var(--muted);margin:6px 2px 0}
+  .hint{background:var(--gold-soft);border:1px dashed var(--gold);border-radius:10px;
+        padding:11px 15px;margin-top:14px;font-size:14px;color:var(--navy);font-weight:600}
+  .infer{background:linear-gradient(120deg,#faf6e8,#f4ecd6);border:2px solid #e7d9a8;
+         border-radius:16px;padding:18px 20px;margin:4px 0 10px}
+  .infer .t{font-weight:800;color:var(--navy);margin-bottom:12px;font-size:15px}
+  .infer .frm{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end}
+  .infer label{font-size:12px;font-weight:700;color:var(--navy);display:flex;flex-direction:column;gap:4px}
+  .infer input[type=number],.infer select{padding:8px;border:1px solid var(--line);border-radius:8px;
+         width:90px;font:inherit;background:#fff}
+  .infer select{width:150px}
+  .infer .chk{flex-direction:row;align-items:center;gap:6px;padding-bottom:8px}
+  .timeline{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin:26px 0 10px}
+  @media(max-width:760px){.timeline{grid-template-columns:repeat(2,1fr)}}
+  .ph{background:#fff;border:2px solid var(--line);border-radius:12px;padding:14px 10px;text-align:center;cursor:pointer;transition:.15s}
+  .ph:hover{border-color:var(--gold);transform:translateY(-2px)}
+  .ph .ic{font-size:22px}
+  .ph .t{font-size:12px;font-weight:700;color:var(--navy);margin:6px 0 4px;min-height:30px;display:flex;align-items:center;justify-content:center}
+  .ph .w{font-size:11px;color:var(--gold);font-weight:800}
+  .detail{background:#fff;border:1px solid var(--line);border-radius:16px;padding:0;overflow:hidden;margin-top:18px}
+  .detail .hd{background:linear-gradient(120deg,#0C2340,#16335c);color:#fff;padding:18px 24px;display:flex;align-items:center;gap:12px}
+  .detail .hd .ic{font-size:26px}
+  .detail .hd h3{margin:0;font-size:19px}
+  .detail .hd .sub{font-size:12px;opacity:.75}
+  .detail .body{padding:22px 24px;display:grid;grid-template-columns:2fr 1fr;gap:24px}
+  @media(max-width:760px){.detail .body{grid-template-columns:1fr}}
+  .block h4{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);margin:0 0 6px}
+  .block p{margin:0 0 14px;font-size:14px}
+  .youdo{background:var(--gold-soft);border-left:4px solid var(--gold);padding:12px 14px;border-radius:8px;font-size:14px}
+  .sidebox{background:var(--gray);border-radius:12px;padding:16px;margin-bottom:12px}
+  .sidebox .k{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
+  .sidebox .v{font-size:22px;font-weight:800;color:var(--navy)}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+  .chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:3px 10px;font-size:12px;color:var(--navy)}
+  .navtabs{display:flex;gap:8px;justify-content:center;margin:18px 0}
+  .navtabs button{border:none;background:#eef0f3;color:var(--navy);font-weight:700;font-size:13px;
+    padding:8px 16px;border-radius:999px;cursor:pointer}
+  .navtabs button.on{background:var(--navy);color:#fff}
+  .show-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:10px}
+  .show-card h4{margin:0 0 4px;color:var(--navy)}
+  .show-card .need{font-size:13px;color:var(--muted);font-style:italic}
+  details.calc{background:#fff;border:1px dashed var(--line);border-radius:12px;padding:12px 16px;margin-top:18px;font-size:13px}
+  details.calc summary{cursor:pointer;font-weight:700;color:var(--navy)}
+  .disclaimer{background:var(--gold-soft);border:1px solid #e7d9a8;border-radius:14px;padding:18px 20px;margin-top:26px;font-size:14px}
+  .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+  .btn{border:none;border-radius:10px;padding:12px 18px;font-weight:700;font-size:14px;cursor:pointer}
+  .btn.primary{background:var(--navy);color:#fff}
+  .btn.gold{background:var(--gold);color:var(--navy)}
+  .btn.ghost{background:#fff;border:2px solid var(--navy);color:var(--navy)}
+  .custom{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-top:14px;display:none}
+  .custom.open{display:block}
+  .custom .row{display:grid;grid-template-columns:1fr 70px;gap:8px;align-items:center;padding:5px 0;border-bottom:1px solid #f1f2f4}
+  .custom input{width:64px;padding:6px;border:1px solid var(--line);border-radius:8px;text-align:center;font:inherit}
+  .custom .grp{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);font-weight:800;margin:10px 0 2px}
+  footer{background:var(--navy);color:#ffffff66;text-align:center;font-size:12px;padding:26px}
+  .hidden{display:none}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div>
+      <h1>Office of Digital Learning</h1>
+      <p>University of Notre Dame · Faculty Process Guide</p>
+    </div>
+    <span class="pill">Plan your project</span>
+  </div>
+</header>
+
+<main>
+  <h2>Partnering with ODL: what to expect</h2>
+  <p class="lead">Pick the kind of project you're imagining and its rough scale. We'll show you the
+    full process, what's expected of <em>you</em> at each step, and an honest estimate of the
+    timeline and effort involved — grounded in our past projects.</p>
+
+  <div class="infer">
+    <div class="t">✨ Not sure about type or size? Tell us roughly what you're imagining — we'll size it
+      by comparing with similar past projects.</div>
+    <div class="frm">
+      <label>Modules<input id="inf-modules" type="number" min="0" value="6"></label>
+      <label>Videos<input id="inf-videos" type="number" min="0" value="8"></label>
+      <label>Video style
+        <select id="inf-style">
+          <option value="lecture">Studio lectures</option>
+          <option value="screencast">Screencasts</option>
+          <option value="mix">A mix</option>
+        </select></label>
+      <label>Animations<input id="inf-anim" type="number" min="0" value="0"></label>
+      <label>Infographics<input id="inf-info" type="number" min="0" value="0"></label>
+      <label class="chk"><input id="inf-xr" type="checkbox"> XR / immersive</label>
+      <button class="btn gold" id="inf-go" type="button">Estimate my project →</button>
+    </div>
+  </div>
+
+  <div class="step-label">1 · What are you building?</div>
+  <div id="types" class="grid types"></div>
+
+  <div class="step-label">2 · How big is the scope?</div>
+  <div id="sizes" class="grid sizes"></div>
+
+  <div id="hint" class="hint hidden"></div>
+
+  <div class="btnrow">
+    <button id="customToggle" class="btn ghost" type="button">⚙︎ Fine-tune the deliverables</button>
+  </div>
+  <div id="custom" class="custom"></div>
+
+  <!-- RESULTS -->
+  <section id="results" class="results">
+    <div class="navtabs">
+      <button data-tab="plan" class="on">Your Plan</button>
+      <button data-tab="process">The Process</button>
+      <button data-tab="similar">Similar Projects</button>
+    </div>
+
+    <!-- PLAN TAB -->
+    <div id="tab-plan">
+      <p class="hint" id="s-inferred" style="display:none;margin:0 0 14px"></p>
+      <div class="summary">
+        <div class="stat"><div class="k">Estimated timeline</div><div class="v" id="s-weeks">—</div><div class="s">calendar weeks, start to launch</div></div>
+        <div class="stat"><div class="k">ODL team effort</div><div class="v" id="s-odl">—</div><div class="s">hours across our team</div></div>
+        <div class="stat gold"><div class="k">Your time (faculty)</div><div class="v" id="s-fac">—</div><div class="s">your hands-on hours</div></div>
+      </div>
+      <p class="note" id="s-bundle"></p>
+      <p class="note" id="s-pm"></p>
+      <p class="note" id="s-history"></p>
+      <div id="timeline" class="timeline"></div>
+      <p class="note">Tap any phase above (or in <strong>The Process</strong>) for what happens and what you'll do.</p>
+      <div id="detailHost"></div>
+
+      <details class="calc">
+        <summary>How are these numbers calculated?</summary>
+        <p>Media and graphics hours come from <strong>ODL's own per-deliverable estimation table</strong>
+        (e.g., a studio lecture ≈ 8.5h, a 3-minute explainer animation ≈ 100h), summed across the
+        deliverables typical for a project of this type and size — and validated against our logged
+        time (observed median ≈ 12.8 h per finished short video, n=5 fully-tracked exemplars).
+        <strong>Project-management hours are calibrated from ODL's actual logged PM time</strong>:
+        0.6–1.6 h per calendar week (middle 50%, 14 PM-tracked projects, 679 tracked PM hours).
+        The "similar real projects" line comes from <strong>2,053 logged staff hours across 55
+        projects</strong> (25 fully tracked), e.g. full courses: median 43 staff-hours (excl. PM) and a
+        median 31-week timeline (middle half 18–42 wk, n=23). Design and faculty-time figures are ODL
+        planning estimates (we have not yet logged faculty time) and are shown as
+        <strong>ranges</strong>, not fixed numbers — they tighten as we track more projects.
+        These are estimates for planning, <strong>not commitments</strong>.</p>
+      </details>
+
+      <div class="disclaimer">
+        <strong>These are planning estimates, not commitments.</strong> Every project is unique. An ODL
+        team member will confirm scope, timeline, and effort with you during your consultation, and any
+        formal commitments are set in your Project Charter and approved by the ODL Director.
+        <div class="btnrow">
+          <a class="btn gold" href="https://learning.nd.edu/about/lets-work-together/" target="_blank" rel="noopener">Start the intake form →</a>
+          <a class="btn ghost" href="mailto:online@nd.edu">Email ODL (online@nd.edu)</a>
+          <button class="btn primary" type="button" onclick="window.print()">🖶 Print / save this plan</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROCESS TAB -->
+    <div id="tab-process" class="hidden"></div>
+
+    <!-- SIMILAR TAB -->
+    <div id="tab-similar" class="hidden"></div>
+  </section>
+</main>
+
+<footer>© <span id="yr"></span> University of Notre Dame · Office of Digital Learning · Estimates for planning only</footer>
+
+<script>
+/* =============================================================================
+   ODL Interactive Process Guide — estimation engine + content data
+   -----------------------------------------------------------------------------
+   PROVENANCE OF NUMBERS (so every figure is defensible to faculty / the Director):
+   - CALIBRATION block below is machine-generated by ../inject_calibration.py
+     from data_all/derived/calibration.json — itself computed by ../calibrate.py
+     from 2,335 real Asana time entries (2,053 h, 2024-08 → 2026-06, 55 projects;
+     calibration set = 25 fully-tracked course-dev projects). Do NOT edit the
+     block by hand; re-run the pipeline after each new Asana pull.
+   - Media/graphics per-deliverable HOURS come from ODL's own "ODL Project
+     Estimations" Asana board (Nov 2024), incl. Pre/Prod/Post splits. Logged
+     data validates the lecture-band rates: observed full-lifecycle short-video
+     median 12.8 h/video (n=5), shrinkage-blended generic rate 11.2 h/video.
+     Interview/testimonial/mini-doc rates remain UNVALIDATED (no fully-logged
+     exemplar yet).
+   - PM hours are CALIBRATED: hours-per-calendar-week quartiles from the 14
+     PM-tracked projects (replaces the old size-bucket extrapolation).
+   - Calendar: per-archetype span quartiles from completed_at timestamps with
+     bulk check-off filtering (full courses: median 31 wk, IQR 18–42, n=23).
+   - Design / Discovery / QA / Evaluation hours and all FACULTY-time figures are
+     ODL planning estimates (labeled as such) — logged data contains ZERO faculty
+     time and <15 h each of Discovery/QA/Evaluation, so they cannot be calibrated
+     yet (see calibration.json not_calibratable).
+   Architecture: this file computes ALL numbers deterministically. No AI/LLM
+   number generation. Estimates are ranges, never false-precision points.
+   ============================================================================= */
+(function (root) {
+  "use strict";
+
+  // === BEGIN CALIBRATION (machine-generated — do not edit by hand) ==========
+  var CALIBRATION =
+  {
+    "provenance": "data_all/time_entries.csv (2,335 entries, 2053.0h, 2024-08-19..2026-06-02, ODL staff time) | 25 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 21 of them with >=10h non-PM logging",
+    "generated_from": "data_all/derived/calibration.json -- run inject_calibration.py to refresh",
+    "archetypeEffort": {
+      "course_redesign": {
+        "n": 2,
+        "values": [
+          32.3,
+          33.4
+        ],
+        "p50": 32.8,
+        "note": "n<4 -- raw values shown; interpolated quartiles withheld"
+      },
+      "full_course": {
+        "n": 14,
+        "min": 15.7,
+        "p25": 21.5,
+        "p50": 42.8,
+        "p75": 65.6,
+        "p80": 73.0,
+        "max": 286.5
+      },
+      "single_video": {
+        "n": 3,
+        "values": [
+          12.0,
+          12.8,
+          15.5
+        ],
+        "p50": 12.8,
+        "note": "n<4 -- raw values shown; interpolated quartiles withheld"
+      },
+      "video_series": {
+        "n": 2,
+        "values": [
+          29.2,
+          54.8
+        ],
+        "p50": 42.0,
+        "note": "n<4 -- raw values shown; interpolated quartiles withheld"
+      }
+    },
+    "pmPerWeek": {
+      "n": 14,
+      "min": 0.3,
+      "p25": 0.6,
+      "p50": 0.8,
+      "p75": 1.6,
+      "p80": 2.0,
+      "max": 3.9
+    },
+    "pmSharePctWhereBothLogged": {
+      "n": 7,
+      "min": 14.7,
+      "p25": 18.9,
+      "p50": 36.1,
+      "p75": 51.0,
+      "p80": 59.1,
+      "max": 73.3
+    },
+    "videoRate": {
+      "observed": {
+        "n": 5,
+        "min": 7.3,
+        "p25": 12.0,
+        "p50": 12.8,
+        "p75": 13.7,
+        "p80": 14.1,
+        "max": 15.5
+      },
+      "blendedGenericP50": 11.2,
+      "shrinkageW": 0.62
+    },
+    "mediaSplitPct": {
+      "Post-Production": 41.9,
+      "Pre-Production": 25.8,
+      "Production": 32.3
+    },
+    "mediaSplitBasis": "pooled hours on per-video sections with full-coverage logging: 1 project(s) (Program for Inclusive Education (PIE) Video #2), 15.5h total",
+    "coursePhaseMixPct": {
+      "Production": 31.8,
+      "Post-Production": 22.0,
+      "Development/Build": 18.5,
+      "Pre-Production": 18.3,
+      "Design": 8.9,
+      "Discovery": 0.5
+    },
+    "coursePhaseMixBasis": "pooled non-PM hours of 14 full-coverage full_course projects (841.3h)",
+    "calendarWeeks": {
+      "consult_or_studio": {
+        "n": 1,
+        "values": [
+          44.0
+        ]
+      },
+      "course_redesign": {
+        "n": 3,
+        "values": [
+          7.8,
+          10.3,
+          23.3
+        ],
+        "p50": 10.3,
+        "note": "n<4 -- raw values shown; interpolated quartiles withheld"
+      },
+      "full_course": {
+        "n": 23,
+        "min": 4.8,
+        "p25": 17.7,
+        "p50": 31.4,
+        "p75": 41.9,
+        "p80": 46.6,
+        "max": 63.6
+      },
+      "podcast": {
+        "n": 2,
+        "values": [
+          6.5,
+          84.6
+        ],
+        "p50": 45.5,
+        "note": "n<4 -- raw values shown; interpolated quartiles withheld"
+      },
+      "single_video": {
+        "n": 4,
+        "min": 2.0,
+        "p25": 2.4,
+        "p50": 3.9,
+        "p75": 7.2,
+        "p80": 8.4,
+        "max": 13.0
+      },
+      "sprint": {
+        "n": 1,
+        "values": [
+          13.9
+        ]
+      },
+      "video_series": {
+        "n": 4,
+        "min": 5.4,
+        "p25": 9.6,
+        "p50": 12.1,
+        "p75": 14.3,
+        "p80": 14.9,
+        "max": 17.4
+      },
+      "xr_interactive": {
+        "n": 4,
+        "min": 10.0,
+        "p25": 10.8,
+        "p50": 16.0,
+        "p75": 22.0,
+        "p80": 22.7,
+        "max": 25.3
+      }
+    },
+    "notCalibratable": {
+      "faculty_time": "time_entries contains ODL STAFF time only -- zero faculty hours logged. All faculty-time figures remain planning estimates and must be labeled as such.",
+      "discovery_effort": "only 11.0h logged across all projects -- discovery happens before boards get tracked. Insufficient.",
+      "evaluation_effort": "only 1.0h logged total. Insufficient.",
+      "qa_effort": "only 1.7h logged total. Insufficient.",
+      "interview_minidoc_video_rates": "no full-coverage logged exemplar (see video block).",
+      "xr_effort": "XR projects in data have <=6h logged (Equity XR 6h, XR Spanish 1h) -- board rates (40-80h) stand, unvalidated.",
+      "per_module_rate": "module counts exist for only 5 of 19 course projects and mean different things (AI for ND 57h/module vs R&E AI 7.6h/week-unit vs Virtual Borders 25h/module) -- logging is not at module granularity yet. Effort stays archetype-level until the new per-task tracking accumulates."
+    },
+    "backtest": {
+      "median_ape_pct": 60.3,
+      "iqr_coverage_pct": 42.9,
+      "reading": "wide APE is expected -- it is the honest spread of a point guess; this is WHY the estimator must quote P25-P80 ranges, not points."
+    }
+  };
+  // === END CALIBRATION =======================================================
+
+  // --- ODL per-1-video rates (hours), from ODL Project Estimations ----------
+  // pre = pre-production (scripting/prep), prod = filming, post = editing
+  var videoRates = {
+    studio_lecture:     { label: "Studio lecture video",   pre: 4,  prod: 0.5, post: 4 },
+    lightboard:         { label: "Lightboard video",       pre: 4,  prod: 0.5, post: 4 },
+    screencast:         { label: "Screencast (3–5 min)",   pre: 1,  prod: 0.5, post: 3 },
+    testimonial:        { label: "Interview / testimonial",pre: 3,  prod: 1,   post: 30 },
+    location_lecture:   { label: "On-location lecture",    pre: 8,  prod: 3,   post: 4 },
+    location_interview: { label: "On-location interview",  pre: 7,  prod: 4,   post: 30 },
+    minidoc:            { label: "Mini-documentary",       pre: 10, prod: 40,  post: 40 }
+  };
+
+  // --- Graphics / animation rates (hours), land in Post-Production & Build ---
+  var graphicsRates = {
+    explainer_animation: { label: "Explainer animation (3 min)", hours: 100 },
+    animation_reuse:     { label: "Animation (reusing assets)",  hours: 43 },
+    title_cards:         { label: "Title cards & lower thirds",  hours: 30 },
+    infographic:         { label: "Infographic",                 hours: 4 },
+    logo:                { label: "Logo / brand mark",           hours: 20 }
+  };
+
+  // --- XR / interactive rates (hours) ---------------------------------------
+  var xrRates = {
+    xr_linear:    { label: "Linear XR / 360 experience",    hours: 40 },
+    xr_multipath: { label: "Branching XR / 360 experience", hours: 80 },
+    unity:        { label: "Unity interactive (est.)",      hours: 80 }
+  };
+
+  // --- size-driven base hours for non-media phases (ODL planning estimates) --
+  var courseMapHours    = { S: 8,  M: 16, L: 28, XL: 40 };
+  var discoveryHours    = { S: 6,  M: 8,  L: 10, XL: 14 };
+  var facDiscoveryHours = { S: 2,  M: 3,  L: 4,  XL: 6 };
+  var facQAHours        = { S: 2,  M: 3,  L: 4,  XL: 5 };
+
+  // --- Project-management effort across the whole project (CALIBRATED) ------
+  // PM is logged ONLY on boards with a dedicated "PM Time Tracking" section
+  // (10 boards, 679 h) — so a flat %-of-effort PM model would be an artifact.
+  // Calibrated model: PM scales with calendar length. From the 14 PM-tracked
+  // projects with reliable spans: 0.6–1.6 h/week (P25–P75), median 0.8,
+  // P80 2.0, observed max 3.9 (flagship "AI for ND", 162 h over 42 wk).
+  // pm = [weeks_lo × P25, weeks_hi × P75]; legacy buckets kept ONLY as a
+  // fallback if the CALIBRATION block is missing.
+  var pmHoursLegacy = { S: [5, 15], M: [15, 50], L: [75, 180], XL: [150, 300] };
+  function pmFromWeeks(weeksLoHi, size) {
+    var c = CALIBRATION && CALIBRATION.pmPerWeek;
+    if (!c) { return pmHoursLegacy[size] || pmHoursLegacy.M; }
+    return [Math.round(weeksLoHi[0] * c.p25), Math.round(weeksLoHi[1] * c.p75)];
+  }
+
+  // --- estimator types → historical archetypes (for CALIBRATION lookups) ----
+  // null = no honest mapping in the logged data yet (do not force one).
+  var TYPE_TO_ARCHETYPE = {
+    new_course: "full_course", bisynchronous: "full_course",
+    flipped: "full_course", ai: "full_course",
+    xr: "xr_interactive", module: null
+  };
+
+  // --- calendar weeks per phase (base = Medium project ≈ 13 wk; scaled) ------
+  var baseWeeksM = { discovery: 2, design: 3, preprod: 2, production: 2, postprod: 3, qa: 1, evaluation: 0 };
+  var sizeWeekFactor = { S: 0.6, M: 1, L: 1.8, XL: 3 };
+
+  // --- canonical phases + faculty-facing content ----------------------------
+  var PHASES = [
+    {
+      key: "discovery", title: "Intake & Discovery", icon: "💬",
+      whatHappens: "We review your idea, evaluate scope and feasibility, and align on pedagogical goals. You submit an intake form and meet the ODL team.",
+      odlDoes: "Reviews intake, assesses feasibility, drafts the Project Charter and IP agreement.",
+      youDo: "Share your vision, your learners, and the outcomes you want. Help us understand the context so we can scope accurately.",
+      artifacts: ["Intake Form", "Draft Project Charter"]
+    },
+    {
+      key: "design", title: "Design — Course Map", icon: "✏️",
+      whatHappens: "We establish course and learning objectives, decide on content, and finalize the Course Map — the blueprint for the whole project.",
+      odlDoes: "Leads design conversations, builds the Course Map, plans assessments and the media asset list.",
+      youDo: "Act as the Subject-Matter Expert: lead the learning objectives and content mapping. This is your heaviest design-thinking phase.",
+      artifacts: ["Course Map", "Design Document", "Media Asset List"]
+    },
+    {
+      key: "preprod", title: "Pre-Production — Scripting", icon: "📝",
+      whatHappens: "With the Course Map set, scripting begins (Draft → Review → Revise → Finalize), plus filming logistics, locations, and consent forms.",
+      odlDoes: "Guides scripting sessions, builds the production schedule, secures locations, finalizes branding.",
+      youDo: "Draft and review scripts for your videos. Time invested here makes filming smooth — it's the highest-leverage faculty work.",
+      artifacts: ["Finalized Scripts", "Production Schedule", "Media Consent Form"]
+    },
+    {
+      key: "production", title: "Production — Filming", icon: "🎬",
+      whatHappens: "Lights, camera, action. Studio filming, on-location shoots, and B-roll capture of your core media.",
+      odlDoes: "Runs the shoot — direction, lighting, audio, camera — and keeps you prepared and comfortable on camera.",
+      youDo: "You're the on-camera talent. Attend filming sessions, deliver your content clearly, ensure technical accuracy.",
+      artifacts: ["Raw Footage"]
+    },
+    {
+      key: "postprod", title: "Post-Production & Build", icon: "🧩",
+      whatHappens: "We edit footage, create graphics/animation, and build the course in Canvas (Rough Cut 1 → Rough Cut 2 → Final Cut).",
+      odlDoes: "Edits all media, produces graphics/animations, and assembles the course site and assessments in the LMS.",
+      youDo: "Review draft videos and course pages for accuracy and pedagogy. Build out supplementary materials (quizzes, assignments).",
+      artifacts: ["Edited Videos", "Graphics", "Course Site (Canvas)"]
+    },
+    {
+      key: "qa", title: "QA & Launch", icon: "🚀",
+      whatHappens: "Rigorous quality assurance — accessibility (WCAG), content proofing — then the course goes live for students.",
+      odlDoes: "Runs accessibility and QA checks, fixes issues, and launches the course on the LMS.",
+      youDo: "Do a full walkthrough and give final approval to go live.",
+      artifacts: ["Live Course", "QA Sign-off"]
+    },
+    {
+      key: "evaluation", title: "Evaluation & Iteration", icon: "📊",
+      whatHappens: "After launch we gather feedback and performance data to understand the student experience and plan improvements.",
+      odlDoes: "Sends the reflection survey, builds the report, runs the retrospective.",
+      youDo: "Review feedback and metrics with us; reflect and plan future enhancements.",
+      artifacts: ["Evaluation Report"], ongoing: true
+    }
+  ];
+
+  var PROJECT_TYPES = [
+    { id: "new_course",    label: "New Course Creation",  desc: "A full online or hybrid course built from scratch." },
+    { id: "bisynchronous", label: "Bisynchronous Course", desc: "A blend of synchronous and asynchronous learning." },
+    { id: "flipped",       label: "Flipped Classroom",    desc: "Move content online; active learning in class." },
+    { id: "ai",            label: "AI Training / Tool",   desc: "Incorporate AI tools and literacy into the curriculum." },
+    { id: "xr",            label: "XR / Immersive",       desc: "VR, AR, 360 video, or interactive simulations." },
+    { id: "module",        label: "Single Module",        desc: "One focused digital learning unit or resource." }
+  ];
+
+  var PROJECT_SIZES = [
+    { id: "S",  label: "Small",       desc: "A single module or short resource." },
+    { id: "M",  label: "Medium",      desc: "A significant portion of a course." },
+    { id: "L",  label: "Large",       desc: "A full course or complex experience." },
+    { id: "XL", label: "Extra Large", desc: "A multi-course sequence or initiative." }
+  ];
+
+  // --- typical deliverable bundles per type × size (counts) ------------------
+  var BUNDLES = {
+    new_course: {
+      S:  { studio_lecture: 3, infographic: 1, modules: 3 },
+      M:  { studio_lecture: 8, screencast: 2, animation_reuse: 1, infographic: 3, modules: 6 },
+      L:  { studio_lecture: 12, testimonial: 1, explainer_animation: 1, infographic: 5, modules: 10 },
+      XL: { studio_lecture: 20, testimonial: 2, explainer_animation: 2, infographic: 8, modules: 16 }
+    },
+    bisynchronous: {
+      S:  { studio_lecture: 3, infographic: 1, modules: 3 },
+      M:  { studio_lecture: 8, testimonial: 1, infographic: 3, modules: 6 },
+      L:  { studio_lecture: 12, testimonial: 2, explainer_animation: 1, infographic: 5, modules: 10 },
+      XL: { studio_lecture: 18, testimonial: 3, explainer_animation: 2, infographic: 8, modules: 16 }
+    },
+    flipped: {
+      S:  { screencast: 4, modules: 2 },
+      M:  { screencast: 8, studio_lecture: 2, infographic: 2, modules: 4 },
+      L:  { screencast: 12, studio_lecture: 4, infographic: 3, modules: 8 },
+      XL: { screencast: 20, studio_lecture: 6, animation_reuse: 1, modules: 12 }
+    },
+    ai: {
+      S:  { screencast: 1, modules: 2 },
+      M:  { screencast: 2, infographic: 1, modules: 4 },
+      L:  { studio_lecture: 3, infographic: 2, modules: 6 },
+      XL: { studio_lecture: 5, animation_reuse: 1, infographic: 2, modules: 10 }
+    },
+    xr: {
+      S:  { xr_linear: 1, modules: 1 },
+      M:  { xr_linear: 1, studio_lecture: 2, modules: 3 },
+      L:  { xr_multipath: 1, xr_linear: 1, studio_lecture: 3, modules: 5 },
+      XL: { xr_multipath: 2, xr_linear: 2, studio_lecture: 4, modules: 8 }
+    },
+    module: {
+      S:  { screencast: 1, infographic: 1, modules: 1 },
+      M:  { studio_lecture: 2, infographic: 1, modules: 1 },
+      L:  { studio_lecture: 3, animation_reuse: 1, infographic: 2, modules: 2 },
+      XL: { studio_lecture: 5, explainer_animation: 1, infographic: 3, modules: 3 }
+    }
+  };
+
+  // --- a few real ND showcase projects for "similar projects" ---------------
+  var SHOWCASE = [
+    { title: "The Qur’an and the Bible (Coursera)", type: "new_course", size: "M", need: "A 6-module MOOC for a global audience.", link: "https://think.nd.edu/big_questions/new-on-coursera-sacred-texts-in-dialogue/" },
+    { title: "AI for the ND Community", type: "ai", size: "L", need: "Campus-wide AI literacy, modular by role.", link: "https://learning.nd.edu/news/announcing-ai-for-the-nd-community-course/" },
+    { title: "ACE ASCENT", type: "new_course", size: "XL", need: "A multi-course teacher PD sequence for national cohorts.", link: "https://ace.nd.edu/ascent-research" },
+    { title: "ACE Assessment Course Redesign", type: "bisynchronous", size: "M", need: "Modernize an assessment course; blend workshops + online modules.", link: "https://ace.nd.edu/" },
+    { title: "MSAN II", type: "bisynchronous", size: "L", need: "Leadership training for military spouses across time zones.", link: "https://learning.nd.edu/news/notre-dames-partnership-with-military-spouse-advocacy-network-launches-second-course/" },
+    { title: "Lab Visualization", type: "flipped", size: "M", need: "Pre-lab videos to boost student readiness and safety.", link: "https://learning.nd.edu/news/visualizing-success-using-video-to-boost-student-lab-readiness-and-confidence/" },
+    { title: "AI Tutor — Critical Thinking", type: "ai", size: "S", need: "A Socratic-style AI feedback tool.", link: "https://learning.nd.edu/" },
+    { title: "Bringing Korean to Life", type: "xr", size: "M", need: "VR/360 immersion + AI conversation avatars.", link: "https://www.library.nd.edu/news/korean-language-students-use-virtual-reality-to-explore-traditions/" },
+    { title: "XR for Law — Car Crash", type: "xr", size: "S", need: "A VR crash to study eyewitness fallibility.", link: "https://xr.nd.edu/projects/law-school-car-crash-simulator/" },
+    { title: "Spanish Escape Room", type: "xr", size: "L", need: "Gamified, collaborative Spanish language & culture.", link: "https://learning.nd.edu/news/ai-and-game-based-learning-enhance-study-of-spanish-language-and-culture/" },
+    { title: "Digital Accessibility — Whitney James", type: "module", size: "S", need: "A high-impact module on universal design / A11y.", link: "https://accessibility.nd.edu/" },
+    { title: "AI Video Series", type: "module", size: "M", need: "Fast-turnaround video series on generative AI.", link: "https://learning.nd.edu/learning-technology/lab-for-ai-in-teaching-and-learning-laitl/ai-for-teaching-and-learning-video-series/" }
+  ];
+
+  // ---------------------------------------------------------------------------
+  // PURE COMPUTE
+  // ---------------------------------------------------------------------------
+  function round1(x) { return Math.round(x * 10) / 10; }
+  function band(h, lo, hi) { return [Math.round(h * lo), Math.round(h * hi)]; }
+
+  function bundleMediaHours(b) {
+    var pre = 0, prod = 0, post = 0, graphics = 0, xr = 0, videoCount = 0;
+    for (var k in videoRates) {
+      var n = b[k] || 0; videoCount += n;
+      pre += n * videoRates[k].pre; prod += n * videoRates[k].prod; post += n * videoRates[k].post;
+    }
+    for (var g in graphicsRates) { graphics += (b[g] || 0) * graphicsRates[g].hours; }
+    for (var x in xrRates) { xr += (b[x] || 0) * xrRates[x].hours; }
+    return { pre: pre, prod: prod, post: post, graphics: graphics, xr: xr,
+             videoCount: videoCount, modules: b.modules || 0 };
+  }
+
+  /* Estimate per phase from an explicit deliverable bundle.
+     Returns { phases:[{key,title,icon,weeks:[lo,hi],odl:[lo,hi],faculty:[lo,hi]}],
+               totals, media, bundle } */
+  function estimateFromBundle(bundle, size) {
+    size = size || "M";
+    var m = bundleMediaHours(bundle);
+    var wf = sizeWeekFactor[size] || 1;
+
+    var odlH = {
+      discovery: discoveryHours[size] || 8,
+      design: (courseMapHours[size] || 16) + 2 + m.modules * 2,
+      preprod: m.pre + m.modules * 0.5,
+      production: m.prod,
+      postprod: m.post + m.graphics + m.xr + m.modules * 2,
+      qa: 5 + m.modules * 0.5,
+      evaluation: 5
+    };
+    var facH = {
+      discovery: facDiscoveryHours[size] || 3,
+      design: 3 + m.modules * 0.6,
+      preprod: m.videoCount * 1.0,
+      production: m.prod * 1.0,
+      postprod: m.videoCount * 0.5,
+      qa: facQAHours[size] || 3,
+      evaluation: 2
+    };
+
+    var phases = PHASES.map(function (p) {
+      var w = (baseWeeksM[p.key] || 0) * wf;
+      var weeks = p.ongoing ? null : [Math.max(1, Math.round(w * 0.8)), Math.max(1, Math.round(w * 1.3))];
+      return {
+        key: p.key, title: p.title, icon: p.icon,
+        whatHappens: p.whatHappens, odlDoes: p.odlDoes, youDo: p.youDo,
+        artifacts: p.artifacts, ongoing: !!p.ongoing,
+        weeks: weeks,
+        odl: band(odlH[p.key], 0.8, 1.25),
+        faculty: band(facH[p.key], 0.8, 1.3)
+      };
+    });
+
+    var totOdl = [0, 0], totFac = [0, 0], totWk = [0, 0];
+    phases.forEach(function (p) {
+      totOdl[0] += p.odl[0]; totOdl[1] += p.odl[1];
+      totFac[0] += p.faculty[0]; totFac[1] += p.faculty[1];
+      if (p.weeks) { totWk[0] += p.weeks[0]; totWk[1] += p.weeks[1]; }
+    });
+    // project management runs across all phases; calibrated from ODL's own
+    // PM time-tracking data (h per calendar week × the estimated timeline) —
+    // added to the ODL-effort total as a line item
+    var pm = pmFromWeeks(totWk, size);
+    totOdl[0] += pm[0]; totOdl[1] += pm[1];
+
+    return {
+      phases: phases,
+      pm: pm,
+      totals: { odl: totOdl, faculty: totFac, weeks: totWk },
+      media: m, bundle: bundle, size: size
+    };
+  }
+
+  /* What did SIMILAR REAL ODL PROJECTS actually take? Pure lookup into the
+     CALIBRATION block (logged staff hours + completed_at calendar spans).
+     Returns null when the type has no honest archetype mapping or no data:
+     { archetype, n, productionHours:{p25,p50,p75,p80,...}, pmPerWeek,
+       calendarWeeks, phaseMixPct, basis } — quartiles of real projects,
+       independent of the bundle math above. */
+  function estimateFromHistory(type) {
+    if (!CALIBRATION) { return null; }
+    var a = TYPE_TO_ARCHETYPE[type] || null;
+    if (!a) { return null; }
+    var eff = CALIBRATION.archetypeEffort[a] || null;
+    var cal = CALIBRATION.calendarWeeks[a] || null;
+    if (!eff && !cal) { return null; }
+    return {
+      archetype: a,
+      productionHours: eff,                       // non-PM staff hours, quartiles
+      pmPerWeek: CALIBRATION.pmPerWeek,           // multiply by calendar weeks
+      calendarWeeks: cal,                         // real span quartiles
+      phaseMixPct: a === "full_course" ? CALIBRATION.coursePhaseMixPct : null,
+      basis: CALIBRATION.provenance
+    };
+  }
+
+  function estimate(type, size) {
+    var b = (BUNDLES[type] && BUNDLES[type][size]) || BUNDLES.module.S;
+    var r = estimateFromBundle(b, size);
+    r.type = type;
+    r.history = estimateFromHistory(type);
+    return r;
+  }
+
+  function similarProjects(type, size) {
+    var exact = SHOWCASE.filter(function (p) { return p.type === type && p.size === size; });
+    var byType = SHOWCASE.filter(function (p) { return p.type === type && p.size !== size; });
+    return exact.concat(byType).slice(0, 3);
+  }
+
+  function deliverableLabel(key) {
+    if (videoRates[key]) return videoRates[key].label;
+    if (graphicsRates[key]) return graphicsRates[key].label;
+    if (xrRates[key]) return xrRates[key].label;
+    if (key === "modules") return "Course modules";
+    return key;
+  }
+
+  /* Infer a project's type + size BACKWARDS from a rough description
+     ("about 8 modules and 10 videos") by nearest-neighbor against the
+     project library profiles, then estimate hours from the USER'S counts.
+     Deterministic — no AI invents anything.
+     input: { modules, videos, style: 'lecture'|'screencast'|'mix',
+              animations, infographics, xr: bool } */
+  function inferProject(input) {
+    var m = Math.max(0, input.modules || 0);
+    var v = Math.max(0, input.videos || 0);
+    var anim = Math.max(0, input.animations || 0);
+    var info = Math.max(0, input.infographics || 0);
+    var xr = input.xr ? 1 : 0;
+
+    // the user's actual deliverable bundle (drives the hour computation)
+    var bundle = { modules: m };
+    if (input.style === "screencast") { bundle.screencast = v; }
+    else if (input.style === "mix") {
+      bundle.studio_lecture = Math.ceil(v / 2);
+      bundle.screencast = Math.floor(v / 2);
+    } else { bundle.studio_lecture = v; }
+    if (anim) bundle.animation_reuse = anim;
+    if (info) bundle.infographic = info;
+    if (xr) bundle.xr_linear = 1;
+
+    // nearest profile in the type x size library (drives size-based items:
+    // PM hours, timeline weeks, discovery/course-map/QA bases)
+    var best = null;
+    for (var t in BUNDLES) {
+      for (var s in BUNDLES[t]) {
+        var b = BUNDLES[t][s];
+        var bv = 0;
+        for (var k in videoRates) { bv += b[k] || 0; }
+        var bm = b.modules || 0;
+        var bg = (b.explainer_animation || 0) + (b.animation_reuse || 0) +
+                 (b.infographic || 0) + (b.title_cards || 0);
+        var bx = ((b.xr_linear || 0) + (b.xr_multipath || 0) + (b.unity || 0)) > 0 ? 1 : 0;
+        var d = Math.pow((v - bv) / 4, 2) + Math.pow((m - bm) / 3, 2) +
+                Math.pow(((anim + info) - bg) / 3, 2) + Math.pow((xr - bx) * 2, 2);
+        if (!best || d < best.d) { best = { d: d, type: t, size: s }; }
+      }
+    }
+
+    var est = estimateFromBundle(bundle, best.size);
+    est.type = best.type;
+    est.inferred = { type: best.type, size: best.size };
+    return est;
+  }
+
+  var API = {
+    PHASES: PHASES, PROJECT_TYPES: PROJECT_TYPES, PROJECT_SIZES: PROJECT_SIZES,
+    BUNDLES: BUNDLES, SHOWCASE: SHOWCASE,
+    videoRates: videoRates, graphicsRates: graphicsRates, xrRates: xrRates,
+    CALIBRATION: CALIBRATION, TYPE_TO_ARCHETYPE: TYPE_TO_ARCHETYPE,
+    estimate: estimate, estimateFromBundle: estimateFromBundle,
+    estimateFromHistory: estimateFromHistory,
+    inferProject: inferProject,
+    similarProjects: similarProjects, deliverableLabel: deliverableLabel
+  };
+
+  root.ODL = API;
+  if (typeof module !== "undefined" && module.exports) { module.exports = API; }
+})(typeof window !== "undefined" ? window : this);
+
+</script>
+<script>
+(function(){
+  var state = { type:null, size:null, custom:null, customMode:false };
+  var $ = function(s){return document.querySelector(s)};
+  document.getElementById("yr").textContent = "2026";
+
+  // ---- build type & size cards ----
+  var typeHost = $("#types");
+  ODL.PROJECT_TYPES.forEach(function(t){
+    var b=document.createElement("button"); b.className="card"; b.dataset.id=t.id;
+    b.innerHTML='<h3>'+t.label+'</h3><div class="d">'+t.desc+'</div>';
+    b.onclick=function(){ state.type=t.id; state.customMode=false; mark(); maybeRun(); };
+    typeHost.appendChild(b);
+  });
+  var sizeHost=$("#sizes");
+  ODL.PROJECT_SIZES.forEach(function(s){
+    var b=document.createElement("button"); b.className="card"; b.dataset.size=s.id;
+    b.innerHTML='<div class="big">'+s.id+'</div><h3>'+s.label+'</h3><div class="d">'+s.desc+'</div>';
+    b.onclick=function(){ state.size=s.id; state.customMode=false; mark(); maybeRun(); };
+    sizeHost.appendChild(b);
+  });
+
+  function mark(){
+    document.querySelectorAll("#types .card").forEach(function(c){ c.classList.toggle("sel", c.dataset.id===state.type); });
+    document.querySelectorAll("#sizes .card").forEach(function(c){ c.classList.toggle("sel", c.dataset.size===state.size); });
+    updateHint();
+  }
+  function updateHint(){
+    var h=$("#hint");
+    if(state.type && !state.size){ h.textContent="👇 Now pick a size below to see your timeline, effort, and the full process."; h.classList.remove("hidden"); }
+    else if(!state.type && state.size){ h.textContent="👆 Now pick a project type above to see your plan."; h.classList.remove("hidden"); }
+    else { h.classList.add("hidden"); }
+  }
+
+  // ---- custom deliverables ----
+  var CUSTOM_FIELDS = [
+    {grp:"Video", keys:["studio_lecture","lightboard","screencast","testimonial","location_lecture","location_interview","minidoc"]},
+    {grp:"Graphics & animation", keys:["explainer_animation","animation_reuse","title_cards","infographic","logo"]},
+    {grp:"XR / interactive", keys:["xr_linear","xr_multipath","unity"]},
+    {grp:"Course", keys:["modules"]}
+  ];
+  function buildCustom(){
+    var host=$("#custom"); host.innerHTML="<p style='margin:0 0 6px;font-size:13px;color:#6b7280'>Adjust the deliverable counts and the plan updates live.</p>";
+    CUSTOM_FIELDS.forEach(function(g){
+      var h=document.createElement("div"); h.className="grp"; h.textContent=g.grp; host.appendChild(h);
+      g.keys.forEach(function(k){
+        var row=document.createElement("div"); row.className="row";
+        var lab=document.createElement("div"); lab.textContent=ODL.deliverableLabel(k);
+        var inp=document.createElement("input"); inp.type="number"; inp.min="0"; inp.value=(state.custom&&state.custom[k])||0; inp.dataset.k=k;
+        inp.oninput=function(){ state.custom[k]=parseInt(inp.value||"0",10)||0; state.customMode=true; run(); };
+        row.appendChild(lab); row.appendChild(inp); host.appendChild(row);
+      });
+    });
+  }
+  $("#customToggle").onclick=function(){
+    var c=$("#custom");
+    if(!c.classList.contains("open")){
+      // seed from current bundle if available
+      var seed = (state.type&&state.size) ? Object.assign({}, ODL.BUNDLES[state.type][state.size]) : {modules:1};
+      state.custom = state.custom || seed;
+      buildCustom(); c.classList.add("open");
+    } else { c.classList.remove("open"); }
+  };
+
+  function maybeRun(){
+    $("#s-inferred").style.display="none";   // manual choice overrides inference
+    if(state.type && state.size){
+      run();
+      $("#results").scrollIntoView({behavior:"smooth", block:"start"});
+    }
+  }
+
+  // ---- "size it for me" backward inference ----
+  $("#inf-go").onclick = function(){
+    var est = ODL.inferProject({
+      modules: parseInt($("#inf-modules").value||"0",10),
+      videos: parseInt($("#inf-videos").value||"0",10),
+      style: $("#inf-style").value,
+      animations: parseInt($("#inf-anim").value||"0",10),
+      infographics: parseInt($("#inf-info").value||"0",10),
+      xr: $("#inf-xr").checked
+    });
+    state.type = est.inferred.type; state.size = est.inferred.size;
+    state.custom = Object.assign({}, est.bundle); state.customMode = true;
+    mark(); run();
+    var tl = (ODL.PROJECT_TYPES.filter(function(t){return t.id===est.inferred.type;})[0]||{}).label || est.inferred.type;
+    var sl = (ODL.PROJECT_SIZES.filter(function(s){return s.id===est.inferred.size;})[0]||{}).label || est.inferred.size;
+    var el = $("#s-inferred");
+    el.innerHTML = "✨ <strong>Sized from similar past projects:</strong> what you described looks like a "+
+      "<strong>"+sl+" "+tl+"</strong> project, and the hours below are computed from <strong>your</strong> counts. "+
+      "We set the type and size above automatically — change them if that's not right.";
+    el.style.display = "block";
+    $("#results").scrollIntoView({behavior:"smooth", block:"start"});
+  };
+
+  function fmtRange(r,unit){ return r[0]+"–"+r[1]+" "+unit; }
+
+  function run(){
+    var est = state.customMode && state.custom
+      ? ODL.estimateFromBundle(state.custom, state.size||"M")
+      : ODL.estimate(state.type, state.size);
+    $("#results").style.display="block";
+
+    // summary
+    $("#s-weeks").textContent = est.totals.weeks[0]+"–"+est.totals.weeks[1]+" wk";
+    $("#s-odl").textContent   = est.totals.odl[0]+"–"+est.totals.odl[1]+" h";
+    $("#s-fac").textContent   = est.totals.faculty[0]+"–"+est.totals.faculty[1]+" h";
+    var dl = Object.keys(est.bundle).filter(function(k){return est.bundle[k]>0;})
+      .map(function(k){ return est.bundle[k]+"× "+ODL.deliverableLabel(k); }).join(" · ");
+    $("#s-bundle").innerHTML = "<strong>Typical deliverables:</strong> " + (dl||"—");
+    $("#s-pm").innerHTML = "<strong>Includes project management:</strong> " +
+      est.pm[0] + "–" + est.pm[1] + " h across all phases (calibrated: 0.6–1.6 h per " +
+      "calendar week, from ODL's 14 PM-tracked projects).";
+    var h = est.history;
+    if (h && (h.productionHours || (h.calendarWeeks && h.calendarWeeks.p50 != null))) {
+      var bits = [];
+      if (h.productionHours && h.productionHours.p25 != null) {
+        bits.push("hands-on staff effort " + h.productionHours.p25 + "–" + h.productionHours.p75 +
+          " h (median " + h.productionHours.p50 + " h, excl. PM, n=" + h.productionHours.n + ")");
+      }
+      if (h.calendarWeeks && h.calendarWeeks.p25 != null) {
+        bits.push("timeline " + Math.round(h.calendarWeeks.p25) + "–" + Math.round(h.calendarWeeks.p75) +
+          " wk (median " + Math.round(h.calendarWeeks.p50) + " wk, n=" + h.calendarWeeks.n + ")");
+      }
+      $("#s-history").innerHTML = "<strong>What similar real ODL projects took:</strong> " +
+        bits.join("; ") + " — middle-50% ranges from our logged hours and project calendars.";
+    } else {
+      $("#s-history").textContent = "";
+    }
+
+    // timeline strip
+    var tl=$("#timeline"); tl.innerHTML="";
+    est.phases.forEach(function(p,i){
+      var d=document.createElement("button"); d.className="ph";
+      d.innerHTML='<div class="ic">'+p.icon+'</div><div class="t">'+p.title+'</div><div class="w">'+
+        (p.weeks? p.weeks[0]+"–"+p.weeks[1]+" wk":"Ongoing")+'</div>';
+      d.onclick=function(){ showDetail(est,i); document.getElementById("detailHost").scrollIntoView({behavior:"smooth",block:"center"}); };
+      tl.appendChild(d);
+    });
+    showDetail(est, 1); // default to Design
+    buildProcess(est);
+    buildSimilar();
+    window._est = est;
+  }
+
+  function detailCard(p){
+    return '<div class="detail"><div class="hd"><div class="ic">'+p.icon+'</div>'+
+      '<div><h3>'+p.title+'</h3><div class="sub">'+(p.weeks? p.weeks[0]+"–"+p.weeks[1]+" weeks":"Ongoing")+'</div></div></div>'+
+      '<div class="body"><div class="block">'+
+        '<h4>What happens</h4><p>'+p.whatHappens+'</p>'+
+        '<h4>ODL handles</h4><p>'+p.odlDoes+'</p>'+
+        '<h4>What you do</h4><div class="youdo">'+p.youDo+'</div>'+
+      '</div><div>'+
+        '<div class="sidebox"><div class="k">Your time this phase</div><div class="v">'+fmtRange(p.faculty,"h")+'</div></div>'+
+        '<div class="sidebox"><div class="k">ODL team effort</div><div class="v">'+fmtRange(p.odl,"h")+'</div></div>'+
+        '<div class="sidebox"><div class="k">Artifacts</div><div class="chips">'+
+          p.artifacts.map(function(a){return '<span class="chip">'+a+'</span>';}).join("")+'</div></div>'+
+      '</div></div></div>';
+  }
+  function showDetail(est,i){ $("#detailHost").innerHTML = detailCard(est.phases[i]); }
+
+  function buildProcess(est){
+    $("#tab-process").innerHTML =
+      '<p class="lead">Your project moves through these phases. Each card shows what happens, what ODL does, what you do, and how much of your time it takes.</p>'+
+      est.phases.map(function(p){return detailCard(p);}).join("");
+  }
+
+  function buildSimilar(){
+    var sims = ODL.similarProjects(state.type||"new_course", state.size||"M");
+    $("#tab-similar").innerHTML =
+      '<p class="lead">Real ND projects of a similar kind:</p>'+
+      (sims.length? sims.map(function(s){
+        return '<div class="show-card"><h4>'+s.title+'</h4><div class="need">“'+s.need+'”</div>'+
+          (s.link?'<p style="margin:8px 0 0"><a href="'+s.link+'" target="_blank" rel="noopener">Learn more →</a></p>':'')+'</div>';
+      }).join("") : '<p>No close match yet — browse all ODL projects via the showcase.</p>');
+  }
+
+  // ---- tabs ----
+  document.querySelectorAll(".navtabs button").forEach(function(b){
+    b.onclick=function(){
+      document.querySelectorAll(".navtabs button").forEach(function(x){x.classList.remove("on")});
+      b.classList.add("on");
+      ["plan","process","similar"].forEach(function(t){
+        document.getElementById("tab-"+t).classList.toggle("hidden", t!==b.dataset.tab);
+      });
+    };
+  });
+})();
+</script>
+</body>
+</html>

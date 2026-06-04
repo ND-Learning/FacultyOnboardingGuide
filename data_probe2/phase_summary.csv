@@ -1,0 +1,13 @@
+project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_completed,last_completed,span_days,tracked_minutes,tracked_hours,total_subtasks,n_activity,n_comments,bulk_created_fraction
+1208740211406775,ODL Project Estimations,Animation & Graphic Design,11,0,0,,,,0.0,0.0,0,0,0,0.09
+1208740211406775,ODL Project Estimations,Design,13,0,0,,,,0.0,0.0,24,0,0,0.08
+1208740211406775,ODL Project Estimations,Traditional Media Totals (per 1 video),7,0,0,,,,0.0,0.0,0,0,0,0.14
+1208740211406775,ODL Project Estimations,Untitled section,17,0,0,,,,0.0,0.0,0,0,0,0.06
+1208740211406775,ODL Project Estimations,XR & Interactives,5,0,0,,,,0.0,0.0,0,0,0,0.2
+1209109368415840,Template - Full Project (Updated Jan 2025),Analysis,4,0,0,,,,0.0,0.0,0,0,0,0.25
+1209109368415840,Template - Full Project (Updated Jan 2025),Design,11,0,0,,,,0.0,0.0,0,0,0,0.09
+1209109368415840,Template - Full Project (Updated Jan 2025),Design Development,6,0,0,,,,0.0,0.0,0,0,0,0.17
+1209109368415840,Template - Full Project (Updated Jan 2025),Post-Production,4,0,0,,,,0.0,0.0,0,0,0,0.25
+1209109368415840,Template - Full Project (Updated Jan 2025),Post-Project Evaluation,5,0,0,,,,0.0,0.0,0,0,0,0.2
+1209109368415840,Template - Full Project (Updated Jan 2025),Pre-Production,10,0,0,,,,0.0,0.0,0,0,0,0.1
+1209109368415840,Template - Full Project (Updated Jan 2025),Production,7,0,0,,,,0.0,0.0,0,0,0,0.14

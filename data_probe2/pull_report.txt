@@ -1,0 +1,13 @@
+ODL Asana pull report
+=====================
+projects pulled        : 2
+tasks pulled           : 100
+phase rows             : 12
+distinct sections      : 11
+time-tracking endpoint : UNAVAILABLE / disabled
+projects with logged hours : 0
+crosswalk applied      : NONE (raw section names used)
+
+WARN: projects where >50% of tasks share one created_at (bulk creation -> created_at unreliable, lean on completed_at): none
+
+NEXT: open crosswalk_template.csv, fill 'canonical_phase' for each section, save as crosswalk.csv, and re-run with --crosswalk.

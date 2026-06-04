@@ -1,0 +1,12 @@
+{
+  "_comment": "Copy to refresh_config.json and fill in. Tokens do NOT go here -- env vars or macOS keychain (see refresh.py header).",
+  "data_dir": "data_all",
+  "asana_portfolio_gid": "FILL_ME — run: python3 asana_pull.py discover",
+  "canvas": {
+    "base_url": "https://canvas.nd.edu",
+    "course_id": "148587",
+    "page_url": "FILL_ME — the page slug, e.g. plan-your-project-with-odl",
+    "parent_folder_path": "Uploaded Media",
+    "file_name": "ODL_Faculty_Onboarding_Guide.html"
+  }
+}

@@ -1,0 +1,104 @@
+# Nightly self-refresh of the ODL effort estimator, in the cloud — no laptop
+# required. Runs the same refresh.py loop the launchd job runs locally:
+#   pull Asana -> deterministic audit -> calibrate -> inject -> bundle ->
+#   publish to Canvas (file replace + iframe self-heal) -> delta report.
+#
+# One-time setup after pushing this repo to GitHub (github.nd.edu or github.com):
+#   Repo -> Settings -> Secrets and variables -> Actions -> New repository secret:
+#     ASANA_TOKEN   (Asana > My Settings > Apps > Developer apps)
+#     CANVAS_TOKEN  (Canvas > Account > Settings > + New Access Token)
+#   Commit refresh_config.json (no secrets in it — just gids/slugs).
+#   Then: Actions tab -> nightly-refresh -> "Run workflow" to test.
+name: nightly-refresh
+
+on:
+  schedule:
+    - cron: "30 11 * * *"   # 11:30 UTC ≈ 06:30/07:30 South Bend (EST/EDT)
+  workflow_dispatch: {}      # manual "Run workflow" button
+
+permissions:
+  contents: write            # to commit the refreshed report/calibration back
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install chart dependencies (everything else is stdlib)
+        run: pip install matplotlib numpy
+
+      - name: Run the refresh loop
+        env:
+          ASANA_TOKEN: ${{ secrets.ASANA_TOKEN }}
+          CANVAS_TOKEN: ${{ secrets.CANVAS_TOKEN }}
+        run: python3 refresh.py
+
+      - name: Publish the report to the job summary
+        if: always()
+        run: |
+          if [ -f refresh_report.txt ]; then
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+            cat refresh_report.txt >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Fail loudly if projects await human review
+        run: |
+          if [ -f data_all/derived/needs_review.csv ] && [ "$(wc -l < data_all/derived/needs_review.csv)" -gt 1 ]; then
+            echo "::warning::needs_review.csv is non-empty — new/drifted projects are EXCLUDED from the calibration until classified in project_registry.csv:"
+            cat data_all/derived/needs_review.csv
+          fi
+
+      - name: Commit refreshed outputs back to the repo (audit trail)
+        run: |
+          git config user.name  "odl-refresh-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A data_all faculty_guide/estimator.js faculty_guide/canvas_upload refresh_report.txt
+          git diff --cached --quiet || git commit -m "nightly refresh $(date -u +%F)"
+          git push
+
+      # OPTIONAL: mirror the guide to a small PUBLIC repo with GitHub Pages on,
+      # giving a stable always-current URL (https://<owner>.github.io/<repo>/)
+      # that ND Learning (WordPress) or any site can iframe/link. Configure by
+      # creating the public repo + setting repo Variable PAGES_REPO
+      # (e.g. "youruser/odl-guide-site") and Secret PAGES_TOKEN (a fine-grained
+      # PAT with contents:write on that one repo). Unconfigured -> skipped.
+      # The bundle is PII-safe by design: aggregate statistics only.
+      - name: Mirror the guide to the public Pages repo (optional)
+        env:
+          PAGES_REPO: ${{ vars.PAGES_REPO }}
+          PAGES_TOKEN: ${{ secrets.PAGES_TOKEN }}
+        run: |
+          if [ -z "$PAGES_REPO" ] || [ -z "$PAGES_TOKEN" ]; then
+            echo "Pages mirror not configured (vars.PAGES_REPO + secrets.PAGES_TOKEN) — skipping"
+            exit 0
+          fi
+          git clone --depth 1 "https://x-access-token:${PAGES_TOKEN}@github.com/${PAGES_REPO}.git" /tmp/pages
+          cp faculty_guide/canvas_upload/ODL_Faculty_Onboarding_Guide.html /tmp/pages/index.html
+          cd /tmp/pages
+          git config user.name "odl-refresh-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add index.html
+          git diff --cached --quiet || { git commit -m "nightly guide update"; git push; }
+
+      - name: Keep artifacts (report, calibration, charts, bundle)
+        uses: actions/upload-artifact@v4
+        with:
+          name: refresh-${{ github.run_number }}
+          path: |
+            refresh_report.txt
+            data_all/derived/calibration.json
+            data_all/derived/needs_review.csv
+            data_all/derived/charts/
+            faculty_guide/canvas_upload/
+          if-no-files-found: warn

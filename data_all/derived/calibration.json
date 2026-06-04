@@ -1,0 +1,596 @@
+{
+  "_provenance": {
+    "source": "data_all/time_entries.csv (2,335 entries, 2053.0h, 2024-08-19..2026-06-02, ODL staff time)",
+    "calibration_set": "25 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 21 of them with >=10h non-PM logging",
+    "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 2202, 'task_name': 103, 'none': 30}",
+    "no_guessing": "blocks state 'not_calibratable' where data is insufficient"
+  },
+  "archetype_effort_hours": {
+    "course_redesign": {
+      "projects": {
+        "ACE Assessment Course Redesign": 33.4,
+        "ND Elevate Updates": 32.3
+      },
+      "production_hours": {
+        "n": 2,
+        "values": [
+          32.3,
+          33.4
+        ],
+        "p50": 32.8,
+        "note": "n<4 -- raw values shown; interpolated quartiles withheld"
+      }
+    },
+    "full_course": {
+      "projects": {
+        "AI for the Notre Dame Community": 286.5,
+        "Responsible and Ethical AI": 98.9,
+        "ASCEND Engineering": 27.5,
+        "Virtual Borders": 75.8,
+        "The Qur’an and the Bible (Gabriel Reynolds)": 46.7,
+        "MSAN II": 71.1,
+        "ASCEND MCOB": 49.2,
+        "Sprint 2025 - Digital Accessibility - Whitney James": 49.2,
+        "Business for Humans | Sheedy Family Program": 38.8,
+        "FCTA - Physics I": 29.2,
+        "Sprint 2025 - Bringing Korean to Life - Yeonhee Yoon": 19.5,
+        "NEON - POS 30022 (Poly Sci)": 16.8,
+        "C2D: Cybertraining for Chemical Data scientists": 16.5,
+        "Travel Safety 101": 15.7
+      },
+      "production_hours": {
+        "n": 14,
+        "min": 15.7,
+        "p25": 21.5,
+        "p50": 42.8,
+        "p75": 65.6,
+        "p80": 73.0,
+        "max": 286.5
+      }
+    },
+    "single_video": {
+      "projects": {
+        "Program for Inclusive Education (PIE) Video #2": 15.5,
+        "Ultrasound Communication Video": 12.8,
+        "Borgo Laudato Si' videos": 12.0
+      },
+      "production_hours": {
+        "n": 3,
+        "values": [
+          12.0,
+          12.8,
+          15.5
+        ],
+        "p50": 12.8,
+        "note": "n<4 -- raw values shown; interpolated quartiles withheld"
+      }
+    },
+    "video_series": {
+      "projects": {
+        "Radio Systems MVP": 54.8,
+        "Videos for Eva": 29.2
+      },
+      "production_hours": {
+        "n": 2,
+        "values": [
+          29.2,
+          54.8
+        ],
+        "p50": 42.0,
+        "note": "n<4 -- raw values shown; interpolated quartiles withheld"
+      }
+    }
+  },
+  "pm_model": {
+    "method": "PM modeled ONLY from projects with a dedicated PM Time Tracking section AND a reliable calendar span. pm_per_week = pm_hours / span_weeks. Global 33% PM share is an artifact (10 boards log PM, the rest log 0%) -- do not use.",
+    "projects": [
+      {
+        "project": "Responsible and Ethical AI",
+        "pm_hours": 179.8,
+        "span_weeks": 50.1,
+        "pm_per_week": 3.59
+      },
+      {
+        "project": "AI for the Notre Dame Community",
+        "pm_hours": 162.2,
+        "span_weeks": 41.7,
+        "pm_per_week": 3.89
+      },
+      {
+        "project": "Radio Systems Course",
+        "pm_hours": 97.3,
+        "span_weeks": 40.6,
+        "pm_per_week": 2.4
+      },
+      {
+        "project": "ASCEND Engineering",
+        "pm_hours": 75.4,
+        "span_weeks": 63.6,
+        "pm_per_week": 1.19
+      },
+      {
+        "project": "National Education Opportunities Network (NEON)",
+        "pm_hours": 46.2,
+        "span_weeks": 69.7,
+        "pm_per_week": 0.66
+      },
+      {
+        "project": "3D Environments Summer Online",
+        "pm_hours": 30.4,
+        "span_weeks": 49.7,
+        "pm_per_week": 0.61
+      },
+      {
+        "project": "The Qur’an and the Bible (Gabriel Reynolds)",
+        "pm_hours": 27.9,
+        "span_weeks": 37.0,
+        "pm_per_week": 0.76
+      },
+      {
+        "project": "Calc I Summer Online",
+        "pm_hours": 14.2,
+        "span_weeks": 24.4,
+        "pm_per_week": 0.58
+      },
+      {
+        "project": "ASCEND MCOB",
+        "pm_hours": 12.8,
+        "span_weeks": 21.5,
+        "pm_per_week": 0.59
+      },
+      {
+        "project": "Sprint 2025: Lab Prep: Visualizing Success",
+        "pm_hours": 11.6,
+        "span_weeks": 33.2,
+        "pm_per_week": 0.35
+      },
+      {
+        "project": "Radio Systems MVP",
+        "pm_hours": 9.4,
+        "span_weeks": 5.4,
+        "pm_per_week": 1.73
+      },
+      {
+        "project": "Insect Podcast Consult",
+        "pm_hours": 5.2,
+        "span_weeks": 6.5,
+        "pm_per_week": 0.8
+      },
+      {
+        "project": "Political Science SO Course",
+        "pm_hours": 4.4,
+        "span_weeks": 4.8,
+        "pm_per_week": 0.92
+      },
+      {
+        "project": "Summer Online 2025",
+        "pm_hours": 1.5,
+        "span_weeks": 5.4,
+        "pm_per_week": 0.28
+      }
+    ],
+    "pm_hours_per_week": {
+      "n": 14,
+      "min": 0.3,
+      "p25": 0.6,
+      "p50": 0.8,
+      "p75": 1.6,
+      "p80": 2.0,
+      "max": 3.9
+    },
+    "pm_share_where_both_logged": [
+      {
+        "project": "The Qur’an and the Bible (Gabriel Reynolds)",
+        "pm_share_pct": 37.4
+      },
+      {
+        "project": "Responsible and Ethical AI",
+        "pm_share_pct": 64.5
+      },
+      {
+        "project": "Radio Systems MVP",
+        "pm_share_pct": 14.7
+      },
+      {
+        "project": "ASCEND Engineering",
+        "pm_share_pct": 73.3
+      },
+      {
+        "project": "AI for the Notre Dame Community",
+        "pm_share_pct": 36.1
+      },
+      {
+        "project": "Sprint 2025: Lab Prep: Visualizing Success",
+        "pm_share_pct": 17.3
+      },
+      {
+        "project": "ASCEND MCOB",
+        "pm_share_pct": 20.6
+      }
+    ],
+    "pm_share_pct": {
+      "n": 7,
+      "min": 14.7,
+      "p25": 18.9,
+      "p50": 36.1,
+      "p75": 51.0,
+      "p80": 59.1,
+      "max": 73.3
+    }
+  },
+  "video_unit_rates": {
+    "unit": "hours per produced short video, full lifecycle (pre+prod+post), ODL staff time",
+    "observed": [
+      {
+        "project": "Program for Inclusive Education (PIE) Video #2",
+        "video": "Video 2 - Lessons From the Saints",
+        "hours": 15.5
+      },
+      {
+        "project": "Ultrasound Communication Video",
+        "video": "(whole project)",
+        "hours": 12.8
+      },
+      {
+        "project": "Borgo Laudato Si' videos",
+        "video": "(whole project)",
+        "hours": 12.0
+      },
+      {
+        "project": "Radio Systems MVP",
+        "video": "(avg of 4 videos)",
+        "hours": 13.7,
+        "is_average": true
+      },
+      {
+        "project": "Videos for Eva",
+        "video": "(avg of 4 videos)",
+        "hours": 7.3,
+        "is_average": true
+      }
+    ],
+    "observed_quartiles": {
+      "n": 5,
+      "min": 7.3,
+      "p25": 12.0,
+      "p50": 12.8,
+      "p75": 13.7,
+      "p80": 14.1,
+      "max": 15.5
+    },
+    "observed_excluded_partial_coverage": [
+      {
+        "project": "AI Video Series",
+        "video": "Video 7:  Addressing Writing / AI-assisted Writing",
+        "hours": 1.5
+      },
+      {
+        "project": "AI Video Series",
+        "video": "Video 8:  Best Practices for Assessment in the Age of AI - Alex Ambrose",
+        "hours": 1.5
+      },
+      {
+        "project": "EIH Lab Video Series",
+        "video": "Video 1: Safety Walkthrough",
+        "hours": 44.0
+      },
+      {
+        "project": "EIH Lab Video Series",
+        "video": "Video 2: Bandsaw",
+        "hours": 8.0
+      },
+      {
+        "project": "EIH Lab Video Series",
+        "video": "Video 3: Drill Press",
+        "hours": 10.0
+      },
+      {
+        "project": "EIH Lab Video Series",
+        "video": "Video 4:  Belt & Disc Sander",
+        "hours": 1.0
+      },
+      {
+        "project": "EIH Lab Video Series",
+        "video": "Video 5: Scheduling",
+        "hours": 2.0
+      }
+    ],
+    "board_prior_per_video": {
+      "Mini-doc (General Max)": 70.0,
+      "Location Interview (General Max)": 41.0,
+      "Studio Interview (General Max)": 34.0,
+      "Location Lecture (General Max)": 15.0,
+      "Studio Lecture": 8.5,
+      "Lightboard": 8.5,
+      "Screencast": 4.0
+    },
+    "board_prior_used": {
+      "value": 8.5,
+      "basis": "median of board lecture-like per-1-video rates (lecture/lightboard/screencast)"
+    },
+    "blended_generic_video_p50": {
+      "value": 11.2,
+      "shrinkage_w": 0.62,
+      "formula": "w*observed_p50 + (1-w)*board_prior, w = n/(n+3)"
+    },
+    "not_calibratable": "interview/testimonial (board: 34-41h) and mini-doc (70h) rates have NO full-coverage logged exemplar yet -- board values stand, unvalidated."
+  },
+  "media_lifecycle_split": {
+    "basis": "pooled hours on per-video sections with full-coverage logging: 1 project(s) (Program for Inclusive Education (PIE) Video #2), 15.5h total",
+    "low_confidence": true,
+    "warning": "SINGLE exemplar -- one project's one video; not a generic lifecycle split yet",
+    "split_pct": {
+      "Post-Production": 41.9,
+      "Pre-Production": 25.8,
+      "Production": 32.3
+    }
+  },
+  "full_course_phase_mix": {
+    "basis": "pooled non-PM hours of 14 full-coverage full_course projects (841.3h)",
+    "share_pct": {
+      "Production": 31.8,
+      "Post-Production": 22.0,
+      "Development/Build": 18.5,
+      "Pre-Production": 18.3,
+      "Design": 8.9,
+      "Discovery": 0.5
+    }
+  },
+  "calendar": {
+    "method": "weeks between first and last completed_at over completed tasks; only spans with n_completed>=5, bulk_completion_frac<=0.5, span>0 (bulk check-offs faked 0-day spans on ~34 boards -- excluded).",
+    "span_weeks_by_archetype": {
+      "consult_or_studio": {
+        "n": 1,
+        "values": [
+          44.0
+        ]
+      },
+      "course_redesign": {
+        "n": 3,
+        "values": [
+          7.8,
+          10.3,
+          23.3
+        ],
+        "p50": 10.3,
+        "note": "n<4 -- raw values shown; interpolated quartiles withheld"
+      },
+      "full_course": {
+        "n": 23,
+        "min": 4.8,
+        "p25": 17.7,
+        "p50": 31.4,
+        "p75": 41.9,
+        "p80": 46.6,
+        "max": 63.6
+      },
+      "podcast": {
+        "n": 2,
+        "values": [
+          6.5,
+          84.6
+        ],
+        "p50": 45.5,
+        "note": "n<4 -- raw values shown; interpolated quartiles withheld"
+      },
+      "single_video": {
+        "n": 4,
+        "min": 2.0,
+        "p25": 2.4,
+        "p50": 3.9,
+        "p75": 7.2,
+        "p80": 8.4,
+        "max": 13.0
+      },
+      "sprint": {
+        "n": 1,
+        "values": [
+          13.9
+        ]
+      },
+      "video_series": {
+        "n": 4,
+        "min": 5.4,
+        "p25": 9.6,
+        "p50": 12.1,
+        "p75": 14.3,
+        "p80": 14.9,
+        "max": 17.4
+      },
+      "xr_interactive": {
+        "n": 4,
+        "min": 10.0,
+        "p25": 10.8,
+        "p50": 16.0,
+        "p75": 22.0,
+        "p80": 22.7,
+        "max": 25.3
+      }
+    },
+    "phase_span_days": {
+      "Design": {
+        "n": 11,
+        "min": 9.9,
+        "p25": 42.5,
+        "p50": 69.5,
+        "p75": 95.7,
+        "p80": 106.3,
+        "max": 207.8
+      },
+      "Development/Build": {
+        "n": 7,
+        "min": 8.4,
+        "p25": 34.6,
+        "p50": 60.1,
+        "p75": 112.0,
+        "p80": 141.4,
+        "max": 209.8
+      },
+      "Discovery": {
+        "n": 9,
+        "min": 15.7,
+        "p25": 21.7,
+        "p50": 41.7,
+        "p75": 93.6,
+        "p80": 179.4,
+        "max": 374.0
+      },
+      "Evaluation": {
+        "n": 6,
+        "min": 4.7,
+        "p25": 7.2,
+        "p50": 12.5,
+        "p75": 56.4,
+        "p80": 70.0,
+        "max": 141.1
+      },
+      "Other": {
+        "n": 17,
+        "min": 0.4,
+        "p25": 45.0,
+        "p50": 77.1,
+        "p75": 120.1,
+        "p80": 141.3,
+        "max": 480.0
+      },
+      "Post-Production": {
+        "n": 15,
+        "min": 0.0,
+        "p25": 29.5,
+        "p50": 51.0,
+        "p75": 92.1,
+        "p80": 97.6,
+        "max": 302.0
+      },
+      "Pre-Production": {
+        "n": 13,
+        "min": 0.8,
+        "p25": 38.4,
+        "p50": 56.0,
+        "p75": 78.9,
+        "p80": 91.8,
+        "max": 229.8
+      },
+      "Production": {
+        "n": 14,
+        "min": 0.8,
+        "p25": 25.1,
+        "p50": 67.0,
+        "p75": 82.5,
+        "p80": 87.1,
+        "max": 122.0
+      },
+      "QA & Launch": {
+        "n": 3,
+        "values": [
+          9.9,
+          43.1,
+          156.4
+        ],
+        "p50": 43.1,
+        "note": "n<4 -- raw values shown; interpolated quartiles withheld"
+      }
+    }
+  },
+  "not_calibratable": {
+    "faculty_time": "time_entries contains ODL STAFF time only -- zero faculty hours logged. All faculty-time figures remain planning estimates and must be labeled as such.",
+    "discovery_effort": "only 11.0h logged across all projects -- discovery happens before boards get tracked. Insufficient.",
+    "evaluation_effort": "only 1.0h logged total. Insufficient.",
+    "qa_effort": "only 1.7h logged total. Insufficient.",
+    "interview_minidoc_video_rates": "no full-coverage logged exemplar (see video block).",
+    "xr_effort": "XR projects in data have <=6h logged (Equity XR 6h, XR Spanish 1h) -- board rates (40-80h) stand, unvalidated.",
+    "per_module_rate": "module counts exist for only 5 of 19 course projects and mean different things (AI for ND 57h/module vs R&E AI 7.6h/week-unit vs Virtual Borders 25h/module) -- logging is not at module granularity yet. Effort stays archetype-level until the new per-task tracking accumulates."
+  },
+  "backtest": {
+    "method": "leave-one-out on full_course production hours: predict P50 of the remaining projects, check if actual falls in their IQR.",
+    "rows": [
+      {
+        "actual": 15.7,
+        "pred_p50": 46.7,
+        "in_iqr": false,
+        "ape_pct": 197.5
+      },
+      {
+        "actual": 16.5,
+        "pred_p50": 46.7,
+        "in_iqr": false,
+        "ape_pct": 183.0
+      },
+      {
+        "actual": 16.8,
+        "pred_p50": 46.7,
+        "in_iqr": false,
+        "ape_pct": 178.0
+      },
+      {
+        "actual": 19.5,
+        "pred_p50": 46.7,
+        "in_iqr": false,
+        "ape_pct": 139.5
+      },
+      {
+        "actual": 27.5,
+        "pred_p50": 46.7,
+        "in_iqr": true,
+        "ape_pct": 69.8
+      },
+      {
+        "actual": 29.2,
+        "pred_p50": 46.7,
+        "in_iqr": true,
+        "ape_pct": 59.9
+      },
+      {
+        "actual": 38.8,
+        "pred_p50": 46.7,
+        "in_iqr": true,
+        "ape_pct": 20.4
+      },
+      {
+        "actual": 46.7,
+        "pred_p50": 38.8,
+        "in_iqr": true,
+        "ape_pct": 16.9
+      },
+      {
+        "actual": 49.2,
+        "pred_p50": 38.8,
+        "in_iqr": true,
+        "ape_pct": 21.1
+      },
+      {
+        "actual": 49.2,
+        "pred_p50": 38.8,
+        "in_iqr": true,
+        "ape_pct": 21.1
+      },
+      {
+        "actual": 71.1,
+        "pred_p50": 38.8,
+        "in_iqr": false,
+        "ape_pct": 45.4
+      },
+      {
+        "actual": 75.8,
+        "pred_p50": 38.8,
+        "in_iqr": false,
+        "ape_pct": 48.8
+      },
+      {
+        "actual": 98.9,
+        "pred_p50": 38.8,
+        "in_iqr": false,
+        "ape_pct": 60.8
+      },
+      {
+        "actual": 286.5,
+        "pred_p50": 38.8,
+        "in_iqr": false,
+        "ape_pct": 86.5
+      }
+    ],
+    "median_ape_pct": 60.3,
+    "iqr_coverage_pct": 42.9,
+    "reading": "wide APE is expected -- it is the honest spread of a point guess; this is WHY the estimator must quote P25-P80 ranges, not points."
+  }
+}

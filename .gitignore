@@ -1,0 +1,8 @@
+# local-only artifacts -- everything else (incl. data_all/) is committed,
+# which is why the repo MUST be private (per-person time entries)
+dist/
+data_pull_tmp/
+*.log
+__pycache__/
+.DS_Store
+# refresh_config.json IS committed (no secrets in it; CI needs it)

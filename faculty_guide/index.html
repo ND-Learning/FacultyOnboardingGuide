@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ODL Interactive Process Guide — for Notre Dame Faculty</title>
+<style>
+  :root{
+    --navy:#0C2340; --gold:#C99700; --gold-soft:#f4ecd6; --gray:#f4f5f7;
+    --ink:#1f2937; --muted:#6b7280; --line:#e5e7eb; --good:#127a3d;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+       color:var(--ink);background:#fbfbfc;line-height:1.5}
+  a{color:var(--navy)}
+  header{background:linear-gradient(120deg,#0C2340,#16335c);color:#fff;padding:22px 28px;
+         box-shadow:0 2px 10px rgba(0,0,0,.15)}
+  header .wrap{max-width:1080px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+  header h1{font-size:21px;margin:0;letter-spacing:-.3px}
+  header p{margin:2px 0 0;font-size:13px;opacity:.8}
+  .pill{background:var(--gold);color:var(--navy);font-weight:700;font-size:12px;padding:5px 12px;border-radius:999px}
+  main{max-width:1080px;margin:0 auto;padding:28px 20px 60px}
+  h2{color:var(--navy);font-size:26px;margin:0 0 6px;letter-spacing:-.4px}
+  .lead{color:var(--muted);max-width:680px;margin:0 0 22px}
+  .step-label{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:30px 0 10px}
+  .grid{display:grid;gap:14px}
+  .types{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+  .sizes{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+  .card{background:#fff;border:2px solid var(--line);border-radius:14px;padding:18px;cursor:pointer;
+        transition:all .15s;text-align:left;font:inherit;color:inherit}
+  .card:hover{border-color:var(--gold);box-shadow:0 6px 18px rgba(201,151,0,.12);transform:translateY(-2px)}
+  .card.sel{border-color:var(--gold);background:var(--gold-soft);box-shadow:0 0 0 3px rgba(201,151,0,.18)}
+  .card h3{margin:0 0 4px;color:var(--navy);font-size:16px}
+  .card .d{font-size:13px;color:var(--muted)}
+  .card .big{font-size:30px;font-weight:800;color:var(--navy);opacity:.18;line-height:1}
+  .results{margin-top:34px;display:none}
+  .summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:8px 0 6px}
+  .stat{background:var(--navy);color:#fff;border-radius:16px;padding:20px 22px}
+  .stat .k{font-size:11px;text-transform:uppercase;letter-spacing:.1em;opacity:.7;font-weight:700}
+  .stat .v{font-size:30px;font-weight:800;margin-top:4px;letter-spacing:-.5px}
+  .stat .s{font-size:12px;opacity:.8;margin-top:2px}
+  .stat.gold{background:var(--gold-soft);color:var(--navy);border:1px solid #e7d9a8}
+  .stat.gold .k{opacity:.6}
+  .note{font-size:12.5px;color:var(--muted);margin:6px 2px 0}
+  .hint{background:var(--gold-soft);border:1px dashed var(--gold);border-radius:10px;
+        padding:11px 15px;margin-top:14px;font-size:14px;color:var(--navy);font-weight:600}
+  .infer{background:linear-gradient(120deg,#faf6e8,#f4ecd6);border:2px solid #e7d9a8;
+         border-radius:16px;padding:18px 20px;margin:4px 0 10px}
+  .infer .t{font-weight:800;color:var(--navy);margin-bottom:12px;font-size:15px}
+  .infer .frm{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end}
+  .infer label{font-size:12px;font-weight:700;color:var(--navy);display:flex;flex-direction:column;gap:4px}
+  .infer input[type=number],.infer select{padding:8px;border:1px solid var(--line);border-radius:8px;
+         width:90px;font:inherit;background:#fff}
+  .infer select{width:150px}
+  .infer .chk{flex-direction:row;align-items:center;gap:6px;padding-bottom:8px}
+  .timeline{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin:26px 0 10px}
+  @media(max-width:760px){.timeline{grid-template-columns:repeat(2,1fr)}}
+  .ph{background:#fff;border:2px solid var(--line);border-radius:12px;padding:14px 10px;text-align:center;cursor:pointer;transition:.15s}
+  .ph:hover{border-color:var(--gold);transform:translateY(-2px)}
+  .ph .ic{font-size:22px}
+  .ph .t{font-size:12px;font-weight:700;color:var(--navy);margin:6px 0 4px;min-height:30px;display:flex;align-items:center;justify-content:center}
+  .ph .w{font-size:11px;color:var(--gold);font-weight:800}
+  .detail{background:#fff;border:1px solid var(--line);border-radius:16px;padding:0;overflow:hidden;margin-top:18px}
+  .detail .hd{background:linear-gradient(120deg,#0C2340,#16335c);color:#fff;padding:18px 24px;display:flex;align-items:center;gap:12px}
+  .detail .hd .ic{font-size:26px}
+  .detail .hd h3{margin:0;font-size:19px}
+  .detail .hd .sub{font-size:12px;opacity:.75}
+  .detail .body{padding:22px 24px;display:grid;grid-template-columns:2fr 1fr;gap:24px}
+  @media(max-width:760px){.detail .body{grid-template-columns:1fr}}
+  .block h4{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);margin:0 0 6px}
+  .block p{margin:0 0 14px;font-size:14px}
+  .youdo{background:var(--gold-soft);border-left:4px solid var(--gold);padding:12px 14px;border-radius:8px;font-size:14px}
+  .sidebox{background:var(--gray);border-radius:12px;padding:16px;margin-bottom:12px}
+  .sidebox .k{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
+  .sidebox .v{font-size:22px;font-weight:800;color:var(--navy)}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+  .chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:3px 10px;font-size:12px;color:var(--navy)}
+  .navtabs{display:flex;gap:8px;justify-content:center;margin:18px 0}
+  .navtabs button{border:none;background:#eef0f3;color:var(--navy);font-weight:700;font-size:13px;
+    padding:8px 16px;border-radius:999px;cursor:pointer}
+  .navtabs button.on{background:var(--navy);color:#fff}
+  .show-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:10px}
+  .show-card h4{margin:0 0 4px;color:var(--navy)}
+  .show-card .need{font-size:13px;color:var(--muted);font-style:italic}
+  details.calc{background:#fff;border:1px dashed var(--line);border-radius:12px;padding:12px 16px;margin-top:18px;font-size:13px}
+  details.calc summary{cursor:pointer;font-weight:700;color:var(--navy)}
+  .disclaimer{background:var(--gold-soft);border:1px solid #e7d9a8;border-radius:14px;padding:18px 20px;margin-top:26px;font-size:14px}
+  .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+  .btn{border:none;border-radius:10px;padding:12px 18px;font-weight:700;font-size:14px;cursor:pointer}
+  .btn.primary{background:var(--navy);color:#fff}
+  .btn.gold{background:var(--gold);color:var(--navy)}
+  .btn.ghost{background:#fff;border:2px solid var(--navy);color:var(--navy)}
+  .custom{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-top:14px;display:none}
+  .custom.open{display:block}
+  .custom .row{display:grid;grid-template-columns:1fr 70px;gap:8px;align-items:center;padding:5px 0;border-bottom:1px solid #f1f2f4}
+  .custom input{width:64px;padding:6px;border:1px solid var(--line);border-radius:8px;text-align:center;font:inherit}
+  .custom .grp{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);font-weight:800;margin:10px 0 2px}
+  footer{background:var(--navy);color:#ffffff66;text-align:center;font-size:12px;padding:26px}
+  .hidden{display:none}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div>
+      <h1>Office of Digital Learning</h1>
+      <p>University of Notre Dame · Faculty Process Guide</p>
+    </div>
+    <span class="pill">Plan your project</span>
+  </div>
+</header>
+
+<main>
+  <h2>Partnering with ODL: what to expect</h2>
+  <p class="lead">Pick the kind of project you're imagining and its rough scale. We'll show you the
+    full process, what's expected of <em>you</em> at each step, and an honest estimate of the
+    timeline and effort involved — grounded in our past projects.</p>
+
+  <div class="infer">
+    <div class="t">✨ Not sure about type or size? Tell us roughly what you're imagining — we'll size it
+      by comparing with similar past projects.</div>
+    <div class="frm">
+      <label>Modules<input id="inf-modules" type="number" min="0" value="6"></label>
+      <label>Videos<input id="inf-videos" type="number" min="0" value="8"></label>
+      <label>Video style
+        <select id="inf-style">
+          <option value="lecture">Studio lectures</option>
+          <option value="screencast">Screencasts</option>
+          <option value="mix">A mix</option>
+        </select></label>
+      <label>Animations<input id="inf-anim" type="number" min="0" value="0"></label>
+      <label>Infographics<input id="inf-info" type="number" min="0" value="0"></label>
+      <label class="chk"><input id="inf-xr" type="checkbox"> XR / immersive</label>
+      <button class="btn gold" id="inf-go" type="button">Estimate my project →</button>
+    </div>
+  </div>
+
+  <div class="step-label">1 · What are you building?</div>
+  <div id="types" class="grid types"></div>
+
+  <div class="step-label">2 · How big is the scope?</div>
+  <div id="sizes" class="grid sizes"></div>
+
+  <div id="hint" class="hint hidden"></div>
+
+  <div class="btnrow">
+    <button id="customToggle" class="btn ghost" type="button">⚙︎ Fine-tune the deliverables</button>
+  </div>
+  <div id="custom" class="custom"></div>
+
+  <!-- RESULTS -->
+  <section id="results" class="results">
+    <div class="navtabs">
+      <button data-tab="plan" class="on">Your Plan</button>
+      <button data-tab="process">The Process</button>
+      <button data-tab="similar">Similar Projects</button>
+    </div>
+
+    <!-- PLAN TAB -->
+    <div id="tab-plan">
+      <p class="hint" id="s-inferred" style="display:none;margin:0 0 14px"></p>
+      <div class="summary">
+        <div class="stat"><div class="k">Estimated timeline</div><div class="v" id="s-weeks">—</div><div class="s">calendar weeks, start to launch</div></div>
+        <div class="stat"><div class="k">ODL team effort</div><div class="v" id="s-odl">—</div><div class="s">hours across our team</div></div>
+        <div class="stat gold"><div class="k">Your time (faculty)</div><div class="v" id="s-fac">—</div><div class="s">your hands-on hours</div></div>
+      </div>
+      <p class="note" id="s-bundle"></p>
+      <p class="note" id="s-pm"></p>
+      <p class="note" id="s-history"></p>
+      <div id="timeline" class="timeline"></div>
+      <p class="note">Tap any phase above (or in <strong>The Process</strong>) for what happens and what you'll do.</p>
+      <div id="detailHost"></div>
+
+      <details class="calc">
+        <summary>How are these numbers calculated?</summary>
+        <p>Media and graphics hours come from <strong>ODL's own per-deliverable estimation table</strong>
+        (e.g., a studio lecture ≈ 8.5h, a 3-minute explainer animation ≈ 100h), summed across the
+        deliverables typical for a project of this type and size — and validated against our logged
+        time (observed median ≈ 12.8 h per finished short video, n=5 fully-tracked exemplars).
+        <strong>Project-management hours are calibrated from ODL's actual logged PM time</strong>:
+        0.6–1.6 h per calendar week (middle 50%, 14 PM-tracked projects, 679 tracked PM hours).
+        The "similar real projects" line comes from <strong>2,053 logged staff hours across 55
+        projects</strong> (25 fully tracked), e.g. full courses: median 43 staff-hours (excl. PM) and a
+        median 31-week timeline (middle half 18–42 wk, n=23). Design and faculty-time figures are ODL
+        planning estimates (we have not yet logged faculty time) and are shown as
+        <strong>ranges</strong>, not fixed numbers — they tighten as we track more projects.
+        These are estimates for planning, <strong>not commitments</strong>.</p>
+      </details>
+
+      <div class="disclaimer">
+        <strong>These are planning estimates, not commitments.</strong> Every project is unique. An ODL
+        team member will confirm scope, timeline, and effort with you during your consultation, and any
+        formal commitments are set in your Project Charter and approved by the ODL Director.
+        <div class="btnrow">
+          <a class="btn gold" href="https://learning.nd.edu/about/lets-work-together/" target="_blank" rel="noopener">Start the intake form →</a>
+          <a class="btn ghost" href="mailto:online@nd.edu">Email ODL (online@nd.edu)</a>
+          <button class="btn primary" type="button" onclick="window.print()">🖶 Print / save this plan</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROCESS TAB -->
+    <div id="tab-process" class="hidden"></div>
+
+    <!-- SIMILAR TAB -->
+    <div id="tab-similar" class="hidden"></div>
+  </section>
+</main>
+
+<footer>© <span id="yr"></span> University of Notre Dame · Office of Digital Learning · Estimates for planning only</footer>
+
+<script src="estimator.js"></script>
+<script>
+(function(){
+  var state = { type:null, size:null, custom:null, customMode:false };
+  var $ = function(s){return document.querySelector(s)};
+  document.getElementById("yr").textContent = "2026";
+
+  // ---- build type & size cards ----
+  var typeHost = $("#types");
+  ODL.PROJECT_TYPES.forEach(function(t){
+    var b=document.createElement("button"); b.className="card"; b.dataset.id=t.id;
+    b.innerHTML='<h3>'+t.label+'</h3><div class="d">'+t.desc+'</div>';
+    b.onclick=function(){ state.type=t.id; state.customMode=false; mark(); maybeRun(); };
+    typeHost.appendChild(b);
+  });
+  var sizeHost=$("#sizes");
+  ODL.PROJECT_SIZES.forEach(function(s){
+    var b=document.createElement("button"); b.className="card"; b.dataset.size=s.id;
+    b.innerHTML='<div class="big">'+s.id+'</div><h3>'+s.label+'</h3><div class="d">'+s.desc+'</div>';
+    b.onclick=function(){ state.size=s.id; state.customMode=false; mark(); maybeRun(); };
+    sizeHost.appendChild(b);
+  });
+
+  function mark(){
+    document.querySelectorAll("#types .card").forEach(function(c){ c.classList.toggle("sel", c.dataset.id===state.type); });
+    document.querySelectorAll("#sizes .card").forEach(function(c){ c.classList.toggle("sel", c.dataset.size===state.size); });
+    updateHint();
+  }
+  function updateHint(){
+    var h=$("#hint");
+    if(state.type && !state.size){ h.textContent="👇 Now pick a size below to see your timeline, effort, and the full process."; h.classList.remove("hidden"); }
+    else if(!state.type && state.size){ h.textContent="👆 Now pick a project type above to see your plan."; h.classList.remove("hidden"); }
+    else { h.classList.add("hidden"); }
+  }
+
+  // ---- custom deliverables ----
+  var CUSTOM_FIELDS = [
+    {grp:"Video", keys:["studio_lecture","lightboard","screencast","testimonial","location_lecture","location_interview","minidoc"]},
+    {grp:"Graphics & animation", keys:["explainer_animation","animation_reuse","title_cards","infographic","logo"]},
+    {grp:"XR / interactive", keys:["xr_linear","xr_multipath","unity"]},
+    {grp:"Course", keys:["modules"]}
+  ];
+  function buildCustom(){
+    var host=$("#custom"); host.innerHTML="<p style='margin:0 0 6px;font-size:13px;color:#6b7280'>Adjust the deliverable counts and the plan updates live.</p>";
+    CUSTOM_FIELDS.forEach(function(g){
+      var h=document.createElement("div"); h.className="grp"; h.textContent=g.grp; host.appendChild(h);
+      g.keys.forEach(function(k){
+        var row=document.createElement("div"); row.className="row";
+        var lab=document.createElement("div"); lab.textContent=ODL.deliverableLabel(k);
+        var inp=document.createElement("input"); inp.type="number"; inp.min="0"; inp.value=(state.custom&&state.custom[k])||0; inp.dataset.k=k;
+        inp.oninput=function(){ state.custom[k]=parseInt(inp.value||"0",10)||0; state.customMode=true; run(); };
+        row.appendChild(lab); row.appendChild(inp); host.appendChild(row);
+      });
+    });
+  }
+  $("#customToggle").onclick=function(){
+    var c=$("#custom");
+    if(!c.classList.contains("open")){
+      // seed from current bundle if available
+      var seed = (state.type&&state.size) ? Object.assign({}, ODL.BUNDLES[state.type][state.size]) : {modules:1};
+      state.custom = state.custom || seed;
+      buildCustom(); c.classList.add("open");
+    } else { c.classList.remove("open"); }
+  };
+
+  function maybeRun(){
+    $("#s-inferred").style.display="none";   // manual choice overrides inference
+    if(state.type && state.size){
+      run();
+      $("#results").scrollIntoView({behavior:"smooth", block:"start"});
+    }
+  }
+
+  // ---- "size it for me" backward inference ----
+  $("#inf-go").onclick = function(){
+    var est = ODL.inferProject({
+      modules: parseInt($("#inf-modules").value||"0",10),
+      videos: parseInt($("#inf-videos").value||"0",10),
+      style: $("#inf-style").value,
+      animations: parseInt($("#inf-anim").value||"0",10),
+      infographics: parseInt($("#inf-info").value||"0",10),
+      xr: $("#inf-xr").checked
+    });
+    state.type = est.inferred.type; state.size = est.inferred.size;
+    state.custom = Object.assign({}, est.bundle); state.customMode = true;
+    mark(); run();
+    var tl = (ODL.PROJECT_TYPES.filter(function(t){return t.id===est.inferred.type;})[0]||{}).label || est.inferred.type;
+    var sl = (ODL.PROJECT_SIZES.filter(function(s){return s.id===est.inferred.size;})[0]||{}).label || est.inferred.size;
+    var el = $("#s-inferred");
+    el.innerHTML = "✨ <strong>Sized from similar past projects:</strong> what you described looks like a "+
+      "<strong>"+sl+" "+tl+"</strong> project, and the hours below are computed from <strong>your</strong> counts. "+
+      "We set the type and size above automatically — change them if that's not right.";
+    el.style.display = "block";
+    $("#results").scrollIntoView({behavior:"smooth", block:"start"});
+  };
+
+  function fmtRange(r,unit){ return r[0]+"–"+r[1]+" "+unit; }
+
+  function run(){
+    var est = state.customMode && state.custom
+      ? ODL.estimateFromBundle(state.custom, state.size||"M")
+      : ODL.estimate(state.type, state.size);
+    $("#results").style.display="block";
+
+    // summary
+    $("#s-weeks").textContent = est.totals.weeks[0]+"–"+est.totals.weeks[1]+" wk";
+    $("#s-odl").textContent   = est.totals.odl[0]+"–"+est.totals.odl[1]+" h";
+    $("#s-fac").textContent   = est.totals.faculty[0]+"–"+est.totals.faculty[1]+" h";
+    var dl = Object.keys(est.bundle).filter(function(k){return est.bundle[k]>0;})
+      .map(function(k){ return est.bundle[k]+"× "+ODL.deliverableLabel(k); }).join(" · ");
+    $("#s-bundle").innerHTML = "<strong>Typical deliverables:</strong> " + (dl||"—");
+    $("#s-pm").innerHTML = "<strong>Includes project management:</strong> " +
+      est.pm[0] + "–" + est.pm[1] + " h across all phases (calibrated: 0.6–1.6 h per " +
+      "calendar week, from ODL's 14 PM-tracked projects).";
+    var h = est.history;
+    if (h && (h.productionHours || (h.calendarWeeks && h.calendarWeeks.p50 != null))) {
+      var bits = [];
+      if (h.productionHours && h.productionHours.p25 != null) {
+        bits.push("hands-on staff effort " + h.productionHours.p25 + "–" + h.productionHours.p75 +
+          " h (median " + h.productionHours.p50 + " h, excl. PM, n=" + h.productionHours.n + ")");
+      }
+      if (h.calendarWeeks && h.calendarWeeks.p25 != null) {
+        bits.push("timeline " + Math.round(h.calendarWeeks.p25) + "–" + Math.round(h.calendarWeeks.p75) +
+          " wk (median " + Math.round(h.calendarWeeks.p50) + " wk, n=" + h.calendarWeeks.n + ")");
+      }
+      $("#s-history").innerHTML = "<strong>What similar real ODL projects took:</strong> " +
+        bits.join("; ") + " — middle-50% ranges from our logged hours and project calendars.";
+    } else {
+      $("#s-history").textContent = "";
+    }
+
+    // timeline strip
+    var tl=$("#timeline"); tl.innerHTML="";
+    est.phases.forEach(function(p,i){
+      var d=document.createElement("button"); d.className="ph";
+      d.innerHTML='<div class="ic">'+p.icon+'</div><div class="t">'+p.title+'</div><div class="w">'+
+        (p.weeks? p.weeks[0]+"–"+p.weeks[1]+" wk":"Ongoing")+'</div>';
+      d.onclick=function(){ showDetail(est,i); document.getElementById("detailHost").scrollIntoView({behavior:"smooth",block:"center"}); };
+      tl.appendChild(d);
+    });
+    showDetail(est, 1); // default to Design
+    buildProcess(est);
+    buildSimilar();
+    window._est = est;
+  }
+
+  function detailCard(p){
+    return '<div class="detail"><div class="hd"><div class="ic">'+p.icon+'</div>'+
+      '<div><h3>'+p.title+'</h3><div class="sub">'+(p.weeks? p.weeks[0]+"–"+p.weeks[1]+" weeks":"Ongoing")+'</div></div></div>'+
+      '<div class="body"><div class="block">'+
+        '<h4>What happens</h4><p>'+p.whatHappens+'</p>'+
+        '<h4>ODL handles</h4><p>'+p.odlDoes+'</p>'+
+        '<h4>What you do</h4><div class="youdo">'+p.youDo+'</div>'+
+      '</div><div>'+
+        '<div class="sidebox"><div class="k">Your time this phase</div><div class="v">'+fmtRange(p.faculty,"h")+'</div></div>'+
+        '<div class="sidebox"><div class="k">ODL team effort</div><div class="v">'+fmtRange(p.odl,"h")+'</div></div>'+
+        '<div class="sidebox"><div class="k">Artifacts</div><div class="chips">'+
+          p.artifacts.map(function(a){return '<span class="chip">'+a+'</span>';}).join("")+'</div></div>'+
+      '</div></div></div>';
+  }
+  function showDetail(est,i){ $("#detailHost").innerHTML = detailCard(est.phases[i]); }
+
+  function buildProcess(est){
+    $("#tab-process").innerHTML =
+      '<p class="lead">Your project moves through these phases. Each card shows what happens, what ODL does, what you do, and how much of your time it takes.</p>'+
+      est.phases.map(function(p){return detailCard(p);}).join("");
+  }
+
+  function buildSimilar(){
+    var sims = ODL.similarProjects(state.type||"new_course", state.size||"M");
+    $("#tab-similar").innerHTML =
+      '<p class="lead">Real ND projects of a similar kind:</p>'+
+      (sims.length? sims.map(function(s){
+        return '<div class="show-card"><h4>'+s.title+'</h4><div class="need">“'+s.need+'”</div>'+
+          (s.link?'<p style="margin:8px 0 0"><a href="'+s.link+'" target="_blank" rel="noopener">Learn more →</a></p>':'')+'</div>';
+      }).join("") : '<p>No close match yet — browse all ODL projects via the showcase.</p>');
+  }
+
+  // ---- tabs ----
+  document.querySelectorAll(".navtabs button").forEach(function(b){
+    b.onclick=function(){
+      document.querySelectorAll(".navtabs button").forEach(function(x){x.classList.remove("on")});
+      b.classList.add("on");
+      ["plan","process","similar"].forEach(function(t){
+        document.getElementById("tab-"+t).classList.toggle("hidden", t!==b.dataset.tab);
+      });
+    };
+  });
+})();
+</script>
+</body>
+</html>

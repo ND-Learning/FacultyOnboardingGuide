@@ -1,0 +1,23 @@
+ODL FACULTY-TIME VALIDATION WORKSHEET — please correct the 'Team corrected' column. ~15 min.
+"Faculty time is NOT logged in Asana, so these planning factors need your judgment. The guide computes all faculty estimates from Part A; fixing a factor fixes every estimate."
+
+PART A — the 7 faculty-time factors the model uses
+#,Phase,Current planning factor,Team corrected (edit me),Notes / rationale
+1,Intake & Discovery,2h (S) / 3h (M) / 4h (L) / 6h (XL) total,,"share vision, intake meeting(s)"
+2,Design (Course Map),3h base + 0.6h per module,,SME content mapping + course-map review
+3,Pre-Production (Scripting),1.0h per video,,drafting + reviewing each script; is 1h/video right?
+4,Production (Filming),1.0 x filming hours (on-camera presence),,"studio lecture ~0.5h, location ~3-4h per ODL rates"
+5,Post-Production (Review),0.5h per video,,reviewing Rough Cut 1 + 2
+6,QA & Launch,2h (S) / 3h (M) / 4h (L) / 5h (XL),,full course walkthrough + approval
+7,Evaluation,2h flat,,survey + retrospective participation
+
+PART B — sanity check: do these TOTAL faculty hours match what those faculty actually spent?
+Real project,Type,Size,Guide estimate: TOTAL faculty hours,Per-phase breakdown,Your verdict (low / about right / high)
+MSAN II,bisynchronous,L,38-62 h,Intake 3-5h; Design 7-12h; Pre-Production 11-18h; Production 6-10h; Post-Production 6-9h; QA 3-5h; Evaluation 2-3h,
+The Quran and the Bible,new_course,M,27-47 h,Intake 2-4h; Design 5-9h; Pre-Production 8-13h; Production 4-7h; Post-Production 4-7h; QA 2-4h; Evaluation 2-3h,
+Lab Prep: Visualizing Success,flipped,M,26-45 h,Intake 2-4h; Design 4-7h; Pre-Production 8-13h; Production 4-7h; Post-Production 4-7h; QA 2-4h; Evaluation 2-3h,
+Digital Accessibility,module,S,10-17 h,Intake 2-3h; Design 3-5h; Pre-Production 1-1h; Production 0-1h; Post-Production 0-1h; QA 2-3h; Evaluation 2-3h,
+AI for the ND Community,ai,L,17-30 h,Intake 3-5h; Design 5-9h; Pre-Production 2-4h; Production 1-2h; Post-Production 1-2h; QA 3-5h; Evaluation 2-3h,
+XR for Law - Car Crash,xr,S,9-14 h,Intake 2-3h; Design 3-5h; Pre-Production 0-0h; Production 0-0h; Post-Production 0-0h; QA 2-3h; Evaluation 2-3h,
+
+Corrections drop directly into estimator.js — return to Juntong.
