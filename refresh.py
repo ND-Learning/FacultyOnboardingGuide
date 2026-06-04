@@ -94,6 +94,14 @@ def main():
     before = snapshot_numbers(cal_path)
     py = sys.executable or "python3"
 
+    import hashlib
+    bundle = os.path.join(HERE, "faculty_guide", "canvas_upload",
+                          cfg.get("canvas", {}).get("file_name",
+                          "ODL_Faculty_Onboarding_Guide.html"))
+    bhash = lambda: (hashlib.sha256(open(bundle, "rb").read()).hexdigest()[:12]
+                     if os.path.exists(bundle) else "missing")
+    bundle_before = bhash()
+
     # Zero-context guard: if there is no pulled data AND this run won't pull,
     # explain the situation in plain language instead of letting audit_rules
     # crash with a traceback. (The PII-safe handoff zip ships without data_all/
@@ -146,12 +154,19 @@ def main():
     run([py, os.path.join("faculty_guide", "build_canvas_bundle.py")], dry=args.dry_run)
 
     # 6. PUBLISH ----------------------------------------------------------------
+    # works fine WITHOUT a Canvas token: publish is skipped and the report
+    # tells you when the bundle changed and is worth re-uploading by hand
+    # (download from GitHub -> Canvas Files -> upload same name -> Replace).
     pushed = False
     if args.skip_push:
         print("6. PUBLISH: skipped (--skip-push)")
     elif not cfg.get("canvas", {}).get("course_id"):
         print("6. PUBLISH: skipped -- no canvas config in refresh_config.json "
               "(re-upload canvas_upload/*.html manually, same filename -> Replace)")
+    elif not token("CANVAS_TOKEN", "canvas_token"):
+        print("6. PUBLISH: skipped -- no CANVAS_TOKEN (env or keychain). "
+              "Manual update when numbers change: download the bundle and "
+              "re-upload to Canvas Files with the SAME filename -> Replace.")
     else:
         cmd = [py, "canvas_push.py", "--config", args.config]
         if args.dry_run:
@@ -160,6 +175,7 @@ def main():
         pushed = not args.dry_run
 
     # 7. REPORT -----------------------------------------------------------------
+    bundle_changed = (bundle_before != bhash())
     after = snapshot_numbers(cal_path)
     review_path = os.path.join(data_dir, "derived", "needs_review.csv")
     review = list(csv.DictReader(open(review_path))) if os.path.exists(review_path) else []
@@ -174,6 +190,12 @@ def main():
         mark = "  " if b == a else "->"
         lines.append(f"  {mark} {k}: {b} -> {a}")
     lines.append("")
+    if bundle_changed and not pushed and not args.dry_run:
+        lines.append("ACTION NEEDED -- the Canvas bundle CHANGED but was not auto-published "
+                     "(no Canvas token). Re-upload faculty_guide/canvas_upload/"
+                     "ODL_Faculty_Onboarding_Guide.html to Canvas Files with the SAME "
+                     "filename and choose Replace (~1 minute).")
+        lines.append("")
     if review:
         lines.append(f"ACTION NEEDED -- {len(review)} project(s) await a human decision "
                      "(excluded from calibration until resolved):")
