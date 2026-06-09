@@ -1,8 +1,8 @@
 {
   "_provenance": {
-    "source": "data_all/time_entries.csv (2,347 entries, 2069.0h, 2024-08-19..2026-06-08, ODL staff time)",
+    "source": "data_all/time_entries.csv (2,349 entries, 2072.3h, 2024-08-19..2026-06-09, ODL staff time)",
     "calibration_set": "25 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 21 of them with >=10h non-PM logging",
-    "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 2207, 'task_name': 103, 'none': 37}",
+    "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 2209, 'task_name': 103, 'none': 37}",
     "no_guessing": "blocks state 'not_calibratable' where data is insufficient"
   },
   "archetype_effort_hours": {
@@ -33,15 +33,15 @@
         "Sprint 2025 - Digital Accessibility - Whitney James": 49.2,
         "Business for Humans | Sheedy Family Program": 38.8,
         "FCTA - Physics I": 38.7,
+        "NEON - POLS 30022 (Poly Sci)": 21.0,
         "Sprint 2025 - Bringing Korean to Life - Yeonhee Yoon": 19.5,
-        "NEON - POLS 30022 (Poly Sci)": 18.5,
         "C2D: Cybertraining for Chemical Data scientists": 16.5,
         "Travel Safety 101": 15.7
       },
       "production_hours": {
         "n": 14,
         "min": 15.7,
-        "p25": 21.5,
+        "p25": 22.6,
         "p50": 42.8,
         "p75": 65.6,
         "p80": 74.2,
@@ -51,17 +51,17 @@
     "single_video": {
       "projects": {
         "Program for Inclusive Education (PIE) Video #2": 15.5,
-        "Ultrasound Communication Video": 13.5,
+        "Ultrasound Communication Video": 14.2,
         "Borgo Laudato Si' videos": 12.0
       },
       "production_hours": {
         "n": 3,
         "values": [
           12.0,
-          13.5,
+          14.2,
           15.5
         ],
-        "p50": 13.5,
+        "p50": 14.2,
         "note": "n<4 -- raw values shown; interpolated quartiles withheld"
       }
     },
@@ -229,7 +229,7 @@
       {
         "project": "Ultrasound Communication Video",
         "video": "(whole project)",
-        "hours": 13.5
+        "hours": 14.2
       },
       {
         "project": "Borgo Laudato Si' videos",
@@ -253,9 +253,9 @@
       "n": 5,
       "min": 7.3,
       "p25": 12.0,
-      "p50": 13.5,
-      "p75": 13.7,
-      "p80": 14.1,
+      "p50": 13.7,
+      "p75": 14.2,
+      "p80": 14.5,
       "max": 15.5
     },
     "observed_excluded_partial_coverage": [
@@ -309,7 +309,7 @@
       "basis": "median of board lecture-like per-1-video rates (lecture/lightboard/screencast)"
     },
     "blended_generic_video_p50": {
-      "value": 11.6,
+      "value": 11.8,
       "shrinkage_w": 0.62,
       "formula": "w*observed_p50 + (1-w)*board_prior, w = n/(n+3)"
     },
@@ -326,12 +326,12 @@
     }
   },
   "full_course_phase_mix": {
-    "basis": "pooled non-PM hours of 14 full-coverage full_course projects (855.5h)",
+    "basis": "pooled non-PM hours of 14 full-coverage full_course projects (858.0h)",
     "share_pct": {
-      "Production": 31.8,
+      "Production": 32.0,
       "Post-Production": 21.6,
       "Development/Build": 18.2,
-      "Pre-Production": 18.0,
+      "Pre-Production": 17.9,
       "Design": 8.8,
       "Other / unsorted": 1.1,
       "Discovery": 0.5
@@ -518,16 +518,16 @@
         "ape_pct": 183.0
       },
       {
-        "actual": 18.5,
-        "pred_p50": 46.7,
-        "in_iqr": false,
-        "ape_pct": 152.4
-      },
-      {
         "actual": 19.5,
         "pred_p50": 46.7,
         "in_iqr": false,
         "ape_pct": 139.5
+      },
+      {
+        "actual": 21.0,
+        "pred_p50": 46.7,
+        "in_iqr": false,
+        "ape_pct": 122.4
       },
       {
         "actual": 27.5,

@@ -30,7 +30,7 @@
   // === BEGIN CALIBRATION (machine-generated — do not edit by hand) ==========
   var CALIBRATION =
   {
-    "provenance": "data_all/time_entries.csv (2,347 entries, 2069.0h, 2024-08-19..2026-06-08, ODL staff time) | 25 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 21 of them with >=10h non-PM logging",
+    "provenance": "data_all/time_entries.csv (2,349 entries, 2072.3h, 2024-08-19..2026-06-09, ODL staff time) | 25 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 21 of them with >=10h non-PM logging",
     "generated_from": "data_all/derived/calibration.json -- run inject_calibration.py to refresh",
     "archetypeEffort": {
       "course_redesign": {
@@ -45,7 +45,7 @@
       "full_course": {
         "n": 14,
         "min": 15.7,
-        "p25": 21.5,
+        "p25": 22.6,
         "p50": 42.8,
         "p75": 65.6,
         "p80": 74.2,
@@ -55,10 +55,10 @@
         "n": 3,
         "values": [
           12.0,
-          13.5,
+          14.2,
           15.5
         ],
-        "p50": 13.5,
+        "p50": 14.2,
         "note": "n<4 -- raw values shown; interpolated quartiles withheld"
       },
       "video_series": {
@@ -94,12 +94,12 @@
         "n": 5,
         "min": 7.3,
         "p25": 12.0,
-        "p50": 13.5,
-        "p75": 13.7,
-        "p80": 14.1,
+        "p50": 13.7,
+        "p75": 14.2,
+        "p80": 14.5,
         "max": 15.5
       },
-      "blendedGenericP50": 11.6,
+      "blendedGenericP50": 11.8,
       "shrinkageW": 0.62
     },
     "mediaSplitPct": {
@@ -109,15 +109,15 @@
     },
     "mediaSplitBasis": "pooled hours on per-video sections with full-coverage logging: 1 project(s) (Program for Inclusive Education (PIE) Video #2), 15.5h total",
     "coursePhaseMixPct": {
-      "Production": 31.8,
+      "Production": 32.0,
       "Post-Production": 21.6,
       "Development/Build": 18.2,
-      "Pre-Production": 18.0,
+      "Pre-Production": 17.9,
       "Design": 8.8,
       "Other / unsorted": 1.1,
       "Discovery": 0.5
     },
-    "coursePhaseMixBasis": "pooled non-PM hours of 14 full-coverage full_course projects (855.5h)",
+    "coursePhaseMixBasis": "pooled non-PM hours of 14 full-coverage full_course projects (858.0h)",
     "calendarWeeks": {
       "consult_or_studio": {
         "n": 1,
