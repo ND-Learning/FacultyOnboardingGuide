@@ -8,6 +8,8 @@ the block says so explicitly instead of inventing one.
 
 Inputs (relative to --dir, default data_all/):
   time_entries.csv              2,335 real time-tracking entries (ground truth)
+  task_custom_fields.csv        optional task-level Asana custom fields, including
+                                Impact Tracker task fields when that project is pulled
   derived/audit_coverage.csv    per-project logging-coverage audit (full/partial/minimal)
   derived/ground_truth.csv      25-project calibration set (full coverage, course-dev, >=10h)
   derived/archetypes.csv        archetype + deliverable counts per project
@@ -36,7 +38,7 @@ Method notes (decided from the audit, all documented in provenance fields):
     (README design): rate = w*observed + (1-w)*board_prior.
 """
 import argparse, csv, json, os, re, statistics as st
-from collections import defaultdict
+from collections import Counter, defaultdict
 
 # --------------------------------------------------------------------------- #
 # Phase mapping: ordered keyword rules. First match wins. Applied to the
@@ -62,6 +64,27 @@ PHASE_RULES = [
     (("media", "video", "animation", "graphic"), "Production"),
 ]
 VIDEO_SECTION_RE = re.compile(r"^\s*(video|episode)\s*\d+", re.I)
+ASSET_FIELD_RE = re.compile(
+    r"(?=.*(?:asset|deliverable|video|module|graphic|animation|media))"
+    r"(?=.*(?:#|number|count|total|num))"
+    r"|^\s*(assets?|deliverables?|videos?|graphics?|animations?|interactives?|"
+    r"canvas\s+courses?|web\s*page\s+modules?|xr\s+experiences?)\s*$",
+    re.I,
+)
+# "Total Assets" is the tracker's own rollup of the per-type counts above;
+# prefer it per record, else sum the components -- never add both.
+TOTAL_ASSET_FIELD_RE = re.compile(r"^\s*total\s+assets?\s*$", re.I)
+SATISFACTION_FIELD_RE = re.compile(r"satisfaction|faculty.*rating|partner.*rating", re.I)
+NPS_FIELD_RE = re.compile(r"net\s*promoter|\bnps\b", re.I)
+REACH_FIELD_RE = re.compile(r"\breach\b", re.I)
+TOTAL_HOURS_FIELD_RE = re.compile(r"^\s*total\s+hours\s*(?:\((\d{4})\))?\s*$", re.I)
+COMPLIANCE_FIELD_RE = re.compile(
+    r"^\s*(ip\s+agreement|project\s+charter|handoff\s+document|"
+    r"post-?project\s+evaluation|mou)\s*$", re.I)
+TRACKER_STATUS_FIELD_RE = re.compile(r"^\s*status\s*$", re.I)
+IMPACT_BOARD_RE = re.compile(r"impact\s*tracker", re.I)
+GID_FIELD_RE = re.compile(r"\b(gid|project id|asana id|project gid|asana project)\b", re.I)
+URL_GID_RE = re.compile(r"\b\d{10,}\b")
 
 
 def keyword_phase(text):
@@ -120,6 +143,39 @@ def shrink(observed, prior, n, k=3.0):
     return round(w * observed + (1 - w) * prior, 1), round(w, 2)
 
 
+def read_optional_csv(path):
+    if not os.path.exists(path) or os.path.getsize(path) == 0:
+        return []
+    return list(csv.DictReader(open(path, newline="")))
+
+
+def norm_name(s):
+    return re.sub(r"[^a-z0-9]+", "", (s or "").lower())
+
+
+def num_or_none(value):
+    s = str(value or "").strip()
+    if not s or s.lower() in ("n/a", "na", "none", "null", "-"):
+        return None
+    m = re.search(r"-?\d+(?:,\d{3})*(?:\.\d+)?", s)
+    if not m:
+        return None
+    try:
+        return float(m.group(0).replace(",", ""))
+    except ValueError:
+        return None
+
+
+def field_stats(values):
+    nums = [v for v in values if v is not None]
+    if not nums:
+        return None
+    q = quart(nums)
+    if q:
+        return q
+    return {"n": len(nums), "values": [round(x, 1) for x in nums]}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dir", default=os.path.join(os.path.dirname(__file__), "data_all"))
@@ -130,6 +186,8 @@ def main():
 
     rd = lambda p: list(csv.DictReader(open(p, newline="")))
     entries = rd(os.path.join(D, "time_entries.csv"))
+    projects = rd(os.path.join(D, "projects.csv"))
+    task_custom_fields = read_optional_csv(os.path.join(D, "task_custom_fields.csv"))
     coverage = {r["project_gid"]: r for r in rd(os.path.join(DV, "audit_coverage.csv"))}
     ground = {r["gid"]: r for r in rd(os.path.join(DV, "ground_truth.csv"))}
     arch = {r["gid"]: r for r in rd(os.path.join(DV, "archetypes.csv"))}
@@ -316,7 +374,275 @@ def main():
             ph_spans[r["phase"]].append(float(r["span_days"]))
     calendar["phase_span_days"] = {ph: quart(v) for ph, v in sorted(ph_spans.items()) if quart(v)}
 
-    # ---- 9. block G: explicitly NOT calibratable ---------------------------- #
+    # ---- 9. block G: Asana impact tracker status ---------------------------- #
+    impact_field = "cf::Impact Tracker Status"
+    impact_rows = []
+    for r in projects:
+        status = (r.get(impact_field) or "").strip()
+        if status:
+            impact_rows.append({
+                "project_gid": r["project_gid"],
+                "project": r["project_name"],
+                "status": status,
+            })
+    status_counts = Counter(r["status"] for r in impact_rows)
+    tracked_n = len(impact_rows)
+    project_n = len(projects)
+    up_to_date_n = status_counts.get("Up to date", 0)
+    impact_tracker = {
+        "field": impact_field,
+        "basis": f"data_all/projects.csv Asana project custom field across {project_n} pulled projects",
+        "total_projects": project_n,
+        "tracked_projects": tracked_n,
+        "blank_projects": project_n - tracked_n,
+        "coverage_pct": round(100 * tracked_n / project_n, 1) if project_n else None,
+        "status_counts": dict(status_counts.most_common()),
+        "up_to_date_pct_of_tracked": round(100 * up_to_date_n / tracked_n, 1) if tracked_n else None,
+        "outdated_projects": [r for r in impact_rows if r["status"].lower() == "outdated"],
+    }
+
+    # ---- 10. block H: Impact Tracker task custom fields --------------------- #
+    projects_by_gid = {r["project_gid"]: r["project_name"] for r in projects}
+    name_to_gids = defaultdict(set)
+    for r in projects:
+        name_to_gids[norm_name(r["project_name"])].add(r["project_gid"])
+    for gid, name in proj_name.items():
+        name_to_gids[norm_name(name)].add(gid)
+    unique_name_to_gid = {n: list(gids)[0] for n, gids in name_to_gids.items()
+                          if n and len(gids) == 1}
+
+    if task_custom_fields:
+        all_records = {}
+        rows_by_key = Counter()
+        for r in task_custom_fields:
+            fname = (r.get("custom_field_name") or "").strip()
+            if not fname:
+                continue
+            key = r.get("task_gid") or "%s::%s" % (r.get("project_gid"), r.get("task_name"))
+            rec = all_records.setdefault(key, {
+                "source_project_gid": r.get("project_gid") or "",
+                "source_project": r.get("project_name") or "",
+                "task_gid": r.get("task_gid") or "",
+                "task_name": r.get("task_name") or "",
+                "fields": {},
+            })
+            rec["fields"][fname] = r.get("display_value") or ""
+            rows_by_key[key] += 1
+
+        # The pull exports task custom fields for EVERY project. Exact-name
+        # metric fields ("Status", "Project Charter", ...) exist on other
+        # boards too, so scope metrics to the Impact Tracker board's own rows
+        # whenever that board is in the pull.
+        board_records = {k: r for k, r in all_records.items()
+                         if IMPACT_BOARD_RE.search(r["source_project"] or "")}
+        if board_records:
+            tracker_records = board_records
+            metric_scope = "Impact Tracker board tasks only"
+        else:
+            tracker_records = all_records
+            metric_scope = ("all pulled task custom fields -- Impact Tracker "
+                            "board not found in this pull")
+        field_counts = Counter()
+        for rec in tracker_records.values():
+            for fname in rec["fields"]:
+                field_counts[fname] += 1
+        scoped_value_count = sum(rows_by_key[k] for k in tracker_records)
+
+        asset_field_values = defaultdict(list)
+        satisfaction_field_values = defaultdict(list)
+        nps_values, reach_values = [], []
+        reported_hours_by_year = defaultdict(float)
+        compliance_counts = defaultdict(Counter)
+        tracker_status_counts = Counter()
+        hours_crosscheck_rows = []
+        impact_metric_records = []
+        for rec in tracker_records.values():
+            fields = rec["fields"]
+            matched_gid = None
+            for fname, value in fields.items():
+                if GID_FIELD_RE.search(fname or ""):
+                    for token in URL_GID_RE.findall(str(value or "")):
+                        if token in projects_by_gid or token in proj:
+                            matched_gid = token
+                            break
+                if matched_gid:
+                    break
+            if not matched_gid:
+                matched_gid = unique_name_to_gid.get(norm_name(rec["task_name"]))
+
+            asset_values, satisfaction_values = [], []
+            rollup_total_assets = None
+            component_asset_sum = 0.0
+            reported_total_hours = None
+            for fname, value in fields.items():
+                fname = (fname or "").strip()
+                sval = str(value or "").strip()
+                if sval and TRACKER_STATUS_FIELD_RE.match(fname):
+                    tracker_status_counts[sval] += 1
+                if sval and COMPLIANCE_FIELD_RE.match(fname):
+                    compliance_counts[fname][sval] += 1
+                num = num_or_none(value)
+                if num is None:
+                    continue
+                hours_match = TOTAL_HOURS_FIELD_RE.match(fname)
+                if hours_match:
+                    if hours_match.group(1):
+                        reported_hours_by_year[hours_match.group(1)] += num
+                    else:
+                        reported_total_hours = num
+                    continue
+                if TOTAL_ASSET_FIELD_RE.match(fname):
+                    rollup_total_assets = num
+                    asset_values.append((fname, num))
+                    asset_field_values[fname].append(num)
+                elif ASSET_FIELD_RE.search(fname):
+                    component_asset_sum += num
+                    asset_values.append((fname, num))
+                    asset_field_values[fname].append(num)
+                if NPS_FIELD_RE.search(fname):
+                    nps_values.append(num)
+                elif SATISFACTION_FIELD_RE.search(fname):
+                    satisfaction_values.append((fname, num))
+                    satisfaction_field_values[fname].append(num)
+                if REACH_FIELD_RE.search(fname):
+                    reach_values.append(num)
+
+            if (matched_gid and matched_gid in proj
+                    and reported_total_hours and reported_total_hours > 0):
+                tracked_total = round(sum(proj[matched_gid].values()), 1)
+                if tracked_total > 0:
+                    hours_crosscheck_rows.append({
+                        "project": proj_name.get(matched_gid, rec["task_name"]),
+                        "project_gid": matched_gid,
+                        "tracker_reported_hours": reported_total_hours,
+                        "asana_logged_hours": tracked_total,
+                        "ratio_logged_over_reported": round(
+                            tracked_total / reported_total_hours, 2),
+                    })
+
+            if asset_values or satisfaction_values:
+                asset_total = (rollup_total_assets
+                               if (rollup_total_assets or 0) > 0
+                               else round(component_asset_sum, 1))
+                impact_metric_records.append({
+                    "task_gid": rec["task_gid"],
+                    "task_name": rec["task_name"],
+                    "source_project": rec["source_project"],
+                    "matched_project_gid": matched_gid or "",
+                    "matched_project": projects_by_gid.get(matched_gid, proj_name.get(matched_gid, "")),
+                    "asset_total": asset_total,
+                    "asset_fields": {k: v for k, v in asset_values},
+                    "satisfaction_fields": {k: v for k, v in satisfaction_values},
+                })
+
+        asset_model_rows = []
+        for r in impact_metric_records:
+            gid = r["matched_project_gid"]
+            asset_total = float(r.get("asset_total") or 0)
+            if not gid or gid not in proj or asset_total <= 0:
+                continue
+            h = nonpm_of(gid)
+            cov = coverage.get(gid, {}).get("coverage", "unreviewed")
+            if cov == "full" and h >= 10.0:
+                asset_model_rows.append({
+                    "project": proj_name.get(gid, r["matched_project"]),
+                    "project_gid": gid,
+                    "asset_total": asset_total,
+                    "non_pm_hours": round(h, 1),
+                    "hours_per_asset": round(h / asset_total, 2),
+                })
+        hours_per_asset = field_stats([r["hours_per_asset"] for r in asset_model_rows])
+        usable_asset_model = bool(hours_per_asset and hours_per_asset.get("n", 0) >= 4
+                                  and hours_per_asset.get("p25") is not None
+                                  and hours_per_asset.get("p75") is not None)
+
+        satisfaction_all = [v for vals in satisfaction_field_values.values()
+                            for v in vals]
+        outcomes = {
+            "faculty_satisfaction_index": dict(
+                field_stats(satisfaction_all) or {},
+                mean=round(st.mean(satisfaction_all), 2)) if satisfaction_all else None,
+            "net_promoter_score": dict(
+                field_stats(nps_values) or {},
+                mean=round(st.mean(nps_values), 2)) if nps_values else None,
+            "student_reach_per_year": dict(
+                field_stats(reach_values) or {},
+                total=round(sum(reach_values))) if reach_values else None,
+        }
+        compliance = {}
+        for fname, counts in sorted(compliance_counts.items()):
+            yes = sum(n for v, n in counts.items() if v.strip().lower() == "yes")
+            na = sum(n for v, n in counts.items()
+                     if v.strip().lower() in ("n/a", "na"))
+            answered = sum(counts.values())
+            applicable = answered - na
+            compliance[fname] = {
+                "counts": dict(counts.most_common()),
+                "answered": answered,
+                "applicable": applicable,
+                "yes": yes,
+                "yes_pct_of_applicable": (round(100 * yes / applicable, 1)
+                                          if applicable else None),
+            }
+        ratios = [r["ratio_logged_over_reported"] for r in hours_crosscheck_rows]
+        hours_crosscheck = {
+            "n": len(hours_crosscheck_rows),
+            "median_ratio_logged_over_reported": (round(st.median(ratios), 2)
+                                                  if ratios else None),
+            "rows": sorted(hours_crosscheck_rows, key=lambda r: r["project"]),
+            "basis": "Tracker 'Total Hours' field vs hours actually logged in Asana "
+                     "time entries for the same project (matched by GID or unique "
+                     "normalized name).",
+        }
+
+        impact_custom_fields = {
+            "available": True,
+            "source": "data_all/task_custom_fields.csv",
+            "metric_scope": metric_scope,
+            "value_count": scoped_value_count,
+            "field_count": len(field_counts),
+            "all_fields": sorted(field_counts),
+            "record_count": len(tracker_records),
+            "detected_asset_fields": sorted(asset_field_values),
+            "detected_satisfaction_fields": sorted(satisfaction_field_values),
+            "asset_field_stats": {
+                k: field_stats(v) for k, v in sorted(asset_field_values.items())
+            },
+            "satisfaction_field_stats": {
+                k: field_stats(v) for k, v in sorted(satisfaction_field_values.items())
+            },
+            "records_with_assets": sum(1 for r in impact_metric_records if r["asset_total"] > 0),
+            "records_with_satisfaction": sum(1 for r in impact_metric_records
+                                             if r["satisfaction_fields"]),
+            "matched_records": sum(1 for r in impact_metric_records
+                                   if r["matched_project_gid"]),
+            "outcomes": outcomes,
+            "compliance": compliance,
+            "tracker_status_counts": dict(tracker_status_counts.most_common()),
+            "assets_produced_total": round(sum(r["asset_total"]
+                                               for r in impact_metric_records), 1),
+            "asset_field_totals": {k: round(sum(v), 1)
+                                   for k, v in sorted(asset_field_values.items())},
+            "reported_hours_by_year": {k: round(v, 1) for k, v
+                                       in sorted(reported_hours_by_year.items())},
+            "hours_crosscheck": hours_crosscheck,
+            "asset_hours_per_asset": {
+                "usable_for_estimation": usable_asset_model,
+                "hours_per_asset": hours_per_asset,
+                "matched_full_coverage_projects": asset_model_rows,
+                "basis": "Impact Tracker asset-count fields joined to full-coverage Asana time entries by project GID or normalized project/task name.",
+                "note": (None if usable_asset_model else
+                         "Need at least 4 matched full-coverage projects with asset counts before this can adjust displayed hour estimates."),
+            },
+        }
+    else:
+        impact_custom_fields = {
+            "available": False,
+            "source": "data_all/task_custom_fields.csv",
+            "reason": "No task_custom_fields.csv found yet. Run asana_pull.py after the 38 Impact Tracker task fields are available.",
+        }
+
+    # ---- 11. block I: explicitly NOT calibratable --------------------------- #
     not_calibratable = {
         "faculty_time": "time_entries contains ODL STAFF time only -- zero faculty "
                         "hours logged. All faculty-time figures remain planning "
@@ -338,7 +664,7 @@ def main():
                            "per-task tracking accumulates.",
     }
 
-    # ---- 10. backtest: leave-one-out --------------------------------------- #
+    # ---- 12. backtest: leave-one-out --------------------------------------- #
     fc = sorted(h for _, h in by_arch.get("full_course", []))
     loo = []
     for i, v in enumerate(fc):
@@ -358,7 +684,7 @@ def main():
                    "this is WHY the estimator must quote P25-P80 ranges, not points.",
     }
 
-    # ---- 11. assemble + write ----------------------------------------------- #
+    # ---- 13. assemble + write ----------------------------------------------- #
     entry_dates = sorted(e["entry_date"] for e in entries if e["entry_date"])
     cal = {
         "_provenance": {
@@ -378,6 +704,8 @@ def main():
         "media_lifecycle_split": media_split,
         "full_course_phase_mix": course_phase_mix,
         "calendar": calendar,
+        "impact_tracker": impact_tracker,
+        "impact_custom_fields": impact_custom_fields,
         "not_calibratable": not_calibratable,
         "backtest": backtest,
     }
@@ -385,7 +713,7 @@ def main():
     json.dump(cal, open(out, "w"), indent=2, ensure_ascii=False)
     print("wrote", out)
 
-    # ---- 12. charts ---------------------------------------------------------- #
+    # ---- 14. charts ---------------------------------------------------------- #
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
@@ -472,7 +800,7 @@ def main():
     fig.tight_layout(); fig.savefig(os.path.join(C, "6_phase_mix.png"), dpi=140); plt.close(fig)
     print("wrote 6 charts to", C)
 
-    # ---- 13. readable summary ------------------------------------------------ #
+    # ---- 15. readable summary ------------------------------------------------ #
     print("\n=== CALIBRATION READOUT ===")
     print(f"production set (n={len(prod_set)}):", [proj_name[g] for g in prod_set])
     for a, blk in archetype_effort.items():
@@ -482,6 +810,19 @@ def main():
     print("video p50 observed:", obs_q, "-> blended", blended, f"(w={w})")
     print("media split:", media_split["split_pct"])
     print("course mix:", course_phase_mix["share_pct"])
+    print("impact tracker:", {
+        "tracked_projects": impact_tracker["tracked_projects"],
+        "coverage_pct": impact_tracker["coverage_pct"],
+        "status_counts": impact_tracker["status_counts"],
+    })
+    print("impact custom fields:", {
+        "available": impact_custom_fields["available"],
+        "field_count": impact_custom_fields.get("field_count", 0),
+        "asset_fields": impact_custom_fields.get("detected_asset_fields", []),
+        "satisfaction_fields": impact_custom_fields.get("detected_satisfaction_fields", []),
+        "usable_asset_model": (impact_custom_fields.get("asset_hours_per_asset") or {})
+                              .get("usable_for_estimation", False),
+    })
     print("backtest:", {k: backtest[k] for k in ("median_ape_pct", "iqr_coverage_pct")})
 
 

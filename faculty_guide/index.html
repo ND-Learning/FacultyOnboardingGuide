@@ -79,6 +79,21 @@
   .navtabs button{border:none;background:#eef0f3;color:var(--navy);font-weight:700;font-size:13px;
     padding:8px 16px;border-radius:999px;cursor:pointer}
   .navtabs button.on{background:var(--navy);color:#fff}
+  .perf-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin:10px 0 16px}
+  .perf-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .perf-card .k{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
+  .perf-card .v{font-size:28px;font-weight:800;color:var(--navy);letter-spacing:-.4px;margin-top:3px}
+  .perf-card .v .vu{font-size:15px;font-weight:700;color:var(--muted)}
+  .perf-card .s{font-size:12px;color:var(--muted);margin-top:2px}
+  .meter{height:10px;background:#eef0f3;border-radius:999px;overflow:hidden;margin-top:10px}
+  .meter span{display:block;height:100%;background:var(--gold)}
+  .outdated-list{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:12px 0 0}
+  .outdated-list h4{margin:0 0 8px;color:var(--navy);font-size:14px}
+  .outdated-list ul{margin:0;padding-left:18px;color:var(--muted);font-size:13px}
+  .status-note{background:var(--gold-soft);border-left:4px solid var(--gold);border-radius:8px;padding:12px 14px;margin-top:12px;font-size:13px;color:var(--navy)}
+  .field-pills{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+  .field-pill{background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 9px;font-size:12px;color:var(--navy)}
+  .perf-h{margin:22px 0 6px;color:var(--navy);font-size:15px}
   .show-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:10px}
   .show-card h4{margin:0 0 4px;color:var(--navy)}
   .show-card .need{font-size:13px;color:var(--muted);font-style:italic}
@@ -153,6 +168,7 @@
     <div class="navtabs">
       <button data-tab="plan" class="on">Your Plan</button>
       <button data-tab="process">The Process</button>
+      <button data-tab="performance">Track Record</button>
       <button data-tab="similar">Similar Projects</button>
     </div>
 
@@ -167,6 +183,8 @@
       <p class="note" id="s-bundle"></p>
       <p class="note" id="s-pm"></p>
       <p class="note" id="s-history"></p>
+      <p class="note" id="s-impact"></p>
+      <p class="note" id="s-impact-asset"></p>
       <div id="timeline" class="timeline"></div>
       <p class="note">Tap any phase above (or in <strong>The Process</strong>) for what happens and what you'll do.</p>
       <div id="detailHost"></div>
@@ -183,8 +201,11 @@
         projects</strong> (25 fully tracked), e.g. full courses: median 43 staff-hours (excl. PM) and a
         median 31-week timeline (middle half 18–42 wk, n=23). Design and faculty-time figures are ODL
         planning estimates (we have not yet logged faculty time) and are shown as
-        <strong>ranges</strong>, not fixed numbers — they tighten as we track more projects.
-        These are estimates for planning, <strong>not commitments</strong>.</p>
+        <strong>ranges</strong>, not fixed numbers — they tighten as we track more projects. The
+        <strong>Track Record</strong> tab draws on ODL's Impact Tracker in Asana: project status plus
+        outcome fields like assets delivered and faculty satisfaction. Asset counts feed back into
+        the estimate (the "second opinion" line) only once enough fully tracked projects match the
+        tracker. These are estimates for planning, <strong>not commitments</strong>.</p>
       </details>
 
       <div class="disclaimer">
@@ -201,6 +222,9 @@
 
     <!-- PROCESS TAB -->
     <div id="tab-process" class="hidden"></div>
+
+    <!-- PERFORMANCE TAB -->
+    <div id="tab-performance" class="hidden"></div>
 
     <!-- SIMILAR TAB -->
     <div id="tab-similar" class="hidden"></div>
@@ -306,6 +330,15 @@
   };
 
   function fmtRange(r,unit){ return r[0]+"–"+r[1]+" "+unit; }
+  function esc(s){
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){
+      return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c];
+    });
+  }
+  function fieldPills(items, emptyText){
+    if (!items || !items.length) return '<span class="field-pill">'+esc(emptyText || "None detected yet")+'</span>';
+    return items.map(function(x){ return '<span class="field-pill">'+esc(x)+'</span>'; }).join("");
+  }
 
   function run(){
     var est = state.customMode && state.custom
@@ -339,6 +372,28 @@
     } else {
       $("#s-history").textContent = "";
     }
+    var ifd = ODL.CALIBRATION && ODL.CALIBRATION.impactCustomFields;
+    var sat = ifd && ifd.available && ifd.outcomes && ifd.outcomes.faculty_satisfaction_index;
+    if (sat && sat.p50 != null) {
+      $("#s-impact").innerHTML = "<strong>Working with ODL:</strong> faculty partners on " +
+        sat.n + " completed projects rated the experience " + sat.p50 +
+        " out of 5 (median) — more on the <strong>Track Record</strong> tab.";
+    } else if (ODL.CALIBRATION && ODL.CALIBRATION.impactTracker) {
+      $("#s-impact").innerHTML = "<strong>Curious how past projects went?</strong> " +
+        "The <strong>Track Record</strong> tab shows outcomes from completed ODL projects.";
+    } else {
+      $("#s-impact").textContent = "";
+    }
+    if (est.impactAsset && est.impactAsset.hoursPerAsset.p25 != null) {
+      var ia = est.impactAsset;
+      $("#s-impact-asset").innerHTML = "<strong>Second opinion:</strong> pricing your " +
+        ia.assetCount + " planned assets at what finished ones have actually cost (" +
+        ia.hoursPerAsset.p25 + "–" + ia.hoursPerAsset.p75 + " h each, from " +
+        ia.matchedProjects + " fully tracked projects) lands at " +
+        ia.totalWithPm[0] + "–" + ia.totalWithPm[1] + " h including PM.";
+    } else {
+      $("#s-impact-asset").textContent = "";
+    }
 
     // timeline strip
     var tl=$("#timeline"); tl.innerHTML="";
@@ -351,6 +406,7 @@
     });
     showDetail(est, 1); // default to Design
     buildProcess(est);
+    buildPerformance();
     buildSimilar();
     window._est = est;
   }
@@ -377,6 +433,139 @@
       est.phases.map(function(p){return detailCard(p);}).join("");
   }
 
+  function buildPerformance(){
+    var impact = ODL.CALIBRATION && ODL.CALIBRATION.impactTracker;
+    var f = ODL.CALIBRATION && ODL.CALIBRATION.impactCustomFields;
+    var hasFields = !!(f && f.available);
+    if (!impact && !hasFields) {
+      $("#tab-performance").innerHTML =
+        '<p class="lead">Outcome data hasn\'t been pulled into this build of the guide yet — '+
+        'ask ODL for the latest numbers.</p>';
+      return;
+    }
+    function clampPct(x){ return Math.max(0, Math.min(100, x || 0)); }
+
+    // headline cards: what we delivered and what partners said
+    var oc = hasFields && f.outcomes;
+    var cards = [];
+    if (oc && oc.faculty_satisfaction_index && oc.faculty_satisfaction_index.p50 != null) {
+      var s = oc.faculty_satisfaction_index;
+      cards.push('<div class="perf-card"><div class="k">Faculty satisfaction</div>'+
+        '<div class="v">'+s.p50+'<span class="vu"> / 5</span></div>'+
+        '<div class="s">median rating from '+s.n+' completed projects</div></div>');
+    }
+    if (oc && oc.net_promoter_score && oc.net_promoter_score.p50 != null) {
+      var nps = oc.net_promoter_score;
+      cards.push('<div class="perf-card"><div class="k">Would recommend ODL</div>'+
+        '<div class="v">'+nps.p50+'</div>'+
+        '<div class="s">median Net Promoter Score, '+nps.n+' projects</div></div>');
+    }
+    if (oc && oc.student_reach_per_year && oc.student_reach_per_year.total != null) {
+      cards.push('<div class="perf-card"><div class="k">Students reached / year</div>'+
+        '<div class="v">'+oc.student_reach_per_year.total+'</div>'+
+        '<div class="s">across '+oc.student_reach_per_year.n+' tracked projects</div></div>');
+    }
+    if (hasFields && f.assets_produced_total) {
+      cards.push('<div class="perf-card"><div class="k">Assets delivered</div>'+
+        '<div class="v">'+f.assets_produced_total+'</div>'+
+        '<div class="s">videos, course builds, graphics and more, across '+
+        f.records_with_assets+' projects</div></div>');
+    }
+    if (!cards.length && impact) {
+      cards.push('<div class="perf-card"><div class="k">Projects tracked</div>'+
+        '<div class="v">'+impact.tracked_projects+'</div>'+
+        '<div class="s">of '+impact.total_projects+' ODL projects in Asana</div></div>');
+    }
+    var typeTotals = (hasFields && f.asset_field_totals) || {};
+    var typePills = Object.keys(typeTotals)
+      .filter(function(k){ return !/^total/i.test(k) && typeTotals[k] > 0; })
+      .map(function(k){ return '<span class="field-pill">'+esc(k)+': '+typeTotals[k]+'</span>'; }).join("");
+
+    // documentation follow-through, friendliest label first
+    var complianceHtml = "";
+    var comp = hasFields && f.compliance;
+    if (comp && Object.keys(comp).length) {
+      var compLabels = {
+        "Post-Project Evaluation": "Post-project evaluation completed",
+        "Project Charter": "Project charter on file",
+        "Handoff Document": "Handoff document delivered",
+        "IP Agreement": "IP agreement signed",
+        "MOU": "MOU in place"
+      };
+      var order = Object.keys(compLabels).filter(function(k){ return comp[k]; })
+        .concat(Object.keys(comp).filter(function(k){ return !compLabels[k]; }));
+      complianceHtml = '<h4 class="perf-h">How we hold ourselves accountable</h4>'+
+        '<p class="note" style="margin:0 0 10px">Every ODL project is supposed to wrap up with its paperwork '+
+        'in order — a charter, a handoff document, an evaluation. Here\'s how often that has actually happened '+
+        'so far, straight from our tracker:</p>'+
+        order.map(function(k){
+          var c = comp[k];
+          var pct = c.yes_pct_of_applicable;
+          return '<div class="status-note"><strong>'+esc(compLabels[k] || k)+':</strong> '+
+            (pct != null ? c.yes+' of '+c.applicable+' applicable projects ('+Math.round(pct)+'%)' :
+             'no applicable projects yet')+
+            '<div class="meter"><span style="width:'+clampPct(pct)+'%"></span></div></div>';
+        }).join("");
+    }
+
+    // the fine print: coverage, caveats, and where the numbers come from
+    var fine = [];
+    if (impact) {
+      var counts = impact.status_counts || {};
+      var upToDate = counts["Up to date"] || 0;
+      var outdated = counts["Outdated"] || 0;
+      fine.push('<p><strong>Coverage.</strong> '+impact.tracked_projects+' of '+impact.total_projects+
+        ' ODL projects in Asana ('+(impact.coverage_pct != null ? impact.coverage_pct : "?")+
+        '%) carry an Impact Tracker status; '+upToDate+' are up to date and '+outdated+
+        ' need a refresh. A blank status means the field wasn\'t filled in, not that the project had no impact.</p>');
+      var outdatedRows = impact.outdated_projects || [];
+      if (outdatedRows.length) {
+        fine.push('<p><strong>Waiting on a tracker refresh:</strong> '+
+          outdatedRows.map(function(r){ return esc(r.project); }).join(" · ")+'.</p>');
+      }
+    }
+    if (hasFields && f.tracker_status_counts && Object.keys(f.tracker_status_counts).length) {
+      var mix = f.tracker_status_counts;
+      fine.push('<p><strong>Tracker board status:</strong> '+
+        Object.keys(mix).map(function(k){ return mix[k]+' '+esc(k.toLowerCase()); }).join(", ")+'.</p>');
+    }
+    var hx = hasFields && f.hours_crosscheck;
+    if (hx && hx.n > 0 && hx.median_ratio_logged_over_reported != null) {
+      fine.push('<p><strong>A caveat on hours.</strong> On the '+hx.n+
+        ' projects that appear in both systems, our Asana time entries capture a median '+
+        Math.round(hx.median_ratio_logged_over_reported*100)+
+        '% of the hours reported in the tracker, so logged-hours figures elsewhere in this guide '+
+        'are best read as a floor.</p>');
+    }
+    if (hasFields) {
+      fine.push('<p><strong>Under the hood.</strong> '+f.field_count+' tracker fields ('+
+        f.value_count+' values across '+f.record_count+' rows); '+f.records_with_assets+
+        ' rows carry asset counts, '+f.records_with_satisfaction+' carry satisfaction scores, and '+
+        f.matched_records+' matched back to Asana projects.</p>');
+      var model = f.asset_hours_per_asset || {};
+      var q = model.hours_per_asset || {};
+      if (model.usable_for_estimation && q.p25 != null && q.p75 != null) {
+        fine.push('<p><strong>Estimator cross-check:</strong> active — finished assets have cost '+
+          q.p25+'–'+q.p75+' non-PM hours each (middle 50%), from '+
+          (model.matched_full_coverage_projects || []).length+' fully tracked projects. '+
+          'This powers the "second opinion" line on Your Plan.</p>');
+      } else if (model.note) {
+        fine.push('<p><strong>Estimator cross-check:</strong> not active yet — '+esc(model.note)+'</p>');
+      }
+    }
+
+    $("#tab-performance").innerHTML =
+      '<p class="lead">How working with ODL has actually gone — what we\'ve delivered and what '+
+      'faculty partners said afterward. Every number on this page comes straight from our own '+
+      'project tracker; where the data is thin, we say so.</p>'+
+      '<div class="perf-grid">'+cards.join("")+'</div>'+
+      (typePills ? '<div class="status-note"><strong>Delivered so far</strong>'+
+        '<div class="field-pills">'+typePills+'</div></div>' : '')+
+      complianceHtml+
+      (fine.length ? '<details class="calc"><summary>About this data — coverage and caveats</summary>'+
+        fine.join("")+'</details>' : '');
+  }
+
   function buildSimilar(){
     var sims = ODL.similarProjects(state.type||"new_course", state.size||"M");
     $("#tab-similar").innerHTML =
@@ -392,7 +581,7 @@
     b.onclick=function(){
       document.querySelectorAll(".navtabs button").forEach(function(x){x.classList.remove("on")});
       b.classList.add("on");
-      ["plan","process","similar"].forEach(function(t){
+      ["plan","process","performance","similar"].forEach(function(t){
         document.getElementById("tab-"+t).classList.toggle("hidden", t!==b.dataset.tab);
       });
     };

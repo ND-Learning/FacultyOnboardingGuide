@@ -156,8 +156,11 @@ def main():
                          "--workspace", team_ws, "--team", team],
                         cwd=HERE, env={**os.environ, "ASANA_TOKEN": tok},
                         capture_output=True, text=True)
+                    # real Asana GIDs are long ints; the length guard skips the
+                    # header and the trailing "N projects." summary line
                     gids = [ln.split()[0] for ln in lp.stdout.splitlines()
-                            if ln[:1].isdigit()]
+                            if ln.split() and ln.split()[0].isdigit()
+                            and len(ln.split()[0]) >= 10]
                     if lp.returncode != 0 or len(gids) < 5:
                         sys.exit("team project listing failed or implausibly small "
                                  f"({len(gids)} projects) -- keeping previous data.\n"

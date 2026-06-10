@@ -44,6 +44,8 @@ def main():
         "coursePhaseMixBasis": cal["full_course_phase_mix"]["basis"],
         "calendarWeeks": {a: q(b) for a, b in
                           cal["calendar"]["span_weeks_by_archetype"].items()},
+        "impactTracker": cal.get("impact_tracker"),
+        "impactCustomFields": cal.get("impact_custom_fields"),
         "notCalibratable": cal["not_calibratable"],
         "backtest": {k: cal["backtest"][k]
                      for k in ("median_ape_pct", "iqr_coverage_pct", "reading")},

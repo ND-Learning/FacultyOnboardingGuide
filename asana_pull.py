@@ -47,6 +47,9 @@ QUICK START
 OUTPUT FILES (in --out dir):
    projects.csv          one row per project (dates, span, task counts, custom fields)
    tasks_raw.csv         one row per (project, task) -- the ground-truth extract
+                         includes tcf::<field name> columns for task custom fields
+   project_custom_fields.csv one row per project custom-field value
+   task_custom_fields.csv    one row per task custom-field value
    phase_summary.csv     one row per (project, phase) -- the modelling table
    sections_seen.csv     every distinct section name found, with task counts
    crosswalk_template.csv section_name + blank canonical_phase, ready to fill
@@ -227,7 +230,7 @@ def cmd_list_projects(args):
         print("%-18s %-7s %-26s %s" % (
             p["gid"], str(p.get("archived")),
             (p.get("team") or {}).get("name", "")[:26], p.get("name")))
-    print("\n%d projects." % len(rows))
+    print("\n%d projects." % len(rows), file=sys.stderr)
 
 
 def cmd_discover(args):
@@ -284,7 +287,21 @@ TASK_FIELDS = ",".join([
     "assignee.name", "assignee.gid", "num_subtasks", "resource_subtype",
     "start_on", "due_on",
     "memberships.project.gid", "memberships.section.name",
-    "custom_fields.name", "custom_fields.display_value",
+    "custom_fields.gid", "custom_fields.name", "custom_fields.resource_subtype",
+    "custom_fields.display_value", "custom_fields.text_value",
+    "custom_fields.number_value", "custom_fields.enum_value.name",
+    "custom_fields.multi_enum_values.name", "custom_fields.date_value.date",
+    "custom_fields.people_value.name", "custom_fields.reference_value.name",
+])
+
+PROJECT_FIELDS = ",".join([
+    "name", "archived", "created_at", "start_on", "due_on",
+    "current_status.text", "owner.name", "team.name",
+    "custom_fields.gid", "custom_fields.name", "custom_fields.resource_subtype",
+    "custom_fields.display_value", "custom_fields.text_value",
+    "custom_fields.number_value", "custom_fields.enum_value.name",
+    "custom_fields.multi_enum_values.name", "custom_fields.date_value.date",
+    "custom_fields.people_value.name", "custom_fields.reference_value.name",
 ])
 
 
@@ -337,6 +354,66 @@ def section_of(task, project_gid):
     return "(no section)"
 
 
+def _compact_names(values):
+    return ", ".join((v.get("name") or "") for v in (values or []) if v.get("name"))
+
+
+def _custom_field_display(cf):
+    """Return a stable export value for any Asana custom-field type."""
+    if cf.get("display_value") not in (None, ""):
+        return cf.get("display_value")
+    subtype = cf.get("resource_subtype") or ""
+    if subtype == "text":
+        return cf.get("text_value") or ""
+    if subtype == "number":
+        return cf.get("number_value")
+    if subtype == "enum":
+        return (cf.get("enum_value") or {}).get("name", "")
+    if subtype == "multi_enum":
+        return _compact_names(cf.get("multi_enum_values"))
+    if subtype == "date":
+        return (cf.get("date_value") or {}).get("date", "")
+    if subtype == "people":
+        return _compact_names(cf.get("people_value"))
+    if subtype == "reference":
+        return _compact_names(cf.get("reference_value"))
+    return ""
+
+
+def custom_field_map(custom_fields):
+    """Field name -> display/export value. Used for wide CSV columns."""
+    out = {}
+    for cf in custom_fields or []:
+        name = (cf.get("name") or "").strip()
+        if name:
+            out[name] = _custom_field_display(cf)
+    return out
+
+
+def custom_field_rows(custom_fields, base):
+    """Long-form custom field rows preserve every field even when names change."""
+    rows = []
+    for cf in custom_fields or []:
+        name = (cf.get("name") or "").strip()
+        if not name:
+            continue
+        date_value = cf.get("date_value") or {}
+        rows.append(dict(base, **{
+            "custom_field_gid": cf.get("gid") or "",
+            "custom_field_name": name,
+            "resource_subtype": cf.get("resource_subtype") or "",
+            "display_value": _custom_field_display(cf),
+            "text_value": cf.get("text_value") or "",
+            "number_value": cf.get("number_value") if cf.get("number_value") is not None else "",
+            "enum_value": (cf.get("enum_value") or {}).get("name", ""),
+            "multi_enum_values": _compact_names(cf.get("multi_enum_values")),
+            "date_value": date_value.get("date", "") or date_value.get("date_time", ""),
+            "people_value": _compact_names(cf.get("people_value")),
+            "reference_value": _compact_names(cf.get("reference_value")),
+        }))
+    return rows
+
+
 def fetch_time_tracking(task_gid, available, sleep):
     """Returns (entries, still_available). entries = list of dicts
     {minutes, entered_on, author} — the individual logged time entries (a real
@@ -376,7 +453,8 @@ def cmd_pull(args):
     tt_available = not args.no_time_tracking
     report = []
     sections_seen = defaultdict(int)
-    project_rows, task_rows, time_entry_rows = [], [], []
+    project_rows, project_custom_field_rows = [], []
+    task_rows, task_custom_field_rows, time_entry_rows = [], [], []
     # phase aggregation: key (project_gid, phase) -> accumulator
     agg = defaultdict(lambda: {
         "n_tasks": 0, "n_completed": 0, "assignees": set(),
@@ -393,9 +471,7 @@ def cmd_pull(args):
             _log("  ...checkpoint saved (%d time entries so far)" % len(time_entry_rows))
         try:
             proj, _ = api_get("/projects/%s" % gid, {
-                "opt_fields": "name,archived,created_at,start_on,due_on,"
-                              "current_status.text,owner.name,team.name,"
-                              "custom_fields.name,custom_fields.display_value"})
+                "opt_fields": PROJECT_FIELDS})
             pname = proj.get("name")
             _log("  [%d/%d] %s (%s)" % (pi, len(gids), pname, gid))
             tasks = api_get_all("/projects/%s/tasks" % gid,
@@ -406,8 +482,11 @@ def cmd_pull(args):
             continue
 
         proj_first_done = proj_last_done = None
-        custom = {(cf.get("name") or ""): cf.get("display_value")
-                  for cf in (proj.get("custom_fields") or [])}
+        custom = custom_field_map(proj.get("custom_fields"))
+        project_custom_field_rows.extend(custom_field_rows(
+            proj.get("custom_fields"),
+            {"project_gid": gid, "project_name": pname}
+        ))
 
         for t in tasks:
             sec = section_of(t, gid)
@@ -416,9 +495,16 @@ def cmd_pull(args):
             created = parse_dt(t.get("created_at"))
             done = parse_dt(t.get("completed_at"))
             assignee = (t.get("assignee") or {}).get("name")
-            tcustom = {(cf.get("name") or ""): cf.get("display_value")
-                       for cf in (t.get("custom_fields") or [])}
+            tcustom = custom_field_map(t.get("custom_fields"))
             resp_team = tcustom.get("Responsible Team") or ""
+            task_custom_field_rows.extend(custom_field_rows(
+                t.get("custom_fields"),
+                {
+                    "project_gid": gid, "project_name": pname,
+                    "task_gid": t["gid"], "task_name": t.get("name"),
+                    "section": sec, "canonical_phase": phase,
+                }
+            ))
 
             tt_minutes = 0.0
             if tt_available:
@@ -440,7 +526,7 @@ def cmd_pull(args):
             act = comm = 0
             if args.activity:
                 act, comm = fetch_activity(t["gid"], args.sleep)
-            task_rows.append({
+            task_row = {
                 "project_gid": gid, "project_name": pname,
                 "task_gid": t["gid"], "task_name": t.get("name"),
                 "section": sec, "canonical_phase": phase,
@@ -453,7 +539,10 @@ def cmd_pull(args):
                 "tracked_minutes": tt_minutes,
                 "n_activity": act, "n_comments": comm,
                 "task_custom_fields": json.dumps(tcustom, ensure_ascii=False),
-            })
+            }
+            for k, v in tcustom.items():
+                task_row["tcf::" + k] = v
+            task_rows.append(task_row)
 
             a = agg[(gid, phase)]
             a["n_tasks"] += 1
@@ -501,6 +590,12 @@ def cmd_pull(args):
     # ---- write projects.csv ----------------------------------------------- #
     _write_csv(os.path.join(args.out, "projects.csv"), project_rows)
 
+    # ---- write long-form custom field values ------------------------------ #
+    _write_csv(os.path.join(args.out, "project_custom_fields.csv"),
+               project_custom_field_rows)
+    _write_csv(os.path.join(args.out, "task_custom_fields.csv"),
+               task_custom_field_rows)
+
     # ---- write phase_summary.csv ------------------------------------------ #
     phase_rows = []
     for (gid, phase), a in agg.items():
@@ -536,6 +631,10 @@ def cmd_pull(args):
     # ---- report ----------------------------------------------------------- #
     n_tracked_projects = len({r["project_gid"] for r in phase_rows
                               if r["tracked_minutes"] > 0})
+    n_project_custom_fields = len({r["custom_field_name"]
+                                   for r in project_custom_field_rows})
+    n_task_custom_fields = len({r["custom_field_name"]
+                                for r in task_custom_field_rows})
     bulk_projects = sorted({r["project_name"] for r in phase_rows
                             if r["bulk_created_fraction"] > 0.5})
     lines = [
@@ -545,6 +644,10 @@ def cmd_pull(args):
         "tasks pulled           : %d" % len(task_rows),
         "phase rows             : %d" % len(phase_rows),
         "distinct sections      : %d" % len(sections_seen),
+        "project custom fields  : %d distinct names (%d values)" %
+        (n_project_custom_fields, len(project_custom_field_rows)),
+        "task custom fields     : %d distinct names (%d values)" %
+        (n_task_custom_fields, len(task_custom_field_rows)),
         "time-tracking endpoint : %s" % (
             "AVAILABLE" if (not args.no_time_tracking and tt_available)
             else "UNAVAILABLE / disabled"),

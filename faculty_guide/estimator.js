@@ -17,6 +17,11 @@
      PM-tracked projects (replaces the old size-bucket extrapolation).
    - Calendar: per-archetype span quartiles from completed_at timestamps with
      bulk check-off filtering (full courses: median 31 wk, IQR 18–42, n=23).
+   - Impact Tracker status is pulled from the Asana project custom field
+     "Impact Tracker Status" and summarized as a performance/compliance signal.
+   - Impact Tracker task fields, when exported to task_custom_fields.csv, are
+     used as an asset-count cross-check only after matching to fully tracked
+     projects produces a defensible hours-per-asset calibration.
    - Design / Discovery / QA / Evaluation hours and all FACULTY-time figures are
      ODL planning estimates (labeled as such) — logged data contains ZERO faculty
      time and <15 h each of Discovery/QA/Evaluation, so they cannot be calibrated
@@ -187,6 +192,472 @@
         "max": 25.3
       }
     },
+    "impactTracker": {
+      "field": "cf::Impact Tracker Status",
+      "basis": "data_all/projects.csv Asana project custom field across 125 pulled projects",
+      "total_projects": 125,
+      "tracked_projects": 31,
+      "blank_projects": 94,
+      "coverage_pct": 24.8,
+      "status_counts": {
+        "Up to date": 23,
+        "Outdated": 8
+      },
+      "up_to_date_pct_of_tracked": 74.2,
+      "outdated_projects": [
+        {
+          "project_gid": "1207942229848224",
+          "project": "National Education Opportunities Network (NEON)",
+          "status": "Outdated"
+        },
+        {
+          "project_gid": "1209417474929053",
+          "project": "Business on the Frontlines XR",
+          "status": "Outdated"
+        },
+        {
+          "project_gid": "1209679644127773",
+          "project": "Radio Systems Course",
+          "status": "Outdated"
+        },
+        {
+          "project_gid": "1212660352662527",
+          "project": "Romance Languages video/podcast initiative",
+          "status": "Outdated"
+        },
+        {
+          "project_gid": "1213393701257435",
+          "project": "Digital Accessibility",
+          "status": "Outdated"
+        },
+        {
+          "project_gid": "1213551317973102",
+          "project": "ODL Media Studio Sessions",
+          "status": "Outdated"
+        },
+        {
+          "project_gid": "1214783923511446",
+          "project": "Sprint - Unlocking Inaccessible Korean Heritage",
+          "status": "Outdated"
+        },
+        {
+          "project_gid": "1214795652576790",
+          "project": "Maximizing Mendoza",
+          "status": "Outdated"
+        }
+      ]
+    },
+    "impactCustomFields": {
+      "available": true,
+      "source": "data_all/task_custom_fields.csv",
+      "metric_scope": "Impact Tracker board tasks only",
+      "value_count": 5396,
+      "field_count": 38,
+      "all_fields": [
+        "Academic Department",
+        "Additional Comments",
+        "Canvas Courses",
+        "Credit-Bearing",
+        "End Date",
+        "Faculty Collaborators",
+        "Faculty Satisfaction Index",
+        "Fees",
+        "Google Drive Folder Title",
+        "Graphics",
+        "Handoff Document",
+        "IP Agreement",
+        "Interactives",
+        "Link to Handoff Document",
+        "Link to IP Agreement",
+        "Link to MOU",
+        "Link to Project Charter",
+        "Link to Reflection Report",
+        "MOU",
+        "Net Promoter Score",
+        "ODL Departments Involved",
+        "Post-Project Evaluation",
+        "Project Charter",
+        "Project Type",
+        "Start Date",
+        "Status",
+        "Student Reach / Year",
+        "Summary",
+        "T-Shirt Size",
+        "Team Members",
+        "Total Assets",
+        "Total Hours",
+        "Total Hours (2024)",
+        "Total Hours (2025)",
+        "Total Hours (2026)",
+        "Videos",
+        "Web Page Modules",
+        "XR experiences"
+      ],
+      "record_count": 142,
+      "detected_asset_fields": [
+        "Canvas Courses",
+        "Graphics",
+        "Interactives",
+        "Total Assets",
+        "Videos",
+        "Web Page Modules",
+        "XR experiences"
+      ],
+      "detected_satisfaction_fields": [
+        "Faculty Satisfaction Index"
+      ],
+      "asset_field_stats": {
+        "Canvas Courses": {
+          "n": 28,
+          "min": 0.0,
+          "p25": 0.0,
+          "p50": 1.0,
+          "p75": 1.0,
+          "p80": 1.0,
+          "max": 2.0
+        },
+        "Graphics": {
+          "n": 28,
+          "min": 0.0,
+          "p25": 0.0,
+          "p50": 0.0,
+          "p75": 0.0,
+          "p80": 0.0,
+          "max": 8.0
+        },
+        "Interactives": {
+          "n": 27,
+          "min": 0.0,
+          "p25": 0.0,
+          "p50": 0.0,
+          "p75": 0.0,
+          "p80": 0.0,
+          "max": 1.0
+        },
+        "Total Assets": {
+          "n": 142,
+          "min": 0.0,
+          "p25": 0.0,
+          "p50": 0.0,
+          "p75": 0.0,
+          "p80": 1.0,
+          "max": 114.0
+        },
+        "Videos": {
+          "n": 29,
+          "min": 0.0,
+          "p25": 0.0,
+          "p50": 0.0,
+          "p75": 14.0,
+          "p80": 17.4,
+          "max": 114.0
+        },
+        "Web Page Modules": {
+          "n": 26,
+          "min": 0.0,
+          "p25": 0.0,
+          "p50": 0.0,
+          "p75": 0.0,
+          "p80": 0.0,
+          "max": 4.0
+        },
+        "XR experiences": {
+          "n": 28,
+          "min": 0.0,
+          "p25": 0.0,
+          "p50": 0.0,
+          "p75": 0.0,
+          "p80": 0.6,
+          "max": 1.0
+        }
+      },
+      "satisfaction_field_stats": {
+        "Faculty Satisfaction Index": {
+          "n": 24,
+          "min": 4.4,
+          "p25": 4.7,
+          "p50": 4.9,
+          "p75": 5.0,
+          "p80": 5.0,
+          "max": 5.0
+        }
+      },
+      "records_with_assets": 31,
+      "records_with_satisfaction": 24,
+      "matched_records": 45,
+      "outcomes": {
+        "faculty_satisfaction_index": {
+          "n": 24,
+          "min": 4.4,
+          "p25": 4.7,
+          "p50": 4.9,
+          "p75": 5.0,
+          "p80": 5.0,
+          "max": 5.0,
+          "mean": 4.84
+        },
+        "net_promoter_score": {
+          "n": 24,
+          "min": 90.0,
+          "p25": 100.0,
+          "p50": 100.0,
+          "p75": 100.0,
+          "p80": 100.0,
+          "max": 100.0,
+          "mean": 99.38
+        },
+        "student_reach_per_year": null
+      },
+      "compliance": {
+        "Handoff Document": {
+          "counts": {
+            "No": 88,
+            "Yes": 24
+          },
+          "answered": 112,
+          "applicable": 112,
+          "yes": 24,
+          "yes_pct_of_applicable": 21.4
+        },
+        "IP Agreement": {
+          "counts": {
+            "No": 91,
+            "Yes": 20,
+            "Not Signed": 9,
+            "N/A": 3,
+            "In Progress": 1
+          },
+          "answered": 124,
+          "applicable": 121,
+          "yes": 20,
+          "yes_pct_of_applicable": 16.5
+        },
+        "MOU": {
+          "counts": {
+            "Yes": 7,
+            "N/A": 5,
+            "In Progress": 2
+          },
+          "answered": 14,
+          "applicable": 9,
+          "yes": 7,
+          "yes_pct_of_applicable": 77.8
+        },
+        "Post-Project Evaluation": {
+          "counts": {
+            "Yes": 22,
+            "No": 9
+          },
+          "answered": 31,
+          "applicable": 31,
+          "yes": 22,
+          "yes_pct_of_applicable": 71.0
+        },
+        "Project Charter": {
+          "counts": {
+            "No": 59,
+            "Yes": 34,
+            "Not Signed": 15,
+            "In Progress": 14,
+            "Other Plan": 5,
+            "Addendum": 1
+          },
+          "answered": 128,
+          "applicable": 128,
+          "yes": 34,
+          "yes_pct_of_applicable": 26.6
+        }
+      },
+      "tracker_status_counts": {
+        "Complete": 72,
+        "In Progress": 28,
+        "No Documentation": 15,
+        "On Hold": 4
+      },
+      "assets_produced_total": 358.0,
+      "asset_field_totals": {
+        "Canvas Courses": 21.0,
+        "Graphics": 15.0,
+        "Interactives": 3.0,
+        "Total Assets": 358.0,
+        "Videos": 309.0,
+        "Web Page Modules": 4.0,
+        "XR experiences": 6.0
+      },
+      "reported_hours_by_year": {
+        "2025": 5815.0
+      },
+      "hours_crosscheck": {
+        "n": 17,
+        "median_ratio_logged_over_reported": 0.35,
+        "rows": [
+          {
+            "project": "3D Environments Summer Online",
+            "project_gid": "1208878713359040",
+            "tracker_reported_hours": 72.0,
+            "asana_logged_hours": 35.2,
+            "ratio_logged_over_reported": 0.49
+          },
+          {
+            "project": "ACE Assessment Course Redesign",
+            "project_gid": "1208622917750063",
+            "tracker_reported_hours": 84.5,
+            "asana_logged_hours": 33.4,
+            "ratio_logged_over_reported": 0.4
+          },
+          {
+            "project": "ACE Higher Powered Learning (HPL)",
+            "project_gid": "1211134268245785",
+            "tracker_reported_hours": 523.0,
+            "asana_logged_hours": 26.0,
+            "ratio_logged_over_reported": 0.05
+          },
+          {
+            "project": "ASCEND Engineering",
+            "project_gid": "1209213189516073",
+            "tracker_reported_hours": 159.0,
+            "asana_logged_hours": 102.9,
+            "ratio_logged_over_reported": 0.65
+          },
+          {
+            "project": "ASCEND MCOB",
+            "project_gid": "1212343204566399",
+            "tracker_reported_hours": 8.0,
+            "asana_logged_hours": 62.0,
+            "ratio_logged_over_reported": 7.75
+          },
+          {
+            "project": "Business for Humans | Sheedy Family Program",
+            "project_gid": "1211653962736510",
+            "tracker_reported_hours": 12.0,
+            "asana_logged_hours": 38.8,
+            "ratio_logged_over_reported": 3.23
+          },
+          {
+            "project": "C2D: Cybertraining for Chemical Data scientists",
+            "project_gid": "1211900372320318",
+            "tracker_reported_hours": 20.0,
+            "asana_logged_hours": 16.5,
+            "ratio_logged_over_reported": 0.82
+          },
+          {
+            "project": "CIF Video",
+            "project_gid": "1212638028070139",
+            "tracker_reported_hours": 29.0,
+            "asana_logged_hours": 9.0,
+            "ratio_logged_over_reported": 0.31
+          },
+          {
+            "project": "FCTA - Calculus I",
+            "project_gid": "1208031566113859",
+            "tracker_reported_hours": 43.0,
+            "asana_logged_hours": 2.8,
+            "ratio_logged_over_reported": 0.07
+          },
+          {
+            "project": "FCTA - Physics I",
+            "project_gid": "1207760971753716",
+            "tracker_reported_hours": 127.0,
+            "asana_logged_hours": 38.7,
+            "ratio_logged_over_reported": 0.3
+          },
+          {
+            "project": "I CAN HELP Learning Modules",
+            "project_gid": "1211900373500710",
+            "tracker_reported_hours": 17.0,
+            "asana_logged_hours": 6.0,
+            "ratio_logged_over_reported": 0.35
+          },
+          {
+            "project": "MS-ACMS Faculty Videos",
+            "project_gid": "1211489930659695",
+            "tracker_reported_hours": 33.0,
+            "asana_logged_hours": 5.0,
+            "ratio_logged_over_reported": 0.15
+          },
+          {
+            "project": "MSAN",
+            "project_gid": "1208014741125322",
+            "tracker_reported_hours": 71.0,
+            "asana_logged_hours": 8.0,
+            "ratio_logged_over_reported": 0.11
+          },
+          {
+            "project": "MSAN II",
+            "project_gid": "1208335647365608",
+            "tracker_reported_hours": 50.0,
+            "asana_logged_hours": 71.1,
+            "ratio_logged_over_reported": 1.42
+          },
+          {
+            "project": "ODL Lookbook",
+            "project_gid": "1208659811898324",
+            "tracker_reported_hours": 75.0,
+            "asana_logged_hours": 22.3,
+            "ratio_logged_over_reported": 0.3
+          },
+          {
+            "project": "Responsible and Ethical AI",
+            "project_gid": "1208963580488220",
+            "tracker_reported_hours": 918.0,
+            "asana_logged_hours": 278.6,
+            "ratio_logged_over_reported": 0.3
+          },
+          {
+            "project": "Virtual Borders",
+            "project_gid": "1208335647365619",
+            "tracker_reported_hours": 120.0,
+            "asana_logged_hours": 81.8,
+            "ratio_logged_over_reported": 0.68
+          }
+        ],
+        "basis": "Tracker 'Total Hours' field vs hours actually logged in Asana time entries for the same project (matched by GID or unique normalized name)."
+      },
+      "asset_hours_per_asset": {
+        "usable_for_estimation": true,
+        "hours_per_asset": {
+          "n": 4,
+          "min": 0.9,
+          "p25": 2.0,
+          "p50": 2.5,
+          "p75": 5.9,
+          "p80": 7.9,
+          "max": 15.8
+        },
+        "matched_full_coverage_projects": [
+          {
+            "project": "MSAN II",
+            "project_gid": "1208335647365608",
+            "asset_total": 27.0,
+            "non_pm_hours": 71.1,
+            "hours_per_asset": 2.63
+          },
+          {
+            "project": "Responsible and Ethical AI",
+            "project_gid": "1208963580488220",
+            "asset_total": 114.0,
+            "non_pm_hours": 98.9,
+            "hours_per_asset": 0.87
+          },
+          {
+            "project": "ACE Assessment Course Redesign",
+            "project_gid": "1208622917750063",
+            "asset_total": 14.0,
+            "non_pm_hours": 33.4,
+            "hours_per_asset": 2.39
+          },
+          {
+            "project": "Travel Safety 101",
+            "project_gid": "1208255134985069",
+            "asset_total": 1.0,
+            "non_pm_hours": 15.7,
+            "hours_per_asset": 15.75
+          }
+        ],
+        "basis": "Impact Tracker asset-count fields joined to full-coverage Asana time entries by project GID or normalized project/task name.",
+        "note": null
+      }
+    },
     "notCalibratable": {
       "faculty_time": "time_entries contains ODL STAFF time only -- zero faculty hours logged. All faculty-time figures remain planning estimates and must be labeled as such.",
       "discovery_effort": "only 11.0h logged across all projects -- discovery happens before boards get tracked. Insufficient.",
@@ -311,10 +782,10 @@
     },
     {
       key: "evaluation", title: "Evaluation & Iteration", icon: "📊",
-      whatHappens: "After launch we gather feedback and performance data to understand the student experience and plan improvements.",
-      odlDoes: "Sends the reflection survey, builds the report, runs the retrospective.",
+      whatHappens: "After launch we gather feedback, analyze performance data, and update the Asana Impact Tracker to understand the student experience and plan improvements.",
+      odlDoes: "Sends the reflection survey, updates the impact tracker status, builds the report, and runs the retrospective.",
       youDo: "Review feedback and metrics with us; reflect and plan future enhancements.",
-      artifacts: ["Evaluation Report"], ongoing: true
+      artifacts: ["Evaluation Report", "Impact Tracker update"], ongoing: true
     }
   ];
 
@@ -397,15 +868,40 @@
   function band(h, lo, hi) { return [Math.round(h * lo), Math.round(h * hi)]; }
 
   function bundleMediaHours(b) {
-    var pre = 0, prod = 0, post = 0, graphics = 0, xr = 0, videoCount = 0;
+    var pre = 0, prod = 0, post = 0, graphics = 0, xr = 0;
+    var videoCount = 0, graphicsCount = 0, xrCount = 0;
     for (var k in videoRates) {
       var n = b[k] || 0; videoCount += n;
       pre += n * videoRates[k].pre; prod += n * videoRates[k].prod; post += n * videoRates[k].post;
     }
-    for (var g in graphicsRates) { graphics += (b[g] || 0) * graphicsRates[g].hours; }
-    for (var x in xrRates) { xr += (b[x] || 0) * xrRates[x].hours; }
+    for (var g in graphicsRates) {
+      var gn = b[g] || 0; graphicsCount += gn; graphics += gn * graphicsRates[g].hours;
+    }
+    for (var x in xrRates) {
+      var xn = b[x] || 0; xrCount += xn; xr += xn * xrRates[x].hours;
+    }
     return { pre: pre, prod: prod, post: post, graphics: graphics, xr: xr,
-             videoCount: videoCount, modules: b.modules || 0 };
+             videoCount: videoCount, modules: b.modules || 0,
+             graphicsCount: graphicsCount, xrCount: xrCount,
+             assetCount: videoCount + (b.modules || 0) + graphicsCount + xrCount };
+  }
+
+  function impactAssetEstimate(assetCount, pm) {
+    var blk = CALIBRATION && CALIBRATION.impactCustomFields;
+    var model = blk && blk.asset_hours_per_asset;
+    var q = model && model.hours_per_asset;
+    if (!model || !model.usable_for_estimation || !q || q.p25 == null || q.p75 == null || !assetCount) {
+      return null;
+    }
+    var nonPm = [Math.round(assetCount * q.p25), Math.round(assetCount * q.p75)];
+    return {
+      assetCount: assetCount,
+      nonPm: nonPm,
+      totalWithPm: [nonPm[0] + pm[0], nonPm[1] + pm[1]],
+      hoursPerAsset: q,
+      basis: model.basis,
+      matchedProjects: (model.matched_full_coverage_projects || []).length
+    };
   }
 
   /* Estimate per phase from an explicit deliverable bundle.
@@ -459,12 +955,14 @@
     // added to the ODL-effort total as a line item
     var pm = pmFromWeeks(totWk, size);
     totOdl[0] += pm[0]; totOdl[1] += pm[1];
+    var impactAsset = impactAssetEstimate(m.assetCount, pm);
 
     return {
       phases: phases,
       pm: pm,
       totals: { odl: totOdl, faculty: totFac, weeks: totWk },
-      media: m, bundle: bundle, size: size
+      media: m, bundle: bundle, size: size,
+      impactAsset: impactAsset
     };
   }
 

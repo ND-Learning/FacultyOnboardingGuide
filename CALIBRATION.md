@@ -168,3 +168,42 @@ adds one registry row; a fully-tracked project whose logging stops while tasks
 keep completing is demoted and queued (re-admit with `force_coverage=full`).
 The deterministic audit (`audit_rules.py`) reproduces the agent-verified
 baseline calibration exactly (0 differences).
+
+## 8. Performance & impact (Asana Impact Tracker, added 2026-06-10)
+
+Two calibration blocks feed the faculty guide's **Performance** tab; both are
+recomputed on every refresh and flow through the same no-hand-typing path
+(`calibrate.py` → `calibration.json` → `inject_calibration.py`).
+
+**Block G — project-level status** (`impact_tracker`): coverage and freshness
+of the `Impact Tracker Status` custom field across all pulled projects
+(`data_all/projects.csv`), including the list of projects flagged *Outdated*.
+
+**Block H — the Impact Tracker board** (`impact_custom_fields`): the ODL
+*Impact Tracker* Asana board (gid 1211592424221769, registered
+`internal_admin` / non-course-dev so it never enters effort calibration) holds
+one task per past/current project with **38 custom fields**. The pull exports
+every task custom field to `data_all/task_custom_fields.csv`; block H scopes
+metric extraction to that board's rows and derives:
+
+- **Outcomes** — Faculty Satisfaction Index and Net Promoter Score
+  (median/mean/n), Student Reach / Year (empty in Asana as of 2026-06-10).
+- **Assets delivered** — per record it prefers the `Total Assets` rollup and
+  falls back to summing the per-type counts (Videos, XR experiences, Graphics,
+  Canvas Courses, Interactives, Web Page Modules) — never both, so no double
+  counting.
+- **Documentation compliance** — % *Yes* among applicable (non-N/A) projects
+  for IP Agreement, Project Charter, Handoff Document, Post-Project
+  Evaluation, MOU.
+- **Status mix** of the board (`Complete` / `In Progress` / …).
+- **Hours cross-check** — tracker-reported `Total Hours` vs hours actually
+  logged in Asana time entries for the same project (matched by GID or unique
+  normalized name); reported as a ratio, since tracker hours predate
+  systematic time logging.
+- **Hours-per-asset model** — `Total Assets` joined to full-coverage logged
+  projects; used by the estimator only as a labeled cross-check, activating at
+  n≥4 matched projects.
+
+Same honesty rules as everything above: blank Asana fields are reported as
+missing, never imputed; survey-style results stay summary-level (directors own
+the raw survey data per SOP).
