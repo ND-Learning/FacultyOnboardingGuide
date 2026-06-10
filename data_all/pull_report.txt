@@ -1,8 +1,8 @@
 ODL Asana pull report
 =====================
-projects pulled        : 124
-tasks pulled           : 3119
-phase rows             : 512
+projects pulled        : 125
+tasks pulled           : 3261
+phase rows             : 513
 distinct sections      : 158
 time-tracking endpoint : AVAILABLE
 projects with logged hours : 55
@@ -13,4 +13,4 @@ WARN: projects where >50% of tasks share one created_at (bulk creation -> create
 NEXT: open crosswalk_template.csv, fill 'canonical_phase' for each section, save as crosswalk.csv, and re-run with --crosswalk.
 
 skips:
-  project 124 skipped: HTTP 404 for https://app.asana.com/api/1.0/projects/124?opt_fields=name%2Carchived%2Ccreated_at%2Cstart_on%2Cdue_on%2Ccurrent_status.text%2Cowner.name%2Cteam.name%2Ccustom_fields.name%2Ccustom_fields.display_value :: {"errors":[{"message":"project: Not a recognized ID: 0","help":"For more information on API status codes and how to handle them, read the docs on errors: https://developers.asana.com/docs/errors"}]}
+  project 125 skipped: HTTP 404 for https://app.asana.com/api/1.0/projects/125?opt_fields=name%2Carchived%2Ccreated_at%2Cstart_on%2Cdue_on%2Ccurrent_status.text%2Cowner.name%2Cteam.name%2Ccustom_fields.name%2Ccustom_fields.display_value :: {"errors":[{"message":"project: Not a recognized ID: 125","help":"For more information on API status codes and how to handle them, read the docs on errors: https://developers.asana.com/docs/errors"}]}
