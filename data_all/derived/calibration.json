@@ -1,8 +1,8 @@
 {
   "_provenance": {
-    "source": "data_all/time_entries.csv (2,356 entries, 2117.8h, 2024-08-19..2026-06-10, ODL staff time)",
+    "source": "data_all/time_entries.csv (2,360 entries, 2123.5h, 2024-08-19..2026-06-12, ODL staff time)",
     "calibration_set": "25 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 21 of them with >=10h non-PM logging",
-    "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 2216, 'task_name': 103, 'none': 37}",
+    "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 2220, 'task_name': 103, 'none': 37}",
     "no_guessing": "blocks state 'not_calibratable' where data is insufficient"
   },
   "archetype_effort_hours": {
@@ -27,7 +27,7 @@
         "Responsible and Ethical AI": 98.9,
         "ASCEND Engineering": 27.5,
         "ASCEND MCOB": 80.2,
-        "Virtual Borders": 81.8,
+        "Virtual Borders": 86.8,
         "The Qur’an and the Bible (Gabriel Reynolds)": 46.7,
         "MSAN II": 71.1,
         "Sprint 2025 - Digital Accessibility - Whitney James": 49.2,
@@ -44,24 +44,24 @@
         "p25": 24.3,
         "p50": 47.2,
         "p75": 77.9,
-        "p80": 80.8,
+        "p80": 82.8,
         "max": 286.5
       }
     },
     "single_video": {
       "projects": {
         "Program for Inclusive Education (PIE) Video #2": 15.5,
-        "Ultrasound Communication Video": 14.5,
+        "Ultrasound Communication Video": 15.2,
         "Borgo Laudato Si' videos": 12.0
       },
       "production_hours": {
         "n": 3,
         "values": [
           12.0,
-          14.5,
+          15.2,
           15.5
         ],
-        "p50": 14.5,
+        "p50": 15.2,
         "note": "n<4 -- raw values shown; interpolated quartiles withheld"
       }
     },
@@ -229,7 +229,7 @@
       {
         "project": "Ultrasound Communication Video",
         "video": "(whole project)",
-        "hours": 14.5
+        "hours": 15.2
       },
       {
         "project": "Borgo Laudato Si' videos",
@@ -254,8 +254,8 @@
       "min": 7.3,
       "p25": 12.0,
       "p50": 13.7,
-      "p75": 14.5,
-      "p80": 14.7,
+      "p75": 15.2,
+      "p80": 15.3,
       "max": 15.5
     },
     "observed_excluded_partial_coverage": [
@@ -326,14 +326,14 @@
     }
   },
   "full_course_phase_mix": {
-    "basis": "pooled non-PM hours of 14 full-coverage full_course projects (903.3h)",
+    "basis": "pooled non-PM hours of 14 full-coverage full_course projects (908.3h)",
     "share_pct": {
-      "Production": 31.0,
-      "Post-Production": 24.9,
-      "Development/Build": 17.2,
-      "Pre-Production": 17.0,
+      "Production": 31.4,
+      "Post-Production": 24.8,
+      "Development/Build": 17.1,
+      "Pre-Production": 16.9,
       "Design": 8.3,
-      "Other / unsorted": 1.1,
+      "Other / unsorted": 1.0,
       "Discovery": 0.4
     }
   },
@@ -495,11 +495,11 @@
   },
   "impact_tracker": {
     "field": "cf::Impact Tracker Status",
-    "basis": "data_all/projects.csv Asana project custom field across 125 pulled projects",
-    "total_projects": 125,
+    "basis": "data_all/projects.csv Asana project custom field across 129 pulled projects",
+    "total_projects": 129,
     "tracked_projects": 31,
-    "blank_projects": 94,
-    "coverage_pct": 24.8,
+    "blank_projects": 98,
+    "coverage_pct": 24.0,
     "status_counts": {
       "Up to date": 23,
       "Outdated": 8
@@ -908,8 +908,8 @@
           "project": "Virtual Borders",
           "project_gid": "1208335647365619",
           "tracker_reported_hours": 120.0,
-          "asana_logged_hours": 81.8,
-          "ratio_logged_over_reported": 0.68
+          "asana_logged_hours": 86.8,
+          "ratio_logged_over_reported": 0.72
         }
       ],
       "basis": "Tracker 'Total Hours' field vs hours actually logged in Asana time entries for the same project (matched by GID or unique normalized name)."
@@ -1038,10 +1038,10 @@
         "ape_pct": 41.8
       },
       {
-        "actual": 81.8,
+        "actual": 86.8,
         "pred_p50": 46.7,
         "in_iqr": false,
-        "ape_pct": 42.9
+        "ape_pct": 46.2
       },
       {
         "actual": 98.9,
@@ -1056,7 +1056,7 @@
         "ape_pct": 83.7
       }
     ],
-    "median_ape_pct": 47.8,
+    "median_ape_pct": 49.5,
     "iqr_coverage_pct": 42.9,
     "reading": "wide APE is expected -- it is the honest spread of a point guess; this is WHY the estimator must quote P25-P80 ranges, not points."
   }
