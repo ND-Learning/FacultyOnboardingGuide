@@ -251,7 +251,7 @@
       "available": true,
       "source": "data_all/task_custom_fields.csv",
       "metric_scope": "Impact Tracker board tasks only",
-      "value_count": 5396,
+      "value_count": 5434,
       "field_count": 38,
       "all_fields": [
         "Academic Department",
@@ -293,7 +293,7 @@
         "Web Page Modules",
         "XR experiences"
       ],
-      "record_count": 142,
+      "record_count": 143,
       "detected_asset_fields": [
         "Canvas Courses",
         "Graphics",
@@ -335,7 +335,7 @@
           "max": 1.0
         },
         "Total Assets": {
-          "n": 142,
+          "n": 143,
           "min": 0.0,
           "p25": 0.0,
           "p50": 0.0,
@@ -384,7 +384,7 @@
       },
       "records_with_assets": 31,
       "records_with_satisfaction": 24,
-      "matched_records": 45,
+      "matched_records": 46,
       "outcomes": {
         "faculty_satisfaction_index": {
           "n": 24,
@@ -470,7 +470,7 @@
       },
       "tracker_status_counts": {
         "Complete": 72,
-        "In Progress": 28,
+        "In Progress": 29,
         "No Documentation": 15,
         "On Hold": 4
       },
