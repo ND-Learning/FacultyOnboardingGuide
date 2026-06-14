@@ -1,4 +1,4 @@
-ODL estimator refresh -- 2026-06-13T16:27:33
+ODL estimator refresh -- 2026-06-14T17:20:37
 pull: ran | published to Canvas: no
 
 headline numbers (before -> after):
@@ -9,7 +9,5 @@ headline numbers (before -> after):
      pm_p50_h_per_wk: 0.8 -> 0.8
      video_blended_h: 11.8 -> 11.8
      full_course_median_weeks: 31.4 -> 31.4
-
-ACTION NEEDED -- the Canvas bundle CHANGED but was not auto-published (no Canvas token). Re-upload faculty_guide/canvas_upload/ODL_Faculty_Onboarding_Guide.html to Canvas Files with the SAME filename and choose Replace (~1 minute).
 
 review queue: empty -- all logged projects classified.
