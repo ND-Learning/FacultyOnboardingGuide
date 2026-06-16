@@ -1,8 +1,8 @@
 {
   "_provenance": {
-    "source": "data_all/time_entries.csv (2,362 entries, 2125.3h, 2024-08-19..2026-06-15, ODL staff time)",
+    "source": "data_all/time_entries.csv (2,365 entries, 2129.8h, 2024-08-19..2026-06-16, ODL staff time)",
     "calibration_set": "25 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 21 of them with >=10h non-PM logging",
-    "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 2222, 'task_name': 103, 'none': 37}",
+    "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 2225, 'task_name': 103, 'none': 37}",
     "no_guessing": "blocks state 'not_calibratable' where data is insufficient"
   },
   "archetype_effort_hours": {
@@ -27,13 +27,13 @@
         "Responsible and Ethical AI": 98.9,
         "ASCEND Engineering": 27.5,
         "ASCEND MCOB": 80.2,
-        "Virtual Borders": 88.5,
+        "Virtual Borders": 90.5,
         "The Qur’an and the Bible (Gabriel Reynolds)": 46.7,
         "MSAN II": 71.1,
         "Sprint 2025 - Digital Accessibility - Whitney James": 49.2,
         "Business for Humans | Sheedy Family Program": 47.8,
         "FCTA - Physics I": 38.7,
-        "NEON - POLS 30022 (Poly Sci)": 23.2,
+        "NEON - POLS 30022 (Poly Sci)": 24.8,
         "Sprint 2025 - Bringing Korean to Life - Yeonhee Yoon": 19.5,
         "C2D: Cybertraining for Chemical Data scientists": 16.5,
         "Travel Safety 101": 15.7
@@ -41,27 +41,27 @@
       "production_hours": {
         "n": 14,
         "min": 15.7,
-        "p25": 24.3,
+        "p25": 25.5,
         "p50": 47.2,
         "p75": 77.9,
-        "p80": 83.5,
+        "p80": 84.3,
         "max": 286.5
       }
     },
     "single_video": {
       "projects": {
+        "Ultrasound Communication Video": 16.2,
         "Program for Inclusive Education (PIE) Video #2": 15.5,
-        "Ultrasound Communication Video": 15.2,
         "Borgo Laudato Si' videos": 12.0
       },
       "production_hours": {
         "n": 3,
         "values": [
           12.0,
-          15.2,
-          15.5
+          15.5,
+          16.2
         ],
-        "p50": 15.2,
+        "p50": 15.5,
         "note": "n<4 -- raw values shown; interpolated quartiles withheld"
       }
     },
@@ -229,7 +229,7 @@
       {
         "project": "Ultrasound Communication Video",
         "video": "(whole project)",
-        "hours": 15.2
+        "hours": 16.2
       },
       {
         "project": "Borgo Laudato Si' videos",
@@ -254,9 +254,9 @@
       "min": 7.3,
       "p25": 12.0,
       "p50": 13.7,
-      "p75": 15.2,
-      "p80": 15.3,
-      "max": 15.5
+      "p75": 15.5,
+      "p80": 15.6,
+      "max": 16.2
     },
     "observed_excluded_partial_coverage": [
       {
@@ -326,13 +326,13 @@
     }
   },
   "full_course_phase_mix": {
-    "basis": "pooled non-PM hours of 14 full-coverage full_course projects (910.0h)",
+    "basis": "pooled non-PM hours of 14 full-coverage full_course projects (913.5h)",
     "share_pct": {
-      "Production": 31.5,
-      "Post-Production": 24.7,
-      "Development/Build": 17.1,
-      "Pre-Production": 16.9,
-      "Design": 8.3,
+      "Production": 31.8,
+      "Post-Production": 24.6,
+      "Development/Build": 17.0,
+      "Pre-Production": 16.8,
+      "Design": 8.2,
       "Other / unsorted": 1.0,
       "Discovery": 0.4
     }
@@ -918,8 +918,8 @@
           "project": "Virtual Borders",
           "project_gid": "1208335647365619",
           "tracker_reported_hours": 120.0,
-          "asana_logged_hours": 88.5,
-          "ratio_logged_over_reported": 0.74
+          "asana_logged_hours": 90.5,
+          "ratio_logged_over_reported": 0.75
         }
       ],
       "basis": "Tracker 'Total Hours' field vs hours actually logged in Asana time entries for the same project (matched by GID or unique normalized name)."
@@ -1000,10 +1000,10 @@
         "ape_pct": 145.1
       },
       {
-        "actual": 23.2,
+        "actual": 24.8,
         "pred_p50": 47.8,
         "in_iqr": false,
-        "ape_pct": 106.0
+        "ape_pct": 92.7
       },
       {
         "actual": 27.5,
@@ -1048,10 +1048,10 @@
         "ape_pct": 41.8
       },
       {
-        "actual": 88.5,
+        "actual": 90.5,
         "pred_p50": 46.7,
         "in_iqr": false,
-        "ape_pct": 47.2
+        "ape_pct": 48.4
       },
       {
         "actual": 98.9,
@@ -1066,7 +1066,7 @@
         "ape_pct": 83.7
       }
     ],
-    "median_ape_pct": 50.0,
+    "median_ape_pct": 50.6,
     "iqr_coverage_pct": 42.9,
     "reading": "wide APE is expected -- it is the honest spread of a point guess; this is WHY the estimator must quote P25-P80 ranges, not points."
   }

@@ -35,7 +35,7 @@
   // === BEGIN CALIBRATION (machine-generated — do not edit by hand) ==========
   var CALIBRATION =
   {
-    "provenance": "data_all/time_entries.csv (2,362 entries, 2125.3h, 2024-08-19..2026-06-15, ODL staff time) | 25 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 21 of them with >=10h non-PM logging",
+    "provenance": "data_all/time_entries.csv (2,365 entries, 2129.8h, 2024-08-19..2026-06-16, ODL staff time) | 25 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 21 of them with >=10h non-PM logging",
     "generated_from": "data_all/derived/calibration.json -- run inject_calibration.py to refresh",
     "archetypeEffort": {
       "course_redesign": {
@@ -50,20 +50,20 @@
       "full_course": {
         "n": 14,
         "min": 15.7,
-        "p25": 24.3,
+        "p25": 25.5,
         "p50": 47.2,
         "p75": 77.9,
-        "p80": 83.5,
+        "p80": 84.3,
         "max": 286.5
       },
       "single_video": {
         "n": 3,
         "values": [
           12.0,
-          15.2,
-          15.5
+          15.5,
+          16.2
         ],
-        "p50": 15.2,
+        "p50": 15.5,
         "note": "n<4 -- raw values shown; interpolated quartiles withheld"
       },
       "video_series": {
@@ -100,9 +100,9 @@
         "min": 7.3,
         "p25": 12.0,
         "p50": 13.7,
-        "p75": 15.2,
-        "p80": 15.3,
-        "max": 15.5
+        "p75": 15.5,
+        "p80": 15.6,
+        "max": 16.2
       },
       "blendedGenericP50": 11.8,
       "shrinkageW": 0.62
@@ -114,15 +114,15 @@
     },
     "mediaSplitBasis": "pooled hours on per-video sections with full-coverage logging: 1 project(s) (Program for Inclusive Education (PIE) Video #2), 15.5h total",
     "coursePhaseMixPct": {
-      "Production": 31.5,
-      "Post-Production": 24.7,
-      "Development/Build": 17.1,
-      "Pre-Production": 16.9,
-      "Design": 8.3,
+      "Production": 31.8,
+      "Post-Production": 24.6,
+      "Development/Build": 17.0,
+      "Pre-Production": 16.8,
+      "Design": 8.2,
       "Other / unsorted": 1.0,
       "Discovery": 0.4
     },
-    "coursePhaseMixBasis": "pooled non-PM hours of 14 full-coverage full_course projects (910.0h)",
+    "coursePhaseMixBasis": "pooled non-PM hours of 14 full-coverage full_course projects (913.5h)",
     "calendarWeeks": {
       "consult_or_studio": {
         "n": 1,
@@ -617,8 +617,8 @@
             "project": "Virtual Borders",
             "project_gid": "1208335647365619",
             "tracker_reported_hours": 120.0,
-            "asana_logged_hours": 88.5,
-            "ratio_logged_over_reported": 0.74
+            "asana_logged_hours": 90.5,
+            "ratio_logged_over_reported": 0.75
           }
         ],
         "basis": "Tracker 'Total Hours' field vs hours actually logged in Asana time entries for the same project (matched by GID or unique normalized name)."
@@ -678,7 +678,7 @@
       "per_module_rate": "module counts exist for only 5 of 19 course projects and mean different things (AI for ND 57h/module vs R&E AI 7.6h/week-unit vs Virtual Borders 25h/module) -- logging is not at module granularity yet. Effort stays archetype-level until the new per-task tracking accumulates."
     },
     "backtest": {
-      "median_ape_pct": 50.0,
+      "median_ape_pct": 50.6,
       "iqr_coverage_pct": 42.9,
       "reading": "wide APE is expected -- it is the honest spread of a point guess; this is WHY the estimator must quote P25-P80 ranges, not points."
     }

@@ -298,7 +298,7 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1213292120696339,NEON - POLS 30022 (Poly Sci),Analysis,3,0,1,,,,0.0,0.0,0,0,0,0.33
 1213292120696339,NEON - POLS 30022 (Poly Sci),Design,13,1,2,2026-03-06T17:44:06.133000+00:00,2026-03-06T17:44:06.133000+00:00,0,600.0,10.0,0,0,0,0.08
 1213292120696339,NEON - POLS 30022 (Poly Sci),Design Development,6,0,2,,,,0.0,0.0,0,0,0,0.17
-1213292120696339,NEON - POLS 30022 (Poly Sci),Media Timetracking,15,0,0,,,,675.0,11.25,0,0,0,0.07
+1213292120696339,NEON - POLS 30022 (Poly Sci),Media Timetracking,15,0,0,,,,765.0,12.75,0,0,0,0.07
 1213292120696339,NEON - POLS 30022 (Poly Sci),Post-Production,3,0,0,,,,0.0,0.0,0,0,0,0.33
 1213292120696339,NEON - POLS 30022 (Poly Sci),Post-Project Evaluation,5,0,1,,,,0.0,0.0,0,0,0,0.2
 1213292120696339,NEON - POLS 30022 (Poly Sci),Pre-Production,9,0,1,,,,120.0,2.0,0,0,0,0.11
@@ -488,7 +488,7 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1212638027964018,Ultrasound Communication Video,Analysis,3,0,0,,,,0.0,0.0,0,0,0,0.33
 1212638027964018,Ultrasound Communication Video,Design,9,1,0,2026-04-30T14:25:03.308000+00:00,2026-04-30T14:25:03.308000+00:00,0,270.0,4.5,0,0,0,0.11
 1212638027964018,Ultrasound Communication Video,Design Development,4,0,0,,,,0.0,0.0,0,0,0,0.25
-1212638027964018,Ultrasound Communication Video,Media Timetracking,16,0,1,,,,615.0,10.25,0,0,0,0.06
+1212638027964018,Ultrasound Communication Video,Media Timetracking,16,0,1,,,,675.0,11.25,0,0,0,0.06
 1212638027964018,Ultrasound Communication Video,Post-Production,9,0,0,,,,0.0,0.0,0,0,0,0.11
 1212638027964018,Ultrasound Communication Video,Post-Project Evaluation,4,0,0,,,,0.0,0.0,0,0,0,0.25
 1212638027964018,Ultrasound Communication Video,Pre-Production,7,1,0,2026-06-01T14:45:52.878000+00:00,2026-06-01T14:45:52.878000+00:00,0,30.0,0.5,0,0,0,0.14
@@ -505,7 +505,7 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1208335647365619,Virtual Borders,Media Timetracking,5,0,0,,,,315.0,5.25,0,0,0,0.2
 1208335647365619,Virtual Borders,Post-Production / Design Development,9,0,3,,,,0.0,0.0,0,0,0,0.11
 1208335647365619,Virtual Borders,Pre-Production,4,3,1,2025-02-10T18:00:52.129000+00:00,2025-02-20T21:09:55.485000+00:00,10,870.0,14.5,9,0,0,0.25
-1208335647365619,Virtual Borders,Production,9,1,2,2025-02-27T17:34:59.484000+00:00,2025-02-27T17:34:59.484000+00:00,0,4125.0,68.75,4,0,0,0.11
+1208335647365619,Virtual Borders,Production,9,1,2,2025-02-27T17:34:59.484000+00:00,2025-02-27T17:34:59.484000+00:00,0,4245.0,70.75,4,0,0,0.11
 1206425015213615,XR Overview (Spring 24),Classroom Experiences,7,1,0,2024-01-24T01:43:21.592000+00:00,2024-01-24T01:43:21.592000+00:00,0,0.0,0.0,0,0,0,0.14
 1206425015213615,XR Overview (Spring 24),Development Projects,5,1,0,2024-01-24T01:51:30.659000+00:00,2024-01-24T01:51:30.659000+00:00,0,0.0,0.0,0,0,0,0.2
 1206425015213615,XR Overview (Spring 24),In Queue,2,0,0,,,,0.0,0.0,0,0,0,0.5
