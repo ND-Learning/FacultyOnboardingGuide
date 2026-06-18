@@ -223,6 +223,8 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 1208335647365619,Virtual Borders,1214891724371464,Phase 2 - (Jun 1 - Jun 19),Production,Production,Matthew Simmons,,Matthew Simmons,2026-06-15,30.0,0.5
 1208335647365619,Virtual Borders,1214891724371464,Phase 2 - (Jun 1 - Jun 19),Production,Production,Matthew Simmons,,Matthew Simmons,2026-06-15,75.0,1.25
 1208335647365619,Virtual Borders,1214891724371464,Phase 2 - (Jun 1 - Jun 19),Production,Production,Matthew Simmons,,Matthew Simmons,2026-06-16,150.0,2.5
+1208335647365619,Virtual Borders,1214891724371464,Phase 2 - (Jun 1 - Jun 19),Production,Production,Matthew Simmons,,Matthew Simmons,2026-06-17,45.0,0.75
+1208335647365619,Virtual Borders,1214891724371464,Phase 2 - (Jun 1 - Jun 19),Production,Production,Matthew Simmons,,Matthew Simmons,2026-06-18,45.0,0.75
 1208344673489500,MSAN Asset Spreadsheet,1208369713621903,MSAN Interview video with Beth Webe,Untitled section,Untitled section,Kevin DeCloedt,,Kevin DeCloedt,2025-02-11,1.0,0.017
 1208344673489500,MSAN Asset Spreadsheet,1208369713621927,MSAN Lecture Video - Substance use - Ryan Carpenter,Untitled section,Untitled section,Kevin DeCloedt,,Kevin DeCloedt,2025-02-11,30.0,0.5
 1208344673489500,MSAN Asset Spreadsheet,1208369713621929,MSAN Lecture Video - Good Stress vs Bad Stress,Untitled section,Untitled section,Kevin DeCloedt,,Kevin DeCloedt,2025-02-11,30.0,0.5
@@ -1567,6 +1569,8 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 1212638027964018,Ultrasound Communication Video,1215436682184127,6/8 - 6/12,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-06-12,30.0,0.5
 1212638027964018,Ultrasound Communication Video,1215436682184129,6/15 - 6/19,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-06-16,60.0,1.0
 1212638027964018,Ultrasound Communication Video,1215436682184129,6/15 - 6/19,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-06-17,60.0,1.0
+1212638027964018,Ultrasound Communication Video,1215436682184129,6/15 - 6/19,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-06-18,180.0,3.0
+1212638027964018,Ultrasound Communication Video,1215436682184129,6/15 - 6/19,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-06-18,60.0,1.0
 1212638027964018,Ultrasound Communication Video,1212660352666713,Create Course Map Document,Design,Design,,Design,Brianna Stines,2026-04-30,30.0,0.5
 1212638027964018,Ultrasound Communication Video,1212638028068004,Develop Learning Objectives,Design,Design,,Design,Brianna Stines,2026-04-30,120.0,2.0
 1212638027964018,Ultrasound Communication Video,1212638028068011,Develop Course Structure / Flow,Design,Design,,Design,Brianna Stines,2026-04-30,120.0,2.0
@@ -1595,6 +1599,7 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 1213292120696339,NEON - POLS 30022 (Poly Sci),1214791864379860,6/8 - 6/12,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-06-10,60.0,1.0
 1213292120696339,NEON - POLS 30022 (Poly Sci),1214791864379860,6/8 - 6/12,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-06-10,75.0,1.25
 1213292120696339,NEON - POLS 30022 (Poly Sci),1214791864379862,6/15 - 6/19,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-06-16,90.0,1.5
+1213292120696339,NEON - POLS 30022 (Poly Sci),1214791864379862,6/15 - 6/19,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-06-17,90.0,1.5
 1213292120696339,NEON - POLS 30022 (Poly Sci),1213300128327622,Scripting,Pre-Production,Pre-Production,,Media,Brianna Stines,2026-05-18,120.0,2.0
 1213478777903328,Media Studio Sessions,1213824904918683,Filming time tracker,Untitled section,Untitled section,,,Kevin DeCloedt,2026-01-28,60.0,1.0
 1213478777903328,Media Studio Sessions,1213824904918683,Filming time tracker,Untitled section,Untitled section,,,Kevin DeCloedt,2026-02-25,75.0,1.25
