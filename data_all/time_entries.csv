@@ -23,6 +23,7 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 1207760971753716,FCTA - Physics I,1215382849227821,Time Estimates,Testimonials,Testimonials,,,Matthew Simmons,2026-06-04,90.0,1.5
 1207760971753716,FCTA - Physics I,1215382849227821,Time Estimates,Testimonials,Testimonials,,,Matthew Simmons,2026-06-08,90.0,1.5
 1207760971753716,FCTA - Physics I,1215382849227821,Time Estimates,Testimonials,Testimonials,,,Matthew Simmons,2026-06-08,120.0,2.0
+1207760971753716,FCTA - Physics I,1215382849227821,Time Estimates,Testimonials,Testimonials,,,Matthew Simmons,2026-06-22,60.0,1.0
 1207816481565083,Gen Chem Intro Video ,1207816491518204,Filming,Production,Production,John Corba,,John Corba,2024-08-19,90.0,1.5
 1207816481565083,Gen Chem Intro Video ,1207816486599309,Editing,Post-Production,Post-Production,John Corba,,John Corba,2024-08-19,540.0,9.0
 1207816481565083,Gen Chem Intro Video ,1207816486599309,Editing,Post-Production,Post-Production,John Corba,,John Corba,2024-08-20,60.0,1.0
@@ -226,6 +227,7 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 1208335647365619,Virtual Borders,1214891724371464,Phase 2 - (Jun 1 - Jun 19),Production,Production,Matthew Simmons,,Matthew Simmons,2026-06-17,45.0,0.75
 1208335647365619,Virtual Borders,1214891724371464,Phase 2 - (Jun 1 - Jun 19),Production,Production,Matthew Simmons,,Matthew Simmons,2026-06-18,45.0,0.75
 1208335647365619,Virtual Borders,1214891724371464,Phase 2 - (Jun 1 - Jun 19),Production,Production,Matthew Simmons,,Matthew Simmons,2026-06-19,45.0,0.75
+1208335647365619,Virtual Borders,1214891724371466,Phase 3 - (Jun 22 - July 10),Production,Production,Matthew Simmons,,Matthew Simmons,2026-06-22,120.0,2.0
 1208344673489500,MSAN Asset Spreadsheet,1208369713621903,MSAN Interview video with Beth Webe,Untitled section,Untitled section,Kevin DeCloedt,,Kevin DeCloedt,2025-02-11,1.0,0.017
 1208344673489500,MSAN Asset Spreadsheet,1208369713621927,MSAN Lecture Video - Substance use - Ryan Carpenter,Untitled section,Untitled section,Kevin DeCloedt,,Kevin DeCloedt,2025-02-11,30.0,0.5
 1208344673489500,MSAN Asset Spreadsheet,1208369713621929,MSAN Lecture Video - Good Stress vs Bad Stress,Untitled section,Untitled section,Kevin DeCloedt,,Kevin DeCloedt,2025-02-11,30.0,0.5
@@ -1572,6 +1574,7 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 1212638027964018,Ultrasound Communication Video,1215436682184129,6/15 - 6/19,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-06-17,60.0,1.0
 1212638027964018,Ultrasound Communication Video,1215436682184129,6/15 - 6/19,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-06-18,180.0,3.0
 1212638027964018,Ultrasound Communication Video,1215436682184129,6/15 - 6/19,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-06-18,60.0,1.0
+1212638027964018,Ultrasound Communication Video,1215436682184131,6/22 - 6/26,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-06-22,120.0,2.0
 1212638027964018,Ultrasound Communication Video,1212660352666713,Create Course Map Document,Design,Design,,Design,Brianna Stines,2026-04-30,30.0,0.5
 1212638027964018,Ultrasound Communication Video,1212638028068004,Develop Learning Objectives,Design,Design,,Design,Brianna Stines,2026-04-30,120.0,2.0
 1212638027964018,Ultrasound Communication Video,1212638028068011,Develop Course Structure / Flow,Design,Design,,Design,Brianna Stines,2026-04-30,120.0,2.0

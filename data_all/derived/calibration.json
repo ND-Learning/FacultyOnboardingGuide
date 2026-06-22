@@ -1,8 +1,8 @@
 {
   "_provenance": {
-    "source": "data_all/time_entries.csv (2,375 entries, 2141.5h, 2024-08-19..2026-06-19, ODL staff time)",
+    "source": "data_all/time_entries.csv (2,378 entries, 2146.5h, 2024-08-19..2026-06-22, ODL staff time)",
     "calibration_set": "25 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 21 of them with >=10h non-PM logging",
-    "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 2235, 'task_name': 103, 'none': 37}",
+    "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 2237, 'task_name': 103, 'none': 38}",
     "no_guessing": "blocks state 'not_calibratable' where data is insufficient"
   },
   "archetype_effort_hours": {
@@ -26,13 +26,13 @@
         "AI for the Notre Dame Community": 286.5,
         "Responsible and Ethical AI": 98.9,
         "ASCEND Engineering": 27.5,
-        "Virtual Borders": 93.2,
+        "Virtual Borders": 95.2,
         "ASCEND MCOB": 80.2,
         "The Qur’an and the Bible (Gabriel Reynolds)": 46.7,
         "MSAN II": 71.1,
         "Sprint 2025 - Digital Accessibility - Whitney James": 49.2,
         "Business for Humans | Sheedy Family Program": 47.8,
-        "FCTA - Physics I": 38.7,
+        "FCTA - Physics I": 39.7,
         "NEON - POLS 30022 (Poly Sci)": 28.8,
         "Sprint 2025 - Bringing Korean to Life - Yeonhee Yoon": 19.5,
         "C2D: Cybertraining for Chemical Data scientists": 16.5,
@@ -44,13 +44,13 @@
         "p25": 27.8,
         "p50": 47.2,
         "p75": 77.9,
-        "p80": 85.4,
+        "p80": 86.2,
         "max": 286.5
       }
     },
     "single_video": {
       "projects": {
-        "Ultrasound Communication Video": 21.2,
+        "Ultrasound Communication Video": 23.2,
         "Program for Inclusive Education (PIE) Video #2": 15.5,
         "Borgo Laudato Si' videos": 12.0
       },
@@ -59,7 +59,7 @@
         "values": [
           12.0,
           15.5,
-          21.2
+          23.2
         ],
         "p50": 15.5,
         "note": "n<4 -- raw values shown; interpolated quartiles withheld"
@@ -229,7 +229,7 @@
       {
         "project": "Ultrasound Communication Video",
         "video": "(whole project)",
-        "hours": 21.2
+        "hours": 23.2
       },
       {
         "project": "Borgo Laudato Si' videos",
@@ -255,8 +255,8 @@
       "p25": 12.0,
       "p50": 13.7,
       "p75": 15.5,
-      "p80": 16.6,
-      "max": 21.2
+      "p80": 17.0,
+      "max": 23.2
     },
     "observed_excluded_partial_coverage": [
       {
@@ -326,14 +326,14 @@
     }
   },
   "full_course_phase_mix": {
-    "basis": "pooled non-PM hours of 14 full-coverage full_course projects (920.3h)",
+    "basis": "pooled non-PM hours of 14 full-coverage full_course projects (923.3h)",
     "share_pct": {
-      "Production": 32.3,
+      "Production": 32.4,
       "Post-Production": 24.4,
       "Development/Build": 16.9,
       "Pre-Production": 16.7,
       "Design": 8.2,
-      "Other / unsorted": 1.0,
+      "Other / unsorted": 1.1,
       "Discovery": 0.4
     }
   },
@@ -501,11 +501,16 @@
     "blank_projects": 99,
     "coverage_pct": 24.4,
     "status_counts": {
-      "Up to date": 22,
-      "Outdated": 10
+      "Up to date": 21,
+      "Outdated": 11
     },
-    "up_to_date_pct_of_tracked": 68.8,
+    "up_to_date_pct_of_tracked": 65.6,
     "outdated_projects": [
+      {
+        "project_gid": "1207760971753716",
+        "project": "FCTA - Physics I",
+        "status": "Outdated"
+      },
       {
         "project_gid": "1207942229848224",
         "project": "National Education Opportunities Network (NEON)",
@@ -780,8 +785,8 @@
       }
     },
     "tracker_status_counts": {
-      "Complete": 73,
-      "In Progress": 29,
+      "Complete": 74,
+      "In Progress": 28,
       "No Documentation": 15,
       "On Hold": 4
     },
@@ -869,8 +874,8 @@
           "project": "FCTA - Physics I",
           "project_gid": "1207760971753716",
           "tracker_reported_hours": 127.0,
-          "asana_logged_hours": 38.7,
-          "ratio_logged_over_reported": 0.3
+          "asana_logged_hours": 39.7,
+          "ratio_logged_over_reported": 0.31
         },
         {
           "project": "I CAN HELP Learning Modules",
@@ -918,8 +923,8 @@
           "project": "Virtual Borders",
           "project_gid": "1208335647365619",
           "tracker_reported_hours": 120.0,
-          "asana_logged_hours": 93.2,
-          "ratio_logged_over_reported": 0.78
+          "asana_logged_hours": 95.2,
+          "ratio_logged_over_reported": 0.79
         }
       ],
       "basis": "Tracker 'Total Hours' field vs hours actually logged in Asana time entries for the same project (matched by GID or unique normalized name)."
@@ -1012,10 +1017,10 @@
         "ape_pct": 66.0
       },
       {
-        "actual": 38.7,
+        "actual": 39.7,
         "pred_p50": 47.8,
         "in_iqr": true,
-        "ape_pct": 23.5
+        "ape_pct": 20.4
       },
       {
         "actual": 46.7,
@@ -1048,10 +1053,10 @@
         "ape_pct": 41.8
       },
       {
-        "actual": 93.2,
+        "actual": 95.2,
         "pred_p50": 46.7,
         "in_iqr": false,
-        "ape_pct": 49.9
+        "ape_pct": 50.9
       },
       {
         "actual": 98.9,
@@ -1066,7 +1071,7 @@
         "ape_pct": 83.7
       }
     ],
-    "median_ape_pct": 51.3,
+    "median_ape_pct": 51.8,
     "iqr_coverage_pct": 42.9,
     "reading": "wide APE is expected -- it is the honest spread of a point guess; this is WHY the estimator must quote P25-P80 ranges, not points."
   }
