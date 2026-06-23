@@ -22,10 +22,13 @@
    - Impact Tracker task fields, when exported to task_custom_fields.csv, are
      used as an asset-count cross-check only after matching to fully tracked
      projects produces a defensible hours-per-asset calibration.
-   - Design / Discovery / QA / Evaluation hours and all FACULTY-time figures are
-     ODL planning estimates (labeled as such) — logged data contains ZERO faculty
-     time and <15 h each of Discovery/QA/Evaluation, so they cannot be calibrated
-     yet (see calibration.json not_calibratable).
+   - FACULTY-time figures are ODL learning-design & media leads' own planning
+     estimates (2026): media 1h pre + 1h prod + 0.5h post per video; design goals
+     2-4h (fixed) and a course map that scales with course size (~6-30h); 3-10h per module for build/QA; and
+     ~1h per calendar week for working meetings. No faculty time is logged yet, so
+     these stay planning estimates (labeled as such) and are shown as ranges.
+   - Design / Discovery / QA / Evaluation ODL-side hours remain planning estimates
+     (logged data has <15 h each of Discovery/QA/Evaluation — see not_calibratable).
    Architecture: this file computes ALL numbers deterministically. No AI/LLM
    number generation. Estimates are ranges, never false-precision points.
    ============================================================================= */
@@ -805,19 +808,19 @@
   ];
 
   var PROJECT_TYPES = [
-    { id: "new_course",    label: "New Course Creation",  desc: "A full online or hybrid course built from scratch." },
-    { id: "bisynchronous", label: "Bisynchronous Course", desc: "A blend of synchronous and asynchronous learning." },
-    { id: "flipped",       label: "Flipped Classroom",    desc: "Move content online; active learning in class." },
-    { id: "ai",            label: "AI Training / Tool",   desc: "Incorporate AI tools and literacy into the curriculum." },
-    { id: "xr",            label: "XR / Immersive",       desc: "VR, AR, 360 video, or interactive simulations." },
-    { id: "module",        label: "Single Module",        desc: "One focused digital learning unit or resource." }
+    { id: "new_course",    label: "New Course Creation",  desc: "A full online or hybrid course built from scratch — modules, videos, and assessments together.", ex: "e.g., a 6-module online course like “The Qur’an and the Bible.”", pick: "Pick this if you're building a whole course that doesn't exist yet." },
+    { id: "bisynchronous", label: "Bisynchronous Course", desc: "A blend of live (synchronous) sessions and self-paced (asynchronous) online content.", ex: "e.g., leadership training run live across time zones, like MSAN II.", pick: "Pick this if learners meet live AND work through online material on their own." },
+    { id: "flipped",       label: "Flipped Classroom",    desc: "Move lectures online so class time is freed up for active, hands-on learning.", ex: "e.g., pre-lab videos students watch before coming to the lab.", pick: "Pick this if you already teach in person and want to move content online." },
+    { id: "ai",            label: "AI Training / Tool",   desc: "Build AI literacy into a course, or create an AI-powered tool for teaching and learning.", ex: "e.g., a campus-wide AI literacy course, or a Socratic AI tutor.", pick: "Pick this if AI is the subject, or you want an AI-powered learning tool." },
+    { id: "xr",            label: "XR / Immersive",       desc: "Virtual or augmented reality, 360° video, or interactive simulations students step inside.", ex: "e.g., a VR Korean cultural immersion or a Spanish escape room.", pick: "Pick this if students will explore a simulated or 360° environment." },
+    { id: "module",        label: "Single Module",        desc: "One focused digital learning unit, resource, or short video series — not a whole course.", ex: "e.g., a single high-impact module on digital accessibility.", pick: "Pick this if you need one focused piece, not a full course." }
   ];
 
   var PROJECT_SIZES = [
-    { id: "S",  label: "Small",       desc: "A single module or short resource." },
-    { id: "M",  label: "Medium",      desc: "A significant portion of a course." },
-    { id: "L",  label: "Large",       desc: "A full course or complex experience." },
-    { id: "XL", label: "Extra Large", desc: "A multi-course sequence or initiative." }
+    { id: "S",  label: "Small",       desc: "One small piece — a few weeks of work.",  scope: "≈ 1–3 videos · 1–3 modules" },
+    { id: "M",  label: "Medium",      desc: "A big chunk of a course — a few months.", scope: "≈ 8–10 videos · ~6 modules" },
+    { id: "L",  label: "Large",       desc: "A complete course — a semester or more.", scope: "≈ 12–15 videos · ~10 modules" },
+    { id: "XL", label: "Extra Large", desc: "A multi-course program — about a year.",   scope: "≈ 20+ videos · 16+ modules" }
   ];
 
   // --- typical deliverable bundles per type × size (counts) ------------------
@@ -936,26 +939,60 @@
       qa: 5 + m.modules * 0.5,
       evaluation: 5
     };
-    var facH = {
-      discovery: facDiscoveryHours[size] || 3,
-      design: 3 + m.modules * 0.6,
-      preprod: m.videoCount * 1.0,
-      production: m.prod * 1.0,
-      postprod: m.videoCount * 0.5,
-      qa: facQAHours[size] || 3,
-      evaluation: 2
+    // --- FACULTY hands-on time per phase, as honest [lo,hi] ranges -----------
+    // From ODL's learning-design & media leads' own estimates (2026):
+    //   • media per video: 1h script (pre) + 1h film (prod) + 0.5h review (post)
+    //   • design goals 2–4h (fixed) + course map scaled by size (~6–30h)
+    //   • build/QA: 3–10h per module
+    //   • meetings: ~1h per calendar week working with us (added to total below)
+    // Planning estimates (no faculty time is logged yet) — shown as ranges.
+    var V = m.videoCount, MOD = m.modules;
+    // A single standalone module/resource isn't a course to map (MOD<=1): it gets
+    // a lighter goals + short-outline pass. A multi-module course gets goals (2–4h,
+    // fixed) plus a course map whose hours scale with the size of the course.
+    var hasCourse = MOD >= 2;
+    var courseMapHrs = { S: [6, 9], M: [10, 15], L: [16, 22], XL: [22, 30] }[size] || [10, 15];
+    function pair(v) { return [Math.round(v * 0.8), Math.round(v * 1.3)]; }
+    var facRange = {
+      discovery:  pair(facDiscoveryHours[size] || 3),               // planning estimate (size-scaled)
+      design:     hasCourse ? [2 + courseMapHrs[0], 4 + courseMapHrs[1]] : [2 + 2, 4 + 4], // goals 2–4 + (size-scaled course map | short outline 2–4)
+      preprod:    [V * 1, V * 1],                                   // 1 h/video — script writing
+      production: [V * 1, V * 1],                                   // 1 h/video — filming
+      postprod:   [round1(V * 0.5) + MOD * 3, round1(V * 0.5) + MOD * 10], // 0.5 h/video review + 3–10 h/module build & QA
+      qa:         [1, 3],                                           // final walkthrough & go-live sign-off
+      evaluation: [2, 2]                                            // reviewing feedback after launch
+    };
+
+    // plain-language basis for each phase's faculty hours, so the (now larger)
+    // numbers are self-explanatory where faculty actually see them
+    function eachOf(n, noun) { return n === 1 ? ("your " + noun) : ("each of your " + n + " " + noun + "s"); }
+    var postParts = [];
+    if (V > 0) { postParts.push("about 30 min reviewing " + eachOf(V, "video")); }
+    if (MOD > 0) { postParts.push("3–10 h helping build & check " + eachOf(MOD, "module")); }
+    var facNote = {
+      discovery:  "Sharing your vision, learners, and goals so we can scope it well.",
+      design:     hasCourse
+                    ? "About 2–4 h setting your learning goals, plus a " + courseMapHrs[0] + "–" + courseMapHrs[1] + " h course map (it grows with the size of the course) — the blueprint we build together."
+                    : "About 2–4 h setting your learning goals and a short content outline (a single module doesn't need a full course map).",
+      preprod:    V > 0 ? "About 1 h writing the script for " + eachOf(V, "video") + "." : "Scripting any narration or on-screen text.",
+      production: V > 0 ? "About 1 h on camera filming " + eachOf(V, "video") + "." : "Any on-camera or recording time.",
+      postprod:   postParts.length ? (postParts.join(", and ") + ".") : "Reviewing drafts for accuracy.",
+      qa:         "A final walkthrough and your sign-off to go live.",
+      evaluation: "Reviewing student feedback and results with us after launch."
     };
 
     var phases = PHASES.map(function (p) {
       var w = (baseWeeksM[p.key] || 0) * wf;
       var weeks = p.ongoing ? null : [Math.max(1, Math.round(w * 0.8)), Math.max(1, Math.round(w * 1.3))];
+      var fr = facRange[p.key] || [0, 0];
       return {
         key: p.key, title: p.title, icon: p.icon,
         whatHappens: p.whatHappens, odlDoes: p.odlDoes, youDo: p.youDo,
         artifacts: p.artifacts, ongoing: !!p.ongoing,
         weeks: weeks,
         odl: band(odlH[p.key], 0.8, 1.25),
-        faculty: band(facH[p.key], 0.8, 1.3)
+        faculty: [Math.round(fr[0]), Math.round(fr[1])],
+        facNote: facNote[p.key] || ""
       };
     });
 
@@ -970,11 +1007,16 @@
     // added to the ODL-effort total as a line item
     var pm = pmFromWeeks(totWk, size);
     totOdl[0] += pm[0]; totOdl[1] += pm[1];
+    // faculty meetings: ~1 h of working/meeting time per calendar week with ODL,
+    // added to the faculty total as a line item (mirrors PM on the ODL side)
+    var meetings = [Math.round(totWk[0] * 1), Math.round(totWk[1] * 1)];
+    totFac[0] += meetings[0]; totFac[1] += meetings[1];
     var impactAsset = impactAssetEstimate(m.assetCount, pm);
 
     return {
       phases: phases,
       pm: pm,
+      meetings: meetings,
       totals: { odl: totOdl, faculty: totFac, weeks: totWk },
       media: m, bundle: bundle, size: size,
       impactAsset: impactAsset
@@ -1012,10 +1054,45 @@
     return r;
   }
 
+  // Logged staff hours for a showcase project, matched by name to the hours
+  // cross-check rows in CALIBRATION (real Asana time entries). null if no match.
+  function loggedHoursForTitle(title) {
+    var cf = CALIBRATION && CALIBRATION.impactCustomFields;
+    var rows = cf && cf.hours_crosscheck && cf.hours_crosscheck.rows;
+    if (!rows || !title) { return null; }
+    var norm = String(title).toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+    for (var i = 0; i < rows.length; i++) {
+      var rn = String(rows[i].project || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+      if (rn && rn === norm) { return rows[i].asana_logged_hours; }
+    }
+    return null;
+  }
+  function sizeLabel(id) {
+    var s = PROJECT_SIZES.filter(function (x) { return x.id === id; })[0];
+    return s ? s.label : id;
+  }
+
+  /* Similar real ND projects of the same TYPE — exact size first, then other
+     sizes. Each carries the effort a project that size tends to take (computed
+     by the same engine) plus any real logged staff hours, so faculty can see
+     how a project like theirs has actually played out — including ones that
+     match their type but not their size. */
   function similarProjects(type, size) {
     var exact = SHOWCASE.filter(function (p) { return p.type === type && p.size === size; });
     var byType = SHOWCASE.filter(function (p) { return p.type === type && p.size !== size; });
-    return exact.concat(byType).slice(0, 3);
+    var list = exact.concat(byType).slice(0, 3);
+    return list.map(function (p) {
+      var est = estimate(p.type, p.size);
+      return {
+        title: p.title, need: p.need, link: p.link,
+        type: p.type, size: p.size,
+        sizeMatch: p.size === size,
+        sizeLabel: sizeLabel(p.size),
+        yourSizeLabel: sizeLabel(size),
+        effort: { odl: est.totals.odl, faculty: est.totals.faculty, weeks: est.totals.weeks },
+        loggedHours: loggedHoursForTitle(p.title)
+      };
+    });
   }
 
   function deliverableLabel(key) {

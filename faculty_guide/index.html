@@ -85,20 +85,13 @@
   .perf-card .v{font-size:28px;font-weight:800;color:var(--navy);letter-spacing:-.4px;margin-top:3px}
   .perf-card .v .vu{font-size:15px;font-weight:700;color:var(--muted)}
   .perf-card .s{font-size:12px;color:var(--muted);margin-top:2px}
-  .meter{height:10px;background:#eef0f3;border-radius:999px;overflow:hidden;margin-top:10px}
-  .meter span{display:block;height:100%;background:var(--gold)}
-  .outdated-list{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:12px 0 0}
-  .outdated-list h4{margin:0 0 8px;color:var(--navy);font-size:14px}
-  .outdated-list ul{margin:0;padding-left:18px;color:var(--muted);font-size:13px}
   .status-note{background:var(--gold-soft);border-left:4px solid var(--gold);border-radius:8px;padding:12px 14px;margin-top:12px;font-size:13px;color:var(--navy)}
   .field-pills{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
   .field-pill{background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 9px;font-size:12px;color:var(--navy)}
-  .perf-h{margin:22px 0 6px;color:var(--navy);font-size:15px}
   .show-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:10px}
   .show-card h4{margin:0 0 4px;color:var(--navy)}
   .show-card .need{font-size:13px;color:var(--muted);font-style:italic}
-  details.calc{background:#fff;border:1px dashed var(--line);border-radius:12px;padding:12px 16px;margin-top:18px;font-size:13px}
-  details.calc summary{cursor:pointer;font-weight:700;color:var(--navy)}
+  .facnote{font-size:11.5px;color:var(--muted);margin-top:7px;line-height:1.45}
   .disclaimer{background:var(--gold-soft);border:1px solid #e7d9a8;border-radius:14px;padding:18px 20px;margin-top:26px;font-size:14px}
   .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
   .btn{border:none;border-radius:10px;padding:12px 18px;font-weight:700;font-size:14px;cursor:pointer}
@@ -111,6 +104,13 @@
   .custom input{width:64px;padding:6px;border:1px solid var(--line);border-radius:8px;text-align:center;font:inherit}
   .custom .grp{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);font-weight:800;margin:10px 0 2px}
   footer{background:var(--navy);color:#ffffff66;text-align:center;font-size:12px;padding:26px}
+  .card .ex{font-size:12px;color:var(--gold);font-style:italic;margin-top:7px;font-weight:600;line-height:1.4}
+  .infer .skip{display:block;margin-top:12px;background:transparent;border:none;color:var(--navy);
+    text-decoration:underline;font-weight:600;font-size:13px;cursor:pointer;padding:4px 0}
+  .sim-size{display:inline-block;background:var(--gold-soft);border:1px solid #e7d9a8;border-radius:999px;
+    padding:3px 11px;font-size:11px;font-weight:700;color:var(--navy);margin-top:8px}
+  .sim-effort{font-size:13.5px;color:var(--ink);margin:9px 0 0;line-height:1.55}
+  .sim-effort strong{color:var(--navy)}
   .hidden{display:none}
 </style>
 </head>
@@ -132,7 +132,7 @@
     timeline and effort involved — grounded in our past projects.</p>
 
   <div class="infer">
-    <div class="t">✨ Not sure about type or size? Tell us roughly what you're imagining — we'll size it
+    <div class="t">✨ Already have rough numbers in mind? Tell us what you're imagining and we'll size it
       by comparing with similar past projects.</div>
     <div class="frm">
       <label>Modules<input id="inf-modules" type="number" min="0" value="6"></label>
@@ -148,6 +148,7 @@
       <label class="chk"><input id="inf-xr" type="checkbox"> XR / immersive</label>
       <button class="btn gold" id="inf-go" type="button">Estimate my project →</button>
     </div>
+    <button class="skip" id="inf-skip" type="button">Don't know your numbers yet? Pick your project by description instead ↓</button>
   </div>
 
   <div class="step-label">1 · What are you building?</div>
@@ -178,35 +179,18 @@
       <div class="summary">
         <div class="stat"><div class="k">Estimated timeline</div><div class="v" id="s-weeks">—</div><div class="s">calendar weeks, start to launch</div></div>
         <div class="stat"><div class="k">ODL team effort</div><div class="v" id="s-odl">—</div><div class="s">hours across our team</div></div>
-        <div class="stat gold"><div class="k">Your time (faculty)</div><div class="v" id="s-fac">—</div><div class="s">your hands-on hours</div></div>
+        <div class="stat gold"><div class="k">Your time (faculty)</div><div class="v" id="s-fac">—</div><div class="s">your hands-on hours · planning estimate</div></div>
       </div>
+      <p class="note">Faculty hours are our team's planning estimate — we don't log your time, so read them as a generous guide, not a bill. Most of it is the design blueprint, ~1 h to script and ~1 h to film each video, and building each module with us.</p>
       <p class="note" id="s-bundle"></p>
       <p class="note" id="s-pm"></p>
+      <p class="note" id="s-meet"></p>
       <p class="note" id="s-history"></p>
       <p class="note" id="s-impact"></p>
       <p class="note" id="s-impact-asset"></p>
       <div id="timeline" class="timeline"></div>
       <p class="note">Tap any phase above (or in <strong>The Process</strong>) for what happens and what you'll do.</p>
       <div id="detailHost"></div>
-
-      <details class="calc">
-        <summary>How are these numbers calculated?</summary>
-        <p>Media and graphics hours come from <strong>ODL's own per-deliverable estimation table</strong>
-        (e.g., a studio lecture ≈ 8.5h, a 3-minute explainer animation ≈ 100h), summed across the
-        deliverables typical for a project of this type and size — and validated against our logged
-        time (observed median ≈ 12.8 h per finished short video, n=5 fully-tracked exemplars).
-        <strong>Project-management hours are calibrated from ODL's actual logged PM time</strong>:
-        0.6–1.6 h per calendar week (middle 50%, 14 PM-tracked projects, 679 tracked PM hours).
-        The "similar real projects" line comes from <strong>2,053 logged staff hours across 55
-        projects</strong> (25 fully tracked), e.g. full courses: median 43 staff-hours (excl. PM) and a
-        median 31-week timeline (middle half 18–42 wk, n=23). Design and faculty-time figures are ODL
-        planning estimates (we have not yet logged faculty time) and are shown as
-        <strong>ranges</strong>, not fixed numbers — they tighten as we track more projects. The
-        <strong>Track Record</strong> tab draws on ODL's Impact Tracker in Asana: project status plus
-        outcome fields like assets delivered and faculty satisfaction. Asset counts feed back into
-        the estimate (the "second opinion" line) only once enough fully tracked projects match the
-        tracker. These are estimates for planning, <strong>not commitments</strong>.</p>
-      </details>
 
       <div class="disclaimer">
         <strong>These are planning estimates, not commitments.</strong> Every project is unique. An ODL
@@ -244,14 +228,14 @@
   var typeHost = $("#types");
   ODL.PROJECT_TYPES.forEach(function(t){
     var b=document.createElement("button"); b.className="card"; b.dataset.id=t.id;
-    b.innerHTML='<h3>'+t.label+'</h3><div class="d">'+t.desc+'</div>';
+    b.innerHTML='<h3>'+t.label+'</h3><div class="d">'+t.desc+'</div>'+(t.ex?'<div class="ex">'+t.ex+'</div>':'');
     b.onclick=function(){ state.type=t.id; state.customMode=false; mark(); maybeRun(); };
     typeHost.appendChild(b);
   });
   var sizeHost=$("#sizes");
   ODL.PROJECT_SIZES.forEach(function(s){
     var b=document.createElement("button"); b.className="card"; b.dataset.size=s.id;
-    b.innerHTML='<div class="big">'+s.id+'</div><h3>'+s.label+'</h3><div class="d">'+s.desc+'</div>';
+    b.innerHTML='<div class="big">'+s.id+'</div><h3>'+s.label+'</h3><div class="d">'+s.desc+'</div>'+(s.scope?'<div class="ex">'+s.scope+'</div>':'');
     b.onclick=function(){ state.size=s.id; state.customMode=false; mark(); maybeRun(); };
     sizeHost.appendChild(b);
   });
@@ -329,7 +313,19 @@
     $("#results").scrollIntoView({behavior:"smooth", block:"start"});
   };
 
-  function fmtRange(r,unit){ return r[0]+"–"+r[1]+" "+unit; }
+  // ---- "I don't know my numbers" → guide them to pick by description -------
+  $("#inf-skip").onclick = function(){
+    var h = $("#hint");
+    h.innerHTML = "No problem — you don't need exact counts. Read the options below and pick the project "+
+      "<strong>type</strong> and <strong>size</strong> that feel closest. You can fine-tune the details afterward, "+
+      "and ODL will confirm everything with you.";
+    h.classList.remove("hidden");
+    document.querySelector(".step-label").scrollIntoView({behavior:"smooth", block:"start"});
+  };
+
+  function rng(a,b){ return a===b ? (""+a) : (a+"–"+b); }                 // "8" when equal, "8–11" for a real range
+  function wks(a,b){ return rng(a,b)+" "+((a===b&&a===1)?"week":"weeks"); }
+  function fmtRange(r,unit){ return rng(r[0],r[1])+" "+unit; }
   function esc(s){
     return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){
       return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c];
@@ -347,24 +343,28 @@
     $("#results").style.display="block";
 
     // summary
-    $("#s-weeks").textContent = est.totals.weeks[0]+"–"+est.totals.weeks[1]+" wk";
-    $("#s-odl").textContent   = est.totals.odl[0]+"–"+est.totals.odl[1]+" h";
-    $("#s-fac").textContent   = est.totals.faculty[0]+"–"+est.totals.faculty[1]+" h";
+    $("#s-weeks").textContent = rng(est.totals.weeks[0],est.totals.weeks[1])+" wk";
+    $("#s-odl").textContent   = rng(est.totals.odl[0],est.totals.odl[1])+" h";
+    $("#s-fac").textContent   = rng(est.totals.faculty[0],est.totals.faculty[1])+" h";
     var dl = Object.keys(est.bundle).filter(function(k){return est.bundle[k]>0;})
       .map(function(k){ return est.bundle[k]+"× "+ODL.deliverableLabel(k); }).join(" · ");
     $("#s-bundle").innerHTML = "<strong>Typical deliverables:</strong> " + (dl||"—");
     $("#s-pm").innerHTML = "<strong>Includes project management:</strong> " +
-      est.pm[0] + "–" + est.pm[1] + " h across all phases (calibrated: 0.6–1.6 h per " +
+      rng(est.pm[0],est.pm[1]) + " h across all phases (calibrated: 0.6–1.6 h per " +
       "calendar week, from ODL's 14 PM-tracked projects).";
+    if (est.meetings) {
+      $("#s-meet").innerHTML = "<strong>Your time includes working meetings:</strong> about 1 hour per week with " +
+        "the ODL team (" + rng(est.meetings[0],est.meetings[1]) + " h total over the project), already counted above.";
+    } else { $("#s-meet").textContent = ""; }
     var h = est.history;
     if (h && (h.productionHours || (h.calendarWeeks && h.calendarWeeks.p50 != null))) {
       var bits = [];
       if (h.productionHours && h.productionHours.p25 != null) {
-        bits.push("hands-on staff effort " + h.productionHours.p25 + "–" + h.productionHours.p75 +
+        bits.push("hands-on staff effort " + rng(h.productionHours.p25, h.productionHours.p75) +
           " h (median " + h.productionHours.p50 + " h, excl. PM, n=" + h.productionHours.n + ")");
       }
       if (h.calendarWeeks && h.calendarWeeks.p25 != null) {
-        bits.push("timeline " + Math.round(h.calendarWeeks.p25) + "–" + Math.round(h.calendarWeeks.p75) +
+        bits.push("timeline " + rng(Math.round(h.calendarWeeks.p25), Math.round(h.calendarWeeks.p75)) +
           " wk (median " + Math.round(h.calendarWeeks.p50) + " wk, n=" + h.calendarWeeks.n + ")");
       }
       $("#s-history").innerHTML = "<strong>What similar real ODL projects took:</strong> " +
@@ -388,9 +388,9 @@
       var ia = est.impactAsset;
       $("#s-impact-asset").innerHTML = "<strong>Second opinion:</strong> pricing your " +
         ia.assetCount + " planned assets at what finished ones have actually cost (" +
-        ia.hoursPerAsset.p25 + "–" + ia.hoursPerAsset.p75 + " h each, from " +
+        rng(ia.hoursPerAsset.p25, ia.hoursPerAsset.p75) + " h each, from " +
         ia.matchedProjects + " fully tracked projects) lands at " +
-        ia.totalWithPm[0] + "–" + ia.totalWithPm[1] + " h including PM.";
+        rng(ia.totalWithPm[0], ia.totalWithPm[1]) + " h including PM.";
     } else {
       $("#s-impact-asset").textContent = "";
     }
@@ -400,7 +400,7 @@
     est.phases.forEach(function(p,i){
       var d=document.createElement("button"); d.className="ph";
       d.innerHTML='<div class="ic">'+p.icon+'</div><div class="t">'+p.title+'</div><div class="w">'+
-        (p.weeks? p.weeks[0]+"–"+p.weeks[1]+" wk":"Ongoing")+'</div>';
+        (p.weeks? rng(p.weeks[0],p.weeks[1])+" wk":"Ongoing")+'</div>';
       d.onclick=function(){ showDetail(est,i); document.getElementById("detailHost").scrollIntoView({behavior:"smooth",block:"center"}); };
       tl.appendChild(d);
     });
@@ -413,13 +413,14 @@
 
   function detailCard(p){
     return '<div class="detail"><div class="hd"><div class="ic">'+p.icon+'</div>'+
-      '<div><h3>'+p.title+'</h3><div class="sub">'+(p.weeks? p.weeks[0]+"–"+p.weeks[1]+" weeks":"Ongoing")+'</div></div></div>'+
+      '<div><h3>'+p.title+'</h3><div class="sub">'+(p.weeks? wks(p.weeks[0],p.weeks[1]):"Ongoing")+'</div></div></div>'+
       '<div class="body"><div class="block">'+
         '<h4>What happens</h4><p>'+p.whatHappens+'</p>'+
         '<h4>ODL handles</h4><p>'+p.odlDoes+'</p>'+
         '<h4>What you do</h4><div class="youdo">'+p.youDo+'</div>'+
       '</div><div>'+
-        '<div class="sidebox"><div class="k">Your time this phase</div><div class="v">'+fmtRange(p.faculty,"h")+'</div></div>'+
+        '<div class="sidebox"><div class="k">Your time this phase</div><div class="v">'+fmtRange(p.faculty,"h")+'</div>'+
+          (p.facNote?'<div class="facnote">'+esc(p.facNote)+'</div>':'')+'</div>'+
         '<div class="sidebox"><div class="k">ODL team effort</div><div class="v">'+fmtRange(p.odl,"h")+'</div></div>'+
         '<div class="sidebox"><div class="k">Artifacts</div><div class="chips">'+
           p.artifacts.map(function(a){return '<span class="chip">'+a+'</span>';}).join("")+'</div></div>'+
@@ -443,7 +444,6 @@
         'ask ODL for the latest numbers.</p>';
       return;
     }
-    function clampPct(x){ return Math.max(0, Math.min(100, x || 0)); }
 
     // headline cards: what we delivered and what partners said
     var oc = hasFields && f.outcomes;
@@ -456,7 +456,7 @@
     }
     if (oc && oc.net_promoter_score && oc.net_promoter_score.p50 != null) {
       var nps = oc.net_promoter_score;
-      cards.push('<div class="perf-card"><div class="k">Would recommend ODL</div>'+
+      cards.push('<div class="perf-card"><div class="k">Faculty recommend ODL</div>'+
         '<div class="v">'+nps.p50+'</div>'+
         '<div class="s">median Net Promoter Score, '+nps.n+' projects</div></div>');
     }
@@ -481,98 +481,38 @@
       .filter(function(k){ return !/^total/i.test(k) && typeTotals[k] > 0; })
       .map(function(k){ return '<span class="field-pill">'+esc(k)+': '+typeTotals[k]+'</span>'; }).join("");
 
-    // documentation follow-through, friendliest label first
-    var complianceHtml = "";
-    var comp = hasFields && f.compliance;
-    if (comp && Object.keys(comp).length) {
-      var compLabels = {
-        "Post-Project Evaluation": "Post-project evaluation completed",
-        "Project Charter": "Project charter on file",
-        "Handoff Document": "Handoff document delivered",
-        "IP Agreement": "IP agreement signed",
-        "MOU": "MOU in place"
-      };
-      var order = Object.keys(compLabels).filter(function(k){ return comp[k]; })
-        .concat(Object.keys(comp).filter(function(k){ return !compLabels[k]; }));
-      complianceHtml = '<h4 class="perf-h">How we hold ourselves accountable</h4>'+
-        '<p class="note" style="margin:0 0 10px">Every ODL project is supposed to wrap up with its paperwork '+
-        'in order — a charter, a handoff document, an evaluation. Here\'s how often that has actually happened '+
-        'so far, straight from our tracker:</p>'+
-        order.map(function(k){
-          var c = comp[k];
-          var pct = c.yes_pct_of_applicable;
-          return '<div class="status-note"><strong>'+esc(compLabels[k] || k)+':</strong> '+
-            (pct != null ? c.yes+' of '+c.applicable+' applicable projects ('+Math.round(pct)+'%)' :
-             'no applicable projects yet')+
-            '<div class="meter"><span style="width:'+clampPct(pct)+'%"></span></div></div>';
-        }).join("");
-    }
-
-    // the fine print: coverage, caveats, and where the numbers come from
-    var fine = [];
-    if (impact) {
-      var counts = impact.status_counts || {};
-      var upToDate = counts["Up to date"] || 0;
-      var outdated = counts["Outdated"] || 0;
-      fine.push('<p><strong>Coverage.</strong> '+impact.tracked_projects+' of '+impact.total_projects+
-        ' ODL projects in Asana ('+(impact.coverage_pct != null ? impact.coverage_pct : "?")+
-        '%) carry an Impact Tracker status; '+upToDate+' are up to date and '+outdated+
-        ' need a refresh. A blank status means the field wasn\'t filled in, not that the project had no impact.</p>');
-      var outdatedRows = impact.outdated_projects || [];
-      if (outdatedRows.length) {
-        fine.push('<p><strong>Waiting on a tracker refresh:</strong> '+
-          outdatedRows.map(function(r){ return esc(r.project); }).join(" · ")+'.</p>');
-      }
-    }
-    if (hasFields && f.tracker_status_counts && Object.keys(f.tracker_status_counts).length) {
-      var mix = f.tracker_status_counts;
-      fine.push('<p><strong>Tracker board status:</strong> '+
-        Object.keys(mix).map(function(k){ return mix[k]+' '+esc(k.toLowerCase()); }).join(", ")+'.</p>');
-    }
-    var hx = hasFields && f.hours_crosscheck;
-    if (hx && hx.n > 0 && hx.median_ratio_logged_over_reported != null) {
-      fine.push('<p><strong>A caveat on hours.</strong> On the '+hx.n+
-        ' projects that appear in both systems, our Asana time entries capture a median '+
-        Math.round(hx.median_ratio_logged_over_reported*100)+
-        '% of the hours reported in the tracker, so logged-hours figures elsewhere in this guide '+
-        'are best read as a floor.</p>');
-    }
-    if (hasFields) {
-      fine.push('<p><strong>Under the hood.</strong> '+f.field_count+' tracker fields ('+
-        f.value_count+' values across '+f.record_count+' rows); '+f.records_with_assets+
-        ' rows carry asset counts, '+f.records_with_satisfaction+' carry satisfaction scores, and '+
-        f.matched_records+' matched back to Asana projects.</p>');
-      var model = f.asset_hours_per_asset || {};
-      var q = model.hours_per_asset || {};
-      if (model.usable_for_estimation && q.p25 != null && q.p75 != null) {
-        fine.push('<p><strong>Estimator cross-check:</strong> active — finished assets have cost '+
-          q.p25+'–'+q.p75+' non-PM hours each (middle 50%), from '+
-          (model.matched_full_coverage_projects || []).length+' fully tracked projects. '+
-          'This powers the "second opinion" line on Your Plan.</p>');
-      } else if (model.note) {
-        fine.push('<p><strong>Estimator cross-check:</strong> not active yet — '+esc(model.note)+'</p>');
-      }
-    }
-
     $("#tab-performance").innerHTML =
       '<p class="lead">How working with ODL has actually gone — what we\'ve delivered and what '+
-      'faculty partners said afterward. Every number on this page comes straight from our own '+
-      'project tracker; where the data is thin, we say so.</p>'+
+      'faculty partners said afterward, straight from our own project tracker.</p>'+
       '<div class="perf-grid">'+cards.join("")+'</div>'+
       (typePills ? '<div class="status-note"><strong>Delivered so far</strong>'+
-        '<div class="field-pills">'+typePills+'</div></div>' : '')+
-      complianceHtml+
-      (fine.length ? '<details class="calc"><summary>About this data — coverage and caveats</summary>'+
-        fine.join("")+'</details>' : '');
+        '<div class="field-pills">'+typePills+'</div></div>' : '');
   }
 
   function buildSimilar(){
     var sims = ODL.similarProjects(state.type||"new_course", state.size||"M");
     $("#tab-similar").innerHTML =
-      '<p class="lead">Real ND projects of a similar kind:</p>'+
+      '<p class="lead">Real Notre Dame projects of a similar kind — and the effort each tends to take, '+
+      'so you can see how a project like yours has played out. Some match your size; others are the '+
+      'same <em>type</em> at a different scale.</p>'+
       (sims.length? sims.map(function(s){
-        return '<div class="show-card"><h4>'+s.title+'</h4><div class="need">“'+s.need+'”</div>'+
-          (s.link?'<p style="margin:8px 0 0"><a href="'+s.link+'" target="_blank" rel="noopener">Learn more →</a></p>':'')+'</div>';
+        var e = s.effort || {};
+        var badge = s.sizeMatch
+          ? '<span class="sim-size">'+esc(s.sizeLabel)+' — same size you picked</span>'
+          : '<span class="sim-size">'+esc(s.sizeLabel)+' project'+
+            (s.yourSizeLabel ? ' · you picked '+esc(s.yourSizeLabel) : '')+'</span>';
+        var effortLine = (e.odl && e.weeks && e.faculty)
+          ? '<p class="sim-effort"><strong>Planning estimate for a project this size:</strong> '+
+            'about '+rng(e.odl[0],e.odl[1])+' ODL team hours over '+wks(e.weeks[0],e.weeks[1])+', '+
+            'with roughly '+rng(e.faculty[0],e.faculty[1])+' hours of your time.</p>'
+          : '';
+        var loggedLine = (s.loggedHours != null)
+          ? '<p class="note" style="margin:5px 0 0">On this specific project, ODL has logged about '+Math.round(s.loggedHours)+
+            ' staff hours so far — actual tracked time, measured differently from the estimate above.</p>'
+          : '';
+        return '<div class="show-card"><h4>'+esc(s.title)+'</h4><div class="need">“'+esc(s.need)+'”</div>'+
+          badge+effortLine+loggedLine+
+          (s.link?'<p style="margin:8px 0 0"><a href="'+esc(s.link)+'" target="_blank" rel="noopener">Learn more →</a></p>':'')+'</div>';
       }).join("") : '<p>No close match yet — browse all ODL projects via the showcase.</p>');
   }
 
