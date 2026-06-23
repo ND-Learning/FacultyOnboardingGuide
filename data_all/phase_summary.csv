@@ -298,7 +298,7 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1213292120696339,NEON - POLS 30022 (Poly Sci),Analysis,3,0,1,,,,0.0,0.0,0,0,0,0.33
 1213292120696339,NEON - POLS 30022 (Poly Sci),Design,13,1,2,2026-03-06T17:44:06.133000+00:00,2026-03-06T17:44:06.133000+00:00,0,600.0,10.0,0,0,0,0.08
 1213292120696339,NEON - POLS 30022 (Poly Sci),Design Development,6,0,2,,,,0.0,0.0,0,0,0,0.17
-1213292120696339,NEON - POLS 30022 (Poly Sci),Media Timetracking,15,0,0,,,,1005.0,16.75,0,0,0,0.07
+1213292120696339,NEON - POLS 30022 (Poly Sci),Media Timetracking,15,0,0,,,,1080.0,18.0,0,0,0,0.07
 1213292120696339,NEON - POLS 30022 (Poly Sci),Post-Production,3,0,0,,,,0.0,0.0,0,0,0,0.33
 1213292120696339,NEON - POLS 30022 (Poly Sci),Post-Project Evaluation,5,0,1,,,,0.0,0.0,0,0,0,0.2
 1213292120696339,NEON - POLS 30022 (Poly Sci),Pre-Production,9,0,1,,,,120.0,2.0,0,0,0,0.11
