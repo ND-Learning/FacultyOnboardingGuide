@@ -38,7 +38,7 @@
   // === BEGIN CALIBRATION (machine-generated — do not edit by hand) ==========
   var CALIBRATION =
   {
-    "provenance": "data_all/time_entries.csv (2,384 entries, 2155.5h, 2024-08-19..2026-06-24, ODL staff time) | 25 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 21 of them with >=10h non-PM logging",
+    "provenance": "data_all/time_entries.csv (2,385 entries, 2158.5h, 2024-08-19..2026-06-24, ODL staff time) | 25 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 21 of them with >=10h non-PM logging",
     "generated_from": "data_all/derived/calibration.json -- run inject_calibration.py to refresh",
     "archetypeEffort": {
       "course_redesign": {
@@ -117,15 +117,15 @@
     },
     "mediaSplitBasis": "pooled hours on per-video sections with full-coverage logging: 1 project(s) (Program for Inclusive Education (PIE) Video #2), 15.5h total",
     "coursePhaseMixPct": {
-      "Production": 33.0,
-      "Post-Production": 24.1,
+      "Production": 33.2,
+      "Post-Production": 24.0,
       "Development/Build": 16.7,
       "Pre-Production": 16.5,
-      "Design": 8.1,
-      "Other / unsorted": 1.2,
+      "Design": 8.0,
+      "Other / unsorted": 1.1,
       "Discovery": 0.4
     },
-    "coursePhaseMixBasis": "pooled non-PM hours of 14 full-coverage full_course projects (932.3h)",
+    "coursePhaseMixBasis": "pooled non-PM hours of 14 full-coverage full_course projects (935.3h)",
     "calendarWeeks": {
       "consult_or_studio": {
         "n": 1,
@@ -625,8 +625,8 @@
             "project": "Virtual Borders",
             "project_gid": "1208335647365619",
             "tracker_reported_hours": 120.0,
-            "asana_logged_hours": 100.2,
-            "ratio_logged_over_reported": 0.84
+            "asana_logged_hours": 103.2,
+            "ratio_logged_over_reported": 0.86
           }
         ],
         "basis": "Tracker 'Total Hours' field vs hours actually logged in Asana time entries for the same project (matched by GID or unique normalized name)."

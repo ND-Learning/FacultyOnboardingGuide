@@ -1,8 +1,8 @@
 {
   "_provenance": {
-    "source": "data_all/time_entries.csv (2,384 entries, 2155.5h, 2024-08-19..2026-06-24, ODL staff time)",
+    "source": "data_all/time_entries.csv (2,385 entries, 2158.5h, 2024-08-19..2026-06-24, ODL staff time)",
     "calibration_set": "25 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 21 of them with >=10h non-PM logging",
-    "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 2242, 'task_name': 103, 'none': 39}",
+    "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 2243, 'task_name': 103, 'none': 39}",
     "no_guessing": "blocks state 'not_calibratable' where data is insufficient"
   },
   "archetype_effort_hours": {
@@ -25,8 +25,8 @@
       "projects": {
         "AI for the Notre Dame Community": 286.5,
         "Responsible and Ethical AI": 98.9,
+        "Virtual Borders": 103.2,
         "ASCEND Engineering": 27.5,
-        "Virtual Borders": 100.2,
         "ASCEND MCOB": 80.2,
         "The Qur’an and the Bible (Gabriel Reynolds)": 46.7,
         "MSAN II": 71.1,
@@ -326,14 +326,14 @@
     }
   },
   "full_course_phase_mix": {
-    "basis": "pooled non-PM hours of 14 full-coverage full_course projects (932.3h)",
+    "basis": "pooled non-PM hours of 14 full-coverage full_course projects (935.3h)",
     "share_pct": {
-      "Production": 33.0,
-      "Post-Production": 24.1,
+      "Production": 33.2,
+      "Post-Production": 24.0,
       "Development/Build": 16.7,
       "Pre-Production": 16.5,
-      "Design": 8.1,
-      "Other / unsorted": 1.2,
+      "Design": 8.0,
+      "Other / unsorted": 1.1,
       "Discovery": 0.4
     }
   },
@@ -923,8 +923,8 @@
           "project": "Virtual Borders",
           "project_gid": "1208335647365619",
           "tracker_reported_hours": 120.0,
-          "asana_logged_hours": 100.2,
-          "ratio_logged_over_reported": 0.84
+          "asana_logged_hours": 103.2,
+          "ratio_logged_over_reported": 0.86
         }
       ],
       "basis": "Tracker 'Total Hours' field vs hours actually logged in Asana time entries for the same project (matched by GID or unique normalized name)."
@@ -1059,10 +1059,10 @@
         "ape_pct": 52.8
       },
       {
-        "actual": 100.2,
+        "actual": 103.2,
         "pred_p50": 46.7,
         "in_iqr": false,
-        "ape_pct": 53.4
+        "ape_pct": 54.7
       },
       {
         "actual": 286.5,
