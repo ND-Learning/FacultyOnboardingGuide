@@ -148,27 +148,36 @@ def main():
                 run([py, "asana_pull.py", "pull", "--portfolio", portfolio,
                      "--out", tmp], env={"ASANA_TOKEN": tok}, dry=args.dry_run)
             else:
-                # live team discovery -> gid file -> pull
-                print(f"\n$ asana_pull.py list-projects --team {team} (live discovery)")
+                # live WORKSPACE discovery -> gid file -> pull. Listing the whole
+                # workspace (NOT one team) each run means projects on any team's
+                # board are captured -- e.g. the cross-team "NDL Project Tracking
+                # & Awareness" board the dashboard needs, plus every new May/June
+                # project. Archived projects are included (the pull records the
+                # `archived` flag per project). The regenerated list is written to
+                # all_gids.txt (in 'gid  # name' format) and promoted only after a
+                # successful pull, so a failed listing can't corrupt the audit trail.
+                print(f"\n$ asana_pull.py list-projects --workspace {team_ws} (live workspace discovery)")
+                gid_file = os.path.join(tmp, "_all_gids.txt")
                 if not args.dry_run:
                     lp = subprocess.run(
                         [py, "asana_pull.py", "list-projects",
-                         "--workspace", team_ws, "--team", team],
+                         "--workspace", team_ws, "--out-file", gid_file],
                         cwd=HERE, env={**os.environ, "ASANA_TOKEN": tok},
                         capture_output=True, text=True)
-                    # real Asana GIDs are long ints; the length guard skips the
-                    # header and the trailing "N projects." summary line
-                    gids = [ln.split()[0] for ln in lp.stdout.splitlines()
-                            if ln.split() and ln.split()[0].isdigit()
-                            and len(ln.split()[0]) >= 10]
+                    # count real gids from the written file (strip '# name' comments);
+                    # real Asana GIDs are long ints, so the length guard is a sanity net
+                    gids = []
+                    if os.path.exists(gid_file):
+                        with open(gid_file) as f:
+                            for ln in f:
+                                g = ln.split("#", 1)[0].strip()
+                                if g.isdigit() and len(g) >= 10:
+                                    gids.append(g)
                     if lp.returncode != 0 or len(gids) < 5:
-                        sys.exit("team project listing failed or implausibly small "
+                        sys.exit("workspace project listing failed or implausibly small "
                                  f"({len(gids)} projects) -- keeping previous data.\n"
                                  + lp.stderr[-500:])
-                    gid_file = os.path.join(tmp, "_team_gids.txt")
-                    with open(gid_file, "w") as f:
-                        f.write("\n".join(gids) + "\n")
-                    print(f"  discovered {len(gids)} projects in the team")
+                    print(f"  discovered {len(gids)} projects in the workspace")
                 else:
                     gid_file = "(dry-run)"
                 run([py, "asana_pull.py", "pull", "--project-file", gid_file,
@@ -178,6 +187,12 @@ def main():
                 missing = [f for f in required if not os.path.exists(os.path.join(tmp, f))]
                 if missing:
                     sys.exit(f"pull incomplete (missing {missing}) -- keeping previous data")
+                # promote the freshly regenerated workspace project list (only now
+                # that the pull succeeded) so all_gids.txt stays an accurate,
+                # committed audit trail of exactly what was pulled this run.
+                disc = os.path.join(tmp, "_all_gids.txt")
+                if os.path.exists(disc):
+                    shutil.move(disc, os.path.join(HERE, "all_gids.txt"))
                 for f in os.listdir(tmp):
                     if f.startswith("_"):
                         continue

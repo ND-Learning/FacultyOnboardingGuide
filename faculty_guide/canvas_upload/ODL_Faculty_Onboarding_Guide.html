@@ -112,6 +112,15 @@
   .sim-effort{font-size:13.5px;color:var(--ink);margin:9px 0 0;line-height:1.55}
   .sim-effort strong{color:var(--navy)}
   .hidden{display:none}
+  /* discreet "view the source" affordances (external links to Asana / Sheets) */
+  .srclink{color:var(--navy);text-decoration:none;border-bottom:1px dashed #c3c9d2;
+    white-space:nowrap;font-weight:600}
+  .srclink:hover{color:var(--gold);border-bottom-color:var(--gold)}
+  .srcline{font-size:12px;color:var(--muted);margin:-6px 2px 16px}
+  .srcstrip{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;margin-top:14px;
+    padding-top:12px;border-top:1px solid #e7d9a8}
+  .srcstrip .cap{flex-basis:100%;font-size:11.5px;color:var(--muted);margin-bottom:-2px}
+  .srcstrip a{font-size:12.5px}
 </style>
 </head>
 <body>
@@ -200,6 +209,12 @@
           <a class="btn gold" href="https://learning.nd.edu/about/lets-work-together/" target="_blank" rel="noopener">Start the intake form →</a>
           <a class="btn ghost" href="mailto:online@nd.edu">Email ODL (online@nd.edu)</a>
           <button class="btn primary" type="button" onclick="window.print()">🖶 Print / save this plan</button>
+        </div>
+        <div class="srcstrip">
+          <span class="cap">Where these numbers come from (ND login required):</span>
+          <a class="srclink" href="https://app.asana.com/1/228221773618853/project/1211592424221769" target="_blank" rel="noopener">ODL Impact Tracker ↗</a>
+          <a class="srclink" href="https://docs.google.com/spreadsheets/d/1YD9b8vLnglbA5pmFO6HsE-bvMq7wluHv1P1wY4FCujw/edit?gid=1025292964" target="_blank" rel="noopener">Team capacity sheet ↗</a>
+          <a class="srclink" href="https://app.asana.com/1/228221773618853/home" target="_blank" rel="noopener">Logged hours (Asana) ↗</a>
         </div>
       </div>
     </div>
@@ -1020,10 +1035,10 @@
     },
     {
       key: "evaluation", title: "Evaluation & Iteration", icon: "📊",
-      whatHappens: "After launch we gather feedback, analyze performance data, and update the Asana Impact Tracker to understand the student experience and plan improvements.",
+      whatHappens: "After launch we gather feedback, analyze performance data, and update the <a href=\"https://app.asana.com/1/228221773618853/project/1211592424221769\" target=\"_blank\" rel=\"noopener\">Asana Impact Tracker ↗</a> to understand the student experience and plan improvements.",
       odlDoes: "Sends the reflection survey, updates the impact tracker status, builds the report, and runs the retrospective.",
       youDo: "Review feedback and metrics with us; reflect and plan future enhancements.",
-      artifacts: ["Evaluation Report", "Impact Tracker update"], ongoing: true
+      artifacts: ["Evaluation Report", "<a href=\"https://app.asana.com/1/228221773618853/project/1211592424221769\" target=\"_blank\" rel=\"noopener\">Impact Tracker update ↗</a>"], ongoing: true
     }
   ];
 
@@ -1084,19 +1099,23 @@
   };
 
   // --- a few real ND showcase projects for "similar projects" ---------------
+  // `gid` = the Asana project GID (from data_all/projects.csv, matched on
+  // normalized name), used to deep-link "View project in Asana". Entries with
+  // no confident single match omit gid (ACE ASCENT is split across Phase II/III;
+  // "AI Tutor" has no Asana board yet) and simply show no Asana link.
   var SHOWCASE = [
-    { title: "The Qur’an and the Bible (Coursera)", type: "new_course", size: "M", need: "A 6-module MOOC for a global audience.", link: "https://think.nd.edu/big_questions/new-on-coursera-sacred-texts-in-dialogue/" },
-    { title: "AI for the ND Community", type: "ai", size: "L", need: "Campus-wide AI literacy, modular by role.", link: "https://learning.nd.edu/news/announcing-ai-for-the-nd-community-course/" },
+    { title: "The Qur’an and the Bible (Coursera)", gid: "1208255134984932", type: "new_course", size: "M", need: "A 6-module MOOC for a global audience.", link: "https://think.nd.edu/big_questions/new-on-coursera-sacred-texts-in-dialogue/" },
+    { title: "AI for the ND Community", gid: "1209298164735103", type: "ai", size: "L", need: "Campus-wide AI literacy, modular by role.", link: "https://learning.nd.edu/news/announcing-ai-for-the-nd-community-course/" },
     { title: "ACE ASCENT", type: "new_course", size: "XL", need: "A multi-course teacher PD sequence for national cohorts.", link: "https://ace.nd.edu/ascent-research" },
-    { title: "ACE Assessment Course Redesign", type: "bisynchronous", size: "M", need: "Modernize an assessment course; blend workshops + online modules.", link: "https://ace.nd.edu/" },
-    { title: "MSAN II", type: "bisynchronous", size: "L", need: "Leadership training for military spouses across time zones.", link: "https://learning.nd.edu/news/notre-dames-partnership-with-military-spouse-advocacy-network-launches-second-course/" },
-    { title: "Lab Visualization", type: "flipped", size: "M", need: "Pre-lab videos to boost student readiness and safety.", link: "https://learning.nd.edu/news/visualizing-success-using-video-to-boost-student-lab-readiness-and-confidence/" },
+    { title: "ACE Assessment Course Redesign", gid: "1208622917750063", type: "bisynchronous", size: "M", need: "Modernize an assessment course; blend workshops + online modules.", link: "https://ace.nd.edu/" },
+    { title: "MSAN II", gid: "1208335647365608", type: "bisynchronous", size: "L", need: "Leadership training for military spouses across time zones.", link: "https://learning.nd.edu/news/notre-dames-partnership-with-military-spouse-advocacy-network-launches-second-course/" },
+    { title: "Lab Visualization", gid: "1210202036254627", type: "flipped", size: "M", need: "Pre-lab videos to boost student readiness and safety.", link: "https://learning.nd.edu/news/visualizing-success-using-video-to-boost-student-lab-readiness-and-confidence/" },
     { title: "AI Tutor — Critical Thinking", type: "ai", size: "S", need: "A Socratic-style AI feedback tool.", link: "https://learning.nd.edu/" },
-    { title: "Bringing Korean to Life", type: "xr", size: "M", need: "VR/360 immersion + AI conversation avatars.", link: "https://www.library.nd.edu/news/korean-language-students-use-virtual-reality-to-explore-traditions/" },
-    { title: "XR for Law — Car Crash", type: "xr", size: "S", need: "A VR crash to study eyewitness fallibility.", link: "https://xr.nd.edu/projects/law-school-car-crash-simulator/" },
-    { title: "Spanish Escape Room", type: "xr", size: "L", need: "Gamified, collaborative Spanish language & culture.", link: "https://learning.nd.edu/news/ai-and-game-based-learning-enhance-study-of-spanish-language-and-culture/" },
-    { title: "Digital Accessibility — Whitney James", type: "module", size: "S", need: "A high-impact module on universal design / A11y.", link: "https://accessibility.nd.edu/" },
-    { title: "AI Video Series", type: "module", size: "M", need: "Fast-turnaround video series on generative AI.", link: "https://learning.nd.edu/learning-technology/lab-for-ai-in-teaching-and-learning-laitl/ai-for-teaching-and-learning-video-series/" }
+    { title: "Bringing Korean to Life", gid: "1210225716846542", type: "xr", size: "M", need: "VR/360 immersion + AI conversation avatars.", link: "https://www.library.nd.edu/news/korean-language-students-use-virtual-reality-to-explore-traditions/" },
+    { title: "XR for Law — Car Crash", gid: "1209243150458283", type: "xr", size: "S", need: "A VR crash to study eyewitness fallibility.", link: "https://xr.nd.edu/projects/law-school-car-crash-simulator/" },
+    { title: "Spanish Escape Room", gid: "1207760971753765", type: "xr", size: "L", need: "Gamified, collaborative Spanish language & culture.", link: "https://learning.nd.edu/news/ai-and-game-based-learning-enhance-study-of-spanish-language-and-culture/" },
+    { title: "Digital Accessibility — Whitney James", gid: "1210225716846536", type: "module", size: "S", need: "A high-impact module on universal design / A11y.", link: "https://accessibility.nd.edu/" },
+    { title: "AI Video Series", gid: "1207728646024488", type: "module", size: "M", need: "Fast-turnaround video series on generative AI.", link: "https://learning.nd.edu/learning-technology/lab-for-ai-in-teaching-and-learning-laitl/ai-for-teaching-and-learning-video-series/" }
   ];
 
   // ---------------------------------------------------------------------------
@@ -1304,7 +1323,7 @@
     return list.map(function (p) {
       var est = estimate(p.type, p.size);
       return {
-        title: p.title, need: p.need, link: p.link,
+        title: p.title, need: p.need, link: p.link, gid: p.gid,
         type: p.type, size: p.size,
         sizeMatch: p.size === size,
         sizeLabel: sizeLabel(p.size),
@@ -1392,6 +1411,17 @@
   var state = { type:null, size:null, custom:null, customMode:false };
   var $ = function(s){return document.querySelector(s)};
   document.getElementById("yr").textContent = "2026";
+
+  // ---- where the numbers come from (source deep-links, ND login required) ----
+  var SRC = {
+    impact:   "https://app.asana.com/1/228221773618853/project/1211592424221769", // ODL Impact Tracker board
+    hours:    "https://app.asana.com/1/228221773618853/home",                     // Asana logged project hours
+    capacity: "https://docs.google.com/spreadsheets/d/1YD9b8vLnglbA5pmFO6HsE-bvMq7wluHv1P1wY4FCujw/edit?gid=1025292964",
+    asanaProject: function(gid){ return "https://app.asana.com/1/228221773618853/project/" + gid; }
+  };
+  function srcLink(url, label){
+    return ' <a class="srclink" href="' + url + '" target="_blank" rel="noopener">' + label + ' ↗</a>';
+  }
 
   // ---- build type & size cards ----
   var typeHost = $("#types");
@@ -1520,7 +1550,8 @@
     $("#s-bundle").innerHTML = "<strong>Typical deliverables:</strong> " + (dl||"—");
     $("#s-pm").innerHTML = "<strong>Includes project management:</strong> " +
       rng(est.pm[0],est.pm[1]) + " h across all phases (calibrated: 0.6–1.6 h per " +
-      "calendar week, from ODL's 14 PM-tracked projects).";
+      "calendar week, from ODL's 14 PM-tracked projects)." +
+      srcLink(SRC.hours, "our logged project hours (Asana)");
     if (est.meetings) {
       $("#s-meet").innerHTML = "<strong>Your time includes working meetings:</strong> about 1 hour per week with " +
         "the ODL team (" + rng(est.meetings[0],est.meetings[1]) + " h total over the project), already counted above.";
@@ -1537,7 +1568,8 @@
           " wk (median " + Math.round(h.calendarWeeks.p50) + " wk, n=" + h.calendarWeeks.n + ")");
       }
       $("#s-history").innerHTML = "<strong>What similar real ODL projects took:</strong> " +
-        bits.join("; ") + " — middle-50% ranges from our logged hours and project calendars.";
+        bits.join("; ") + " — middle-50% ranges from our logged hours and project calendars." +
+        srcLink(SRC.hours, "our logged project hours (Asana)");
     } else {
       $("#s-history").textContent = "";
     }
@@ -1546,10 +1578,12 @@
     if (sat && sat.p50 != null) {
       $("#s-impact").innerHTML = "<strong>Working with ODL:</strong> faculty partners on " +
         sat.n + " completed projects rated the experience " + sat.p50 +
-        " out of 5 (median) — more on the <strong>Track Record</strong> tab.";
+        " out of 5 (median) — more on the <strong>Track Record</strong> tab." +
+        srcLink(SRC.impact, "ODL Impact Tracker (Asana)");
     } else if (ODL.CALIBRATION && ODL.CALIBRATION.impactTracker) {
       $("#s-impact").innerHTML = "<strong>Curious how past projects went?</strong> " +
-        "The <strong>Track Record</strong> tab shows outcomes from completed ODL projects.";
+        "The <strong>Track Record</strong> tab shows outcomes from completed ODL projects." +
+        srcLink(SRC.impact, "ODL Impact Tracker (Asana)");
     } else {
       $("#s-impact").textContent = "";
     }
@@ -1559,7 +1593,8 @@
         ia.assetCount + " planned assets at what finished ones have actually cost (" +
         rng(ia.hoursPerAsset.p25, ia.hoursPerAsset.p75) + " h each, from " +
         ia.matchedProjects + " fully tracked projects) lands at " +
-        rng(ia.totalWithPm[0], ia.totalWithPm[1]) + " h including PM.";
+        rng(ia.totalWithPm[0], ia.totalWithPm[1]) + " h including PM." +
+        srcLink(SRC.impact, "ODL Impact Tracker (Asana)");
     } else {
       $("#s-impact-asset").textContent = "";
     }
@@ -1653,6 +1688,7 @@
     $("#tab-performance").innerHTML =
       '<p class="lead">How working with ODL has actually gone — what we\'ve delivered and what '+
       'faculty partners said afterward, straight from our own project tracker.</p>'+
+      '<p class="srcline">'+srcLink(SRC.impact, "Source: ODL Impact Tracker (Asana)")+'</p>'+
       '<div class="perf-grid">'+cards.join("")+'</div>'+
       (typePills ? '<div class="status-note"><strong>Delivered so far</strong>'+
         '<div class="field-pills">'+typePills+'</div></div>' : '');
@@ -1679,9 +1715,16 @@
           ? '<p class="note" style="margin:5px 0 0">On this specific project, ODL has logged about '+Math.round(s.loggedHours)+
             ' staff hours so far — actual tracked time, measured differently from the estimate above.</p>'
           : '';
+        var asanaLine = s.gid
+          ? '<a class="srclink" href="'+SRC.asanaProject(s.gid)+'" target="_blank" rel="noopener">View project in Asana ↗</a>'
+          : '';
+        var linkLine = (s.link || asanaLine)
+          ? '<p style="margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px 16px">'+
+            (s.link?'<a href="'+esc(s.link)+'" target="_blank" rel="noopener">Learn more →</a>':'')+
+            asanaLine+'</p>'
+          : '';
         return '<div class="show-card"><h4>'+esc(s.title)+'</h4><div class="need">“'+esc(s.need)+'”</div>'+
-          badge+effortLine+loggedLine+
-          (s.link?'<p style="margin:8px 0 0"><a href="'+esc(s.link)+'" target="_blank" rel="noopener">Learn more →</a></p>':'')+'</div>';
+          badge+effortLine+loggedLine+linkLine+'</div>';
       }).join("") : '<p>No close match yet — browse all ODL projects via the showcase.</p>');
   }
 

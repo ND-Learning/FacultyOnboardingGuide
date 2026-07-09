@@ -800,10 +800,10 @@
     },
     {
       key: "evaluation", title: "Evaluation & Iteration", icon: "📊",
-      whatHappens: "After launch we gather feedback, analyze performance data, and update the Asana Impact Tracker to understand the student experience and plan improvements.",
+      whatHappens: "After launch we gather feedback, analyze performance data, and update the <a href=\"https://app.asana.com/1/228221773618853/project/1211592424221769\" target=\"_blank\" rel=\"noopener\">Asana Impact Tracker ↗</a> to understand the student experience and plan improvements.",
       odlDoes: "Sends the reflection survey, updates the impact tracker status, builds the report, and runs the retrospective.",
       youDo: "Review feedback and metrics with us; reflect and plan future enhancements.",
-      artifacts: ["Evaluation Report", "Impact Tracker update"], ongoing: true
+      artifacts: ["Evaluation Report", "<a href=\"https://app.asana.com/1/228221773618853/project/1211592424221769\" target=\"_blank\" rel=\"noopener\">Impact Tracker update ↗</a>"], ongoing: true
     }
   ];
 
@@ -864,19 +864,23 @@
   };
 
   // --- a few real ND showcase projects for "similar projects" ---------------
+  // `gid` = the Asana project GID (from data_all/projects.csv, matched on
+  // normalized name), used to deep-link "View project in Asana". Entries with
+  // no confident single match omit gid (ACE ASCENT is split across Phase II/III;
+  // "AI Tutor" has no Asana board yet) and simply show no Asana link.
   var SHOWCASE = [
-    { title: "The Qur’an and the Bible (Coursera)", type: "new_course", size: "M", need: "A 6-module MOOC for a global audience.", link: "https://think.nd.edu/big_questions/new-on-coursera-sacred-texts-in-dialogue/" },
-    { title: "AI for the ND Community", type: "ai", size: "L", need: "Campus-wide AI literacy, modular by role.", link: "https://learning.nd.edu/news/announcing-ai-for-the-nd-community-course/" },
+    { title: "The Qur’an and the Bible (Coursera)", gid: "1208255134984932", type: "new_course", size: "M", need: "A 6-module MOOC for a global audience.", link: "https://think.nd.edu/big_questions/new-on-coursera-sacred-texts-in-dialogue/" },
+    { title: "AI for the ND Community", gid: "1209298164735103", type: "ai", size: "L", need: "Campus-wide AI literacy, modular by role.", link: "https://learning.nd.edu/news/announcing-ai-for-the-nd-community-course/" },
     { title: "ACE ASCENT", type: "new_course", size: "XL", need: "A multi-course teacher PD sequence for national cohorts.", link: "https://ace.nd.edu/ascent-research" },
-    { title: "ACE Assessment Course Redesign", type: "bisynchronous", size: "M", need: "Modernize an assessment course; blend workshops + online modules.", link: "https://ace.nd.edu/" },
-    { title: "MSAN II", type: "bisynchronous", size: "L", need: "Leadership training for military spouses across time zones.", link: "https://learning.nd.edu/news/notre-dames-partnership-with-military-spouse-advocacy-network-launches-second-course/" },
-    { title: "Lab Visualization", type: "flipped", size: "M", need: "Pre-lab videos to boost student readiness and safety.", link: "https://learning.nd.edu/news/visualizing-success-using-video-to-boost-student-lab-readiness-and-confidence/" },
+    { title: "ACE Assessment Course Redesign", gid: "1208622917750063", type: "bisynchronous", size: "M", need: "Modernize an assessment course; blend workshops + online modules.", link: "https://ace.nd.edu/" },
+    { title: "MSAN II", gid: "1208335647365608", type: "bisynchronous", size: "L", need: "Leadership training for military spouses across time zones.", link: "https://learning.nd.edu/news/notre-dames-partnership-with-military-spouse-advocacy-network-launches-second-course/" },
+    { title: "Lab Visualization", gid: "1210202036254627", type: "flipped", size: "M", need: "Pre-lab videos to boost student readiness and safety.", link: "https://learning.nd.edu/news/visualizing-success-using-video-to-boost-student-lab-readiness-and-confidence/" },
     { title: "AI Tutor — Critical Thinking", type: "ai", size: "S", need: "A Socratic-style AI feedback tool.", link: "https://learning.nd.edu/" },
-    { title: "Bringing Korean to Life", type: "xr", size: "M", need: "VR/360 immersion + AI conversation avatars.", link: "https://www.library.nd.edu/news/korean-language-students-use-virtual-reality-to-explore-traditions/" },
-    { title: "XR for Law — Car Crash", type: "xr", size: "S", need: "A VR crash to study eyewitness fallibility.", link: "https://xr.nd.edu/projects/law-school-car-crash-simulator/" },
-    { title: "Spanish Escape Room", type: "xr", size: "L", need: "Gamified, collaborative Spanish language & culture.", link: "https://learning.nd.edu/news/ai-and-game-based-learning-enhance-study-of-spanish-language-and-culture/" },
-    { title: "Digital Accessibility — Whitney James", type: "module", size: "S", need: "A high-impact module on universal design / A11y.", link: "https://accessibility.nd.edu/" },
-    { title: "AI Video Series", type: "module", size: "M", need: "Fast-turnaround video series on generative AI.", link: "https://learning.nd.edu/learning-technology/lab-for-ai-in-teaching-and-learning-laitl/ai-for-teaching-and-learning-video-series/" }
+    { title: "Bringing Korean to Life", gid: "1210225716846542", type: "xr", size: "M", need: "VR/360 immersion + AI conversation avatars.", link: "https://www.library.nd.edu/news/korean-language-students-use-virtual-reality-to-explore-traditions/" },
+    { title: "XR for Law — Car Crash", gid: "1209243150458283", type: "xr", size: "S", need: "A VR crash to study eyewitness fallibility.", link: "https://xr.nd.edu/projects/law-school-car-crash-simulator/" },
+    { title: "Spanish Escape Room", gid: "1207760971753765", type: "xr", size: "L", need: "Gamified, collaborative Spanish language & culture.", link: "https://learning.nd.edu/news/ai-and-game-based-learning-enhance-study-of-spanish-language-and-culture/" },
+    { title: "Digital Accessibility — Whitney James", gid: "1210225716846536", type: "module", size: "S", need: "A high-impact module on universal design / A11y.", link: "https://accessibility.nd.edu/" },
+    { title: "AI Video Series", gid: "1207728646024488", type: "module", size: "M", need: "Fast-turnaround video series on generative AI.", link: "https://learning.nd.edu/learning-technology/lab-for-ai-in-teaching-and-learning-laitl/ai-for-teaching-and-learning-video-series/" }
   ];
 
   // ---------------------------------------------------------------------------
@@ -1084,7 +1088,7 @@
     return list.map(function (p) {
       var est = estimate(p.type, p.size);
       return {
-        title: p.title, need: p.need, link: p.link,
+        title: p.title, need: p.need, link: p.link, gid: p.gid,
         type: p.type, size: p.size,
         sizeMatch: p.size === size,
         sizeLabel: sizeLabel(p.size),

@@ -230,6 +230,15 @@ def cmd_list_projects(args):
         print("%-18s %-7s %-26s %s" % (
             p["gid"], str(p.get("archived")),
             (p.get("team") or {}).get("name", "")[:26], p.get("name")))
+    # optional machine-readable dump: one "gid  # name" line per project, so
+    # refresh.py can regenerate all_gids.txt from the workspace without having
+    # to parse the human-readable columns above.
+    if getattr(args, "out_file", None):
+        with open(args.out_file, "w") as f:
+            for p in rows:
+                name = (p.get("name") or "").replace("\n", " ").strip()
+                f.write("%s  # %s\n" % (p["gid"], name))
+        _log("wrote %s (%d projects, 'gid  # name' format)" % (args.out_file, len(rows)))
     print("\n%d projects." % len(rows), file=sys.stderr)
 
 
@@ -444,6 +453,66 @@ def fetch_activity(task_gid, sleep):
     return len(rows), comments
 
 
+STATUS_UPDATE_FIELDS = "title,text,status_type,created_at,created_by.name"
+
+
+def fetch_status_updates(project_gid, available, sleep):
+    """The project's weekly STATUS UPDATES — the colored 'On track / At risk / Off
+    track' narrative PMs post each week. Returns (updates, still_available). Probes
+    once and disables on 402/403/404 (like time-tracking) so we don't hammer an
+    endpoint the plan/permissions don't allow. Each update: created_at, status_type,
+    title, text, author."""
+    if not available:
+        return [], False
+    try:
+        rows = api_get_all("/status_updates",
+                           {"parent": project_gid, "opt_fields": STATUS_UPDATE_FIELDS},
+                           sleep=sleep)
+        updates = [{"created_at": r.get("created_at") or "",
+                    "status_type": r.get("status_type") or "",
+                    "title": (r.get("title") or "").strip(),
+                    "text": (r.get("text") or "").strip(),
+                    "author": (r.get("created_by") or {}).get("name", "")}
+                   for r in rows]
+        return updates, True
+    except ApiError as e:
+        if e.code in (402, 403, 404):
+            _log("  status-updates endpoint unavailable (HTTP %d) -- "
+                 "skipping it for the rest of the run." % e.code)
+            return [], False
+        raise
+
+
+def _status_update_row(gid, pname, u):
+    return {"project_gid": gid, "project_name": pname,
+            "created_at": u["created_at"], "status_type": u["status_type"],
+            "author": u["author"], "title": u["title"], "text": u["text"]}
+
+
+def cmd_pull_status(args):
+    """Standalone: pull ONLY the weekly project status updates -> status_updates.csv
+    (fast; lets you test the feature without a full re-pull)."""
+    os.makedirs(args.out, exist_ok=True)
+    gids = resolve_project_gids(args)
+    _log("Pulling status updates for %d projects..." % len(gids))
+    su_available, rows = True, []
+    for pi, gid in enumerate(gids, 1):
+        try:
+            proj, _ = api_get("/projects/%s" % gid, {"opt_fields": "name"})
+            pname = proj.get("name")
+        except Exception as e:
+            _log("  project %s skipped (%s)" % (gid, e))
+            continue
+        updates, su_available = fetch_status_updates(gid, su_available, args.sleep)
+        _log("  [%d/%d] %s: %d update(s)" % (pi, len(gids), pname, len(updates)))
+        rows.extend(_status_update_row(gid, pname, u) for u in updates)
+        if not su_available:
+            _log("  (status-updates endpoint unavailable -- stopping)")
+            break
+    _write_csv(os.path.join(args.out, "status_updates.csv"), rows)
+    _log("wrote %s/status_updates.csv (%d rows)" % (args.out, len(rows)))
+
+
 def cmd_pull(args):
     os.makedirs(args.out, exist_ok=True)
     crosswalk = load_crosswalk(args.crosswalk)
@@ -451,6 +520,8 @@ def cmd_pull(args):
     _log("Pulling %d projects..." % len(gids))
 
     tt_available = not args.no_time_tracking
+    su_available = not getattr(args, "no_status_updates", False)
+    status_update_rows = []
     report = []
     sections_seen = defaultdict(int)
     project_rows, project_custom_field_rows = [], []
@@ -487,6 +558,11 @@ def cmd_pull(args):
             proj.get("custom_fields"),
             {"project_gid": gid, "project_name": pname}
         ))
+
+        # weekly status updates (colored On track/At risk/Off track narrative)
+        if su_available:
+            updates, su_available = fetch_status_updates(gid, su_available, args.sleep)
+            status_update_rows.extend(_status_update_row(gid, pname, u) for u in updates)
 
         for t in tasks:
             sec = section_of(t, gid)
@@ -587,6 +663,15 @@ def cmd_pull(args):
     # ---- write time_entries.csv (the actual timesheet) -------------------- #
     _write_csv(os.path.join(args.out, "time_entries.csv"), time_entry_rows)
 
+    # ---- write status_updates.csv (weekly project updates) ---------------- #
+    # Always emit a well-formed CSV (header row even when there are zero updates,
+    # e.g. the endpoint was unavailable) so the dashboard's weekly-update risk
+    # detector never has to read a 0-byte / headerless file.
+    _write_csv_with_header(
+        os.path.join(args.out, "status_updates.csv"), status_update_rows,
+        ["project_gid", "project_name", "created_at", "status_type",
+         "author", "title", "text"])
+
     # ---- write projects.csv ----------------------------------------------- #
     _write_csv(os.path.join(args.out, "projects.csv"), project_rows)
 
@@ -670,6 +755,17 @@ def cmd_pull(args):
     _log("\nWrote outputs to %s/" % args.out)
 
 
+def _write_csv_with_header(path, rows, header):
+    """Like _write_csv but writes an explicit header even when rows is empty, so
+    consumers always get a parseable CSV (not a 0-byte file)."""
+    with open(path, "w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=header)
+        w.writeheader()
+        for r in rows:
+            w.writerow(r)
+    _log("  wrote %s (%d rows)" % (path, len(rows)))
+
+
 def _write_csv(path, rows):
     if not rows:
         # still create an empty file so downstream steps don't choke
@@ -710,6 +806,8 @@ def build_parser():
     lp.add_argument("--team", default=None)
     lp.add_argument("--archived", type=lambda s: s.lower() == "true",
                     default=None, help="true|false (omit for both)")
+    lp.add_argument("--out-file", default=None,
+                    help="also write the list to this file as 'gid  # name' lines")
     lp.set_defaults(func=cmd_list_projects)
 
     pi = sub.add_parser("portfolio-items", help="list items inside a portfolio")
@@ -728,11 +826,22 @@ def build_parser():
     pl.add_argument("--out", default="data", help="output directory")
     pl.add_argument("--no-time-tracking", action="store_true",
                     help="skip the time_tracking_entries calls entirely")
+    pl.add_argument("--no-status-updates", action="store_true",
+                    help="skip the project status_updates calls")
     pl.add_argument("--activity", action="store_true",
                     help="also pull per-task stories (slow: 1 call/task)")
     pl.add_argument("--sleep", type=float, default=0.2,
                     help="seconds between API calls (raise if rate-limited)")
     pl.set_defaults(func=cmd_pull)
+
+    ps = sub.add_parser("pull-status",
+                        help="pull ONLY weekly project status updates -> status_updates.csv")
+    ps.add_argument("--portfolio", default=None)
+    ps.add_argument("--projects", default=None)
+    ps.add_argument("--project-file", default=None)
+    ps.add_argument("--out", default="data")
+    ps.add_argument("--sleep", type=float, default=0.2)
+    ps.set_defaults(func=cmd_pull_status)
     return p
 
 
