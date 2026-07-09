@@ -100,7 +100,7 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1211653962736510,Business for Humans | Sheedy Family Program,Analysis,3,1,1,2026-04-29T13:07:44.876000+00:00,2026-04-29T13:07:44.876000+00:00,0,60.0,1.0,0,0,0,0.33
 1211653962736510,Business for Humans | Sheedy Family Program,Design,9,7,2,2026-04-29T13:11:23.071000+00:00,2026-04-29T13:11:39.889000+00:00,0,0.0,0.0,0,0,0,0.11
 1211653962736510,Business for Humans | Sheedy Family Program,Design Development,5,0,2,,,,0.0,0.0,0,0,0,0.2
-1211653962736510,Business for Humans | Sheedy Family Program,Post-Production,1,0,1,,,,540.0,9.0,27,0,0,1.0
+1211653962736510,Business for Humans | Sheedy Family Program,Post-Production,2,0,1,,,,540.0,9.0,27,0,0,0.5
 1211653962736510,Business for Humans | Sheedy Family Program,Post-Project Evaluation,4,0,1,,,,0.0,0.0,0,0,0,0.25
 1211653962736510,Business for Humans | Sheedy Family Program,Pre-Production,8,4,1,2026-03-20T15:27:05.274000+00:00,2026-06-08T13:37:41.785000+00:00,80,1950.0,32.5,0,0,0,0.12
 1211653962736510,Business for Humans | Sheedy Family Program,Production,2,1,1,2026-06-08T13:37:51.972000+00:00,2026-06-08T13:37:51.972000+00:00,0,315.0,5.25,6,0,0,0.5
@@ -205,7 +205,7 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1207760971753716,FCTA - Physics I,Post-Production,5,2,3,2025-12-11T15:35:57.079000+00:00,2026-01-07T20:46:07.377000+00:00,27,300.0,5.0,11,0,0,0.2
 1207760971753716,FCTA - Physics I,Pre-Production,7,4,2,2025-08-28T17:16:50.375000+00:00,2025-11-07T17:27:02.345000+00:00,71,640.0,10.67,1,0,0,0.14
 1207760971753716,FCTA - Physics I,Production,3,2,1,2025-08-24T21:31:59.570000+00:00,2026-01-07T20:45:58.977000+00:00,136,600.0,10.0,11,0,0,0.33
-1207760971753716,FCTA - Physics I,Testimonials,1,0,0,,,,630.0,10.5,0,0,0,1.0
+1207760971753716,FCTA - Physics I,Testimonials,1,0,0,,,,645.0,10.75,0,0,0,1.0
 1213077276586762,FCTA - Physics II,Design,3,2,0,2026-02-02T03:52:44.093000+00:00,2026-02-02T03:52:44.653000+00:00,0,0.0,0.0,1,0,0,0.33
 1213077276586762,FCTA - Physics II,Post Project Evaluation,4,0,0,,,,0.0,0.0,0,0,0,0.25
 1213077276586762,FCTA - Physics II,Post-Production,5,2,0,2026-02-02T03:52:49.415000+00:00,2026-02-02T03:52:49.939000+00:00,0,0.0,0.0,11,0,0,0.2
@@ -298,7 +298,7 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1213292120696339,NEON - POLS 30022 (Poly Sci),Analysis,3,0,1,,,,0.0,0.0,0,0,0,0.33
 1213292120696339,NEON - POLS 30022 (Poly Sci),Design,13,1,2,2026-03-06T17:44:06.133000+00:00,2026-03-06T17:44:06.133000+00:00,0,600.0,10.0,0,0,0,0.08
 1213292120696339,NEON - POLS 30022 (Poly Sci),Design Development,6,0,2,,,,0.0,0.0,0,0,0,0.17
-1213292120696339,NEON - POLS 30022 (Poly Sci),Media Timetracking,15,0,0,,,,1005.0,16.75,0,0,0,0.07
+1213292120696339,NEON - POLS 30022 (Poly Sci),Media Timetracking,15,0,0,,,,1230.0,20.5,0,0,0,0.07
 1213292120696339,NEON - POLS 30022 (Poly Sci),Post-Production,3,0,0,,,,0.0,0.0,0,0,0,0.33
 1213292120696339,NEON - POLS 30022 (Poly Sci),Post-Project Evaluation,5,0,1,,,,0.0,0.0,0,0,0,0.2
 1213292120696339,NEON - POLS 30022 (Poly Sci),Pre-Production,9,0,1,,,,120.0,2.0,0,0,0,0.11
@@ -505,7 +505,7 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1208335647365619,Virtual Borders,Media Timetracking,5,0,0,,,,315.0,5.25,0,0,0,0.2
 1208335647365619,Virtual Borders,Post-Production / Design Development,9,0,3,,,,0.0,0.0,0,0,0,0.11
 1208335647365619,Virtual Borders,Pre-Production,4,3,1,2025-02-10T18:00:52.129000+00:00,2025-02-20T21:09:55.485000+00:00,10,870.0,14.5,9,0,0,0.25
-1208335647365619,Virtual Borders,Production,9,1,2,2025-02-27T17:34:59.484000+00:00,2025-02-27T17:34:59.484000+00:00,0,4530.0,75.5,4,0,0,0.11
+1208335647365619,Virtual Borders,Production,9,1,2,2025-02-27T17:34:59.484000+00:00,2025-02-27T17:34:59.484000+00:00,0,5010.0,83.5,4,0,0,0.11
 1206425015213615,XR Overview (Spring 24),Classroom Experiences,7,1,0,2024-01-24T01:43:21.592000+00:00,2024-01-24T01:43:21.592000+00:00,0,0.0,0.0,0,0,0,0.14
 1206425015213615,XR Overview (Spring 24),Development Projects,5,1,0,2024-01-24T01:51:30.659000+00:00,2024-01-24T01:51:30.659000+00:00,0,0.0,0.0,0,0,0,0.2
 1206425015213615,XR Overview (Spring 24),In Queue,2,0,0,,,,0.0,0.0,0,0,0,0.5

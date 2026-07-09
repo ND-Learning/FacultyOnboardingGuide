@@ -24,6 +24,7 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 1207760971753716,FCTA - Physics I,1215382849227821,Time Estimates,Testimonials,Testimonials,,,Matthew Simmons,2026-06-08,90.0,1.5
 1207760971753716,FCTA - Physics I,1215382849227821,Time Estimates,Testimonials,Testimonials,,,Matthew Simmons,2026-06-08,120.0,2.0
 1207760971753716,FCTA - Physics I,1215382849227821,Time Estimates,Testimonials,Testimonials,,,Matthew Simmons,2026-06-22,60.0,1.0
+1207760971753716,FCTA - Physics I,1215382849227821,Time Estimates,Testimonials,Testimonials,,,Matthew Simmons,2026-06-23,15.0,0.25
 1207816481565083,Gen Chem Intro Video ,1207816491518204,Filming,Production,Production,John Corba,,John Corba,2024-08-19,90.0,1.5
 1207816481565083,Gen Chem Intro Video ,1207816486599309,Editing,Post-Production,Post-Production,John Corba,,John Corba,2024-08-19,540.0,9.0
 1207816481565083,Gen Chem Intro Video ,1207816486599309,Editing,Post-Production,Post-Production,John Corba,,John Corba,2024-08-20,60.0,1.0
@@ -227,7 +228,10 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 1208335647365619,Virtual Borders,1214891724371464,Phase 2 - (Jun 1 - Jun 19),Production,Production,Matthew Simmons,,Matthew Simmons,2026-06-17,45.0,0.75
 1208335647365619,Virtual Borders,1214891724371464,Phase 2 - (Jun 1 - Jun 19),Production,Production,Matthew Simmons,,Matthew Simmons,2026-06-18,45.0,0.75
 1208335647365619,Virtual Borders,1214891724371464,Phase 2 - (Jun 1 - Jun 19),Production,Production,Matthew Simmons,,Matthew Simmons,2026-06-19,45.0,0.75
+1208335647365619,Virtual Borders,1214891724371466,Phase 3 - (Jun 22 - July 10),Production,Production,Matthew Simmons,,Michael Lerma,2026-06-17,120.0,2.0
 1208335647365619,Virtual Borders,1214891724371466,Phase 3 - (Jun 22 - July 10),Production,Production,Matthew Simmons,,Matthew Simmons,2026-06-22,120.0,2.0
+1208335647365619,Virtual Borders,1214891724371466,Phase 3 - (Jun 22 - July 10),Production,Production,Matthew Simmons,,Matthew Simmons,2026-06-23,180.0,3.0
+1208335647365619,Virtual Borders,1214891724371466,Phase 3 - (Jun 22 - July 10),Production,Production,Matthew Simmons,,Matthew Simmons,2026-06-24,180.0,3.0
 1208344673489500,MSAN Asset Spreadsheet,1208369713621903,MSAN Interview video with Beth Webe,Untitled section,Untitled section,Kevin DeCloedt,,Kevin DeCloedt,2025-02-11,1.0,0.017
 1208344673489500,MSAN Asset Spreadsheet,1208369713621927,MSAN Lecture Video - Substance use - Ryan Carpenter,Untitled section,Untitled section,Kevin DeCloedt,,Kevin DeCloedt,2025-02-11,30.0,0.5
 1208344673489500,MSAN Asset Spreadsheet,1208369713621929,MSAN Lecture Video - Good Stress vs Bad Stress,Untitled section,Untitled section,Kevin DeCloedt,,Kevin DeCloedt,2025-02-11,30.0,0.5
@@ -1607,6 +1611,9 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 1213292120696339,NEON - POLS 30022 (Poly Sci),1214791864379862,6/15 - 6/19,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-06-19,30.0,0.5
 1213292120696339,NEON - POLS 30022 (Poly Sci),1214791864379862,6/15 - 6/19,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-06-19,90.0,1.5
 1213292120696339,NEON - POLS 30022 (Poly Sci),1214791864379862,6/15 - 6/19,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-06-19,30.0,0.5
+1213292120696339,NEON - POLS 30022 (Poly Sci),1214791864379864,6/22 - 6/26,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-06-23,75.0,1.25
+1213292120696339,NEON - POLS 30022 (Poly Sci),1214791864379864,6/22 - 6/26,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-06-24,120.0,2.0
+1213292120696339,NEON - POLS 30022 (Poly Sci),1214791864379864,6/22 - 6/26,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-06-24,30.0,0.5
 1213292120696339,NEON - POLS 30022 (Poly Sci),1213300128327622,Scripting,Pre-Production,Pre-Production,,Media,Brianna Stines,2026-05-18,120.0,2.0
 1213478777903328,Media Studio Sessions,1213824904918683,Filming time tracker,Untitled section,Untitled section,,,Kevin DeCloedt,2026-01-28,60.0,1.0
 1213478777903328,Media Studio Sessions,1213824904918683,Filming time tracker,Untitled section,Untitled section,,,Kevin DeCloedt,2026-02-25,75.0,1.25
