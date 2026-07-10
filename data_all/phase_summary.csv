@@ -32,6 +32,16 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1207338575319394,ACE Ascent Phase III,Pre-Production Geometry and Measurement,6,6,1,2024-05-16T17:28:24.305000+00:00,2024-05-16T17:35:54.079000+00:00,0,0.0,0.0,0,0,0,0.17
 1207338575319394,ACE Ascent Phase III,Pre-Production Leadership IIIa,3,3,1,2024-05-16T17:30:01.617000+00:00,2024-05-16T17:30:09.177000+00:00,0,0.0,0.0,4,0,0,0.33
 1207338575319394,ACE Ascent Phase III,Production Geometry and Measurement,4,4,1,2024-05-16T17:28:29.724000+00:00,2024-05-16T17:28:33.114000+00:00,0,0.0,0.0,0,0,0,0.25
+1208031565604539,ACE Ascent Phase IV,Design Algebra and Function,8,8,1,2024-08-15T19:05:57.271000+00:00,2024-09-06T17:48:03.032000+00:00,22,0.0,0.0,0,0,0,0.12
+1208031565604539,ACE Ascent Phase IV,Design Leadership IIIb,7,7,1,2024-08-15T19:07:05.892000+00:00,2024-09-06T17:48:29.406000+00:00,22,0.0,0.0,0,0,0,0.14
+1208031565604539,ACE Ascent Phase IV,Development Algebra and Function,3,3,0,2024-11-26T17:39:15.790000+00:00,2024-12-13T15:49:46.407000+00:00,17,420.0,7.0,21,0,0,0.33
+1208031565604539,ACE Ascent Phase IV,Development Leadership IIIb,3,3,0,2024-12-13T15:49:52.299000+00:00,2024-12-13T15:49:55.447000+00:00,0,5.0,0.08,16,0,0,0.33
+1208031565604539,ACE Ascent Phase IV,Post-Production Leadership IIIb,2,2,0,2024-11-21T14:14:34.731000+00:00,2024-11-21T14:14:44.579000+00:00,0,0.0,0.0,7,0,0,0.5
+1208031565604539,ACE Ascent Phase IV,Post-ProductionAlgebra and Function,6,4,2,2024-10-31T16:47:43.141000+00:00,2025-02-10T15:18:04.464000+00:00,102,0.0,0.0,6,0,0,0.17
+1208031565604539,ACE Ascent Phase IV,Pre-Production Algebra and Function,6,6,1,2024-09-16T14:22:05.892000+00:00,2024-10-16T11:35:36.282000+00:00,30,0.0,0.0,0,0,0,0.17
+1208031565604539,ACE Ascent Phase IV,Pre-Production Leadership IIIb,3,3,0,2024-09-13T16:43:22.470000+00:00,2024-10-10T18:48:22.466000+00:00,27,0.0,0.0,6,0,0,0.33
+1208031565604539,ACE Ascent Phase IV,Production Algebra and Function,3,3,1,2024-10-16T11:35:38.868000+00:00,2024-10-17T18:22:26.807000+00:00,1,0.0,0.0,0,0,0,0.33
+1208031565604539,ACE Ascent Phase IV,Production Leadership IIIb,3,3,0,2024-10-14T14:01:36.509000+00:00,2024-10-17T18:22:36.779000+00:00,3,0.0,0.0,8,0,0,0.33
 1208622917750063,ACE Assessment Course Redesign,Post-Production,11,11,1,2025-02-25T19:46:56.485000+00:00,2025-04-17T20:36:53.034000+00:00,51,920.0,15.33,0,0,0,0.09
 1208622917750063,ACE Assessment Course Redesign,Pre-Production,5,5,1,2025-02-04T14:42:53.344000+00:00,2025-02-18T16:10:02.832000+00:00,14,635.0,10.58,5,0,0,0.2
 1208622917750063,ACE Assessment Course Redesign,Production,4,4,0,2025-02-18T16:10:35.297000+00:00,2025-02-25T19:46:13.958000+00:00,7,450.0,7.5,0,0,0,0.25
@@ -52,6 +62,8 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1207728646024488,AI Video Series,Video 6:  AI Literacy/Preparing Students for an AI Driven Future - Karla Badillo / Roberto Casarez,10,10,1,2024-09-09T19:54:39.294000+00:00,2024-11-04T14:49:31.329000+00:00,56,0.0,0.0,0,0,0,0.1
 1207728646024488,AI Video Series,Video 7:  Addressing Writing / AI-assisted Writing,10,10,2,2024-07-18T18:37:16.512000+00:00,2024-08-30T18:48:26.613000+00:00,43,90.0,1.5,0,0,0,0.1
 1207728646024488,AI Video Series,Video 8:  Best Practices for Assessment in the Age of AI - Alex Ambrose,10,10,2,2024-08-06T14:52:12.415000+00:00,2024-08-30T18:48:04.764000+00:00,24,90.0,1.5,0,0,0,0.1
+1208345374594379,AI Video Series - Alex,Untitled section,10,10,0,2025-02-03T14:28:49.451000+00:00,2025-02-03T14:28:54.884000+00:00,0,0.0,0.0,0,0,0,0.1
+1208345374594375,AI Video Series - Ardea,Untitled section,10,10,3,2024-12-02T20:12:34.288000+00:00,2024-12-02T20:12:40.796000+00:00,0,0.0,0.0,0,0,0,0.1
 1208345374594366,AI Video Series - John,Untitled section,1,1,0,2025-02-03T14:29:05.191000+00:00,2025-02-03T14:29:05.191000+00:00,0,0.0,0.0,0,0,0,1.0
 1208711008179173,AI Video Series - Karla,Untitled section,10,10,1,2024-12-02T19:45:30.841000+00:00,2024-12-02T19:47:31.102000+00:00,0,0.0,0.0,0,0,0,0.1
 1209298164735103,AI for the Notre Dame Community,Analysis,3,3,1,2025-02-09T18:45:21.125000+00:00,2025-04-29T17:49:29.129000+00:00,79,0.0,0.0,0,0,0,0.33
@@ -154,6 +166,7 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1207760971753758,Consultations,Prof. Chen's NSF Proposal,3,3,2,2024-07-15T14:30:48.921000+00:00,2024-07-18T13:28:14.904000+00:00,3,0.0,0.0,0,0,0,0.33
 1207760971753758,Consultations,Prof. Yi-Ting Hsu's Video Creation Needs,2,1,2,2024-08-16T17:17:05.473000+00:00,2024-08-16T17:17:05.473000+00:00,0,0.0,0.0,0,0,0,0.5
 1207760971753758,Consultations,Untitled section,1,1,1,2024-09-16T22:18:27.624000+00:00,2024-09-16T22:18:27.624000+00:00,0,0.0,0.0,0,0,0,1.0
+1208345374594360,Consultations - Nathaniel,Untitled section,2,2,1,2024-12-02T19:59:19.563000+00:00,2024-12-02T19:59:20.860000+00:00,0,0.0,0.0,0,0,0,0.5
 1206006474289122,Creative Asset Feedback & Approval,Approved,1,0,0,,,,0.0,0.0,0,0,0,1.0
 1206006474289122,Creative Asset Feedback & Approval,In Production,1,0,0,,,,0.0,0.0,0,0,0,1.0
 1206006474289122,Creative Asset Feedback & Approval,In Review,1,0,0,,,,0.0,0.0,0,0,0,1.0
@@ -197,6 +210,54 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1207817115500019,Equity XR ,Workshops,4,4,0,2025-03-21T17:25:55.230000+00:00,2025-04-02T16:44:01.886000+00:00,12,360.0,6.0,0,0,0,0.25
 1207906802350226,FA Faculty Workshop Series,Phase 1: Planning,3,3,1,2024-08-02T17:17:19.626000+00:00,2024-08-23T16:02:30.528000+00:00,21,0.0,0.0,3,0,0,0.33
 1207906802350226,FA Faculty Workshop Series,Phase 2: Content Development,5,4,3,2024-09-06T17:50:57.075000+00:00,2024-11-08T17:46:59.818000+00:00,63,0.0,0.0,0,0,0,0.2
+1213596603291607,FA27 | Christmyer \\ Becoming Women of the Way,Christmyer Ad,2,0,1,,,,0.0,0.0,0,0,0,0.5
+1213596603291607,FA27 | Christmyer \\ Becoming Women of the Way,Christmyer Author Bio,7,0,3,,,,0.0,0.0,0,0,0,0.14
+1213596603291607,FA27 | Christmyer \\ Becoming Women of the Way,Christmyer Author Mailings,6,0,3,,,,0.0,0.0,0,0,0,0.17
+1213596603291607,FA27 | Christmyer \\ Becoming Women of the Way,Christmyer Back Cover Copy & Interior Endorsements,7,0,4,,,,0.0,0.0,0,0,0,0.14
+1213596603291607,FA27 | Christmyer \\ Becoming Women of the Way,Christmyer Book Description,11,0,6,,,,0.0,0.0,0,0,0,0.09
+1213596603291607,FA27 | Christmyer \\ Becoming Women of the Way,Christmyer CIP,1,0,0,,,,0.0,0.0,0,0,0,1.0
+1213596603291607,FA27 | Christmyer \\ Becoming Women of the Way,Christmyer Copyediting,5,0,0,,,,0.0,0.0,0,0,0,0.2
+1213596603291607,FA27 | Christmyer \\ Becoming Women of the Way,Christmyer Endorsements,3,0,2,,,,0.0,0.0,0,0,0,0.33
+1213596603291607,FA27 | Christmyer \\ Becoming Women of the Way,Christmyer First Proofs,8,0,1,,,,0.0,0.0,0,0,0,0.12
+1213596603291607,FA27 | Christmyer \\ Becoming Women of the Way,Christmyer Front Cover,28,0,6,,,,0.0,0.0,0,0,0,0.04
+1213596603291607,FA27 | Christmyer \\ Becoming Women of the Way,Christmyer Full Cover,12,0,5,,,,0.0,0.0,0,0,0,0.08
+1213596603291607,FA27 | Christmyer \\ Becoming Women of the Way,Christmyer Imprimatur,1,0,1,,,,0.0,0.0,0,0,0,1.0
+1213596603291607,FA27 | Christmyer \\ Becoming Women of the Way,Christmyer Launch,1,0,0,,,,0.0,0.0,0,0,0,1.0
+1213596603291607,FA27 | Christmyer \\ Becoming Women of the Way,Christmyer Manuscript,3,0,1,,,,0.0,0.0,0,0,0,0.33
+1213596603291607,FA27 | Christmyer \\ Becoming Women of the Way,Christmyer PO,11,0,5,,,,0.0,0.0,0,0,0,0.09
+1213596603291607,FA27 | Christmyer \\ Becoming Women of the Way,Christmyer Prepare for Production,1,0,0,,,,0.0,0.0,0,0,0,1.0
+1213596603291607,FA27 | Christmyer \\ Becoming Women of the Way,Christmyer Printing,10,0,6,,,,0.0,0.0,0,0,0,0.1
+1213596603291607,FA27 | Christmyer \\ Becoming Women of the Way,Christmyer Sage,1,0,1,,,,0.0,0.0,0,0,0,1.0
+1213596603291607,FA27 | Christmyer \\ Becoming Women of the Way,Christmyer Second Proofs,3,0,0,,,,0.0,0.0,0,0,0,0.33
+1213596603291607,FA27 | Christmyer \\ Becoming Women of the Way,Christmyer Third Proofs,5,0,1,,,,0.0,0.0,0,0,0,0.2
+1213596603291607,FA27 | Christmyer \\ Becoming Women of the Way,Christmyer Title,2,0,1,,,,0.0,0.0,0,0,0,0.5
+1213596603291607,FA27 | Christmyer \\ Becoming Women of the Way,Christmyer ePub,4,0,1,,,,0.0,0.0,0,0,0,0.25
+1213596603291607,FA27 | Christmyer \\ Becoming Women of the Way,Leader's Guide,14,0,5,,,,0.0,0.0,0,0,0,0.07
+1213596603291607,FA27 | Christmyer \\ Becoming Women of the Way,Video,19,0,2,,,,0.0,0.0,0,0,0,0.11
+1215383370815292,FA27 | Tooke \\ Grit for the Kingdom,Ad,2,0,1,,,,0.0,0.0,0,0,0,0.5
+1215383370815292,FA27 | Tooke \\ Grit for the Kingdom,Author Bio,7,0,3,,,,0.0,0.0,0,0,0,0.14
+1215383370815292,FA27 | Tooke \\ Grit for the Kingdom,Author Mailings,1,0,1,,,,0.0,0.0,0,0,0,1.0
+1215383370815292,FA27 | Tooke \\ Grit for the Kingdom,Back Cover Copy & Interior Endorsements,7,0,4,,,,0.0,0.0,0,0,0,0.14
+1215383370815292,FA27 | Tooke \\ Grit for the Kingdom,Book Description,11,0,5,,,,0.0,0.0,0,0,0,0.09
+1215383370815292,FA27 | Tooke \\ Grit for the Kingdom,CIP,1,0,0,,,,0.0,0.0,0,0,0,1.0
+1215383370815292,FA27 | Tooke \\ Grit for the Kingdom,Copyediting,5,0,0,,,,0.0,0.0,0,0,0,0.2
+1215383370815292,FA27 | Tooke \\ Grit for the Kingdom,Endorsements,4,0,1,,,,0.0,0.0,0,0,0,0.25
+1215383370815292,FA27 | Tooke \\ Grit for the Kingdom,First Proofs,6,0,1,,,,0.0,0.0,0,0,0,0.17
+1215383370815292,FA27 | Tooke \\ Grit for the Kingdom,Front Cover,26,0,5,,,,0.0,0.0,0,0,0,0.04
+1215383370815292,FA27 | Tooke \\ Grit for the Kingdom,Full Cover,12,0,5,,,,0.0,0.0,0,0,0,0.08
+1215383370815292,FA27 | Tooke \\ Grit for the Kingdom,Imprimatur,1,0,0,,,,0.0,0.0,0,0,0,1.0
+1215383370815292,FA27 | Tooke \\ Grit for the Kingdom,Launch,1,0,0,,,,0.0,0.0,0,0,0,1.0
+1215383370815292,FA27 | Tooke \\ Grit for the Kingdom,Leader's Guide,14,0,4,,,,0.0,0.0,0,0,0,0.07
+1215383370815292,FA27 | Tooke \\ Grit for the Kingdom,Manuscript,3,0,0,,,,0.0,0.0,0,0,0,0.33
+1215383370815292,FA27 | Tooke \\ Grit for the Kingdom,PO,11,0,5,,,,0.0,0.0,0,0,0,0.09
+1215383370815292,FA27 | Tooke \\ Grit for the Kingdom,Prepare for Production,1,0,0,,,,0.0,0.0,0,0,0,1.0
+1215383370815292,FA27 | Tooke \\ Grit for the Kingdom,Printing,10,0,6,,,,0.0,0.0,0,0,0,0.1
+1215383370815292,FA27 | Tooke \\ Grit for the Kingdom,Sage,1,0,1,,,,0.0,0.0,0,0,0,1.0
+1215383370815292,FA27 | Tooke \\ Grit for the Kingdom,Second Proofs,3,0,0,,,,0.0,0.0,0,0,0,0.33
+1215383370815292,FA27 | Tooke \\ Grit for the Kingdom,Third Proofs,5,0,1,,,,0.0,0.0,0,0,0,0.2
+1215383370815292,FA27 | Tooke \\ Grit for the Kingdom,Title,2,0,0,,,,0.0,0.0,0,0,0,0.5
+1215383370815292,FA27 | Tooke \\ Grit for the Kingdom,Video,19,0,2,,,,0.0,0.0,0,0,0,0.05
+1215383370815292,FA27 | Tooke \\ Grit for the Kingdom,ePub,4,0,1,,,,0.0,0.0,0,0,0,0.25
 1208031566113859,FCTA - Calculus I,Goal development,2,1,0,2025-07-11T14:23:44.874000+00:00,2025-07-11T14:23:44.874000+00:00,0,165.0,2.75,0,0,0,0.5
 1208031566113859,FCTA - Calculus I,Media,5,0,0,,,,0.0,0.0,0,0,0,0.2
 1208031566113859,FCTA - Calculus I,Planning Phase,4,4,1,2024-09-06T13:51:31.880000+00:00,2025-07-11T14:22:16.849000+00:00,308,0.0,0.0,0,0,0,0.25
@@ -295,6 +356,14 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1211654114707733,ND-IBM Tech Ethics Lab Video Content Development,Production,3,0,0,,,,0.0,0.0,0,0,0,0.33
 1211654114707733,ND-IBM Tech Ethics Lab Video Content Development,Untitled section,4,3,4,2025-10-06T16:46:25.210000+00:00,2025-10-14T17:23:16.591000+00:00,8,0.0,0.0,0,0,0,0.25
 1207760971753720,NDIAS Teaching Fellows - Global Catholicism,Untitled section,1,1,0,2025-02-03T14:28:43.527000+00:00,2025-02-03T14:28:43.527000+00:00,0,0.0,0.0,0,0,0,1.0
+1207871566050072,NDL Project Tracking & Awareness,Consultations,16,16,1,2025-08-07T19:52:06.546000+00:00,2026-06-18T18:49:22.207000+00:00,315,0.0,0.0,0,0,0,0.06
+1207871566050072,NDL Project Tracking & Awareness,Create Project - Fast Tracked,1,1,1,2025-08-16T19:40:18.715000+00:00,2025-08-16T19:40:18.715000+00:00,0,0.0,0.0,0,0,0,1.0
+1207871566050072,NDL Project Tracking & Awareness,Create Project - Kaneb Center,1,1,1,2025-08-06T15:26:19.092000+00:00,2025-08-06T15:26:19.092000+00:00,0,0.0,0.0,0,0,0,1.0
+1207871566050072,NDL Project Tracking & Awareness,Create project - LAITL,8,8,1,2025-08-25T15:28:39.393000+00:00,2026-03-19T13:23:03.603000+00:00,206,0.0,0.0,0,0,0,0.12
+1207871566050072,NDL Project Tracking & Awareness,On Hold,3,0,1,,,,0.0,0.0,0,0,0,0.33
+1207871566050072,NDL Project Tracking & Awareness,Reached out - No response,2,2,1,2025-09-15T18:28:25.518000+00:00,2025-09-16T18:37:55.991000+00:00,1,0.0,0.0,0,0,0,0.5
+1207871566050072,NDL Project Tracking & Awareness,Received Requests - Triage Needed,3,0,1,,,,0.0,0.0,0,0,0,0.33
+1207871566050072,NDL Project Tracking & Awareness,Resolved,7,7,2,2025-09-04T19:21:27.764000+00:00,2026-04-27T18:10:48.781000+00:00,235,0.0,0.0,0,0,0,0.14
 1213292120696339,NEON - POLS 30022 (Poly Sci),Analysis,3,0,1,,,,0.0,0.0,0,0,0,0.33
 1213292120696339,NEON - POLS 30022 (Poly Sci),Design,13,1,2,2026-03-06T17:44:06.133000+00:00,2026-03-06T17:44:06.133000+00:00,0,600.0,10.0,0,0,0,0.08
 1213292120696339,NEON - POLS 30022 (Poly Sci),Design Development,6,0,2,,,,0.0,0.0,0,0,0,0.17
@@ -348,6 +417,11 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1209741238247552,Political Science SO Course,Pre-Production,6,0,1,,,,0.0,0.0,0,0,0,0.17
 1209741238247552,Political Science SO Course,Production,2,0,1,,,,0.0,0.0,0,0,0,0.5
 1208875960377620,Program for Inclusive Education (PIE) Video #2,Video 2 - Lessons From the Saints,12,11,2,2025-01-10T18:56:03.992000+00:00,2025-02-06T19:23:48.006000+00:00,27,930.0,15.5,0,0,0,0.08
+1207760971753624,Program for Inclusive Education (PIE) Videos,Untitled section,1,1,1,2024-07-10T13:50:32.425000+00:00,2024-07-10T13:50:32.425000+00:00,0,60.0,1.0,0,0,0,1.0
+1207760971753624,Program for Inclusive Education (PIE) Videos,Video 1 - The Term Disability,11,11,2,2024-08-19T20:24:43.866000+00:00,2024-10-23T13:41:36.860000+00:00,65,390.0,6.5,0,0,0,0.09
+1207760971753624,Program for Inclusive Education (PIE) Videos,Video 2 - Lessons From the Saints,11,0,0,,,,0.0,0.0,0,0,0,0.09
+1207760971753624,Program for Inclusive Education (PIE) Videos,Video 3 - Name TBD,11,0,0,,,,0.0,0.0,0,0,0,0.09
+1207760971753624,Program for Inclusive Education (PIE) Videos,Video 4 - Salt & Light,11,0,0,,,,0.0,0.0,0,0,0,0.09
 1206434839973092,Project Requests & Intake ,Untitled section,24,24,0,2024-01-30T20:42:18.970000+00:00,2024-02-26T15:57:34.652000+00:00,27,0.0,0.0,0,0,0,0.04
 1209679644127773,Radio Systems Course,Analysis,2,2,1,2025-03-21T13:45:17.257000+00:00,2025-06-11T13:00:48.329000+00:00,82,0.0,0.0,0,0,0,0.5
 1209679644127773,Radio Systems Course,Design,9,6,3,2025-06-30T19:02:54.775000+00:00,2025-07-10T16:34:03.533000+00:00,10,210.0,3.5,0,0,0,0.11
@@ -378,6 +452,22 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1212660352662527,Romance Languages video/podcast initiative,Post-Project Evaluation,4,0,0,,,,0.0,0.0,0,0,0,0.25
 1212660352662527,Romance Languages video/podcast initiative,Pre-Production,6,0,0,,,,0.0,0.0,0,0,0,0.17
 1212660352662527,Romance Languages video/podcast initiative,Production,2,0,0,,,,0.0,0.0,0,0,0,0.5
+1207907957836519,Spanish Simulation (Canvas Version),Design,2,2,1,2024-08-02T15:42:34.399000+00:00,2024-09-19T14:42:22.882000+00:00,48,0.0,0.0,5,0,0,0.5
+1207907957836519,Spanish Simulation (Canvas Version),Development,3,3,1,2024-11-22T15:00:47.704000+00:00,2024-11-22T15:00:49.691000+00:00,0,0.0,0.0,8,0,0,0.33
+1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,Analysis,3,0,1,,,,0.0,0.0,0,0,0,0.33
+1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,Design,10,2,3,2026-06-05T15:25:05.913000+00:00,2026-06-05T15:25:58.009000+00:00,0,480.0,8.0,0,0,0,0.1
+1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,Design Development,5,0,2,,,,30.0,0.5,0,0,0,0.2
+1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,Post-Production,1,0,1,,,,0.0,0.0,0,0,0,1.0
+1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,Post-Project Evaluation,4,0,1,,,,0.0,0.0,0,0,0,0.25
+1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,Pre-Production,6,0,2,,,,0.0,0.0,0,0,0,0.17
+1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,Production,2,0,2,,,,0.0,0.0,0,0,0,0.5
+1215176396318246,Sprint - Lost in Transliteration,Analysis,3,0,1,,,,0.0,0.0,0,0,0,0.33
+1215176396318246,Sprint - Lost in Transliteration,Design,10,0,2,,,,0.0,0.0,0,0,0,0.1
+1215176396318246,Sprint - Lost in Transliteration,Design Development,5,0,2,,,,0.0,0.0,0,0,0,0.2
+1215176396318246,Sprint - Lost in Transliteration,Post-Production,1,0,0,,,,0.0,0.0,0,0,0,1.0
+1215176396318246,Sprint - Lost in Transliteration,Post-Project Evaluation,4,0,1,,,,0.0,0.0,0,0,0,0.25
+1215176396318246,Sprint - Lost in Transliteration,Pre-Production,6,0,1,,,,0.0,0.0,0,0,0,0.17
+1215176396318246,Sprint - Lost in Transliteration,Production,2,0,1,,,,0.0,0.0,0,0,0,0.5
 1214783923511436,Sprint - Methods Applied: Proposal Scaffolded Support (MAPPS),Analysis,3,0,1,,,,0.0,0.0,0,0,0,0.33
 1214783923511436,Sprint - Methods Applied: Proposal Scaffolded Support (MAPPS),Design,10,0,3,,,,0.0,0.0,0,0,0,0.1
 1214783923511436,Sprint - Methods Applied: Proposal Scaffolded Support (MAPPS),Design Development,5,0,2,,,,0.0,0.0,0,0,0,0.2
@@ -421,9 +511,25 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1210202036254627,Sprint 2025: Lab Prep: Visualizing Success,Post-Project Evaluation,4,4,1,2025-08-14T17:01:31.384000+00:00,2026-01-02T20:00:41.686000+00:00,141,0.0,0.0,0,0,0,0.25
 1210202036254627,Sprint 2025: Lab Prep: Visualizing Success,Pre-Production,5,3,1,2025-06-20T19:25:56.853000+00:00,2025-08-14T17:06:08.739000+00:00,55,0.0,0.0,0,0,0,0.2
 1210202036254627,Sprint 2025: Lab Prep: Visualizing Success,Production,3,3,2,2025-07-21T14:14:27.354000+00:00,2025-08-14T17:01:02.472000+00:00,24,960.0,16.0,0,0,0,0.33
+1207472351598359,Sprint: Data Visual Insights(Erlacher),Analysis,7,7,4,2024-08-22T17:57:05.789000+00:00,2025-01-08T20:28:03.782000+00:00,139,0.0,0.0,0,0,0,0.14
+1207472351598359,Sprint: Data Visual Insights(Erlacher),Design,2,2,2,2024-06-03T16:51:19.520000+00:00,2024-07-03T18:30:12.019000+00:00,30,0.0,0.0,2,0,0,0.5
+1207472351598359,Sprint: Data Visual Insights(Erlacher),Development,3,3,1,2024-08-30T14:25:12.783000+00:00,2025-01-08T20:28:13.584000+00:00,131,0.0,0.0,7,0,0,0.33
+1207472351598359,Sprint: Data Visual Insights(Erlacher),Post-Production,2,2,1,2024-10-10T14:54:23.889000+00:00,2025-01-08T20:28:11.397000+00:00,90,0.0,0.0,4,0,0,0.5
+1207472351598359,Sprint: Data Visual Insights(Erlacher),Pre-Production,2,2,1,2024-06-28T16:08:42.829000+00:00,2024-08-19T13:26:59.601000+00:00,52,0.0,0.0,0,0,0,0.5
+1207472351598359,Sprint: Data Visual Insights(Erlacher),Production,3,3,2,2024-08-09T14:09:42.947000+00:00,2024-12-12T16:43:29.257000+00:00,125,0.0,0.0,21,0,0,0.33
 1207473416887601,Sprint: Interactive (Elena) ,Analysis,7,4,4,2024-08-22T19:29:03.919000+00:00,2024-09-09T01:56:37.351000+00:00,18,60.0,1.0,0,0,0,0.14
 1207473416887601,Sprint: Interactive (Elena) ,Design,3,3,2,2024-06-03T16:52:36.027000+00:00,2024-08-27T18:16:56.059000+00:00,85,0.0,0.0,0,0,0,0.33
 1207473416887601,Sprint: Interactive (Elena) ,Genially Build,4,4,1,2024-06-28T16:13:35.089000+00:00,2024-08-27T18:16:59.030000+00:00,60,0.0,0.0,0,0,0,0.25
+1207473416887619,Sprint: Molecular Neuroscience (Branco),Analysis,7,4,4,2024-08-22T18:11:34.661000+00:00,2024-09-18T00:52:35.923000+00:00,27,0.0,0.0,0,0,0,0.14
+1207473416887619,Sprint: Molecular Neuroscience (Branco),Design,2,2,2,2024-06-03T16:57:26.699000+00:00,2024-06-28T16:14:04.811000+00:00,25,0.0,0.0,0,0,0,0.5
+1207473416887619,Sprint: Molecular Neuroscience (Branco),Development,6,6,1,2024-10-01T18:13:45.520000+00:00,2024-12-02T17:17:09.843000+00:00,62,180.0,3.0,0,0,0,0.17
+1207473416887619,Sprint: Molecular Neuroscience (Branco),Implementation,1,1,0,2024-12-02T17:17:56.311000+00:00,2024-12-02T17:17:56.311000+00:00,0,91.0,1.52,0,0,0,1.0
+1207473416887619,Sprint: Molecular Neuroscience (Branco),Post-Production,8,8,1,2024-10-03T12:47:53.592000+00:00,2024-11-22T18:17:40.614000+00:00,50,0.0,0.0,0,0,0,0.12
+1207473416887619,Sprint: Molecular Neuroscience (Branco),Pre-Production,3,3,0,2024-06-28T16:16:29.978000+00:00,2024-08-02T16:18:50.677000+00:00,35,0.0,0.0,11,0,0,0.33
+1207473416887619,Sprint: Molecular Neuroscience (Branco),Production,2,2,0,2024-08-12T13:47:24.132000+00:00,2024-08-12T13:47:25.526000+00:00,0,0.0,0.0,0,0,0,0.5
+1207472349552365,Sprint: Parent Empowerment (Boothby),Animation,3,3,1,2024-11-06T21:10:09.512000+00:00,2024-11-06T21:11:15.129000+00:00,0,0.0,0.0,21,0,0,0.33
+1207472349552365,Sprint: Parent Empowerment (Boothby),Design,9,9,6,2024-06-03T15:33:50.425000+00:00,2024-11-06T21:10:25.809000+00:00,156,0.0,0.0,3,0,0,0.11
+1207472349552365,Sprint: Parent Empowerment (Boothby),Pre-Production,2,2,1,2024-07-15T14:17:03.946000+00:00,2024-08-01T15:36:48.757000+00:00,17,0.0,0.0,3,0,0,0.5
 1207778717570958,Standard Project Template,Animation/Graphics,2,0,0,,,,0.0,0.0,0,0,0,0.5
 1207778717570958,Standard Project Template,Design,7,0,0,,,,0.0,0.0,0,0,0,0.14
 1207778717570958,Standard Project Template,Development,3,0,0,,,,0.0,0.0,0,0,0,0.33
@@ -484,6 +590,7 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1208255134984932,The Qur’an and the Bible (Gabriel Reynolds),Coursera Site,2,1,1,2025-05-16T13:43:25.921000+00:00,2025-05-16T13:43:25.921000+00:00,0,0.0,0.0,0,0,0,0.5
 1208255134984932,The Qur’an and the Bible (Gabriel Reynolds),PM Time Tracking,22,22,1,2025-02-04T13:42:33.388000+00:00,2025-06-29T18:32:34.921000+00:00,145,1675.0,27.92,1,0,0,0.05
 1208255134984932,The Qur’an and the Bible (Gabriel Reynolds),Untitled section,14,14,2,2024-10-14T01:03:55.089000+00:00,2025-02-05T20:48:59.474000+00:00,114,2800.0,46.67,21,0,0,0.07
+1207678003764211,Tim Hubbard XR Development (Summer 2024),Rocking Rockers Simulation,17,17,0,2024-07-02T14:54:08.231000+00:00,2024-08-12T13:07:49.149000+00:00,41,0.0,0.0,55,0,0,0.06
 1208255134985069,Travel Safety 101,Untitled section,13,8,0,2024-11-05T17:45:00.782000+00:00,2025-03-05T19:41:02.463000+00:00,120,945.0,15.75,0,0,0,0.08
 1212638027964018,Ultrasound Communication Video,Analysis,3,0,0,,,,0.0,0.0,0,0,0,0.33
 1212638027964018,Ultrasound Communication Video,Design,9,1,0,2026-04-30T14:25:03.308000+00:00,2026-04-30T14:25:03.308000+00:00,0,270.0,4.5,0,0,0,0.11

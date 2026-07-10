@@ -38,7 +38,7 @@
   // === BEGIN CALIBRATION (machine-generated — do not edit by hand) ==========
   var CALIBRATION =
   {
-    "provenance": "data_all/time_entries.csv (2,385 entries, 2158.5h, 2024-08-19..2026-06-24, ODL staff time) | 25 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 21 of them with >=10h non-PM logging",
+    "provenance": "data_all/time_entries.csv (2,405 entries, 2186.1h, 2024-07-10..2026-06-24, ODL staff time) | 25 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 21 of them with >=10h non-PM logging",
     "generated_from": "data_all/derived/calibration.json -- run inject_calibration.py to refresh",
     "archetypeEffort": {
       "course_redesign": {
@@ -197,11 +197,11 @@
     },
     "impactTracker": {
       "field": "cf::Impact Tracker Status",
-      "basis": "data_all/projects.csv Asana project custom field across 136 pulled projects",
-      "total_projects": 136,
+      "basis": "data_all/projects.csv Asana project custom field across 152 pulled projects",
+      "total_projects": 152,
       "tracked_projects": 32,
-      "blank_projects": 104,
-      "coverage_pct": 23.5,
+      "blank_projects": 120,
+      "coverage_pct": 21.1,
       "status_counts": {
         "Up to date": 21,
         "Outdated": 11
@@ -402,7 +402,7 @@
       },
       "records_with_assets": 31,
       "records_with_satisfaction": 24,
-      "matched_records": 47,
+      "matched_records": 49,
       "outcomes": {
         "faculty_satisfaction_index": {
           "n": 24,
@@ -678,8 +678,8 @@
     },
     "notCalibratable": {
       "faculty_time": "time_entries contains ODL STAFF time only -- zero faculty hours logged. All faculty-time figures remain planning estimates and must be labeled as such.",
-      "discovery_effort": "only 11.0h logged across all projects -- discovery happens before boards get tracked. Insufficient.",
-      "evaluation_effort": "only 1.0h logged total. Insufficient.",
+      "discovery_effort": "only 12.0h logged across all projects -- discovery happens before boards get tracked. Insufficient.",
+      "evaluation_effort": "only 2.5h logged total. Insufficient.",
       "qa_effort": "only 1.7h logged total. Insufficient.",
       "interview_minidoc_video_rates": "no full-coverage logged exemplar (see video block).",
       "xr_effort": "XR projects in data have <=6h logged (Equity XR 6h, XR Spanish 1h) -- board rates (40-80h) stand, unvalidated.",
@@ -872,14 +872,14 @@
     { title: "The Qur’an and the Bible (Coursera)", gid: "1208255134984932", type: "new_course", size: "M", need: "A 6-module MOOC for a global audience.", link: "https://think.nd.edu/big_questions/new-on-coursera-sacred-texts-in-dialogue/" },
     { title: "AI for the ND Community", gid: "1209298164735103", type: "ai", size: "L", need: "Campus-wide AI literacy, modular by role.", link: "https://learning.nd.edu/news/announcing-ai-for-the-nd-community-course/" },
     { title: "ACE ASCENT", type: "new_course", size: "XL", need: "A multi-course teacher PD sequence for national cohorts.", link: "https://ace.nd.edu/ascent-research" },
-    { title: "ACE Assessment Course Redesign", gid: "1208622917750063", type: "bisynchronous", size: "M", need: "Modernize an assessment course; blend workshops + online modules.", link: "https://ace.nd.edu/" },
+    { title: "ACE Assessment Course Redesign", gid: "1208622917750063", type: "bisynchronous", size: "M", need: "Modernize an assessment course; blend workshops + online modules." },
     { title: "MSAN II", gid: "1208335647365608", type: "bisynchronous", size: "L", need: "Leadership training for military spouses across time zones.", link: "https://learning.nd.edu/news/notre-dames-partnership-with-military-spouse-advocacy-network-launches-second-course/" },
     { title: "Lab Visualization", gid: "1210202036254627", type: "flipped", size: "M", need: "Pre-lab videos to boost student readiness and safety.", link: "https://learning.nd.edu/news/visualizing-success-using-video-to-boost-student-lab-readiness-and-confidence/" },
-    { title: "AI Tutor — Critical Thinking", type: "ai", size: "S", need: "A Socratic-style AI feedback tool.", link: "https://learning.nd.edu/" },
+    { title: "AI Tutor — Critical Thinking", type: "ai", size: "S", need: "A Socratic-style AI feedback tool." },
     { title: "Bringing Korean to Life", gid: "1210225716846542", type: "xr", size: "M", need: "VR/360 immersion + AI conversation avatars.", link: "https://www.library.nd.edu/news/korean-language-students-use-virtual-reality-to-explore-traditions/" },
     { title: "XR for Law — Car Crash", gid: "1209243150458283", type: "xr", size: "S", need: "A VR crash to study eyewitness fallibility.", link: "https://xr.nd.edu/projects/law-school-car-crash-simulator/" },
     { title: "Spanish Escape Room", gid: "1207760971753765", type: "xr", size: "L", need: "Gamified, collaborative Spanish language & culture.", link: "https://learning.nd.edu/news/ai-and-game-based-learning-enhance-study-of-spanish-language-and-culture/" },
-    { title: "Digital Accessibility — Whitney James", gid: "1210225716846536", type: "module", size: "S", need: "A high-impact module on universal design / A11y.", link: "https://accessibility.nd.edu/" },
+    { title: "Digital Accessibility — Whitney James", gid: "1210225716846536", type: "module", size: "S", need: "A high-impact module on universal design / A11y." },
     { title: "AI Video Series", gid: "1207728646024488", type: "module", size: "M", need: "Fast-turnaround video series on generative AI.", link: "https://learning.nd.edu/learning-technology/lab-for-ai-in-teaching-and-learning-laitl/ai-for-teaching-and-learning-video-series/" }
   ];
 

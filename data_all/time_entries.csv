@@ -1620,11 +1620,29 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 1213478777903328,Media Studio Sessions,1213824904918683,Filming time tracker,Untitled section,Untitled section,,,Kevin DeCloedt,2026-03-04,60.0,1.0
 1213478777903328,Media Studio Sessions,1213824904918683,Filming time tracker,Untitled section,Untitled section,,,Kevin DeCloedt,2026-03-05,60.0,1.0
 1213478777903328,Media Studio Sessions,1213824904918683,Filming time tracker,Untitled section,Untitled section,,,Kevin DeCloedt,2026-03-25,300.0,5.0
+1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,1214796432305821,Create Course Map Document,Design,Design,Kuangchen Hsu,Design,Kuangchen Hsu,2026-06-02,90.0,1.5
+1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,1214796432305821,Create Course Map Document,Design,Design,Kuangchen Hsu,Design,Kuangchen Hsu,2026-06-04,30.0,0.5
+1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,1214796432305821,Create Course Map Document,Design,Design,Kuangchen Hsu,Design,Kuangchen Hsu,2026-06-12,60.0,1.0
+1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,1214796432305828,Develop Learning Objectives,Design,Design,Kuangchen Hsu,Design,Kuangchen Hsu,2026-06-03,30.0,0.5
+1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,1214796432305835,Develop Course Structure / Flow,Design,Design,Kuangchen Hsu,Design,Kuangchen Hsu,2026-06-03,60.0,1.0
+1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,1214796432305835,Develop Course Structure / Flow,Design,Design,Kuangchen Hsu,Design,Kuangchen Hsu,2026-06-04,60.0,1.0
+1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,1214796432305835,Develop Course Structure / Flow,Design,Design,Kuangchen Hsu,Design,Kuangchen Hsu,2026-06-09,30.0,0.5
+1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,1214796432305835,Develop Course Structure / Flow,Design,Design,Kuangchen Hsu,Design,Kuangchen Hsu,2026-06-11,120.0,2.0
+1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,1214796373337953,Finalize Assessments,Design Development,Design Development,Kuangchen Hsu,Design,Kuangchen Hsu,2026-06-12,30.0,0.5
 1214795652576790,Maximizing Mendoza,1214795650627331,Create Course Map Document,Design,Design,Brianna Stines,Design,Brianna Stines,2026-05-19,30.0,0.5
 1214795652576790,Maximizing Mendoza,1214795650627336,Develop Learning Objectives,Design,Design,Brianna Stines,Design,Brianna Stines,2026-05-19,60.0,1.0
 1214795652576790,Maximizing Mendoza,1214795650627341,Develop Course Structure / Flow,Design,Design,Brianna Stines,Design,Brianna Stines,2026-05-19,60.0,1.0
 1214795652576790,Maximizing Mendoza,1215046555413004,Bri,Meetings,Meetings,,,Brianna Stines,2026-05-21,120.0,2.0
 1214795652576790,Maximizing Mendoza,1215046555413006,Annie,Meetings,Meetings,,,Brianna Stines,2026-05-21,120.0,2.0
+1207473416887619,Sprint: Molecular Neuroscience (Branco),1208066397045779,IVQs in Panopto videos,Development,Development,Brianna Stines,,Brianna Stines,2024-12-02,120.0,2.0
+1207473416887619,Sprint: Molecular Neuroscience (Branco),1208066397045777,Videos on platform (external tool assignments),Development,Development,Brianna Stines,,Brianna Stines,2024-12-02,60.0,1.0
+1207473416887619,Sprint: Molecular Neuroscience (Branco),1208885965211463,handoff document + video recording (in lieu of meeting),Implementation,Implementation,,,Brianna Stines,2024-12-02,1.0,0.017
+1207473416887619,Sprint: Molecular Neuroscience (Branco),1208885965211463,handoff document + video recording (in lieu of meeting),Implementation,Implementation,,,Brianna Stines,2024-12-02,90.0,1.5
+1207760971753624,Program for Inclusive Education (PIE) Videos,1207760971753627,Kickoff Meeting,Untitled section,Untitled section,Michael Lerma,,Michael Lerma,2024-07-10,60.0,1.0
+1207760971753624,Program for Inclusive Education (PIE) Videos,1208014741125068,PIE Video 1 - Script Review,Video 1 - The Term Disability,Video 1 - The Term Disability,John Corba,,John Corba,2024-08-23,60.0,1.0
+1207760971753624,Program for Inclusive Education (PIE) Videos,1208014741125070,PIE Video 1 - Finalize Filming Details,Video 1 - The Term Disability,Video 1 - The Term Disability,John Corba,,John Corba,2024-08-23,60.0,1.0
+1207760971753624,Program for Inclusive Education (PIE) Videos,1208014741125074,PIE Video 1 - Film,Video 1 - The Term Disability,Video 1 - The Term Disability,John Corba,,John Corba,2024-08-26,90.0,1.5
+1207760971753624,Program for Inclusive Education (PIE) Videos,1208014741125092,PIE Video 1 - Edit FC1,Video 1 - The Term Disability,Video 1 - The Term Disability,John Corba,,John Corba,2024-10-23,180.0,3.0
 1207760971753765,XR Spanish Escape Room,1209243150458313,Project Manager Hours,Final Development items (Spring),Final Development items (Spring),Michael Lerma,,Michael Lerma,2025-01-27,60.0,1.0
 1207817115500015,EIH Lab Video Series ,1207892080017649,EIH Video 1 - Scripting,Video 1: Safety Walkthrough,Video 1: Safety Walkthrough,John Corba,,John Corba,2024-09-11,240.0,4.0
 1207817115500015,EIH Lab Video Series ,1207892080017651,EIH Video 1 - Filming,Video 1: Safety Walkthrough,Video 1: Safety Walkthrough,John Corba,,John Corba,2024-09-11,600.0,10.0
@@ -1658,6 +1676,8 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 1208014741125322,MSAN,1208024907076426,Media Archiving,Post-Production / Design Development,Post-Production / Design Development,Kevin DeCloedt,,Kevin DeCloedt,2025-02-28,60.0,1.0
 1208014741125322,MSAN,1208024907076426,Media Archiving,Post-Production / Design Development,Post-Production / Design Development,Kevin DeCloedt,,Kevin DeCloedt,2025-03-03,30.0,0.5
 1208014741125322,MSAN,1208024906919901,QA,Design Development,Design Development,Kuangchen Hsu,,Kuangchen Hsu,2025-04-25,90.0,1.5
+1208031565604539,ACE Ascent Phase IV,1208039795507853,Instructional Material Dev.,Development Algebra and Function,Development Algebra and Function,,,Brianna Stines,2024-11-26,420.0,7.0
+1208031565604539,ACE Ascent Phase IV,1208040102970365,Instrucional Material Dev.,Development Leadership IIIb,Development Leadership IIIb,,,Brianna Stines,2024-11-26,5.0,0.083
 1208255134984932,The Qur’an and the Bible (Gabriel Reynolds),1208543942925826,Studio Lectures + Intro + Conclusion,Untitled section,Untitled section,,,Alyssa Neece,2024-11-01,480.0,8.0
 1208255134984932,The Qur’an and the Bible (Gabriel Reynolds),1208543942925826,Studio Lectures + Intro + Conclusion,Untitled section,Untitled section,,,Alyssa Neece,2024-11-27,120.0,2.0
 1208255134984932,The Qur’an and the Bible (Gabriel Reynolds),1208543942925826,Studio Lectures + Intro + Conclusion,Untitled section,Untitled section,,,Alyssa Neece,2024-12-06,300.0,5.0

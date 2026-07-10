@@ -1,8 +1,8 @@
-ODL estimator refresh -- 2026-07-09T14:28:17
+ODL estimator refresh -- 2026-07-09T23:55:21
 pull: ran | published to Canvas: no
 
 headline numbers (before -> after):
-     total_logged_hours: 2158.5 -> 2158.5
+  -> total_logged_hours: 2158.5 -> 2186.1
      calibration_set: 25 -> 25
      full_course_p50_h: 47.2 -> 47.2
      full_course_n: 14 -> 14
@@ -10,4 +10,11 @@ headline numbers (before -> after):
      video_blended_h: 11.8 -> 11.8
      full_course_median_weeks: 31.4 -> 31.4
 
-review queue: empty -- all logged projects classified.
+ACTION NEEDED -- the Canvas bundle CHANGED but was not auto-published (no Canvas token). Re-upload faculty_guide/canvas_upload/ODL_Faculty_Onboarding_Guide.html to Canvas Files with the SAME filename and choose Replace (~1 minute).
+
+ACTION NEEDED -- 4 project(s) await a human decision (excluded from calibration until resolved):
+  - Sprint - Free-Body Diagram Visualization and Mastery (8.5h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
+  - Program for Inclusive Education (PIE) Videos (7.5h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
+  - ACE Ascent Phase IV (7.08h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
+  - Sprint: Molecular Neuroscience (Branco) (4.52h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
+  Fix: add/update the row in project_registry.csv, then re-run refresh.

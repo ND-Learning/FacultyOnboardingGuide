@@ -178,6 +178,17 @@ def main():
                                  f"({len(gids)} projects) -- keeping previous data.\n"
                                  + lp.stderr[-500:])
                     print(f"  discovered {len(gids)} projects in the workspace")
+                    # the PM dashboard's intake queue reads the cross-team "NDL
+                    # Project Tracking & Awareness" board; guarantee it is pulled
+                    # even if a listing hiccup (membership/privacy) ever drops it
+                    NDL_BOARD = "1207871566050072"
+                    if NDL_BOARD not in gids:
+                        with open(gid_file, "a") as f:
+                            f.write(NDL_BOARD +
+                                    "  # NDL Project Tracking & Awareness (must-include)\n")
+                        gids.append(NDL_BOARD)
+                        print("  + appended NDL Project Tracking & Awareness board "
+                              "(dashboard intake must-include)")
                 else:
                     gid_file = "(dry-run)"
                 run([py, "asana_pull.py", "pull", "--project-file", gid_file,

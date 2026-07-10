@@ -1,15 +1,15 @@
 ODL Asana pull report
 =====================
-projects pulled        : 136
-tasks pulled           : 3296
-phase rows             : 520
-distinct sections      : 158
-project custom fields  : 31 distinct names (946 values)
-task custom fields     : 120 distinct names (14259 values)
+projects pulled        : 152
+tasks pulled           : 3916
+phase rows             : 627
+distinct sections      : 227
+project custom fields  : 38 distinct names (1135 values)
+task custom fields     : 152 distinct names (21167 values)
 time-tracking endpoint : AVAILABLE
-projects with logged hours : 55
+projects with logged hours : 59
 crosswalk applied      : NONE (raw section names used)
 
-WARN: projects where >50% of tasks share one created_at (bulk creation -> created_at unreliable, lean on completed_at): 3D Environments Summer Online, ACE Higher Powered Learning (HPL), AI Video Series - John, ASCEND Engineering II, Asset Spreadsheet Example, C2D: Cybertraining for Chemical Data scientists, Calc I Summer Online, Commonalities in the Modern Irish and Jewish Experiences, Consultations, Creative Asset Feedback & Approval, Designing to Communicate: Strengthening Communication in Engineering Through Real-World Sustainability Contexts, Diction App, Digital Learning Task Force, Digital Transformations in Higher Education Redesign, ECG Videos, FCTA - Physics I, Gen Chem Intro Video , I CAN HELP Learning Modules, Innovation and Design Thinking XR, Insect Podcast Consult, MS-ACMS Faculty Videos, Maximizing Mendoza, Media Studio Sessions, Multimedia Writing and Rhetoric, NDIAS Teaching Fellows - Global Catholicism, NEON - R&E AI, ODL Media Studio Sessions, Political Science SO Course, Radio Systems Course, Responsible and Ethical AI, Romance Languages video/podcast initiative, Sprint - Methods Applied: Proposal Scaffolded Support (MAPPS), Sprint - Unlocking Inaccessible Korean Heritage, Sprint 2025 - Digital Accessibility - Whitney James, Sprint 2025 - VR in Global Health Training - Elizabeth Wood, Stata bootcamp modules, Summer Online 2024, Summer Online 2026, Template - Full Project (Updated Jan 2025), Test, The Qur’an and the Bible (Gabriel Reynolds), XR Spanish Escape Room
+WARN: projects where >50% of tasks share one created_at (bulk creation -> created_at unreliable, lean on completed_at): 3D Environments Summer Online, ACE Higher Powered Learning (HPL), AI Video Series - John, ASCEND Engineering II, Asset Spreadsheet Example, C2D: Cybertraining for Chemical Data scientists, Calc I Summer Online, Commonalities in the Modern Irish and Jewish Experiences, Consultations, Creative Asset Feedback & Approval, Designing to Communicate: Strengthening Communication in Engineering Through Real-World Sustainability Contexts, Diction App, Digital Learning Task Force, Digital Transformations in Higher Education Redesign, ECG Videos, FA27 | Christmyer \\ Becoming Women of the Way, FA27 | Tooke \\ Grit for the Kingdom, FCTA - Physics I, Gen Chem Intro Video , I CAN HELP Learning Modules, Innovation and Design Thinking XR, Insect Podcast Consult, MS-ACMS Faculty Videos, Maximizing Mendoza, Media Studio Sessions, Multimedia Writing and Rhetoric, NDIAS Teaching Fellows - Global Catholicism, NDL Project Tracking & Awareness, NEON - R&E AI, ODL Media Studio Sessions, Political Science SO Course, Program for Inclusive Education (PIE) Videos, Radio Systems Course, Responsible and Ethical AI, Romance Languages video/podcast initiative, Sprint - Free-Body Diagram Visualization and Mastery, Sprint - Lost in Transliteration, Sprint - Methods Applied: Proposal Scaffolded Support (MAPPS), Sprint - Unlocking Inaccessible Korean Heritage, Sprint 2025 - Digital Accessibility - Whitney James, Sprint 2025 - VR in Global Health Training - Elizabeth Wood, Sprint: Molecular Neuroscience (Branco), Stata bootcamp modules, Summer Online 2024, Summer Online 2026, Template - Full Project (Updated Jan 2025), Test, The Qur’an and the Bible (Gabriel Reynolds), XR Spanish Escape Room
 
 NEXT: open crosswalk_template.csv, fill 'canonical_phase' for each section, save as crosswalk.csv, and re-run with --crosswalk.

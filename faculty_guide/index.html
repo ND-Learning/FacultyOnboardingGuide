@@ -75,7 +75,7 @@
   .sidebox .v{font-size:22px;font-weight:800;color:var(--navy)}
   .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
   .chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:3px 10px;font-size:12px;color:var(--navy)}
-  .navtabs{display:flex;gap:8px;justify-content:center;margin:18px 0}
+  .navtabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:18px 0}
   .navtabs button{border:none;background:#eef0f3;color:var(--navy);font-weight:700;font-size:13px;
     padding:8px 16px;border-radius:999px;cursor:pointer}
   .navtabs button.on{background:var(--navy);color:#fff}
@@ -139,6 +139,18 @@
   <p class="lead">Pick the kind of project you're imagining and its rough scale. We'll show you the
     full process, what's expected of <em>you</em> at each step, and an honest estimate of the
     timeline and effort involved — grounded in our past projects.</p>
+
+  <noscript>
+    <div class="disclaimer">
+      <strong>This interactive guide needs JavaScript to size your project.</strong> With scripts turned
+      off you can't run the estimator, but ODL is still glad to help — reach out and we'll walk you
+      through the process, timeline, and effort together.
+      <div class="btnrow">
+        <a class="btn gold" href="https://learning.nd.edu/about/lets-work-together/" target="_blank" rel="noopener">Start the intake form →</a>
+        <a class="btn ghost" href="mailto:online@nd.edu">Email ODL (online@nd.edu)</a>
+      </div>
+    </div>
+  </noscript>
 
   <div class="infer">
     <div class="t">✨ Already have rough numbers in mind? Tell us what you're imagining and we'll size it
@@ -208,7 +220,7 @@
         <div class="btnrow">
           <a class="btn gold" href="https://learning.nd.edu/about/lets-work-together/" target="_blank" rel="noopener">Start the intake form →</a>
           <a class="btn ghost" href="mailto:online@nd.edu">Email ODL (online@nd.edu)</a>
-          <button class="btn primary" type="button" onclick="window.print()">🖶 Print / save this plan</button>
+          <button class="btn primary" type="button" onclick="window.print()">Print / save this plan</button>
         </div>
         <div class="srcstrip">
           <span class="cap">Where these numbers come from (ND login required):</span>
@@ -237,7 +249,7 @@
 (function(){
   var state = { type:null, size:null, custom:null, customMode:false };
   var $ = function(s){return document.querySelector(s)};
-  document.getElementById("yr").textContent = "2026";
+  document.getElementById("yr").textContent = new Date().getFullYear();
 
   // ---- where the numbers come from (source deep-links, ND login required) ----
   var SRC = {
@@ -552,7 +564,7 @@
           : '';
         return '<div class="show-card"><h4>'+esc(s.title)+'</h4><div class="need">“'+esc(s.need)+'”</div>'+
           badge+effortLine+loggedLine+linkLine+'</div>';
-      }).join("") : '<p>No close match yet — browse all ODL projects via the showcase.</p>');
+      }).join("") : '<p>No close match yet — <a href="https://learning.nd.edu/about/lets-work-together/" target="_blank" rel="noopener">tell us about your project</a> and we\'ll point you to the nearest example.</p>');
   }
 
   // ---- tabs ----
