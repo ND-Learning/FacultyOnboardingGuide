@@ -24,6 +24,15 @@
   main{max-width:1080px;margin:0 auto;padding:28px 20px 60px}
   h2{color:var(--navy);font-size:26px;margin:0 0 6px;letter-spacing:-.4px}
   .lead{color:var(--muted);max-width:680px;margin:0 0 22px}
+  .intro{display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:stretch;margin-bottom:6px}
+  .intro-text{min-width:0}
+  .intro .lead{margin-bottom:0}
+  .intro-art{background:linear-gradient(150deg,#0C2340,#16335c);border-radius:16px;padding:22px 18px;
+    color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:9px}
+  .intro-art svg{filter:drop-shadow(0 3px 8px rgba(0,0,0,.35))}
+  .ia-title{font-weight:800;font-size:16px}
+  .ia-sub{font-size:12.5px;color:#c8d2e0;line-height:1.5}
+  @media(max-width:820px){.intro{grid-template-columns:1fr}.intro-art{display:none}}
   .step-label{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:30px 0 10px}
   .grid{display:grid;gap:14px}
   .types{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
@@ -77,6 +86,9 @@
   .sidebox .v{font-size:22px;font-weight:800;color:var(--navy)}
   .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
   .chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:3px 10px;font-size:12px;color:var(--navy)}
+  a.chip{text-decoration:none;transition:.15s}
+  .chip-doc{background:var(--gold-soft);border-color:#e0cf9a;font-weight:600;cursor:pointer}
+  .chip-doc:hover{border-color:var(--gold);color:var(--gold);box-shadow:0 2px 8px rgba(201,151,0,.15)}
   .navtabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:18px 0}
   .navtabs button{border:none;background:#eef0f3;color:var(--navy);font-weight:700;font-size:13px;
     padding:8px 16px;border-radius:999px;cursor:pointer}
@@ -137,24 +149,32 @@
 </header>
 
 <main>
-  <h2>Partnering with ODL: what to expect</h2>
-  <p class="lead">Pick the kind of project you're imagining and its rough scale. We'll show you the
-    full process, what's expected of <em>you</em> at each step, and an honest estimate of the
-    timeline and effort involved — grounded in our past projects.</p>
+  <div class="intro">
+    <div class="intro-text">
+      <h2>Partnering with ODL: what to expect</h2>
+      <p class="lead">Pick the kind of project you're imagining and its rough scale. We'll show you the
+        full process, what's expected of <em>you</em> at each step, and an honest estimate of the
+        timeline and effort involved — grounded in our past projects.</p>
+    </div>
+    <aside class="intro-art">
+      <svg viewBox="0 0 64 64" width="104" height="104" role="img" aria-label="Notre Dame golden dome">
+        <rect x="15" y="39" width="34" height="15" rx="2" fill="#C99700"/>
+        <path d="M18 40a14 14 0 0 1 28 0z" fill="#C99700"/>
+        <rect x="30.7" y="15" width="2.6" height="7" fill="#C99700"/>
+        <circle cx="32" cy="12" r="3.2" fill="#C99700"/>
+      </svg>
+      <div class="ia-title">Grounded in real projects</div>
+      <div class="ia-sub">Every timeline and effort estimate here comes from Notre Dame courses ODL has actually built and delivered.</div>
+    </aside>
+  </div>
 
-  <div class="disclaimer" style="margin-top:14px">
-    <strong>Timing matters more than you'd think.</strong> A full course typically takes about
-    31 weeks from kickoff to launch, so a course aimed at a spring semester needs to begin the
-    previous spring — and a fall launch by the preceding winter. Single videos and small modules
-    can turn around in a few weeks. The earlier you reach out, the more launch dates stay open.
-    <br><br>
+  <div class="disclaimer" style="margin-top:18px">
     <strong>Have a 1–3-month experiment in mind?</strong> ND Learning's <strong>Digital Learning
     Sprints</strong> award a $3,000 stipend plus hands-on ODL support for focused explorations —
     AI in your course, flipped classrooms, global (COIL) collaborations, asynchronous modules,
-    VR experiences. Applications open each spring (the 2026 cohort applied by April&nbsp;6 and
-    builds over the summer).
+    VR experiences. The application cycle runs each spring, with builds over the summer.
     <div class="btnrow">
-      <a class="btn gold" href="https://learning.nd.edu/projects-partnerships/funding-opportunities/#sprints" target="_blank" rel="noopener">See funding opportunities →</a>
+      <a class="btn gold" href="https://learning.nd.edu/projects-partnerships/funding-opportunities/#sprints" target="_blank" rel="noopener">See past funding opportunities →</a>
     </div>
   </div>
 
@@ -169,6 +189,12 @@
       </div>
     </div>
   </noscript>
+
+  <div class="step-label">1 · What are you building?</div>
+  <div id="types" class="grid types"></div>
+
+  <div class="step-label">2 · How big is the scope?</div>
+  <div id="sizes" class="grid sizes"></div>
 
   <div class="infer">
     <div class="t">✨ Already have rough numbers in mind? Tell us what you're imagining and we'll size it
@@ -187,14 +213,8 @@
       <label class="chk"><input id="inf-xr" type="checkbox"> XR / immersive</label>
       <button class="btn gold" id="inf-go" type="button">Estimate my project →</button>
     </div>
-    <button class="skip" id="inf-skip" type="button">Don't know your numbers yet? Pick your project by description instead ↓</button>
+    <button class="skip" id="inf-skip" type="button">↑ Prefer to pick by type and size? Use the options above.</button>
   </div>
-
-  <div class="step-label">1 · What are you building?</div>
-  <div id="types" class="grid types"></div>
-
-  <div class="step-label">2 · How big is the scope?</div>
-  <div id="sizes" class="grid sizes"></div>
 
   <div id="hint" class="hint hidden"></div>
 
@@ -278,6 +298,39 @@
   };
   function srcLink(url, label){
     return ' <a class="srclink" href="' + url + '" target="_blank" rel="noopener">' + label + ' ↗</a>';
+  }
+
+  // ---- example Google Docs for each ARTIFACT ---------------------------------
+  // Paste the "anyone with the link (Viewer)" Google Doc URL next to each artifact
+  // so faculty can click a tag and preview what that deliverable looks like.
+  // Leave a value as "" and that tag stays a plain (non-linked) label — no broken
+  // links ever ship. Names must match the artifact strings in estimator.js exactly.
+  var ARTIFACT_DOCS = {
+    "Intake Form":          "",
+    "Draft Project Charter":"",
+    "Course Map":           "",
+    "Design Document":      "",
+    "Media Asset List":     "",
+    "Finalized Scripts":    "",
+    "Production Schedule":  "",
+    "Media Consent Form":   "",
+    "Edited Videos":        "",
+    "Graphics":             "",
+    "Course Site (Canvas)": "",
+    "Live Course":          "",
+    "QA Sign-off":          "",
+    "Evaluation Report":    ""
+  };
+  // Render one artifact tag. If an example doc exists, make it a clickable link;
+  // if the artifact string is already HTML (e.g. an Asana deep link), pass it through.
+  function artifactChip(a){
+    if (/^\s*</.test(a)) return '<span class="chip">' + a + '</span>';
+    var url = ARTIFACT_DOCS[a];
+    if (url) {
+      return '<a class="chip chip-doc" href="' + esc(url) + '" target="_blank" rel="noopener"' +
+             ' title="See an example — ' + esc(a) + '">' + esc(a) + ' ↗</a>';
+    }
+    return '<span class="chip">' + esc(a) + '</span>';
   }
 
   // ---- build type & size cards ----
@@ -372,7 +425,7 @@
   // ---- "I don't know my numbers" → guide them to pick by description -------
   $("#inf-skip").onclick = function(){
     var h = $("#hint");
-    h.innerHTML = "No problem — you don't need exact counts. Read the options below and pick the project "+
+    h.innerHTML = "No problem — you don't need exact counts. Read the options above and pick the project "+
       "<strong>type</strong> and <strong>size</strong> that feel closest. You can fine-tune the details afterward, "+
       "and ODL will confirm everything with you.";
     h.classList.remove("hidden");
@@ -484,7 +537,7 @@
           (p.facNote?'<div class="facnote">'+esc(p.facNote)+'</div>':'')+'</div>'+
         '<div class="sidebox"><div class="k">ODL team effort</div><div class="v">'+fmtRange(p.odl,"h")+'</div></div>'+
         '<div class="sidebox"><div class="k">Artifacts</div><div class="chips">'+
-          p.artifacts.map(function(a){return '<span class="chip">'+a+'</span>';}).join("")+'</div></div>'+
+          p.artifacts.map(artifactChip).join("")+'</div></div>'+
       '</div></div></div>';
   }
   function showDetail(est,i){ $("#detailHost").innerHTML = detailCard(est.phases[i]); }
