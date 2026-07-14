@@ -210,6 +210,18 @@ def main():
                     shutil.move(os.path.join(tmp, f), os.path.join(data_dir, f))
                 shutil.rmtree(tmp, ignore_errors=True)
 
+            # regenerate the workspace-wide timesheet (data_all/timesheet_ws.csv) for
+            # the PM dashboard, reusing the same token. Writes a separate file from
+            # time_entries.csv (the per-task puller above, which the estimator's
+            # calibration needs left untouched). Non-fatal -- the dashboard falls
+            # back to time_entries.csv if this step fails.
+            try:
+                run([py, "regen_timesheet.py"], env={"ASANA_TOKEN": tok}, dry=args.dry_run)
+            except SystemExit as e:
+                print(f"WARNING: regen_timesheet.py failed -- {e} "
+                      "(non-fatal; continuing refresh; dashboard falls back to "
+                      "time_entries.csv)")
+
     # 2..5 AUDIT / CALIBRATE / INJECT / BUNDLE ---------------------------------
     run([py, "audit_rules.py", "--dir", data_dir], dry=args.dry_run)
     run([py, "calibrate.py", "--dir", data_dir], dry=args.dry_run)
