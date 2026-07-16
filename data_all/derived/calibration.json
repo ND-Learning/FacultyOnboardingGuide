@@ -1,8 +1,8 @@
 {
   "_provenance": {
-    "source": "data_all/time_entries.csv (3,326 entries, 2831.3h, 2024-07-10..2026-07-09, ODL staff time)",
+    "source": "data_all/time_entries.csv (3,331 entries, 2838.3h, 2024-07-10..2026-07-15, ODL staff time)",
     "calibration_set": "25 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 21 of them with >=10h non-PM logging",
-    "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 3017, 'task_name': 124, 'none': 185}",
+    "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 3022, 'task_name': 124, 'none': 185}",
     "no_guessing": "blocks state 'not_calibratable' where data is insufficient"
   },
   "archetype_effort_hours": {
@@ -25,7 +25,7 @@
       "projects": {
         "AI for the Notre Dame Community": 286.5,
         "Responsible and Ethical AI": 98.9,
-        "Virtual Borders": 110.5,
+        "Virtual Borders": 116.5,
         "ASCEND Engineering": 27.5,
         "ASCEND MCOB": 80.2,
         "The Qur’an and the Bible (Gabriel Reynolds)": 46.7,
@@ -33,7 +33,7 @@
         "Sprint 2025 - Digital Accessibility - Whitney James": 49.2,
         "Business for Humans | Sheedy Family Program": 47.8,
         "FCTA - Physics I": 41.9,
-        "NEON - POLS 30022 (Poly Sci)": 33.8,
+        "NEON - POLS 30022 (Poly Sci)": 34.2,
         "Sprint 2025 - Bringing Korean to Life - Yeonhee Yoon": 19.5,
         "C2D: Cybertraining for Chemical Data scientists": 16.5,
         "Travel Safety 101": 15.7
@@ -41,7 +41,7 @@
       "production_hours": {
         "n": 14,
         "min": 15.7,
-        "p25": 29.1,
+        "p25": 29.2,
         "p50": 47.2,
         "p75": 77.9,
         "p80": 87.7,
@@ -50,7 +50,7 @@
     },
     "single_video": {
       "projects": {
-        "Ultrasound Communication Video": 29.2,
+        "Ultrasound Communication Video": 29.8,
         "Program for Inclusive Education (PIE) Video #2": 15.5,
         "Borgo Laudato Si' videos": 12.0
       },
@@ -59,7 +59,7 @@
         "values": [
           12.0,
           15.5,
-          29.2
+          29.8
         ],
         "p50": 15.5,
         "note": "n<4 -- raw values shown; interpolated quartiles withheld"
@@ -229,7 +229,7 @@
       {
         "project": "Ultrasound Communication Video",
         "video": "(whole project)",
-        "hours": 29.2
+        "hours": 29.8
       },
       {
         "project": "Borgo Laudato Si' videos",
@@ -255,8 +255,8 @@
       "p25": 12.0,
       "p50": 13.7,
       "p75": 15.5,
-      "p80": 18.2,
-      "max": 29.2
+      "p80": 18.4,
+      "max": 29.8
     },
     "observed_excluded_partial_coverage": [
       {
@@ -331,13 +331,13 @@
     }
   },
   "full_course_phase_mix": {
-    "basis": "pooled non-PM hours of 14 full-coverage full_course projects (945.8h)",
+    "basis": "pooled non-PM hours of 14 full-coverage full_course projects (952.3h)",
     "share_pct": {
-      "Production": 33.7,
-      "Post-Production": 23.8,
-      "Development/Build": 16.5,
-      "Pre-Production": 16.3,
-      "Design": 8.0,
+      "Production": 34.2,
+      "Post-Production": 23.6,
+      "Development/Build": 16.4,
+      "Pre-Production": 16.2,
+      "Design": 7.9,
       "Other / unsorted": 1.3,
       "Discovery": 0.4
     }
@@ -1023,10 +1023,10 @@
         "ape_pct": 73.8
       },
       {
-        "actual": 33.8,
+        "actual": 34.2,
         "pred_p50": 47.8,
         "in_iqr": true,
-        "ape_pct": 41.4
+        "ape_pct": 39.8
       },
       {
         "actual": 41.9,
@@ -1071,10 +1071,10 @@
         "ape_pct": 52.8
       },
       {
-        "actual": 110.5,
+        "actual": 116.5,
         "pred_p50": 46.7,
         "in_iqr": false,
-        "ape_pct": 57.7
+        "ape_pct": 59.9
       },
       {
         "actual": 286.5,
