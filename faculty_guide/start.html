@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Working with ODL — a quick guide for Notre Dame Faculty</title>
+<title>Working with ODL: a quick guide for Notre Dame Faculty</title>
 <!-- Notre Dame dome mark: navy dome on ND gold -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%23C99700'/%3E%3Crect x='15' y='39' width='34' height='15' rx='2' fill='%230C2340'/%3E%3Cpath d='M18 40a14 14 0 0 1 28 0z' fill='%230C2340'/%3E%3Crect x='30.7' y='15' width='2.6' height='7' fill='%230C2340'/%3E%3Ccircle cx='32' cy='12' r='3.2' fill='%230C2340'/%3E%3C/svg%3E">
 <style>
@@ -51,7 +51,7 @@
   section{padding:34px 0}
   .eyebrow{font-size:12px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin:0 0 6px;text-align:center}
   h3.sec{color:var(--navy);font-size:25px;margin:0 0 6px;letter-spacing:-.4px;text-align:center}
-  .sec-lead{color:var(--muted);text-align:center;max-width:600px;margin:0 auto 24px}
+  .sec-lead{color:var(--muted);text-align:center;max-width:620px;margin:0 auto 24px}
 
   /* 3 steps */
   .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
@@ -74,18 +74,20 @@
   .hlist div{font-size:14px;display:flex;align-items:flex-start;gap:9px;line-height:1.4}
   .hlist .ck{color:var(--gold);font-weight:800;flex-shrink:0}
 
-  /* Q&A info boxes */
-  .qa{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:10px;overflow:hidden}
-  .qa-q{width:100%;text-align:left;background:none;border:none;font:inherit;cursor:pointer;
-        padding:15px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--navy);font-weight:700;font-size:15px}
-  .qa-q:hover{background:var(--cream)}
-  .qa-q .plus{color:var(--gold);font-size:20px;font-weight:800;transition:transform .2s;flex-shrink:0}
-  .qa.open .qa-q .plus{transform:rotate(45deg)}
-  .qa-a{max-height:0;overflow:hidden;transition:max-height .25s ease;font-size:14px;color:var(--ink)}
-  .qa.open .qa-a{max-height:320px}
-  .qa-a div{padding:0 18px 16px}
-  .qa-a b{color:var(--navy)}
-  .qa-a a{font-weight:700}
+  /* terms box with hover tooltips + template links */
+  .terms-box{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px;line-height:2.5;text-align:center}
+  .term{position:relative;display:inline-block;border:1px dashed #b39a5b;border-radius:5px;padding:2px 9px;margin:5px 4px;
+        color:var(--navy);font-weight:600;font-size:15px;cursor:help;text-decoration:none;background:#fff;line-height:1.3}
+  a.term{cursor:pointer}
+  a.term:hover{border-color:var(--gold);background:var(--gold-soft);border-style:solid}
+  .term:focus{outline:2px solid var(--gold);outline-offset:2px}
+  .term .tip{visibility:hidden;opacity:0;position:absolute;bottom:calc(100% + 12px);left:50%;transform:translateX(-50%);
+        width:min(290px,82vw);background:#2b2b2b;color:#fff;padding:12px 15px;border-radius:11px;font-size:13.5px;font-weight:400;
+        line-height:1.55;text-align:left;white-space:normal;box-shadow:0 10px 30px rgba(0,0,0,.28);z-index:20;
+        transition:opacity .15s;pointer-events:none}
+  .term .tip .go{display:block;margin-top:8px;color:#ffd466;font-weight:700}
+  .term .tip::after{content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:#2b2b2b}
+  .term:hover .tip,.term:focus .tip{visibility:visible;opacity:1}
 
   /* project filter + cards */
   .filts{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:20px}
@@ -152,7 +154,7 @@
 
     <!-- HERO -->
     <div class="hero">
-      <h2>Let's build your course media — together.</h2>
+      <h2>Let's build your course media, together.</h2>
       <p class="lead">Thinking about videos, an online course, or something immersive? Here's the honest picture of what partnering with ODL involves, and how much of <em>your</em> time it really takes.</p>
     </div>
 
@@ -160,36 +162,36 @@
     <div class="clock">
       <div class="ey">Your time commitment</div>
       <div class="hd">A few hours a week.</div>
-      <div class="sub">ODL's team does the heavy lifting — design, filming, editing, and project management. Your role is the ideas and the expertise. In a typical week that looks like:</div>
+      <div class="sub">ODL's team takes on the heavy lifting: design, filming, editing, and project management. You focus on the ideas and expertise, and stay as hands-on as you'd like. In a typical week that looks like:</div>
       <div class="tiers">
         <div class="tier">
-          <div class="v">4–6 <span>hrs / week</span></div>
+          <div class="v">4&ndash;6 <span>hrs / week</span></div>
           <div class="k">For a full online or blended <b>course</b></div>
         </div>
         <div class="tier">
-          <div class="v">2–4 <span>hrs / week</span></div>
+          <div class="v">2&ndash;4 <span>hrs / week</span></div>
           <div class="k">For a single <b>module</b>, or a focused <b>AI</b> or <b>immersive</b> project</div>
         </div>
       </div>
-      <p class="fine">Some weeks are heavier — <b>filming and reviewing your videos</b> take a bit more — and many weeks are lighter. Work spreads comfortably across the project, which usually runs over <b>a semester or two</b> for a course, or <b>a few weeks to a couple of months</b> for a smaller piece. These are ODL's planning estimates; we'll pin down the real numbers for <em>your</em> project together.</p>
+      <p class="fine">Some weeks are heavier (filming and reviewing your videos take a bit more), and many weeks are lighter. Work spreads comfortably across the project, which usually runs over <b>a semester or two</b> for a course, or <b>a few weeks to a couple of months</b> for a smaller piece. These are ODL's planning estimates; we'll pin down the real numbers for <em>your</em> project together.</p>
     </div>
 
     <!-- 3 STEPS -->
     <section>
       <div class="eyebrow">The whole process, in plain terms</div>
       <h3 class="sec">What you actually do</h3>
-      <p class="sec-lead">Three simple phases. No technical or video skills needed — that's our job.</p>
+      <p class="sec-lead">Three simple phases. Bring what you already have, do as much of the making as you'd like, and ODL supports the rest.</p>
       <div class="steps">
         <div class="step">
           <div class="n">1</div>
           <h4>Shape it</h4>
-          <p>Share your vision and learning goals. We sit down with you and turn them into a <b>course map</b> — the one-page blueprint everyone builds from.</p>
+          <p>Share your vision and learning goals. We sit down with you and turn them into a <b>course map</b>, the one-page blueprint everyone builds from.</p>
           <span class="t">A few hours, up front</span>
         </div>
         <div class="step">
           <div class="n">2</div>
           <h4>Record it</h4>
-          <p>You provide the content and, where there's video, step in front of the camera. Roughly <b>~1 hour to script and ~1 hour to film</b> per video — we handle everything around it.</p>
+          <p>You provide the content and, where there's video, step in front of the camera. Roughly <b>~1 hour to script and ~1 hour to film</b> per video, and we handle everything around it.</p>
           <span class="t">Spread across a few sessions</span>
         </div>
         <div class="step">
@@ -201,8 +203,8 @@
       </div>
 
       <div class="handles">
-        <h4>What ODL handles — so you don't</h4>
-        <p>Your expertise is the only specialized thing this needs. Everything below is ours:</p>
+        <h4>What ODL can handle for you</h4>
+        <p>You bring the expertise. We can take all of this off your plate, or share it if you'd like to stay hands-on:</p>
         <div class="hlist">
           <div><span class="ck">✓</span> Instructional &amp; learning design</div>
           <div><span class="ck">✓</span> Filming, studio &amp; video editing</div>
@@ -214,27 +216,18 @@
       </div>
     </section>
 
-    <!-- INFO BOXES -->
+    <!-- TERMS + TEMPLATES -->
     <section>
-      <div class="eyebrow">Quick answers</div>
-      <h3 class="sec">A few terms you'll hear</h3>
-      <p class="sec-lead">Tap to expand. (You don't need to know any of this to start — we'll walk you through it.)</p>
-
-      <div class="qa">
-        <button class="qa-q">What's my role — what's an "SME"? <span class="plus">+</span></button>
-        <div class="qa-a"><div>You are the <b>subject-matter expert (SME)</b> — the one who knows the content. You bring the academic expertise and appear on camera where needed; ODL brings the instructional design, production, and project management. <b>No technical, design, or video skills required.</b></div></div>
-      </div>
-      <div class="qa">
-        <button class="qa-q">What is a "course map"? <span class="plus">+</span></button>
-        <div class="qa-a"><div>A simple, one-page outline of your course: the modules, what each one should teach, and where video or interactive pieces fit. We build it <b>with</b> you early on, and it becomes the blueprint the whole team works from — so there are no surprises later.</div></div>
-      </div>
-      <div class="qa">
-        <button class="qa-q">What kinds of media can ODL make? <span class="plus">+</span></button>
-        <div class="qa-a"><div><b>Studio lectures</b> (you, on camera) · <b>lightboard</b> (writing on illuminated glass facing the viewer) · <b>screencasts</b> (narrated screen recordings) · <b>explainer animations</b> &amp; infographics · <b>360° / VR</b> immersive scenes. We'll recommend the right mix for your goals and budget.</div></div>
-      </div>
-      <div class="qa">
-        <button class="qa-q">Not ready for a full course? Try a Sprint. <span class="plus">+</span></button>
-        <div class="qa-a"><div>A <b>Digital Learning Sprint</b> is a low-commitment way to start: a short, focused exploration with hands-on ODL support and a <b>$3,000 stipend</b>. A great on-ramp to test an idea before committing to a full build. <a href="https://learning.nd.edu/projects-partnerships/funding-opportunities/#sprints" target="_blank" rel="noopener">See funding opportunities →</a></div></div>
+      <div class="eyebrow">Good to know</div>
+      <h3 class="sec">A few terms, and our templates</h3>
+      <p class="sec-lead">Hover any term for a plain-language definition. The ones marked ↗ open a ready-to-use ODL template you can copy.</p>
+      <div class="terms-box">
+        <span class="term" tabindex="0">SME<span class="tip">Subject-matter expert, which is you. You bring the academic content and expertise. Share what you already have, be as hands-on with the making as you like, and ODL provides the production and technical support to match.</span></span>
+        <span class="term" tabindex="0">Media types<span class="tip">The formats we can make: studio lectures (you on camera), lightboard, screencasts, explainer animations and infographics, and 360° / VR. We recommend the right mix for your goals and budget.</span></span>
+        <a class="term" href="https://docs.google.com/document/d/1RrJgo1vmDXQP3vEVjSI5qULrdSLVdlnHkoscWkexXcc/edit?tab=t.0" target="_blank" rel="noopener">Course Map ↗<span class="tip">A one-page outline of your course: modules, learning objectives, and where media fits. We build it with you early on, and it guides the whole team.<span class="go">Click to open the template ↗</span></span></a>
+        <a class="term" href="https://docs.google.com/document/d/1jLQIND-TjehpgLuGaRwwFUvYs82JJkVkchT_XUrXXPs/edit?tab=t.0" target="_blank" rel="noopener">Project Charter ↗<span class="tip">A short, shared agreement that sets your project's goals, scope, and roles up front, so everyone starts on the same page.<span class="go">Click to open the template ↗</span></span></a>
+        <a class="term" href="https://docs.google.com/document/d/1v6JfdOGvrovVzTvXPGxfiGchsvjfl_bVzZ4aYHIM3RA/edit?tab=t.0" target="_blank" rel="noopener">Design Document ↗<span class="tip">The plan for each piece of media: what it should teach, how it looks, and how it gets made.<span class="go">Click to open the template ↗</span></span></a>
+        <a class="term" href="https://docs.google.com/document/d/1stIgpAAG-CPgMtQQnZWq45tzrtsmmtjOLDvVVntH-II/edit?tab=t.0" target="_blank" rel="noopener">Production Schedule ↗<span class="tip">The timeline for filming and building, so you always know what is needed and when.<span class="go">Click to open the template ↗</span></span></a>
       </div>
     </section>
 
@@ -256,56 +249,56 @@
           <div class="cat">Full course · MOOC</div>
           <h4>The Qur'an and the Bible</h4>
           <p class="need">A 6-module course for a global audience on Coursera.</p>
-          <div class="foot"><span class="wk"><b>~4–6</b> hrs/wk</span><a class="see" href="https://think.nd.edu/big_questions/new-on-coursera-sacred-texts-in-dialogue/" target="_blank" rel="noopener">See it →</a></div>
+          <div class="foot"><span class="wk"><b>~4&ndash;6</b> hrs/wk</span><a class="see" href="https://think.nd.edu/big_questions/new-on-coursera-sacred-texts-in-dialogue/" target="_blank" rel="noopener">See it →</a></div>
         </div>
 
         <div class="proj" data-cat="course">
           <div class="cat">Full course · Blended</div>
           <h4>MSAN II</h4>
           <p class="need">Leadership training delivered to cohorts across time zones.</p>
-          <div class="foot"><span class="wk"><b>~4–6</b> hrs/wk</span><a class="see" href="https://learning.nd.edu/news/notre-dames-partnership-with-military-spouse-advocacy-network-launches-second-course/" target="_blank" rel="noopener">See it →</a></div>
+          <div class="foot"><span class="wk"><b>~4&ndash;6</b> hrs/wk</span><a class="see" href="https://learning.nd.edu/news/notre-dames-partnership-with-military-spouse-advocacy-network-launches-second-course/" target="_blank" rel="noopener">See it →</a></div>
         </div>
 
         <div class="proj" data-cat="course">
           <div class="cat">Full course · Flipped</div>
           <h4>Lab Visualization</h4>
           <p class="need">Pre-lab videos that boost student readiness and safety.</p>
-          <div class="foot"><span class="wk"><b>~4–6</b> hrs/wk</span><a class="see" href="https://learning.nd.edu/news/visualizing-success-using-video-to-boost-student-lab-readiness-and-confidence/" target="_blank" rel="noopener">See it →</a></div>
+          <div class="foot"><span class="wk"><b>~4&ndash;6</b> hrs/wk</span><a class="see" href="https://learning.nd.edu/news/visualizing-success-using-video-to-boost-student-lab-readiness-and-confidence/" target="_blank" rel="noopener">See it →</a></div>
         </div>
 
         <div class="proj" data-cat="ai">
           <div class="cat">AI project</div>
           <h4>AI for the ND Community</h4>
           <p class="need">Campus-wide AI literacy, modular by role.</p>
-          <div class="foot"><span class="wk"><b>~2–4</b> hrs/wk</span><a class="see" href="https://learning.nd.edu/news/announcing-ai-for-the-nd-community-course/" target="_blank" rel="noopener">See it →</a></div>
+          <div class="foot"><span class="wk"><b>~2&ndash;4</b> hrs/wk</span><a class="see" href="https://learning.nd.edu/news/announcing-ai-for-the-nd-community-course/" target="_blank" rel="noopener">See it →</a></div>
         </div>
 
         <div class="proj" data-cat="xr">
           <div class="cat">Immersive · VR</div>
           <h4>Bringing Korean to Life</h4>
           <p class="need">VR / 360° immersion with AI conversation avatars.</p>
-          <div class="foot"><span class="wk"><b>~2–4</b> hrs/wk</span><a class="see" href="https://www.library.nd.edu/news/korean-language-students-use-virtual-reality-to-explore-traditions/" target="_blank" rel="noopener">See it →</a></div>
+          <div class="foot"><span class="wk"><b>~2&ndash;4</b> hrs/wk</span><a class="see" href="https://www.library.nd.edu/news/korean-language-students-use-virtual-reality-to-explore-traditions/" target="_blank" rel="noopener">See it →</a></div>
         </div>
 
         <div class="proj" data-cat="xr">
           <div class="cat">Immersive · VR</div>
-          <h4>XR for Law — Car Crash</h4>
+          <h4>XR for Law: Car Crash</h4>
           <p class="need">A VR crash scene for studying eyewitness reliability.</p>
-          <div class="foot"><span class="wk"><b>~2–4</b> hrs/wk</span><a class="see" href="https://xr.nd.edu/projects/law-school-car-crash-simulator/" target="_blank" rel="noopener">See it →</a></div>
+          <div class="foot"><span class="wk"><b>~2&ndash;4</b> hrs/wk</span><a class="see" href="https://xr.nd.edu/projects/law-school-car-crash-simulator/" target="_blank" rel="noopener">See it →</a></div>
         </div>
 
         <div class="proj" data-cat="xr">
           <div class="cat">Immersive · Game-based</div>
           <h4>Spanish Escape Room</h4>
           <p class="need">Gamified, collaborative language &amp; culture.</p>
-          <div class="foot"><span class="wk"><b>~2–4</b> hrs/wk</span><a class="see" href="https://learning.nd.edu/news/ai-and-game-based-learning-enhance-study-of-spanish-language-and-culture/" target="_blank" rel="noopener">See it →</a></div>
+          <div class="foot"><span class="wk"><b>~2&ndash;4</b> hrs/wk</span><a class="see" href="https://learning.nd.edu/news/ai-and-game-based-learning-enhance-study-of-spanish-language-and-culture/" target="_blank" rel="noopener">See it →</a></div>
         </div>
 
         <div class="proj" data-cat="module">
           <div class="cat">Video series</div>
           <h4>AI Video Series</h4>
           <p class="need">A fast-turnaround video series on generative AI.</p>
-          <div class="foot"><span class="wk"><b>~2–4</b> hrs/wk</span><a class="see" href="https://learning.nd.edu/learning-technology/lab-for-ai-in-teaching-and-learning-laitl/ai-for-teaching-and-learning-video-series/" target="_blank" rel="noopener">See it →</a></div>
+          <div class="foot"><span class="wk"><b>~2&ndash;4</b> hrs/wk</span><a class="see" href="https://learning.nd.edu/learning-technology/lab-for-ai-in-teaching-and-learning-laitl/ai-for-teaching-and-learning-video-series/" target="_blank" rel="noopener">See it →</a></div>
         </div>
 
       </div>
@@ -324,12 +317,12 @@
     <section>
       <div class="cta">
         <h3>Let's talk it through.</h3>
-        <p>The fastest way to get a real plan and timeline for <em>your</em> course is a short conversation. Tell us what you're imagining — we'll map it out with you.</p>
+        <p>The fastest way to get a real plan and timeline for <em>your</em> course is a short conversation. Tell us what you're imagining, and we'll map it out with you.</p>
         <div class="btns">
           <a class="btn gold" href="https://learning.nd.edu/about/lets-work-together/" target="_blank" rel="noopener">Start the conversation →</a>
           <a class="btn ghost" href="mailto:online@nd.edu">Email online@nd.edu</a>
         </div>
-        <div class="sprint">Just exploring? A <a href="https://learning.nd.edu/projects-partnerships/funding-opportunities/#sprints" target="_blank" rel="noopener">Digital Learning Sprint</a> ($3,000 stipend) is a low-commitment place to start.</div>
+        <div class="sprint">Curious about funding? ODL Digital Learning Sprints have supported focused faculty explorations with a stipend. <a href="https://learning.nd.edu/projects-partnerships/funding-opportunities/#sprints" target="_blank" rel="noopener">See past funding opportunities</a>.</div>
       </div>
     </section>
 
@@ -342,10 +335,6 @@
 </footer>
 
 <script>
-  // expandable info boxes
-  document.querySelectorAll('.qa').forEach(function(el){
-    el.querySelector('.qa-q').addEventListener('click', function(){ el.classList.toggle('open'); });
-  });
   // project filter
   var fbtns = document.querySelectorAll('.filt');
   var cards = document.querySelectorAll('.proj');
