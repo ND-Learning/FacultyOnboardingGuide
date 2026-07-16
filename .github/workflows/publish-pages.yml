@@ -55,7 +55,13 @@ jobs:
       - name: Stage the site
         run: |
           mkdir _site
-          cp faculty_guide/index.html faculty_guide/estimator.js _site/
+          # Public landing = the simple faculty page (faculty_guide/start.html).
+          # The detailed estimator stays reachable, unlinked, at /estimator.html for
+          # internal ODL use during faculty meetings; its source (index.html +
+          # estimator.js) is untouched and still builds the Canvas bundle.
+          cp faculty_guide/start.html _site/index.html
+          cp faculty_guide/index.html _site/estimator.html
+          cp faculty_guide/estimator.js _site/
           touch _site/.nojekyll
 
       - name: Upload Pages artifact
