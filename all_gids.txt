@@ -166,6 +166,8 @@
 1215987566327904  # Flipped Classroom #2
 1215993168366996  # Brian - Course Trailer
 1215994490410552  # Flipped Classroom #3
+1216713304901433  # Job Fair
+1216741356371289  # Fall Workshops
 1204789220328740  # College BouND
 1204818761552639  # DX Course Design
 1204843864198221  # Inclusivity Modules
