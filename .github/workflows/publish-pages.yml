@@ -58,17 +58,48 @@ jobs:
             echo "::warning::Not fast-forwardable — this mirror has diverged from the live repo; deploying current contents."
           fi
 
-      - name: Stage the site
+      - name: Stage the public site
         run: |
           mkdir _site
-          # Public landing = the simple faculty page (faculty_guide/start.html).
-          # The detailed estimator stays reachable, unlinked, at /estimator.html for
-          # internal ODL use during faculty meetings; its source (index.html +
-          # estimator.js) is untouched and still builds the Canvas bundle.
+          # Public/faculty-facing = the simple landing page (faculty_guide/start.html),
+          # served at the root of https://nd-learning.github.io/FacultyOnboardingGuide/.
           cp faculty_guide/start.html _site/index.html
-          cp faculty_guide/index.html _site/estimator.html
-          cp faculty_guide/estimator.js _site/
           touch _site/.nojekyll
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Encrypt the team estimator (StatiCrypt)
+        # The detailed estimator is TEAM-ONLY (decided 2026-07-23). Its
+        # self-contained nightly build (faculty_guide/canvas_upload/
+        # ODL_Faculty_Onboarding_Guide.html — same file that goes to Canvas) is
+        # published at /estimator.html encrypted with the team password, same
+        # scheme as the PM dashboard (StatiCrypt AES-256 + PBKDF2, fixed salt so
+        # "remember 30 days" survives nightly re-encryption). The raw estimator
+        # source (index.html + estimator.js) is never published. If the
+        # STATICRYPT_PASSWORD secret is missing, the estimator is simply not
+        # published — the public landing still deploys.
+        env:
+          STATICRYPT_PASSWORD: ${{ secrets.STATICRYPT_PASSWORD }}
+          SALT: ${{ vars.STATICRYPT_SALT }}
+        run: |
+          if [ -z "$STATICRYPT_PASSWORD" ]; then
+            echo "::warning::STATICRYPT_PASSWORD secret is not set — publishing the public landing only; /estimator.html is omitted."
+            exit 0
+          fi
+          npm install --no-audit --no-fund --silent staticrypt@3.5.0 yargs@17.7.2
+          ./node_modules/.bin/staticrypt "faculty_guide/canvas_upload/ODL_Faculty_Onboarding_Guide.html" \
+            -d _out --password "$STATICRYPT_PASSWORD" --remember 30 \
+            ${SALT:+--salt "$SALT"} \
+            --template-title "ODL Estimator — team access" \
+            --template-instructions "ODL team only. Enter the team password (ask your PM)." \
+            --short
+          cp _out/ODL_Faculty_Onboarding_Guide.html _site/estimator.html
+          # belt-and-braces: plaintext must never reach the public site
+          if grep -q "Interactive Process Guide" _site/estimator.html; then
+            echo "::error::plaintext leaked into encrypted output"; exit 1
+          fi
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
