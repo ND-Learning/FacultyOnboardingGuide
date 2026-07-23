@@ -47,7 +47,13 @@ jobs:
           git remote add live https://github.com/jliu234-cell/odl-estimator.git
           git fetch live main
           if git merge --ff-only live/main; then
-            git push origin main
+            # Push back so the mirror repo stays current. This is best-effort:
+            # GITHUB_TOKEN cannot push commits that touch .github/workflows/**
+            # ("refusing to allow a GitHub App to ... without workflows permission"),
+            # which froze the site for a week in July 2026 when this push failure
+            # killed the whole job. The runner already has the merged content, so
+            # always deploy it; just warn if the mirror needs a manual push.
+            git push origin main || echo "::warning::Could not push the sync commit back (likely a workflow-file change, which GITHUB_TOKEN may not push). Deploying the merged content anyway — run 'git push origin main' locally to catch the mirror up."
           else
             echo "::warning::Not fast-forwardable — this mirror has diverged from the live repo; deploying current contents."
           fi
