@@ -170,6 +170,12 @@
 1216740509061105  # I CAN HELP - Faculty Consultation
 1216740509061115  # CHEM 10171 FA26 intro video
 1216741356371289  # Fall Workshops
+1216770184023177  # Robinson Learning Center Project
+1216770184023183  # 3rd NEON Course
+1216770184023187  # Flipped Classroom Planning
+1216770184023197  # Canvas Studio Prep
+1216770184023204  # CATDV / SAN
+1216770184023212  # Lightboard Testing
 1204789220328740  # College BouND
 1204818761552639  # DX Course Design
 1204843864198221  # Inclusivity Modules
