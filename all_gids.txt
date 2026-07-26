@@ -138,7 +138,6 @@
 1213393701257435  # Digital Accessibility
 1213478777903328  # Media Studio Sessions
 1213551317973102  # ODL Media Studio Sessions
-1213596603291607  # FA27 | Christmyer \\ Becoming Women of the Way
 1213746954039888  # Faculty AI Incentives
 1214783923511436  # Sprint - Methods Applied: Proposal Scaffolded Support (MAPPS)
 1214783923511442  # Sprint - Free-Body Diagram Visualization and Mastery
@@ -157,7 +156,6 @@
 1215186457850727  # z-Out of Office / Vacation
 1215186457850752  # AI Academy Fall 2026
 1215342625311441  # Calc II Remodel
-1215383370815292  # FA27 | Tooke \\ Grit for the Kingdom
 1215642613575503  # EDUCAUSE Lab
 1215646180453827  # CAD 2026 - Stephen Blackburn Videos
 1215664894792864  # Time Off
