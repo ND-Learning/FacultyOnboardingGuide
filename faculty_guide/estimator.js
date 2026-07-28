@@ -38,7 +38,7 @@
   // === BEGIN CALIBRATION (machine-generated — do not edit by hand) ==========
   var CALIBRATION =
   {
-    "provenance": "data_all/time_entries.csv (3,336 entries, 2844.8h, 2024-07-10..2026-07-24, ODL staff time) | 25 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 21 of them with >=10h non-PM logging",
+    "provenance": "data_all/time_entries.csv (3,333 entries, 2844.8h, 2024-07-10..2026-07-27, ODL staff time) | 25 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 21 of them with >=10h non-PM logging",
     "generated_from": "data_all/derived/calibration.json -- run inject_calibration.py to refresh",
     "archetypeEffort": {
       "course_redesign": {
@@ -117,9 +117,9 @@
     },
     "mediaSplitBasis": "pooled hours on per-video sections with full-coverage logging: 1 project(s) (Program for Inclusive Education (PIE) Video #2), 15.5h total",
     "coursePhaseMixPct": {
-      "Production": 34.6,
+      "Production": 34.0,
       "Post-Production": 23.5,
-      "Development/Build": 16.3,
+      "Development/Build": 16.9,
       "Pre-Production": 16.1,
       "Design": 7.9,
       "Other / unsorted": 1.3,
@@ -146,11 +146,11 @@
       "full_course": {
         "n": 23,
         "min": 4.8,
-        "p25": 17.7,
-        "p50": 31.4,
-        "p75": 41.9,
-        "p80": 46.6,
-        "max": 63.6
+        "p25": 18.3,
+        "p50": 33.2,
+        "p75": 45.9,
+        "p80": 49.9,
+        "max": 91.9
       },
       "podcast": {
         "n": 2,
@@ -493,7 +493,7 @@
       },
       "tracker_status_counts": {
         "Complete": 74,
-        "In Progress": 28,
+        "In Progress": 29,
         "No Documentation": 15,
         "On Hold": 4
       },

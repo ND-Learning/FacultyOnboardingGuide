@@ -1,8 +1,8 @@
 {
   "_provenance": {
-    "source": "data_all/time_entries.csv (3,336 entries, 2844.8h, 2024-07-10..2026-07-24, ODL staff time)",
+    "source": "data_all/time_entries.csv (3,333 entries, 2844.8h, 2024-07-10..2026-07-27, ODL staff time)",
     "calibration_set": "25 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 21 of them with >=10h non-PM logging",
-    "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 3027, 'task_name': 124, 'none': 185}",
+    "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 3024, 'task_name': 124, 'none': 185}",
     "no_guessing": "blocks state 'not_calibratable' where data is insufficient"
   },
   "archetype_effort_hours": {
@@ -333,9 +333,9 @@
   "full_course_phase_mix": {
     "basis": "pooled non-PM hours of 14 full-coverage full_course projects (958.3h)",
     "share_pct": {
-      "Production": 34.6,
+      "Production": 34.0,
       "Post-Production": 23.5,
-      "Development/Build": 16.3,
+      "Development/Build": 16.9,
       "Pre-Production": 16.1,
       "Design": 7.9,
       "Other / unsorted": 1.3,
@@ -364,11 +364,11 @@
       "full_course": {
         "n": 23,
         "min": 4.8,
-        "p25": 17.7,
-        "p50": 31.4,
-        "p75": 41.9,
-        "p80": 46.6,
-        "max": 63.6
+        "p25": 18.3,
+        "p50": 33.2,
+        "p75": 45.9,
+        "p80": 49.9,
+        "max": 91.9
       },
       "podcast": {
         "n": 2,
@@ -471,11 +471,11 @@
       "Pre-Production": {
         "n": 17,
         "min": 0.8,
-        "p25": 35.0,
-        "p50": 51.6,
-        "p75": 76.9,
-        "p80": 78.5,
-        "max": 229.8
+        "p25": 38.4,
+        "p50": 51.8,
+        "p75": 78.9,
+        "p80": 96.1,
+        "max": 531.9
       },
       "Production": {
         "n": 19,
@@ -796,7 +796,7 @@
     },
     "tracker_status_counts": {
       "Complete": 74,
-      "In Progress": 28,
+      "In Progress": 29,
       "No Documentation": 15,
       "On Hold": 4
     },
