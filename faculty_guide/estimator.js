@@ -38,7 +38,7 @@
   // === BEGIN CALIBRATION (machine-generated — do not edit by hand) ==========
   var CALIBRATION =
   {
-    "provenance": "data_all/time_entries.csv (3,333 entries, 2844.8h, 2024-07-10..2026-07-27, ODL staff time) | 25 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 21 of them with >=10h non-PM logging",
+    "provenance": "data_all/time_entries.csv (3,335 entries, 2849.8h, 2024-07-10..2026-07-28, ODL staff time) | 25 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 21 of them with >=10h non-PM logging",
     "generated_from": "data_all/derived/calibration.json -- run inject_calibration.py to refresh",
     "archetypeEffort": {
       "course_redesign": {
@@ -64,7 +64,7 @@
         "values": [
           12.0,
           15.5,
-          30.2
+          33.2
         ],
         "p50": 15.5,
         "note": "n<4 -- raw values shown; interpolated quartiles withheld"
@@ -104,8 +104,8 @@
         "p25": 12.0,
         "p50": 13.7,
         "p75": 15.5,
-        "p80": 18.4,
-        "max": 30.2
+        "p80": 19.0,
+        "max": 33.2
       },
       "blendedGenericP50": 11.8,
       "shrinkageW": 0.62
@@ -117,15 +117,15 @@
     },
     "mediaSplitBasis": "pooled hours on per-video sections with full-coverage logging: 1 project(s) (Program for Inclusive Education (PIE) Video #2), 15.5h total",
     "coursePhaseMixPct": {
-      "Production": 34.0,
-      "Post-Production": 23.5,
-      "Development/Build": 16.9,
-      "Pre-Production": 16.1,
-      "Design": 7.9,
+      "Production": 34.1,
+      "Post-Production": 23.4,
+      "Development/Build": 16.8,
+      "Pre-Production": 16.0,
+      "Design": 7.8,
       "Other / unsorted": 1.3,
       "Discovery": 0.4
     },
-    "coursePhaseMixBasis": "pooled non-PM hours of 14 full-coverage full_course projects (958.3h)",
+    "coursePhaseMixBasis": "pooled non-PM hours of 14 full-coverage full_course projects (960.3h)",
     "calendarWeeks": {
       "consult_or_studio": {
         "n": 1,
