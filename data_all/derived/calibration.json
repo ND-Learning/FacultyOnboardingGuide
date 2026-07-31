@@ -1,8 +1,8 @@
 {
   "_provenance": {
-    "source": "data_all/time_entries.csv (3,335 entries, 2849.8h, 2024-07-10..2026-07-28, ODL staff time)",
+    "source": "data_all/time_entries.csv (3,337 entries, 2858.3h, 2024-07-10..2026-07-30, ODL staff time)",
     "calibration_set": "25 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 21 of them with >=10h non-PM logging",
-    "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 3026, 'task_name': 124, 'none': 185}",
+    "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 3028, 'task_name': 124, 'none': 185}",
     "no_guessing": "blocks state 'not_calibratable' where data is insufficient"
   },
   "archetype_effort_hours": {
@@ -25,7 +25,7 @@
       "projects": {
         "AI for the Notre Dame Community": 286.5,
         "Responsible and Ethical AI": 98.9,
-        "Virtual Borders": 124.5,
+        "Virtual Borders": 129.5,
         "ASCEND Engineering": 27.5,
         "ASCEND MCOB": 80.2,
         "The Qur’an and the Bible (Gabriel Reynolds)": 46.7,
@@ -50,7 +50,7 @@
     },
     "single_video": {
       "projects": {
-        "Ultrasound Communication Video": 33.2,
+        "Ultrasound Communication Video": 36.8,
         "Program for Inclusive Education (PIE) Video #2": 15.5,
         "Borgo Laudato Si' videos": 12.0
       },
@@ -59,7 +59,7 @@
         "values": [
           12.0,
           15.5,
-          33.2
+          36.8
         ],
         "p50": 15.5,
         "note": "n<4 -- raw values shown; interpolated quartiles withheld"
@@ -229,7 +229,7 @@
       {
         "project": "Ultrasound Communication Video",
         "video": "(whole project)",
-        "hours": 33.2
+        "hours": 36.8
       },
       {
         "project": "Borgo Laudato Si' videos",
@@ -255,8 +255,8 @@
       "p25": 12.0,
       "p50": 13.7,
       "p75": 15.5,
-      "p80": 19.0,
-      "max": 33.2
+      "p80": 19.8,
+      "max": 36.8
     },
     "observed_excluded_partial_coverage": [
       {
@@ -331,12 +331,12 @@
     }
   },
   "full_course_phase_mix": {
-    "basis": "pooled non-PM hours of 14 full-coverage full_course projects (960.3h)",
+    "basis": "pooled non-PM hours of 14 full-coverage full_course projects (965.3h)",
     "share_pct": {
-      "Production": 34.1,
-      "Post-Production": 23.4,
+      "Production": 34.5,
+      "Post-Production": 23.3,
       "Development/Build": 16.8,
-      "Pre-Production": 16.0,
+      "Pre-Production": 15.9,
       "Design": 7.8,
       "Other / unsorted": 1.3,
       "Discovery": 0.4
@@ -786,12 +786,12 @@
           "Yes": 20,
           "Not Signed": 9,
           "N/A": 3,
-          "In Progress": 1
+          "In Progress": 2
         },
-        "answered": 124,
-        "applicable": 121,
+        "answered": 125,
+        "applicable": 122,
         "yes": 20,
-        "yes_pct_of_applicable": 16.5
+        "yes_pct_of_applicable": 16.4
       },
       "MOU": {
         "counts": {
@@ -818,21 +818,21 @@
         "counts": {
           "No": 59,
           "Yes": 34,
+          "In Progress": 15,
           "Not Signed": 15,
-          "In Progress": 14,
           "Other Plan": 5,
           "Addendum": 1
         },
-        "answered": 128,
-        "applicable": 128,
+        "answered": 129,
+        "applicable": 129,
         "yes": 34,
-        "yes_pct_of_applicable": 26.6
+        "yes_pct_of_applicable": 26.4
       }
     },
     "tracker_status_counts": {
-      "Complete": 74,
+      "Complete": 78,
+      "No Documentation": 34,
       "In Progress": 29,
-      "No Documentation": 15,
       "On Hold": 4
     },
     "assets_produced_total": 358.0,
@@ -1111,10 +1111,10 @@
         "ape_pct": 52.8
       },
       {
-        "actual": 124.5,
+        "actual": 129.5,
         "pred_p50": 46.7,
         "in_iqr": false,
-        "ape_pct": 62.5
+        "ape_pct": 63.9
       },
       {
         "actual": 286.5,

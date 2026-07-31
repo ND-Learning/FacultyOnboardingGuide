@@ -38,7 +38,7 @@
   // === BEGIN CALIBRATION (machine-generated — do not edit by hand) ==========
   var CALIBRATION =
   {
-    "provenance": "data_all/time_entries.csv (3,335 entries, 2849.8h, 2024-07-10..2026-07-28, ODL staff time) | 25 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 21 of them with >=10h non-PM logging",
+    "provenance": "data_all/time_entries.csv (3,337 entries, 2858.3h, 2024-07-10..2026-07-30, ODL staff time) | 25 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 21 of them with >=10h non-PM logging",
     "generated_from": "data_all/derived/calibration.json -- run inject_calibration.py to refresh",
     "archetypeEffort": {
       "course_redesign": {
@@ -64,7 +64,7 @@
         "values": [
           12.0,
           15.5,
-          33.2
+          36.8
         ],
         "p50": 15.5,
         "note": "n<4 -- raw values shown; interpolated quartiles withheld"
@@ -104,8 +104,8 @@
         "p25": 12.0,
         "p50": 13.7,
         "p75": 15.5,
-        "p80": 19.0,
-        "max": 33.2
+        "p80": 19.8,
+        "max": 36.8
       },
       "blendedGenericP50": 11.8,
       "shrinkageW": 0.62
@@ -117,15 +117,15 @@
     },
     "mediaSplitBasis": "pooled hours on per-video sections with full-coverage logging: 1 project(s) (Program for Inclusive Education (PIE) Video #2), 15.5h total",
     "coursePhaseMixPct": {
-      "Production": 34.1,
-      "Post-Production": 23.4,
+      "Production": 34.5,
+      "Post-Production": 23.3,
       "Development/Build": 16.8,
-      "Pre-Production": 16.0,
+      "Pre-Production": 15.9,
       "Design": 7.8,
       "Other / unsorted": 1.3,
       "Discovery": 0.4
     },
-    "coursePhaseMixBasis": "pooled non-PM hours of 14 full-coverage full_course projects (960.3h)",
+    "coursePhaseMixBasis": "pooled non-PM hours of 14 full-coverage full_course projects (965.3h)",
     "calendarWeeks": {
       "consult_or_studio": {
         "n": 1,
@@ -483,12 +483,12 @@
             "Yes": 20,
             "Not Signed": 9,
             "N/A": 3,
-            "In Progress": 1
+            "In Progress": 2
           },
-          "answered": 124,
-          "applicable": 121,
+          "answered": 125,
+          "applicable": 122,
           "yes": 20,
-          "yes_pct_of_applicable": 16.5
+          "yes_pct_of_applicable": 16.4
         },
         "MOU": {
           "counts": {
@@ -515,21 +515,21 @@
           "counts": {
             "No": 59,
             "Yes": 34,
+            "In Progress": 15,
             "Not Signed": 15,
-            "In Progress": 14,
             "Other Plan": 5,
             "Addendum": 1
           },
-          "answered": 128,
-          "applicable": 128,
+          "answered": 129,
+          "applicable": 129,
           "yes": 34,
-          "yes_pct_of_applicable": 26.6
+          "yes_pct_of_applicable": 26.4
         }
       },
       "tracker_status_counts": {
-        "Complete": 74,
+        "Complete": 78,
+        "No Documentation": 34,
         "In Progress": 29,
-        "No Documentation": 15,
         "On Hold": 4
       },
       "assets_produced_total": 358.0,
