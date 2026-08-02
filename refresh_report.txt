@@ -1,8 +1,8 @@
-ODL estimator refresh -- 2026-08-01T13:10:17
+ODL estimator refresh -- 2026-08-02T13:08:38
 pull: ran | published to Canvas: no
 
 headline numbers (before -> after):
-  -> total_logged_hours: 2858.3 -> 2861.0
+     total_logged_hours: 2861.0 -> 2861.0
      calibration_set: 25 -> 25
      full_course_p50_h: 47.2 -> 47.2
      full_course_n: 14 -> 14

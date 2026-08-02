@@ -420,12 +420,12 @@
           "max": 4.0
         },
         "XR experiences": {
-          "n": 28,
+          "n": 29,
           "min": 0.0,
           "p25": 0.0,
           "p50": 0.0,
           "p75": 0.0,
-          "p80": 0.6,
+          "p80": 1.0,
           "max": 1.0
         }
       },
@@ -440,7 +440,7 @@
           "max": 5.0
         }
       },
-      "records_with_assets": 31,
+      "records_with_assets": 32,
       "records_with_satisfaction": 24,
       "matched_records": 51,
       "outcomes": {
@@ -532,15 +532,15 @@
         "In Progress": 29,
         "On Hold": 4
       },
-      "assets_produced_total": 358.0,
+      "assets_produced_total": 359.0,
       "asset_field_totals": {
         "Canvas Courses": 21.0,
         "Graphics": 15.0,
         "Interactives": 3.0,
-        "Total Assets": 358.0,
+        "Total Assets": 359.0,
         "Videos": 309.0,
         "Web Page Modules": 4.0,
-        "XR experiences": 6.0
+        "XR experiences": 7.0
       },
       "reported_hours_by_year": {
         "2025": 5815.0
