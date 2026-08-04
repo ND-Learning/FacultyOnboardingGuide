@@ -117,9 +117,9 @@
     },
     "mediaSplitBasis": "pooled hours on per-video sections with full-coverage logging: 1 project(s) (Program for Inclusive Education (PIE) Video #2), 15.5h total",
     "coursePhaseMixPct": {
-      "Production": 34.6,
+      "Production": 33.7,
       "Post-Production": 23.2,
-      "Development/Build": 16.7,
+      "Development/Build": 17.7,
       "Pre-Production": 15.9,
       "Design": 7.8,
       "Other / unsorted": 1.3,
@@ -150,7 +150,7 @@
         "p50": 33.2,
         "p75": 45.9,
         "p80": 49.9,
-        "max": 92.4
+        "max": 92.9
       },
       "podcast": {
         "n": 2,
