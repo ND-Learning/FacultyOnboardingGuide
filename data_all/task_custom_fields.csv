@@ -2132,6 +2132,29 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,custom_field
 1207833209424691,Military Testimonial,1208076857095642,Send Survey to Faculty Members,Launch / Evaluation,Launch / Evaluation,1201123044298911,Status,enum,,,,,,,,
 1207833209424691,Military Testimonial,1208076857095646,Collect data / Analyze Data ,Launch / Evaluation,Launch / Evaluation,1201123044298911,Status,enum,,,,,,,,
 1207833209424691,Military Testimonial,1208076857095650,Produce Report,Launch / Evaluation,Launch / Evaluation,1201123044298911,Status,enum,,,,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1217163495978864,Physical AI Simulations into a Mechanics II class,Received Requests - Triage Needed,Received Requests - Triage Needed,1207871566050120,Email Address,text,ebolivar@nd.edu,ebolivar@nd.edu,,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1217163495978864,Physical AI Simulations into a Mechanics II class,Received Requests - Triage Needed,Received Requests - Triage Needed,1207871566050124,Description of Project,text,"I received a 2026 Faculty AI Mini Grant Award. I would like to use these resources to integrate Physical AI Simulations into a Mechanics II class to start next Spring 2027. The initial idea is to:
+- Create simulations that exemplify the main concepts in class (e.g., free body diagrams).
+- Integrate these simulations as part of the weekly assignments.
+- Ideally, it would be helpful to use the agentic version of AI during the simulations (e.g., Google Antigravity, Claude). 
+- Create in-class polling system that integrates with Canvas and promotes peer-instruction (not necessarily using the simulations).
+
+Thank you!","I received a 2026 Faculty AI Mini Grant Award. I would like to use these resources to integrate Physical AI Simulations into a Mechanics II class to start next Spring 2027. The initial idea is to:
+- Create simulations that exemplify the main concepts in class (e.g., free body diagrams).
+- Integrate these simulations as part of the weekly assignments.
+- Ideally, it would be helpful to use the agentic version of AI during the simulations (e.g., Google Antigravity, Claude). 
+- Create in-class polling system that integrates with Canvas and promotes peer-instruction (not necessarily using the simulations).
+
+Thank you!",,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1217163495978864,Physical AI Simulations into a Mechanics II class,Received Requests - Triage Needed,Received Requests - Triage Needed,1207871566050147,Title,text,Physical AI Simulations into a Mechanics II class,Physical AI Simulations into a Mechanics II class,,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1217163495978864,Physical AI Simulations into a Mechanics II class,Received Requests - Triage Needed,Received Requests - Triage Needed,1207871566050150,NDL Project Status,enum,,,,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1217163495978864,Physical AI Simulations into a Mechanics II class,Received Requests - Triage Needed,Received Requests - Triage Needed,1209314408320777,First Name,text,Edgar,Edgar,,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1217163495978864,Physical AI Simulations into a Mechanics II class,Received Requests - Triage Needed,Received Requests - Triage Needed,1209314408320779,Last Name,text,Bolívar-Nieto,Bolívar-Nieto,,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1217163495978864,Physical AI Simulations into a Mechanics II class,Received Requests - Triage Needed,Received Requests - Triage Needed,1209314408320781,Relevant,multi_enum,"Teaching Strategies, Teaching Technologies, Assessment, Artificial Intelligence (AI)",,,,"Teaching Strategies, Teaching Technologies, Assessment, Artificial Intelligence (AI)",,,
+1207871566050072,NDL Project Tracking & Awareness,1217163495978864,Physical AI Simulations into a Mechanics II class,Received Requests - Triage Needed,Received Requests - Triage Needed,1209314408320799,College / School / Unit,enum,Engineering,,,Engineering,,,,
+1207871566050072,NDL Project Tracking & Awareness,1217163495978864,Physical AI Simulations into a Mechanics II class,Received Requests - Triage Needed,Received Requests - Triage Needed,1210756427078203,Link to documentation,text,,,,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1217163495978864,Physical AI Simulations into a Mechanics II class,Received Requests - Triage Needed,Received Requests - Triage Needed,1210850449329256,Fast Track,enum,,,,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1217163495978864,Physical AI Simulations into a Mechanics II class,Received Requests - Triage Needed,Received Requests - Triage Needed,1210850449329262,Department Responsibility,enum,,,,,,,,
 1207871566050072,NDL Project Tracking & Awareness,1216050493626695,Personalize AI and Historical Simulation via AI ,Received Requests - Triage Needed,Received Requests - Triage Needed,1207871566050120,Email Address,text,lcai@nd.edu,lcai@nd.edu,,,,,,
 1207871566050072,NDL Project Tracking & Awareness,1216050493626695,Personalize AI and Historical Simulation via AI ,Received Requests - Triage Needed,Received Requests - Triage Needed,1207871566050124,Description of Project,text,"
 1.	Developing a critical approach to AI-generated content on the topics of Confucianism, utopia, and democracy. To effectively evaluate and critique AI outputs, students will be expected to engage closely with both primary and secondary sources.
