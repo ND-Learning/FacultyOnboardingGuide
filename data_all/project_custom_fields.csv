@@ -1169,7 +1169,7 @@ project_gid,project_name,custom_field_gid,custom_field_name,resource_subtype,dis
 1213077276586762,FCTA - Physics II,1203976499880499,Estimated time,number,,,,,,,,
 1213077276586762,FCTA - Physics II,1212955082668042,Impact Tracker Status,enum,Up to date,,,Up to date,,,,
 1213077276586762,FCTA - Physics II,1216016157752497,Actual costs (total),number,0.00,,0,,,,,
-1213077276586762,FCTA - Physics II,1216016157752503,Actual time (total),number,13h 00m,,780,,,,,
+1213077276586762,FCTA - Physics II,1216016157752503,Actual time (total),number,13h 30m,,810,,,,,
 1213077276586762,FCTA - Physics II,1216016157752493,Estimated costs (total),number,0.00,,0,,,,,
 1213077276586762,FCTA - Physics II,1216016157752495,Estimated time (total),number,42h 00m,,2520,,,,,
 1213084870202768,Beginning Italian 1,1206060337251839,Priority,enum,,,,,,,,
