@@ -38,7 +38,7 @@
   // === BEGIN CALIBRATION (machine-generated — do not edit by hand) ==========
   var CALIBRATION =
   {
-    "provenance": "data_all/time_entries.csv (3,339 entries, 2861.0h, 2024-07-10..2026-07-31, ODL staff time) | 25 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 21 of them with >=10h non-PM logging",
+    "provenance": "data_all/time_entries.csv (3,342 entries, 2872.0h, 2024-07-10..2026-08-06, ODL staff time) | 24 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 20 of them with >=10h non-PM logging",
     "generated_from": "data_all/derived/calibration.json -- run inject_calibration.py to refresh",
     "archetypeEffort": {
       "course_redesign": {
@@ -51,12 +51,12 @@
         "note": "n<4 -- raw values shown; interpolated quartiles withheld"
       },
       "full_course": {
-        "n": 14,
+        "n": 13,
         "min": 15.7,
-        "p25": 29.2,
-        "p50": 47.2,
-        "p75": 77.9,
-        "p80": 87.7,
+        "p25": 27.5,
+        "p50": 46.7,
+        "p75": 80.2,
+        "p80": 91.4,
         "max": 286.5
       },
       "single_video": {
@@ -117,15 +117,15 @@
     },
     "mediaSplitBasis": "pooled hours on per-video sections with full-coverage logging: 1 project(s) (Program for Inclusive Education (PIE) Video #2), 15.5h total",
     "coursePhaseMixPct": {
-      "Production": 33.7,
+      "Production": 35.6,
       "Post-Production": 23.2,
-      "Development/Build": 17.7,
-      "Pre-Production": 15.9,
-      "Design": 7.8,
-      "Other / unsorted": 1.3,
-      "Discovery": 0.4
+      "Development/Build": 18.4,
+      "Pre-Production": 13.0,
+      "Design": 8.1,
+      "Other / unsorted": 1.4,
+      "Discovery": 0.3
     },
-    "coursePhaseMixBasis": "pooled non-PM hours of 14 full-coverage full_course projects (967.5h)",
+    "coursePhaseMixBasis": "pooled non-PM hours of 13 full-coverage full_course projects (930.8h)",
     "calendarWeeks": {
       "consult_or_studio": {
         "n": 1,
@@ -144,11 +144,11 @@
         "note": "n<4 -- raw values shown; interpolated quartiles withheld"
       },
       "full_course": {
-        "n": 23,
+        "n": 24,
         "min": 4.8,
-        "p25": 18.3,
-        "p50": 33.2,
-        "p75": 45.9,
+        "p25": 18.9,
+        "p50": 32.3,
+        "p75": 43.9,
         "p80": 49.9,
         "max": 92.9
       },
@@ -733,8 +733,8 @@
       "per_module_rate": "module counts exist for only 5 of 19 course projects and mean different things (AI for ND 57h/module vs R&E AI 7.6h/week-unit vs Virtual Borders 25h/module) -- logging is not at module granularity yet. Effort stays archetype-level until the new per-task tracking accumulates."
     },
     "backtest": {
-      "median_ape_pct": 47.3,
-      "iqr_coverage_pct": 42.9,
+      "median_ape_pct": 55.2,
+      "iqr_coverage_pct": 38.5,
       "reading": "wide APE is expected -- it is the honest spread of a point guess; this is WHY the estimator must quote P25-P80 ranges, not points."
     }
   };

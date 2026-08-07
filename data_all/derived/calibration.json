@@ -1,8 +1,8 @@
 {
   "_provenance": {
-    "source": "data_all/time_entries.csv (3,339 entries, 2861.0h, 2024-07-10..2026-07-31, ODL staff time)",
-    "calibration_set": "25 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 21 of them with >=10h non-PM logging",
-    "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 3030, 'task_name': 124, 'none': 185}",
+    "source": "data_all/time_entries.csv (3,342 entries, 2872.0h, 2024-07-10..2026-08-06, ODL staff time)",
+    "calibration_set": "24 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 20 of them with >=10h non-PM logging",
+    "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 3033, 'task_name': 124, 'none': 185}",
     "no_guessing": "blocks state 'not_calibratable' where data is insufficient"
   },
   "archetype_effort_hours": {
@@ -25,13 +25,12 @@
       "projects": {
         "AI for the Notre Dame Community": 286.5,
         "Responsible and Ethical AI": 98.9,
-        "Virtual Borders": 131.8,
+        "Virtual Borders": 142.8,
         "ASCEND Engineering": 27.5,
         "ASCEND MCOB": 80.2,
         "The Qur’an and the Bible (Gabriel Reynolds)": 46.7,
         "MSAN II": 71.1,
         "Sprint 2025 - Digital Accessibility - Whitney James": 49.2,
-        "Business for Humans | Sheedy Family Program": 47.8,
         "FCTA - Physics I": 41.9,
         "NEON - POLS 30022 (Poly Sci)": 34.2,
         "Sprint 2025 - Bringing Korean to Life - Yeonhee Yoon": 19.5,
@@ -39,12 +38,12 @@
         "Travel Safety 101": 15.7
       },
       "production_hours": {
-        "n": 14,
+        "n": 13,
         "min": 15.7,
-        "p25": 29.2,
-        "p50": 47.2,
-        "p75": 77.9,
-        "p80": 87.7,
+        "p25": 27.5,
+        "p50": 46.7,
+        "p75": 80.2,
+        "p80": 91.4,
         "max": 286.5
       }
     },
@@ -331,15 +330,15 @@
     }
   },
   "full_course_phase_mix": {
-    "basis": "pooled non-PM hours of 14 full-coverage full_course projects (967.5h)",
+    "basis": "pooled non-PM hours of 13 full-coverage full_course projects (930.8h)",
     "share_pct": {
-      "Production": 33.7,
+      "Production": 35.6,
       "Post-Production": 23.2,
-      "Development/Build": 17.7,
-      "Pre-Production": 15.9,
-      "Design": 7.8,
-      "Other / unsorted": 1.3,
-      "Discovery": 0.4
+      "Development/Build": 18.4,
+      "Pre-Production": 13.0,
+      "Design": 8.1,
+      "Other / unsorted": 1.4,
+      "Discovery": 0.3
     }
   },
   "calendar": {
@@ -362,11 +361,11 @@
         "note": "n<4 -- raw values shown; interpolated quartiles withheld"
       },
       "full_course": {
-        "n": 23,
+        "n": 24,
         "min": 4.8,
-        "p25": 18.3,
-        "p50": 33.2,
-        "p75": 45.9,
+        "p25": 18.9,
+        "p50": 32.3,
+        "p75": 43.9,
         "p80": 49.9,
         "max": 92.9
       },
@@ -469,12 +468,12 @@
         "max": 302.0
       },
       "Pre-Production": {
-        "n": 17,
+        "n": 18,
         "min": 0.8,
-        "p25": 38.4,
-        "p50": 51.8,
-        "p75": 78.9,
-        "p80": 96.1,
+        "p25": 38.6,
+        "p50": 53.9,
+        "p75": 95.0,
+        "p80": 122.3,
         "max": 531.9
       },
       "Production": {
@@ -1040,91 +1039,85 @@
     "rows": [
       {
         "actual": 15.7,
-        "pred_p50": 47.8,
+        "pred_p50": 48.0,
         "in_iqr": false,
-        "ape_pct": 204.5
+        "ape_pct": 205.4
       },
       {
         "actual": 16.5,
-        "pred_p50": 47.8,
+        "pred_p50": 48.0,
         "in_iqr": false,
-        "ape_pct": 189.7
+        "ape_pct": 190.6
       },
       {
         "actual": 19.5,
-        "pred_p50": 47.8,
+        "pred_p50": 48.0,
         "in_iqr": false,
-        "ape_pct": 145.1
+        "ape_pct": 145.9
       },
       {
         "actual": 27.5,
-        "pred_p50": 47.8,
+        "pred_p50": 48.0,
         "in_iqr": false,
-        "ape_pct": 73.8
+        "ape_pct": 74.4
       },
       {
         "actual": 34.2,
-        "pred_p50": 47.8,
+        "pred_p50": 48.0,
         "in_iqr": true,
-        "ape_pct": 39.8
+        "ape_pct": 40.2
       },
       {
         "actual": 41.9,
-        "pred_p50": 47.8,
+        "pred_p50": 48.0,
         "in_iqr": true,
-        "ape_pct": 14.1
+        "ape_pct": 14.4
       },
       {
         "actual": 46.7,
-        "pred_p50": 47.8,
+        "pred_p50": 45.5,
         "in_iqr": true,
-        "ape_pct": 2.4
-      },
-      {
-        "actual": 47.8,
-        "pred_p50": 46.7,
-        "in_iqr": true,
-        "ape_pct": 2.3
+        "ape_pct": 2.5
       },
       {
         "actual": 49.2,
-        "pred_p50": 46.7,
+        "pred_p50": 44.3,
         "in_iqr": true,
-        "ape_pct": 5.1
+        "ape_pct": 10.0
       },
       {
         "actual": 71.1,
-        "pred_p50": 46.7,
+        "pred_p50": 44.3,
         "in_iqr": true,
-        "ape_pct": 34.3
+        "ape_pct": 37.7
       },
       {
         "actual": 80.2,
-        "pred_p50": 46.7,
+        "pred_p50": 44.3,
         "in_iqr": false,
-        "ape_pct": 41.8
+        "ape_pct": 44.8
       },
       {
         "actual": 98.9,
-        "pred_p50": 46.7,
+        "pred_p50": 44.3,
         "in_iqr": false,
-        "ape_pct": 52.8
+        "ape_pct": 55.2
       },
       {
-        "actual": 131.8,
-        "pred_p50": 46.7,
+        "actual": 142.8,
+        "pred_p50": 44.3,
         "in_iqr": false,
-        "ape_pct": 64.6
+        "ape_pct": 69.0
       },
       {
         "actual": 286.5,
-        "pred_p50": 46.7,
+        "pred_p50": 44.3,
         "in_iqr": false,
-        "ape_pct": 83.7
+        "ape_pct": 84.5
       }
     ],
-    "median_ape_pct": 47.3,
-    "iqr_coverage_pct": 42.9,
+    "median_ape_pct": 55.2,
+    "iqr_coverage_pct": 38.5,
     "reading": "wide APE is expected -- it is the honest spread of a point guess; this is WHY the estimator must quote P25-P80 ranges, not points."
   }
 }
