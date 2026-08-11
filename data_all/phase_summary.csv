@@ -557,7 +557,7 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1214783923511436,Sprint - Methods Applied: Proposal Scaffolded Support (MAPPS),Post-Project Evaluation,4,0,1,,,,0.0,0.0,0,0,0,0.25
 1214783923511436,Sprint - Methods Applied: Proposal Scaffolded Support (MAPPS),Pre-Production,6,0,2,,,,0.0,0.0,0,0,0,0.17
 1214783923511436,Sprint - Methods Applied: Proposal Scaffolded Support (MAPPS),Production,2,0,2,,,,0.0,0.0,0,0,0,0.5
-1214783923511446,Sprint - Unlocking Inaccessible Korean Heritage,Analysis,3,0,1,,,,0.0,0.0,0,0,0,0.33
+1214783923511446,Sprint - Unlocking Inaccessible Korean Heritage,Analysis,3,3,1,2026-08-10T17:02:15.107000+00:00,2026-08-10T17:02:16.090000+00:00,0,0.0,0.0,0,0,0,0.33
 1214783923511446,Sprint - Unlocking Inaccessible Korean Heritage,Design,10,0,2,,,,0.0,0.0,0,0,0,0.1
 1214783923511446,Sprint - Unlocking Inaccessible Korean Heritage,Design Development,5,0,2,,,,0.0,0.0,0,0,0,0.2
 1214783923511446,Sprint - Unlocking Inaccessible Korean Heritage,Post-Production,1,0,0,,,,0.0,0.0,0,0,0,1.0
@@ -706,7 +706,7 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1212638027964018,Ultrasound Communication Video,Analysis,3,0,0,,,,0.0,0.0,0,0,0,0.33
 1212638027964018,Ultrasound Communication Video,Design,9,1,0,2026-04-30T14:25:03.308000+00:00,2026-04-30T14:25:03.308000+00:00,0,270.0,4.5,0,0,0,0.11
 1212638027964018,Ultrasound Communication Video,Design Development,4,0,0,,,,0.0,0.0,0,0,0,0.25
-1212638027964018,Ultrasound Communication Video,Media Timetracking,20,0,1,,,,1935.0,32.25,0,0,0,0.05
+1212638027964018,Ultrasound Communication Video,Media Timetracking,24,0,1,,,,1935.0,32.25,0,0,0,0.04
 1212638027964018,Ultrasound Communication Video,Post-Production,9,0,0,,,,0.0,0.0,0,0,0,0.11
 1212638027964018,Ultrasound Communication Video,Post-Project Evaluation,4,0,0,,,,0.0,0.0,0,0,0,0.25
 1212638027964018,Ultrasound Communication Video,Pre-Production,7,1,0,2026-06-01T14:45:52.878000+00:00,2026-06-01T14:45:52.878000+00:00,0,30.0,0.5,0,0,0,0.14
@@ -728,9 +728,9 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1209417479528380,Videos for Eva,Production,4,3,0,2025-02-17T15:23:37.598000+00:00,2025-05-07T19:12:24.014000+00:00,79,600.0,10.0,0,0,0,0.25
 1208335647365619,Virtual Borders,Analysis,9,9,2,2024-10-22T11:36:42.922000+00:00,2025-01-27T03:34:06.869000+00:00,97,0.0,0.0,0,0,0,0.11
 1208335647365619,Virtual Borders,Design,6,6,1,2025-01-14T14:12:49.441000+00:00,2025-01-14T14:12:52.691000+00:00,0,0.0,0.0,10,0,0,0.17
-1208335647365619,Virtual Borders,Final Development,11,7,1,2026-07-27T17:17:10.022000+00:00,2026-08-07T13:45:15.219000+00:00,11,915.0,15.25,0,0,0,0.09
+1208335647365619,Virtual Borders,Final Development,11,8,1,2026-07-27T17:17:10.022000+00:00,2026-08-10T14:09:36.837000+00:00,14,915.0,15.25,0,0,0,0.09
 1208335647365619,Virtual Borders,Launch / Post-Launch,5,0,1,,,,0.0,0.0,0,0,0,0.2
-1208335647365619,Virtual Borders,Media Timetracking,9,0,0,,,,1770.0,29.5,0,0,0,0.11
+1208335647365619,Virtual Borders,Media Timetracking,11,0,0,,,,1770.0,29.5,0,0,0,0.09
 1207943893531837,Virtual Borders,Pre-Production,2,0,0,,,,0.0,0.0,4,0,0,0.5
 1208335647365619,Virtual Borders,Pre-Production,4,4,1,2025-02-10T18:00:52.129000+00:00,2026-07-27T15:41:43.938000+00:00,532,870.0,14.5,9,0,0,0.25
 1207943893531837,Virtual Borders,Production,2,0,0,,,,0.0,0.0,0,0,0,0.5
