@@ -262,7 +262,7 @@ project_gid,project_name,custom_field_gid,custom_field_name,resource_subtype,dis
 1207942229848229,COIL,1216016157752493,Estimated costs (total),number,0.00,,0,,,,,
 1207942229848229,COIL,1216016157752495,Estimated time (total),number,82h 00m,,4920,,,,,
 1207942229848229,COIL,1216016157752497,Actual costs (total),number,0.00,,0,,,,,
-1207942229848229,COIL,1216016157752503,Actual time (total),number,31h 15m,,1875,,,,,
+1207942229848229,COIL,1216016157752503,Actual time (total),number,32h 45m,,1965,,,,,
 1207942229848234,Digital Learning Task Force,1207760971753571,Progress,enum,,,,,,,,
 1207942229848234,Digital Learning Task Force,1207789348846048,Weekly Meeting Status,enum,In Progress,,,In Progress,,,,
 1207942229848234,Digital Learning Task Force,1207867857544034,Project Point Person,people,Sonia Howell,,,,,,Sonia Howell,
