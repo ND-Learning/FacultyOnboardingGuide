@@ -5,13 +5,13 @@ gid,name,logged_hours,reason
 1211653962736510,Business for Humans | Sheedy Family Program,47.75,coverage drift: 7 task completion(s) more than 60d after last time entry (2026-05-29) -- demoted to partial; set force_coverage=full in the registry to re-admit
 1211154824956969,Force for Good Video Project,45.09,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
 1209103142080500,Lawrence Time and Capacity Tracking Part 1,43.75,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
+1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,33.5,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
 1210202036254651,Sprint 2025: Statistics Flipped Class,33.34,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
-1209254874093285,Colin's Projects,19.85,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
+1209254874093285,Colin's Projects,20.85,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
 1209103283248265,Lawrence Time and Capacity Tracking Part 2 January 13 - 17,19.08,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
 1210202036254727,Sprint 2025: AI Tutor--Critical Thinking,12.75,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
 1210202036254791,Sprint 2025: Transforming FIN / MSBR Course,9.75,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
 1209140307416568,Detailed Time Tracking,8.83,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
-1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,8.5,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
 1207760971753624,Program for Inclusive Education (PIE) Videos,7.5,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
 1208031565604539,ACE Ascent Phase IV,7.08,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
 1207473416887619,Sprint: Molecular Neuroscience (Branco),4.52,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv

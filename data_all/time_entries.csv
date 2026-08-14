@@ -208,6 +208,7 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 1208335647365619,Virtual Borders,1216972346679745,7/27 - 7/31 VO text changes and re-build; Transition Scene identifying & writing texts; Intro Video writing and planning; w/ Jolie,Final Development,Final Development,Matthew Simmons,,Matthew Simmons,2026-07-30,45.0,0.75
 1208335647365619,Virtual Borders,1216972346679745,7/27 - 7/31 VO text changes and re-build; Transition Scene identifying & writing texts; Intro Video writing and planning; w/ Jolie,Final Development,Final Development,Matthew Simmons,,Matthew Simmons,2026-07-31,90.0,1.5
 1208335647365619,Virtual Borders,1216932057029879,7/20 - 7/24 Fix door placements; Change “Honduras” to “Guatemala”; Finalize schedule for August,Final Development,Final Development,Matthew Simmons,,Juntong Liu,2026-07-27,360.0,6.0
+1208335647365619,Virtual Borders,1217472796779562,8/3 - 8/7 Revamp Guatemala apartment; Transition Scene fixes;  Handover of Jolie's editing,Final Development,Final Development,Matthew Simmons,,Juntong Liu,2026-08-13,660.0,11.0
 1208335647365619,Virtual Borders,1216520402113152,7/6 - 7/10,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-07-06,45.0,0.75
 1208335647365619,Virtual Borders,1216520402113152,7/6 - 7/10,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-07-06,120.0,2.0
 1208335647365619,Virtual Borders,1216520402113152,7/6 - 7/10,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-07-07,30.0,0.5
@@ -219,9 +220,6 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 1208335647365619,Virtual Borders,1214759190562385,5/4 - 5/8,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-05-12,120.0,2.0
 1208335647365619,Virtual Borders,1214990150390732,5/18 - 5/22,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-05-19,75.0,1.25
 1208335647365619,Virtual Borders,1214990150390732,5/18 - 5/22,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-05-20,120.0,2.0
-1208335647365619,Virtual Borders,1216972346679747,8/3 - 8/7,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-08-03,180.0,3.0
-1208335647365619,Virtual Borders,1216972346679747,8/3 - 8/7,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-08-05,180.0,3.0
-1208335647365619,Virtual Borders,1216972346679747,8/3 - 8/7,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-08-06,300.0,5.0
 1208335647365619,Virtual Borders,1208337654431778,Determine Filming Specifics,Pre-Production,Pre-Production,,,Alyssa Neece,2025-01-21,90.0,1.5
 1208335647365619,Virtual Borders,1208337654431778,Determine Filming Specifics,Pre-Production,Pre-Production,,,Alyssa Neece,2025-01-24,30.0,0.5
 1208335647365619,Virtual Borders,1208337654431778,Determine Filming Specifics,Pre-Production,Pre-Production,,,Alyssa Neece,2025-01-29,135.0,2.25
@@ -835,6 +833,7 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 1209140307416568,Detailed Time Tracking,1209162974154345,Follow Up,3D Environments: Week of 1/13,3D Environments: Week of 1/13,,,Lawrence Greenspun,2025-01-16,15.0,0.25
 1209140307416568,Detailed Time Tracking,1209162974154345,Follow Up,3D Environments: Week of 1/13,3D Environments: Week of 1/13,,,Lawrence Greenspun,2025-01-19,10.0,0.167
 1209140307416568,Detailed Time Tracking,1209162974154345,Follow Up,3D Environments: Week of 1/13,3D Environments: Week of 1/13,,,Lawrence Greenspun,2025-01-19,10.0,0.167
+1209254874093285,Colin's Projects,1211653881574522,Project Kickoff,Untitled section,Untitled section,Michael Lerma,Project Manager,Michael Lerma,2026-04-29,60.0,1.0
 1209254874093285,Colin's Projects,1209255015735679,3D Enviroments,3 Title Cards,3 Title Cards,,,Colin Gallagher,2025-01-28,36.0,0.6
 1209254874093285,Colin's Projects,1209255015735679,3D Enviroments,3 Title Cards,3 Title Cards,,,Colin Gallagher,2025-01-28,165.0,2.75
 1209254874093285,Colin's Projects,1209255015735679,3D Enviroments,3 Title Cards,3 Title Cards,,,Colin Gallagher,2025-01-29,30.0,0.5
@@ -2448,6 +2447,8 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,1214796432305835,Develop Course Structure / Flow,Design,Design,Kuangchen Hsu,Design,Kuangchen Hsu,2026-06-09,30.0,0.5
 1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,1214796432305835,Develop Course Structure / Flow,Design,Design,Kuangchen Hsu,Design,Kuangchen Hsu,2026-06-11,120.0,2.0
 1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,1214796373337953,Finalize Assessments,Design Development,Design Development,Kuangchen Hsu,Design,Kuangchen Hsu,2026-06-12,30.0,0.5
+1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,1217477399529827,Jolie Post-Production Hours,Hours,Hours,,,Michael Lerma,2026-08-13,1200.0,20.0
+1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,1217477399529830,Jolie Production Hours,Hours,Hours,,,Michael Lerma,2026-08-13,300.0,5.0
 1214795652576790,Maximizing Mendoza,1214795650627331,Create Course Map Document,Design,Design,Brianna Stines,Design,Brianna Stines,2026-05-19,30.0,0.5
 1214795652576790,Maximizing Mendoza,1214795650627336,Develop Learning Objectives,Design,Design,Brianna Stines,Design,Brianna Stines,2026-05-19,60.0,1.0
 1214795652576790,Maximizing Mendoza,1214795650627341,Develop Course Structure / Flow,Design,Design,Brianna Stines,Design,Brianna Stines,2026-05-19,60.0,1.0

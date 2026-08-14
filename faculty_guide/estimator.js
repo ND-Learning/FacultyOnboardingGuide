@@ -38,7 +38,7 @@
   // === BEGIN CALIBRATION (machine-generated — do not edit by hand) ==========
   var CALIBRATION =
   {
-    "provenance": "data_all/time_entries.csv (3,342 entries, 2872.0h, 2024-07-10..2026-08-06, ODL staff time) | 24 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 20 of them with >=10h non-PM logging",
+    "provenance": "data_all/time_entries.csv (3,343 entries, 2898.0h, 2024-07-10..2026-08-13, ODL staff time) | 24 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 20 of them with >=10h non-PM logging",
     "generated_from": "data_all/derived/calibration.json -- run inject_calibration.py to refresh",
     "archetypeEffort": {
       "course_redesign": {
@@ -117,9 +117,9 @@
     },
     "mediaSplitBasis": "pooled hours on per-video sections with full-coverage logging: 1 project(s) (Program for Inclusive Education (PIE) Video #2), 15.5h total",
     "coursePhaseMixPct": {
-      "Production": 35.6,
+      "Production": 34.4,
       "Post-Production": 23.2,
-      "Development/Build": 18.4,
+      "Development/Build": 19.6,
       "Pre-Production": 13.0,
       "Design": 8.1,
       "Other / unsorted": 1.4,
@@ -150,7 +150,7 @@
         "p50": 32.3,
         "p75": 43.9,
         "p80": 49.9,
-        "max": 93.9
+        "max": 94.3
       },
       "podcast": {
         "n": 2,
@@ -725,7 +725,7 @@
     },
     "notCalibratable": {
       "faculty_time": "time_entries contains ODL STAFF time only -- zero faculty hours logged. All faculty-time figures remain planning estimates and must be labeled as such.",
-      "discovery_effort": "only 19.1h logged across all projects -- discovery happens before boards get tracked. Insufficient.",
+      "discovery_effort": "only 20.1h logged across all projects -- discovery happens before boards get tracked. Insufficient.",
       "evaluation_effort": "only 29.3h logged total. Insufficient.",
       "qa_effort": "only 1.7h logged total. Insufficient.",
       "interview_minidoc_video_rates": "no full-coverage logged exemplar (see video block).",

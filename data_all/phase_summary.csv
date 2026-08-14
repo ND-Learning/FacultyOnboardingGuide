@@ -132,11 +132,11 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1211653962736510,Business for Humans | Sheedy Family Program,Pre-Production,7,7,1,2026-03-20T15:27:05.274000+00:00,2026-08-06T18:03:47.523000+00:00,139,1950.0,32.5,0,0,0,0.14
 1211653962736510,Business for Humans | Sheedy Family Program,Production,1,1,1,2026-06-08T13:37:51.972000+00:00,2026-06-08T13:37:51.972000+00:00,0,315.0,5.25,6,0,0,1.0
 1209417474929053,Business on the Frontlines XR,Content Expansion,5,5,0,2025-04-28T13:51:18.525000+00:00,2025-05-05T13:34:31.590000+00:00,7,0.0,0.0,0,0,0,0.2
-1209417474929053,Business on the Frontlines XR,Core Framework,2,2,1,2025-03-10T13:25:02.966000+00:00,2025-03-31T13:28:20.070000+00:00,21,0.0,0.0,7,0,0,0.5
+1209417474929053,Business on the Frontlines XR,Core Framework,2,2,0,2025-03-10T13:25:02.966000+00:00,2025-03-31T13:28:20.070000+00:00,21,0.0,0.0,7,0,0,0.5
 1209417474929053,Business on the Frontlines XR,Core Gameplay Loop,3,2,0,2025-04-07T13:29:41.159000+00:00,2025-04-14T13:20:16.347000+00:00,7,0.0,0.0,0,0,0,0.33
 1209417474929053,Business on the Frontlines XR,Milestones,5,3,0,2025-03-03T14:18:52.432000+00:00,2025-05-05T13:34:25.851000+00:00,63,0.0,0.0,0,0,0,0.2
 1209417474929053,Business on the Frontlines XR,Polish and QA Testing,3,0,0,,,,0.0,0.0,0,0,0,0.33
-1209417474929053,Business on the Frontlines XR,Pre-Production,5,5,1,2025-02-24T14:15:07.126000+00:00,2025-03-03T14:10:10.078000+00:00,7,0.0,0.0,0,0,0,0.2
+1209417474929053,Business on the Frontlines XR,Pre-Production,5,5,0,2025-02-24T14:15:07.126000+00:00,2025-03-03T14:10:10.078000+00:00,7,0.0,0.0,0,0,0,0.2
 1211900372320318,C2D: Cybertraining for Chemical Data scientists,Analysis,3,2,1,2026-05-07T15:05:07.381000+00:00,2026-05-07T15:05:07.977000+00:00,0,0.0,0.0,0,0,0,0.33
 1211900372320318,C2D: Cybertraining for Chemical Data scientists,Design,9,8,1,2026-05-07T15:05:32.666000+00:00,2026-05-07T15:05:47.406000+00:00,0,0.0,0.0,0,0,0,0.11
 1211900372320318,C2D: Cybertraining for Chemical Data scientists,Design Development,6,0,2,,,,0.0,0.0,0,0,0,0.17
@@ -144,6 +144,7 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1211900372320318,C2D: Cybertraining for Chemical Data scientists,Post-Project Evaluation,4,0,1,,,,0.0,0.0,0,0,0,0.25
 1211900372320318,C2D: Cybertraining for Chemical Data scientists,Pre-Production,6,6,1,2026-05-14T18:22:38.007000+00:00,2026-05-14T18:22:40.784000+00:00,0,990.0,16.5,0,0,0,0.17
 1211900372320318,C2D: Cybertraining for Chemical Data scientists,Production,2,2,1,2026-03-20T15:30:32.732000+00:00,2026-05-14T18:21:11.503000+00:00,55,0.0,0.0,3,0,0,0.5
+1215646180453827,CAD 2026 - Stephen Blackburn Videos,Untitled section,4,0,2,,,,0.0,0.0,0,0,0,0.25
 1212638028070139,CIF Video,Analysis,4,4,1,2026-04-29T14:27:36.002000+00:00,2026-04-29T14:28:58.064000+00:00,0,120.0,2.0,0,0,0,0.25
 1212638028070139,CIF Video,Post-Production,3,3,2,2026-04-29T14:28:46.532000+00:00,2026-04-29T14:28:50.575000+00:00,0,0.0,0.0,0,0,0,0.33
 1212638028070139,CIF Video,Post-Project Evaluation,4,0,1,,,,0.0,0.0,0,0,0,0.25
@@ -171,6 +172,7 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1209254874093285,Colin's Projects,AI for the Notre Dame Community,2,0,0,,,,960.0,16.0,0,0,0,0.5
 1209254874093285,Colin's Projects,Final Report,2,0,0,,,,0.0,0.0,0,0,0,0.5
 1209254874093285,Colin's Projects,Graphics Toolkit,1,0,0,,,,0.0,0.0,0,0,0,1.0
+1209254874093285,Colin's Projects,Untitled section,1,1,1,2026-04-29T13:07:44.876000+00:00,2026-04-29T13:07:44.876000+00:00,0,60.0,1.0,0,0,0,1.0
 1204789220328740,College BouND,To do,3,2,1,2023-06-08T18:59:11.377000+00:00,2023-06-08T18:59:11.870000+00:00,0,0.0,0.0,0,0,0,0.33
 1209111135522151,Commonalities in the Modern Irish and Jewish Experiences,Analysis,3,0,1,,,,0.0,0.0,0,0,0,0.33
 1209111135522151,Commonalities in the Modern Irish and Jewish Experiences,Design,4,0,1,,,,0.0,0.0,0,0,0,0.25
@@ -192,8 +194,8 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1206006474289122,Creative Asset Feedback & Approval,In Review,1,0,0,,,,0.0,0.0,0,0,0,1.0
 1206006474289122,Creative Asset Feedback & Approval,Template instructions,2,0,0,,,,0.0,0.0,14,0,0,0.5
 1204818761552639,DX Course Design,To do,8,0,0,,,,0.0,0.0,0,0,0,0.12
-1212660351308233,Designing to Communicate: Strengthening Communication in Engineering Through Real-World Sustainability Contexts,Analysis,3,0,0,,,,0.0,0.0,0,0,0,0.33
-1212660351308233,Designing to Communicate: Strengthening Communication in Engineering Through Real-World Sustainability Contexts,Design,10,0,0,,,,0.0,0.0,0,0,0,0.1
+1212660351308233,Designing to Communicate: Strengthening Communication in Engineering Through Real-World Sustainability Contexts,Analysis,3,0,1,,,,0.0,0.0,0,0,0,0.33
+1212660351308233,Designing to Communicate: Strengthening Communication in Engineering Through Real-World Sustainability Contexts,Design,10,4,1,2026-08-13T19:15:33.107000+00:00,2026-08-13T19:16:44.191000+00:00,0,0.0,0.0,0,0,0,0.1
 1212660351308233,Designing to Communicate: Strengthening Communication in Engineering Through Real-World Sustainability Contexts,Design Development,5,0,0,,,,0.0,0.0,0,0,0,0.2
 1212660351308233,Designing to Communicate: Strengthening Communication in Engineering Through Real-World Sustainability Contexts,Post-Production,1,0,0,,,,0.0,0.0,0,0,0,1.0
 1212660351308233,Designing to Communicate: Strengthening Communication in Engineering Through Real-World Sustainability Contexts,Post-Project Evaluation,4,0,0,,,,0.0,0.0,0,0,0,0.25
@@ -536,13 +538,14 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1210576824930050,Spectrum X Consultation,Post-Production,1,0,0,,,,0.0,0.0,0,0,0,1.0
 1210576824930050,Spectrum X Consultation,Pre-Production,6,0,1,,,,0.0,0.0,0,0,0,0.17
 1210576824930050,Spectrum X Consultation,Production,2,0,1,,,,0.0,0.0,0,0,0,0.5
-1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,Analysis,3,0,1,,,,0.0,0.0,0,0,0,0.33
-1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,Design,10,2,3,2026-06-05T15:25:05.913000+00:00,2026-06-05T15:25:58.009000+00:00,0,480.0,8.0,0,0,0,0.1
-1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,Design Development,5,0,2,,,,30.0,0.5,0,0,0,0.2
-1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,Post-Production,1,0,1,,,,0.0,0.0,0,0,0,1.0
+1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,Analysis,3,3,1,2026-08-13T19:13:40.805000+00:00,2026-08-13T19:13:42.386000+00:00,0,0.0,0.0,0,0,0,0.33
+1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,Design,10,10,3,2026-06-05T15:25:05.913000+00:00,2026-08-13T19:13:38.395000+00:00,69,480.0,8.0,0,0,0,0.1
+1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,Design Development,5,5,2,2026-08-13T19:14:08.949000+00:00,2026-08-13T19:14:11.844000+00:00,0,30.0,0.5,0,0,0,0.2
+1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,Hours,2,2,0,2026-08-13T19:13:08.482000+00:00,2026-08-13T19:13:09.671000+00:00,0,1500.0,25.0,0,0,0,0.5
+1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,Post-Production,1,1,1,2026-08-13T19:14:04.198000+00:00,2026-08-13T19:14:04.198000+00:00,0,0.0,0.0,0,0,0,1.0
 1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,Post-Project Evaluation,4,0,1,,,,0.0,0.0,0,0,0,0.25
-1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,Pre-Production,6,0,2,,,,0.0,0.0,0,0,0,0.17
-1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,Production,2,0,2,,,,0.0,0.0,0,0,0,0.5
+1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,Pre-Production,6,6,2,2026-08-13T19:13:47.850000+00:00,2026-08-13T19:13:51.902000+00:00,0,0.0,0.0,0,0,0,0.17
+1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,Production,2,2,2,2026-08-13T19:13:56.284000+00:00,2026-08-13T19:14:01.371000+00:00,0,0.0,0.0,0,0,0,0.5
 1215176396318246,Sprint - Lost in Transliteration,Analysis,3,0,1,,,,0.0,0.0,0,0,0,0.33
 1215176396318246,Sprint - Lost in Transliteration,Design,10,0,2,,,,0.0,0.0,0,0,0,0.1
 1215176396318246,Sprint - Lost in Transliteration,Design Development,5,0,2,,,,0.0,0.0,0,0,0,0.2
@@ -558,12 +561,12 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1214783923511436,Sprint - Methods Applied: Proposal Scaffolded Support (MAPPS),Pre-Production,6,0,2,,,,0.0,0.0,0,0,0,0.17
 1214783923511436,Sprint - Methods Applied: Proposal Scaffolded Support (MAPPS),Production,2,0,2,,,,0.0,0.0,0,0,0,0.5
 1214783923511446,Sprint - Unlocking Inaccessible Korean Heritage,Analysis,3,3,1,2026-08-10T17:02:15.107000+00:00,2026-08-10T17:02:16.090000+00:00,0,0.0,0.0,0,0,0,0.33
-1214783923511446,Sprint - Unlocking Inaccessible Korean Heritage,Design,10,0,2,,,,0.0,0.0,0,0,0,0.1
+1214783923511446,Sprint - Unlocking Inaccessible Korean Heritage,Design,8,6,2,2026-08-13T18:00:30.139000+00:00,2026-08-13T18:00:44.869000+00:00,0,0.0,0.0,0,0,0,0.12
 1214783923511446,Sprint - Unlocking Inaccessible Korean Heritage,Design Development,5,0,2,,,,0.0,0.0,0,0,0,0.2
 1214783923511446,Sprint - Unlocking Inaccessible Korean Heritage,Post-Production,1,0,0,,,,0.0,0.0,0,0,0,1.0
 1214783923511446,Sprint - Unlocking Inaccessible Korean Heritage,Post-Project Evaluation,4,0,1,,,,0.0,0.0,0,0,0,0.25
-1214783923511446,Sprint - Unlocking Inaccessible Korean Heritage,Pre-Production,6,0,1,,,,0.0,0.0,0,0,0,0.17
-1214783923511446,Sprint - Unlocking Inaccessible Korean Heritage,Production,2,0,1,,,,0.0,0.0,0,0,0,0.5
+1214783923511446,Sprint - Unlocking Inaccessible Korean Heritage,Pre-Production,1,0,1,,,,0.0,0.0,0,0,0,1.0
+1214783923511446,Sprint - Unlocking Inaccessible Korean Heritage,Production,2,1,2,2026-08-13T18:37:37.865000+00:00,2026-08-13T18:37:37.865000+00:00,0,0.0,0.0,0,0,0,0.5
 1210225716846542,Sprint 2025 - Bringing Korean to Life - Yeonhee Yoon,Analysis,3,3,1,2025-05-19T13:21:49.623000+00:00,2025-06-17T19:56:03.457000+00:00,29,0.0,0.0,0,0,0,0.33
 1210225716846542,Sprint 2025 - Bringing Korean to Life - Yeonhee Yoon,Design,8,7,2,2025-07-11T20:13:52.870000+00:00,2025-08-11T13:08:25.893000+00:00,31,780.0,13.0,0,0,0,0.12
 1210225716846542,Sprint 2025 - Bringing Korean to Life - Yeonhee Yoon,Design Development,5,0,2,,,,360.0,6.0,0,0,0,0.2
@@ -579,12 +582,12 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1210225716846536,Sprint 2025 - Digital Accessibility - Whitney James,Pre-Production,6,1,1,2025-07-27T22:39:49.164000+00:00,2025-07-27T22:39:49.164000+00:00,0,270.0,4.5,0,0,0,0.17
 1210225716846536,Sprint 2025 - Digital Accessibility - Whitney James,Production,2,0,1,,,,0.0,0.0,0,0,0,0.5
 1210225716846547,Sprint 2025 - VR in Global Health Training - Elizabeth Wood,Analysis,3,3,1,2025-06-23T17:02:06.579000+00:00,2025-06-23T17:02:07.868000+00:00,0,0.0,0.0,0,0,0,0.33
-1210225716846547,Sprint 2025 - VR in Global Health Training - Elizabeth Wood,Design,9,5,3,2025-07-13T03:32:45.310000+00:00,2025-07-13T03:32:47.966000+00:00,0,0.0,0.0,0,0,0,0.11
+1210225716846547,Sprint 2025 - VR in Global Health Training - Elizabeth Wood,Design,9,5,2,2025-07-13T03:32:45.310000+00:00,2025-07-13T03:32:47.966000+00:00,0,0.0,0.0,0,0,0,0.11
 1210225716846547,Sprint 2025 - VR in Global Health Training - Elizabeth Wood,Design Development,5,0,1,,,,0.0,0.0,0,0,0,0.2
-1210225716846547,Sprint 2025 - VR in Global Health Training - Elizabeth Wood,Post-Production,1,0,1,,,,0.0,0.0,0,0,0,1.0
+1210225716846547,Sprint 2025 - VR in Global Health Training - Elizabeth Wood,Post-Production,1,0,0,,,,0.0,0.0,0,0,0,1.0
 1210225716846547,Sprint 2025 - VR in Global Health Training - Elizabeth Wood,Post-Project Evaluation,4,0,1,,,,0.0,0.0,0,0,0,0.25
-1210225716846547,Sprint 2025 - VR in Global Health Training - Elizabeth Wood,Pre-Production,6,0,2,,,,0.0,0.0,0,0,0,0.17
-1210225716846547,Sprint 2025 - VR in Global Health Training - Elizabeth Wood,Production,2,0,2,,,,60.0,1.0,0,0,0,0.5
+1210225716846547,Sprint 2025 - VR in Global Health Training - Elizabeth Wood,Pre-Production,6,0,1,,,,0.0,0.0,0,0,0,0.17
+1210225716846547,Sprint 2025 - VR in Global Health Training - Elizabeth Wood,Production,2,0,1,,,,60.0,1.0,0,0,0,0.5
 1210202036254727,Sprint 2025: AI Tutor--Critical Thinking,Analysis,3,3,1,2025-05-14T00:38:06.654000+00:00,2025-06-17T23:51:19.506000+00:00,34,0.0,0.0,0,0,0,0.33
 1210202036254727,Sprint 2025: AI Tutor--Critical Thinking,Design,10,2,2,2025-06-13T14:23:28.417000+00:00,2025-07-30T11:26:47.478000+00:00,47,0.0,0.0,0,0,0,0.1
 1210202036254727,Sprint 2025: AI Tutor--Critical Thinking,Design Development,5,1,2,2025-08-18T08:31:25.199000+00:00,2025-08-18T08:31:25.199000+00:00,0,0.0,0.0,0,0,0,0.2
@@ -728,9 +731,9 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1209417479528380,Videos for Eva,Production,4,3,0,2025-02-17T15:23:37.598000+00:00,2025-05-07T19:12:24.014000+00:00,79,600.0,10.0,0,0,0,0.25
 1208335647365619,Virtual Borders,Analysis,9,9,2,2024-10-22T11:36:42.922000+00:00,2025-01-27T03:34:06.869000+00:00,97,0.0,0.0,0,0,0,0.11
 1208335647365619,Virtual Borders,Design,6,6,1,2025-01-14T14:12:49.441000+00:00,2025-01-14T14:12:52.691000+00:00,0,0.0,0.0,10,0,0,0.17
-1208335647365619,Virtual Borders,Final Development,11,8,1,2026-07-27T17:17:10.022000+00:00,2026-08-10T14:09:36.837000+00:00,14,915.0,15.25,0,0,0,0.09
+1208335647365619,Virtual Borders,Final Development,11,4,1,2026-07-27T17:17:10.022000+00:00,2026-08-13T16:47:40.423000+00:00,17,1575.0,26.25,0,0,0,0.09
 1208335647365619,Virtual Borders,Launch / Post-Launch,5,0,1,,,,0.0,0.0,0,0,0,0.2
-1208335647365619,Virtual Borders,Media Timetracking,11,0,0,,,,1770.0,29.5,0,0,0,0.09
+1208335647365619,Virtual Borders,Media Timetracking,10,0,0,,,,1110.0,18.5,0,0,0,0.1
 1207943893531837,Virtual Borders,Pre-Production,2,0,0,,,,0.0,0.0,4,0,0,0.5
 1208335647365619,Virtual Borders,Pre-Production,4,4,1,2025-02-10T18:00:52.129000+00:00,2026-07-27T15:41:43.938000+00:00,532,870.0,14.5,9,0,0,0.25
 1207943893531837,Virtual Borders,Production,2,0,0,,,,0.0,0.0,0,0,0,0.5

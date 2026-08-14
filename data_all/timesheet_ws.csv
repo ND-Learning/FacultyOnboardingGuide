@@ -3776,7 +3776,7 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,1213781430747526,Video 10,,,,,Kevin DeCloedt,2026-04-23,90,1.5
 1211653962736510,Business for Humans | Sheedy Family Program,1212055062673829,Pre-Production Meetings,,,,,Kevin DeCloedt,2026-04-27,60,1.0
 1212638027964018,Ultrasound Communication Video,1214759223916113,4/27 - 5/1,,,,,Matthew Simmons,2026-04-28,60,1.0
-1211653962736510,Business for Humans | Sheedy Family Program,1211653881574522,Project Kickoff,,,,,Michael Lerma,2026-04-29,60,1.0
+1209254874093285,Colin's Projects,1211653881574522,Project Kickoff,,,,,Michael Lerma,2026-04-29,60,1.0
 1212638028070139,CIF Video,1212660355727528,Project Management Hours,,,,,Michael Lerma,2026-04-29,120,2.0
 1212638028070139,CIF Video,1212660356531660,Project Management Hours,,,,,Michael Lerma,2026-04-29,30,0.5
 1213292120696339,NEON - POLS 30022 (Poly Sci),1214791864379842,4/27 - 5/1,,,,,Matthew Simmons,2026-04-29,30,0.5
@@ -4501,6 +4501,9 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Kevin DeCloedt,2026-07-27,90,1.5
 ,,,,,,,,Noah Fehrenbach,2026-07-27,90,1.5
 ,,,,,,,,Noah Fehrenbach,2026-07-27,270,4.5
+,,,,,,,,Derrick Patrick,2026-07-27,120,2.0
+,,,,,,,,Derrick Patrick,2026-07-27,90,1.5
+,,,,,,,,Derrick Patrick,2026-07-27,30,0.5
 ,,,,,,,,Brianna Stines,2026-07-28,15,0.25
 ,,,,,,,,Brianna Stines,2026-07-28,240,4.0
 ,,,,,,,,Brianna Stines,2026-07-28,15,0.25
@@ -4511,6 +4514,10 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Kevin DeCloedt,2026-07-28,150,2.5
 ,,,,,,,,Kevin DeCloedt,2026-07-28,240,4.0
 ,,,,,,,,Noah Fehrenbach,2026-07-28,390,6.5
+,,,,,,,,Derrick Patrick,2026-07-28,60,1.0
+,,,,,,,,Derrick Patrick,2026-07-28,60,1.0
+,,,,,,,,Derrick Patrick,2026-07-28,60,1.0
+,,,,,,,,Derrick Patrick,2026-07-28,60,1.0
 1208335647365619,Virtual Borders,1216972346679745,7/27 - 7/31 VO text changes and re-build; Transition Scene identifying & writing texts; Intro Video writing and planning; w/ Jolie,,,,,Matthew Simmons,2026-07-29,300,5.0
 ,,,,,,,,Brianna Stines,2026-07-29,120,2.0
 ,,,,,,,,Brianna Stines,2026-07-29,5,0.08
@@ -4524,6 +4531,8 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Kevin DeCloedt,2026-07-29,150,2.5
 ,,,,,,,,Noah Fehrenbach,2026-07-29,240,4.0
 ,,,,,,,,Noah Fehrenbach,2026-07-29,120,2.0
+,,,,,,,,Derrick Patrick,2026-07-29,90,1.5
+,,,,,,,,Derrick Patrick,2026-07-29,120,2.0
 1212638027964018,Ultrasound Communication Video,1216763361279715,7/27 - 7/31,,,,,Matthew Simmons,2026-07-30,240,4.0
 ,,,,,,,,Brianna Stines,2026-07-30,60,1.0
 ,,,,,,,,Brianna Stines,2026-07-30,120,2.0
@@ -4542,6 +4551,9 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Kevin DeCloedt,2026-07-30,120,2.0
 ,,,,,,,,Noah Fehrenbach,2026-07-30,270,4.5
 ,,,,,,,,Noah Fehrenbach,2026-07-30,90,1.5
+,,,,,,,,Derrick Patrick,2026-07-30,30,0.5
+,,,,,,,,Derrick Patrick,2026-07-30,60,1.0
+,,,,,,,,Derrick Patrick,2026-07-30,45,0.75
 1208335647365619,Virtual Borders,1216972346679745,7/27 - 7/31 VO text changes and re-build; Transition Scene identifying & writing texts; Intro Video writing and planning; w/ Jolie,,,,,Matthew Simmons,2026-07-31,90,1.5
 ,,,,,,,,Colin Gallagher,2026-07-31,180,3.0
 ,,,,,,,,Colin Gallagher,2026-07-31,60,1.0
@@ -4549,6 +4561,8 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Kevin DeCloedt,2026-07-31,180,3.0
 ,,,,,,,,Noah Fehrenbach,2026-07-31,360,6.0
 ,,,,,,,,Brianna Stines,2026-07-31,120,2.0
+,,,,,,,,Derrick Patrick,2026-07-31,60,1.0
+,,,,,,,,Derrick Patrick,2026-07-31,60,1.0
 ,,,,,,,,Brianna Stines,2026-08-03,45,0.75
 ,,,,,,,,Brianna Stines,2026-08-03,45,0.75
 ,,,,,,,,Brianna Stines,2026-08-03,30,0.5
@@ -4557,13 +4571,16 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Kevin DeCloedt,2026-08-03,105,1.75
 ,,,,,,,,Kevin DeCloedt,2026-08-03,45,0.75
 ,,,,,,,,Kevin DeCloedt,2026-08-03,45,0.75
-1208335647365619,Virtual Borders,1216972346679747,8/3 - 8/7,,,,,Matthew Simmons,2026-08-03,180,3.0
+,,,,,,,,Matthew Simmons,2026-08-03,180,3.0
 ,,,,,,,,Kuangchen Hsu,2026-08-03,60,1.0
 ,,,,,,,,Kuangchen Hsu,2026-08-03,60,1.0
 ,,,,,,,,Yi Lu,2026-08-03,180,3.0
 ,,,,,,,,Colin Gallagher,2026-08-03,60,1.0
 ,,,,,,,,Noah Fehrenbach,2026-08-03,300,5.0
 ,,,,,,,,Colin Gallagher,2026-08-03,180,3.0
+,,,,,,,,Derrick Patrick,2026-08-03,60,1.0
+,,,,,,,,Derrick Patrick,2026-08-03,30,0.5
+,,,,,,,,Derrick Patrick,2026-08-03,45,0.75
 ,,,,,,,,Brianna Stines,2026-08-04,30,0.5
 ,,,,,,,,Brianna Stines,2026-08-04,60,1.0
 ,,,,,,,,Kevin DeCloedt,2026-08-04,135,2.25
@@ -4576,11 +4593,13 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Noah Fehrenbach,2026-08-04,90,1.5
 ,,,,,,,,Noah Fehrenbach,2026-08-04,360,6.0
 ,,,,,,,,Colin Gallagher,2026-08-04,120,2.0
+,,,,,,,,Derrick Patrick,2026-08-04,210,3.5
+,,,,,,,,Derrick Patrick,2026-08-04,60,1.0
 ,,,,,,,,Brianna Stines,2026-08-05,30,0.5
 ,,,,,,,,Brianna Stines,2026-08-05,90,1.5
 ,,,,,,,,Brianna Stines,2026-08-05,15,0.25
 ,,,,,,,,Brianna Stines,2026-08-05,15,0.25
-1208335647365619,Virtual Borders,1216972346679747,8/3 - 8/7,,,,,Matthew Simmons,2026-08-05,180,3.0
+,,,,,,,,Matthew Simmons,2026-08-05,180,3.0
 ,,,,,,,,Kevin DeCloedt,2026-08-05,30,0.5
 ,,,,,,,,Kevin DeCloedt,2026-08-05,120,2.0
 ,,,,,,,,Kevin DeCloedt,2026-08-05,60,1.0
@@ -4588,10 +4607,12 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Kuangchen Hsu,2026-08-05,60,1.0
 ,,,,,,,,Noah Fehrenbach,2026-08-05,300,5.0
 ,,,,,,,,Colin Gallagher,2026-08-05,60,1.0
+,,,,,,,,Derrick Patrick,2026-08-05,210,3.5
+,,,,,,,,Derrick Patrick,2026-08-05,60,1.0
 ,,,,,,,,Brianna Stines,2026-08-06,15,0.25
 ,,,,,,,,Brianna Stines,2026-08-06,15,0.25
 ,,,,,,,,Brianna Stines,2026-08-06,15,0.25
-1208335647365619,Virtual Borders,1216972346679747,8/3 - 8/7,,,,,Matthew Simmons,2026-08-06,300,5.0
+,,,,,,,,Matthew Simmons,2026-08-06,300,5.0
 ,,,,,,,,Kevin DeCloedt,2026-08-06,60,1.0
 ,,,,,,,,Kevin DeCloedt,2026-08-06,90,1.5
 ,,,,,,,,Kevin DeCloedt,2026-08-06,45,0.75
@@ -4605,6 +4626,9 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Colin Gallagher,2026-08-06,60,1.0
 ,,,,,,,,Noah Fehrenbach,2026-08-06,240,4.0
 ,,,,,,,,Colin Gallagher,2026-08-06,120,2.0
+,,,,,,,,Derrick Patrick,2026-08-06,30,0.5
+,,,,,,,,Derrick Patrick,2026-08-06,60,1.0
+,,,,,,,,Derrick Patrick,2026-08-06,60,1.0
 ,,,,,,,,Matthew Simmons,2026-08-07,45,0.75
 ,,,,,,,,Kevin DeCloedt,2026-08-07,120,2.0
 ,,,,,,,,Kevin DeCloedt,2026-08-07,120,2.0
@@ -4615,9 +4639,14 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Noah Fehrenbach,2026-08-07,45,0.75
 ,,,,,,,,Colin Gallagher,2026-08-07,240,4.0
 ,,,,,,,,Brianna Stines,2026-08-07,15,0.25
+,,,,,,,,Derrick Patrick,2026-08-07,150,2.5
 ,,,,,,,,Brianna Stines,2026-08-11,60,1.0
 ,,,,,,,,Brianna Stines,2026-08-11,180,3.0
 ,,,,,,,,Brianna Stines,2026-08-11,45,0.75
 ,,,,,,,,Brianna Stines,2026-08-11,15,0.25
 ,,,,,,,,Brianna Stines,2026-08-11,30,0.5
 ,,,,,,,,Brianna Stines,2026-08-12,90,1.5
+,,,,,,,,Brianna Stines,2026-08-12,120,2.0
+1208335647365619,Virtual Borders,1217472796779562,8/3 - 8/7 Revamp Guatemala apartment; Transition Scene fixes;  Handover of Jolie's editing,,,,,Juntong Liu,2026-08-13,660,11.0
+1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,1217477399529827,Jolie Post-Production Hours,,,,,Michael Lerma,2026-08-13,1200,20.0
+1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,1217477399529830,Jolie Production Hours,,,,,Michael Lerma,2026-08-13,300,5.0
