@@ -38,7 +38,7 @@
   // === BEGIN CALIBRATION (machine-generated — do not edit by hand) ==========
   var CALIBRATION =
   {
-    "provenance": "data_all/time_entries.csv (3,343 entries, 2898.0h, 2024-07-10..2026-08-13, ODL staff time) | 24 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 20 of them with >=10h non-PM logging",
+    "provenance": "data_all/time_entries.csv (3,345 entries, 2907.0h, 2024-07-10..2026-08-13, ODL staff time) | 24 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 20 of them with >=10h non-PM logging",
     "generated_from": "data_all/derived/calibration.json -- run inject_calibration.py to refresh",
     "archetypeEffort": {
       "course_redesign": {
@@ -64,7 +64,7 @@
         "values": [
           12.0,
           15.5,
-          37.2
+          46.2
         ],
         "p50": 15.5,
         "note": "n<4 -- raw values shown; interpolated quartiles withheld"
@@ -104,8 +104,8 @@
         "p25": 12.0,
         "p50": 13.7,
         "p75": 15.5,
-        "p80": 19.8,
-        "max": 37.2
+        "p80": 21.6,
+        "max": 46.2
       },
       "blendedGenericP50": 11.8,
       "shrinkageW": 0.62
@@ -150,7 +150,7 @@
         "p50": 32.3,
         "p75": 43.9,
         "p80": 49.9,
-        "max": 94.3
+        "max": 94.5
       },
       "podcast": {
         "n": 2,
@@ -197,11 +197,11 @@
     },
     "impactTracker": {
       "field": "cf::Impact Tracker Status",
-      "basis": "data_all/projects.csv Asana project custom field across 231 pulled projects",
-      "total_projects": 231,
+      "basis": "data_all/projects.csv Asana project custom field across 232 pulled projects",
+      "total_projects": 232,
       "tracked_projects": 33,
-      "blank_projects": 198,
-      "coverage_pct": 14.3,
+      "blank_projects": 199,
+      "coverage_pct": 14.2,
       "status_counts": {
         "Outdated": 19,
         "Up to date": 14

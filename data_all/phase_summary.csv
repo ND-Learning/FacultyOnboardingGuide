@@ -709,7 +709,7 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1212638027964018,Ultrasound Communication Video,Analysis,3,0,0,,,,0.0,0.0,0,0,0,0.33
 1212638027964018,Ultrasound Communication Video,Design,9,1,0,2026-04-30T14:25:03.308000+00:00,2026-04-30T14:25:03.308000+00:00,0,270.0,4.5,0,0,0,0.11
 1212638027964018,Ultrasound Communication Video,Design Development,4,0,0,,,,0.0,0.0,0,0,0,0.25
-1212638027964018,Ultrasound Communication Video,Media Timetracking,24,0,1,,,,1935.0,32.25,0,0,0,0.04
+1212638027964018,Ultrasound Communication Video,Media Timetracking,24,0,1,,,,2475.0,41.25,0,0,0,0.04
 1212638027964018,Ultrasound Communication Video,Post-Production,9,0,0,,,,0.0,0.0,0,0,0,0.11
 1212638027964018,Ultrasound Communication Video,Post-Project Evaluation,4,0,0,,,,0.0,0.0,0,0,0,0.25
 1212638027964018,Ultrasound Communication Video,Pre-Production,7,1,0,2026-06-01T14:45:52.878000+00:00,2026-06-01T14:45:52.878000+00:00,0,30.0,0.5,0,0,0,0.14
@@ -731,7 +731,7 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1209417479528380,Videos for Eva,Production,4,3,0,2025-02-17T15:23:37.598000+00:00,2025-05-07T19:12:24.014000+00:00,79,600.0,10.0,0,0,0,0.25
 1208335647365619,Virtual Borders,Analysis,9,9,2,2024-10-22T11:36:42.922000+00:00,2025-01-27T03:34:06.869000+00:00,97,0.0,0.0,0,0,0,0.11
 1208335647365619,Virtual Borders,Design,6,6,1,2025-01-14T14:12:49.441000+00:00,2025-01-14T14:12:52.691000+00:00,0,0.0,0.0,10,0,0,0.17
-1208335647365619,Virtual Borders,Final Development,11,4,1,2026-07-27T17:17:10.022000+00:00,2026-08-13T16:47:40.423000+00:00,17,1575.0,26.25,0,0,0,0.09
+1208335647365619,Virtual Borders,Final Development,8,6,1,2026-07-27T17:17:10.022000+00:00,2026-08-14T15:31:19.995000+00:00,18,1575.0,26.25,0,0,0,0.12
 1208335647365619,Virtual Borders,Launch / Post-Launch,5,0,1,,,,0.0,0.0,0,0,0,0.2
 1208335647365619,Virtual Borders,Media Timetracking,10,0,0,,,,1110.0,18.5,0,0,0,0.1
 1207943893531837,Virtual Borders,Pre-Production,2,0,0,,,,0.0,0.0,4,0,0,0.5

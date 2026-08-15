@@ -1,8 +1,8 @@
 {
   "_provenance": {
-    "source": "data_all/time_entries.csv (3,343 entries, 2898.0h, 2024-07-10..2026-08-13, ODL staff time)",
+    "source": "data_all/time_entries.csv (3,345 entries, 2907.0h, 2024-07-10..2026-08-13, ODL staff time)",
     "calibration_set": "24 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 20 of them with >=10h non-PM logging",
-    "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 3031, 'task_name': 127, 'none': 185}",
+    "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 3033, 'task_name': 127, 'none': 185}",
     "no_guessing": "blocks state 'not_calibratable' where data is insufficient"
   },
   "archetype_effort_hours": {
@@ -49,7 +49,7 @@
     },
     "single_video": {
       "projects": {
-        "Ultrasound Communication Video": 37.2,
+        "Ultrasound Communication Video": 46.2,
         "Program for Inclusive Education (PIE) Video #2": 15.5,
         "Borgo Laudato Si' videos": 12.0
       },
@@ -58,7 +58,7 @@
         "values": [
           12.0,
           15.5,
-          37.2
+          46.2
         ],
         "p50": 15.5,
         "note": "n<4 -- raw values shown; interpolated quartiles withheld"
@@ -228,7 +228,7 @@
       {
         "project": "Ultrasound Communication Video",
         "video": "(whole project)",
-        "hours": 37.2
+        "hours": 46.2
       },
       {
         "project": "Borgo Laudato Si' videos",
@@ -254,8 +254,8 @@
       "p25": 12.0,
       "p50": 13.7,
       "p75": 15.5,
-      "p80": 19.8,
-      "max": 37.2
+      "p80": 21.6,
+      "max": 46.2
     },
     "observed_excluded_partial_coverage": [
       {
@@ -367,7 +367,7 @@
         "p50": 32.3,
         "p75": 43.9,
         "p80": 49.9,
-        "max": 94.3
+        "max": 94.5
       },
       "podcast": {
         "n": 2,
@@ -499,11 +499,11 @@
   },
   "impact_tracker": {
     "field": "cf::Impact Tracker Status",
-    "basis": "data_all/projects.csv Asana project custom field across 231 pulled projects",
-    "total_projects": 231,
+    "basis": "data_all/projects.csv Asana project custom field across 232 pulled projects",
+    "total_projects": 232,
     "tracked_projects": 33,
-    "blank_projects": 198,
-    "coverage_pct": 14.3,
+    "blank_projects": 199,
+    "coverage_pct": 14.2,
     "status_counts": {
       "Outdated": 19,
       "Up to date": 14
