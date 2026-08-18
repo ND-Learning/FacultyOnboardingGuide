@@ -1,7 +1,7 @@
 {
   "_provenance": {
     "source": "data_all/time_entries.csv (3,345 entries, 2907.0h, 2024-07-10..2026-08-13, ODL staff time)",
-    "calibration_set": "24 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 20 of them with >=10h non-PM logging",
+    "calibration_set": "23 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 19 of them with >=10h non-PM logging",
     "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 3033, 'task_name': 127, 'none': 185}",
     "no_guessing": "blocks state 'not_calibratable' where data is insufficient"
   },
@@ -34,16 +34,15 @@
         "FCTA - Physics I": 41.9,
         "NEON - POLS 30022 (Poly Sci)": 34.2,
         "Sprint 2025 - Bringing Korean to Life - Yeonhee Yoon": 19.5,
-        "C2D: Cybertraining for Chemical Data scientists": 16.5,
         "Travel Safety 101": 15.7
       },
       "production_hours": {
-        "n": 13,
+        "n": 12,
         "min": 15.7,
-        "p25": 27.5,
-        "p50": 46.7,
-        "p75": 80.2,
-        "p80": 91.4,
+        "p25": 32.5,
+        "p50": 48.0,
+        "p75": 84.9,
+        "p80": 95.2,
         "max": 286.5
       }
     },
@@ -330,13 +329,13 @@
     }
   },
   "full_course_phase_mix": {
-    "basis": "pooled non-PM hours of 13 full-coverage full_course projects (930.8h)",
+    "basis": "pooled non-PM hours of 12 full-coverage full_course projects (914.3h)",
     "share_pct": {
-      "Production": 34.4,
-      "Post-Production": 23.2,
-      "Development/Build": 19.6,
-      "Pre-Production": 13.0,
-      "Design": 8.1,
+      "Production": 35.0,
+      "Post-Production": 23.6,
+      "Development/Build": 19.9,
+      "Pre-Production": 11.5,
+      "Design": 8.2,
       "Other / unsorted": 1.4,
       "Discovery": 0.3
     }
@@ -361,12 +360,12 @@
         "note": "n<4 -- raw values shown; interpolated quartiles withheld"
       },
       "full_course": {
-        "n": 24,
-        "min": 4.8,
-        "p25": 18.9,
-        "p50": 32.3,
-        "p75": 43.9,
-        "p80": 49.9,
+        "n": 25,
+        "min": 0.5,
+        "p25": 17.2,
+        "p50": 31.4,
+        "p75": 42.0,
+        "p80": 49.8,
         "max": 94.5
       },
       "podcast": {
@@ -499,10 +498,10 @@
   },
   "impact_tracker": {
     "field": "cf::Impact Tracker Status",
-    "basis": "data_all/projects.csv Asana project custom field across 232 pulled projects",
-    "total_projects": 232,
+    "basis": "data_all/projects.csv Asana project custom field across 233 pulled projects",
+    "total_projects": 233,
     "tracked_projects": 33,
-    "blank_projects": 199,
+    "blank_projects": 200,
     "coverage_pct": 14.2,
     "status_counts": {
       "Outdated": 19,
@@ -1039,85 +1038,79 @@
     "rows": [
       {
         "actual": 15.7,
-        "pred_p50": 48.0,
+        "pred_p50": 49.2,
         "in_iqr": false,
-        "ape_pct": 205.4
-      },
-      {
-        "actual": 16.5,
-        "pred_p50": 48.0,
-        "in_iqr": false,
-        "ape_pct": 190.6
+        "ape_pct": 213.4
       },
       {
         "actual": 19.5,
-        "pred_p50": 48.0,
+        "pred_p50": 49.2,
         "in_iqr": false,
-        "ape_pct": 145.9
+        "ape_pct": 152.3
       },
       {
         "actual": 27.5,
-        "pred_p50": 48.0,
+        "pred_p50": 49.2,
         "in_iqr": false,
-        "ape_pct": 74.4
+        "ape_pct": 78.9
       },
       {
         "actual": 34.2,
-        "pred_p50": 48.0,
-        "in_iqr": true,
-        "ape_pct": 40.2
+        "pred_p50": 49.2,
+        "in_iqr": false,
+        "ape_pct": 43.9
       },
       {
         "actual": 41.9,
-        "pred_p50": 48.0,
+        "pred_p50": 49.2,
         "in_iqr": true,
-        "ape_pct": 14.4
+        "ape_pct": 17.4
       },
       {
         "actual": 46.7,
-        "pred_p50": 45.5,
+        "pred_p50": 49.2,
         "in_iqr": true,
-        "ape_pct": 2.5
+        "ape_pct": 5.4
       },
       {
         "actual": 49.2,
-        "pred_p50": 44.3,
+        "pred_p50": 46.7,
         "in_iqr": true,
-        "ape_pct": 10.0
+        "ape_pct": 5.1
       },
       {
         "actual": 71.1,
-        "pred_p50": 44.3,
+        "pred_p50": 46.7,
         "in_iqr": true,
-        "ape_pct": 37.7
+        "ape_pct": 34.3
       },
       {
         "actual": 80.2,
-        "pred_p50": 44.3,
-        "in_iqr": false,
-        "ape_pct": 44.8
+        "pred_p50": 46.7,
+        "in_iqr": true,
+        "ape_pct": 41.8
       },
       {
         "actual": 98.9,
-        "pred_p50": 44.3,
+        "pred_p50": 46.7,
         "in_iqr": false,
-        "ape_pct": 55.2
+        "ape_pct": 52.8
       },
       {
         "actual": 142.8,
-        "pred_p50": 44.3,
+        "pred_p50": 46.7,
         "in_iqr": false,
-        "ape_pct": 69.0
+        "ape_pct": 67.3
       },
       {
         "actual": 286.5,
-        "pred_p50": 44.3,
+        "pred_p50": 46.7,
         "in_iqr": false,
-        "ape_pct": 84.5
+        "ape_pct": 83.7
       }
     ],
-    "median_ape_pct": 55.2,
-    "iqr_coverage_pct": 38.5,
+    "median_ape_pct": 48.3,
+    "iqr_coverage_pct": 41.7,
     "reading": "wide APE is expected -- it is the honest spread of a point guess; this is WHY the estimator must quote P25-P80 ranges, not points."
   }
 }

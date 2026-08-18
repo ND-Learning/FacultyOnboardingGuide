@@ -4649,6 +4649,9 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Noah Fehrenbach,2026-08-10,90,1.5
 ,,,,,,,,Colin Gallagher,2026-08-10,180,3.0
 ,,,,,,,,Colin Gallagher,2026-08-10,120,2.0
+,,,,,,,,Derrick Patrick,2026-08-10,90,1.5
+,,,,,,,,Derrick Patrick,2026-08-10,90,1.5
+,,,,,,,,Derrick Patrick,2026-08-10,75,1.25
 ,,,,,,,,Brianna Stines,2026-08-11,60,1.0
 ,,,,,,,,Brianna Stines,2026-08-11,180,3.0
 ,,,,,,,,Brianna Stines,2026-08-11,45,0.75
@@ -4664,6 +4667,10 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Colin Gallagher,2026-08-11,180,3.0
 ,,,,,,,,Colin Gallagher,2026-08-11,120,2.0
 ,,,,,,,,Colin Gallagher,2026-08-11,120,2.0
+,,,,,,,,Derrick Patrick,2026-08-11,30,0.5
+,,,,,,,,Derrick Patrick,2026-08-11,60,1.0
+,,,,,,,,Derrick Patrick,2026-08-11,60,1.0
+,,,,,,,,Derrick Patrick,2026-08-11,35,0.58
 ,,,,,,,,Brianna Stines,2026-08-12,90,1.5
 ,,,,,,,,Brianna Stines,2026-08-12,120,2.0
 ,,,,,,,,Kuangchen Hsu,2026-08-12,45,0.75
@@ -4680,6 +4687,10 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Noah Fehrenbach,2026-08-12,120,2.0
 ,,,,,,,,Noah Fehrenbach,2026-08-12,120,2.0
 ,,,,,,,,Colin Gallagher,2026-08-12,120,2.0
+,,,,,,,,Derrick Patrick,2026-08-12,15,0.25
+,,,,,,,,Derrick Patrick,2026-08-12,75,1.25
+,,,,,,,,Derrick Patrick,2026-08-12,30,0.5
+,,,,,,,,Derrick Patrick,2026-08-12,60,1.0
 1208335647365619,Virtual Borders,1217472796779562,8/3 - 8/7 Revamp Guatemala apartment; Transition Scene fixes;  Handover of Jolie's editing,,,,,Juntong Liu,2026-08-13,660,11.0
 1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,1217477399529827,Jolie Post-Production Hours,,,,,Michael Lerma,2026-08-13,1200,20.0
 1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,1217477399529830,Jolie Production Hours,,,,,Michael Lerma,2026-08-13,300,5.0
@@ -4694,6 +4705,8 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Noah Fehrenbach,2026-08-13,120,2.0
 ,,,,,,,,Colin Gallagher,2026-08-13,120,2.0
 ,,,,,,,,Colin Gallagher,2026-08-13,60,1.0
+,,,,,,,,Derrick Patrick,2026-08-13,90,1.5
+,,,,,,,,Derrick Patrick,2026-08-13,60,1.0
 ,,,,,,,,Kuangchen Hsu,2026-08-14,60,1.0
 ,,,,,,,,Yi Lu,2026-08-14,120,2.0
 ,,,,,,,,Kevin DeCloedt,2026-08-14,180,3.0
@@ -4703,3 +4716,6 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Colin Gallagher,2026-08-14,120,2.0
 ,,,,,,,,Brianna Stines,2026-08-14,30,0.5
 ,,,,,,,,Brianna Stines,2026-08-14,30,0.5
+,,,,,,,,Derrick Patrick,2026-08-14,60,1.0
+,,,,,,,,Derrick Patrick,2026-08-14,60,1.0
+,,,,,,,,Derrick Patrick,2026-08-14,30,0.5

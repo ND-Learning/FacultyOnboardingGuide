@@ -140,7 +140,7 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1211900372320318,C2D: Cybertraining for Chemical Data scientists,Analysis,3,2,1,2026-05-07T15:05:07.381000+00:00,2026-05-07T15:05:07.977000+00:00,0,0.0,0.0,0,0,0,0.33
 1211900372320318,C2D: Cybertraining for Chemical Data scientists,Design,9,8,1,2026-05-07T15:05:32.666000+00:00,2026-05-07T15:05:47.406000+00:00,0,0.0,0.0,0,0,0,0.11
 1211900372320318,C2D: Cybertraining for Chemical Data scientists,Design Development,6,0,2,,,,0.0,0.0,0,0,0,0.17
-1211900372320318,C2D: Cybertraining for Chemical Data scientists,Post-Production,1,0,1,,,,0.0,0.0,4,0,0,1.0
+1211900372320318,C2D: Cybertraining for Chemical Data scientists,Post-Production,1,1,1,2026-08-17T14:19:59.403000+00:00,2026-08-17T14:19:59.403000+00:00,0,0.0,0.0,4,0,0,1.0
 1211900372320318,C2D: Cybertraining for Chemical Data scientists,Post-Project Evaluation,4,0,1,,,,0.0,0.0,0,0,0,0.25
 1211900372320318,C2D: Cybertraining for Chemical Data scientists,Pre-Production,6,6,1,2026-05-14T18:22:38.007000+00:00,2026-05-14T18:22:40.784000+00:00,0,990.0,16.5,0,0,0,0.17
 1211900372320318,C2D: Cybertraining for Chemical Data scientists,Production,2,2,1,2026-03-20T15:30:32.732000+00:00,2026-05-14T18:21:11.503000+00:00,55,0.0,0.0,3,0,0,0.5
@@ -194,12 +194,11 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1206006474289122,Creative Asset Feedback & Approval,In Review,1,0,0,,,,0.0,0.0,0,0,0,1.0
 1206006474289122,Creative Asset Feedback & Approval,Template instructions,2,0,0,,,,0.0,0.0,14,0,0,0.5
 1204818761552639,DX Course Design,To do,8,0,0,,,,0.0,0.0,0,0,0,0.12
-1212660351308233,Designing to Communicate: Strengthening Communication in Engineering Through Real-World Sustainability Contexts,Analysis,3,0,1,,,,0.0,0.0,0,0,0,0.33
+1212660351308233,Designing to Communicate: Strengthening Communication in Engineering Through Real-World Sustainability Contexts,Analysis,3,1,1,2026-08-17T13:37:52.220000+00:00,2026-08-17T13:37:52.220000+00:00,0,0.0,0.0,0,0,0,0.33
 1212660351308233,Designing to Communicate: Strengthening Communication in Engineering Through Real-World Sustainability Contexts,Design,10,4,1,2026-08-13T19:15:33.107000+00:00,2026-08-13T19:16:44.191000+00:00,0,0.0,0.0,0,0,0,0.1
-1212660351308233,Designing to Communicate: Strengthening Communication in Engineering Through Real-World Sustainability Contexts,Design Development,5,0,0,,,,0.0,0.0,0,0,0,0.2
 1212660351308233,Designing to Communicate: Strengthening Communication in Engineering Through Real-World Sustainability Contexts,Post-Production,1,0,0,,,,0.0,0.0,0,0,0,1.0
 1212660351308233,Designing to Communicate: Strengthening Communication in Engineering Through Real-World Sustainability Contexts,Post-Project Evaluation,4,0,0,,,,0.0,0.0,0,0,0,0.25
-1212660351308233,Designing to Communicate: Strengthening Communication in Engineering Through Real-World Sustainability Contexts,Pre-Production,6,0,0,,,,0.0,0.0,0,0,0,0.17
+1212660351308233,Designing to Communicate: Strengthening Communication in Engineering Through Real-World Sustainability Contexts,Pre-Production,2,2,0,2026-08-17T13:38:22.287000+00:00,2026-08-17T13:38:22.823000+00:00,0,0.0,0.0,0,0,0,0.5
 1212660351308233,Designing to Communicate: Strengthening Communication in Engineering Through Real-World Sustainability Contexts,Production,2,0,0,,,,0.0,0.0,0,0,0,0.5
 1209140307416568,Detailed Time Tracking,3D Environments: Week of 1/13,4,4,0,2025-01-16T14:23:31.880000+00:00,2025-01-19T15:40:49.866000+00:00,3,130.0,2.17,0,0,0,0.25
 1209140307416568,Detailed Time Tracking,Calc I: Week of 1/13,5,5,0,2025-01-16T21:32:26.888000+00:00,2025-01-19T15:23:07.785000+00:00,3,215.0,3.58,0,0,0,0.2
@@ -339,7 +338,7 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1214795652576790,Maximizing Mendoza,Meetings,2,0,0,,,,240.0,4.0,0,0,0,0.5
 1214795652576790,Maximizing Mendoza,Post-Production,1,0,0,,,,0.0,0.0,0,0,0,1.0
 1214795652576790,Maximizing Mendoza,Post-Project Evaluation,4,0,0,,,,0.0,0.0,0,0,0,0.25
-1214795652576790,Maximizing Mendoza,Pre-Production,6,0,0,,,,0.0,0.0,0,0,0,0.17
+1214795652576790,Maximizing Mendoza,Pre-Production,6,1,0,2026-08-17T14:21:28.191000+00:00,2026-08-17T14:21:28.191000+00:00,0,0.0,0.0,0,0,0,0.17
 1214795652576790,Maximizing Mendoza,Production,2,0,0,,,,0.0,0.0,0,0,0,0.5
 1214795652576790,Maximizing Mendoza,Untitled section,4,4,4,2026-05-13T19:45:12.130000+00:00,2026-05-13T19:45:19.500000+00:00,0,0.0,0.0,0,0,0,0.25
 1207984230724300,Media Only Project,Analysis,5,0,0,,,,0.0,0.0,0,0,0,0.2
@@ -558,8 +557,8 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1214783923511436,Sprint - Methods Applied: Proposal Scaffolded Support (MAPPS),Design Development,5,0,2,,,,0.0,0.0,0,0,0,0.2
 1214783923511436,Sprint - Methods Applied: Proposal Scaffolded Support (MAPPS),Post-Production,1,0,1,,,,0.0,0.0,0,0,0,1.0
 1214783923511436,Sprint - Methods Applied: Proposal Scaffolded Support (MAPPS),Post-Project Evaluation,4,0,1,,,,0.0,0.0,0,0,0,0.25
-1214783923511436,Sprint - Methods Applied: Proposal Scaffolded Support (MAPPS),Pre-Production,6,0,2,,,,0.0,0.0,0,0,0,0.17
-1214783923511436,Sprint - Methods Applied: Proposal Scaffolded Support (MAPPS),Production,2,0,2,,,,0.0,0.0,0,0,0,0.5
+1214783923511436,Sprint - Methods Applied: Proposal Scaffolded Support (MAPPS),Pre-Production,6,5,2,2026-08-17T14:20:14.756000+00:00,2026-08-17T14:20:24.184000+00:00,0,0.0,0.0,0,0,0,0.17
+1214783923511436,Sprint - Methods Applied: Proposal Scaffolded Support (MAPPS),Production,2,1,2,2026-08-17T14:20:26.817000+00:00,2026-08-17T14:20:26.817000+00:00,0,0.0,0.0,0,0,0,0.5
 1214783923511446,Sprint - Unlocking Inaccessible Korean Heritage,Analysis,3,3,1,2026-08-10T17:02:15.107000+00:00,2026-08-10T17:02:16.090000+00:00,0,0.0,0.0,0,0,0,0.33
 1214783923511446,Sprint - Unlocking Inaccessible Korean Heritage,Design,8,6,2,2026-08-13T18:00:30.139000+00:00,2026-08-13T18:00:44.869000+00:00,0,0.0,0.0,0,0,0,0.12
 1214783923511446,Sprint - Unlocking Inaccessible Korean Heritage,Design Development,5,0,2,,,,0.0,0.0,0,0,0,0.2

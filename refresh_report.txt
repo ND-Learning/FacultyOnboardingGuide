@@ -1,16 +1,18 @@
-ODL estimator refresh -- 2026-08-17T12:32:10
+ODL estimator refresh -- 2026-08-18T12:35:46
 pull: ran | published to Canvas: no
 
 headline numbers (before -> after):
      total_logged_hours: 2907.0 -> 2907.0
-     calibration_set: 24 -> 24
-     full_course_p50_h: 46.7 -> 46.7
-     full_course_n: 13 -> 13
+  -> calibration_set: 24 -> 23
+  -> full_course_p50_h: 46.7 -> 48.0
+  -> full_course_n: 13 -> 12
      pm_p50_h_per_wk: 0.8 -> 0.8
      video_blended_h: 11.8 -> 11.8
-     full_course_median_weeks: 32.3 -> 32.3
+  -> full_course_median_weeks: 32.3 -> 31.4
 
-ACTION NEEDED -- 17 project(s) await a human decision (excluded from calibration until resolved):
+ACTION NEEDED -- the Canvas bundle CHANGED but was not auto-published (no Canvas token). Re-upload faculty_guide/canvas_upload/ODL_Faculty_Onboarding_Guide.html to Canvas Files with the SAME filename and choose Replace (~1 minute).
+
+ACTION NEEDED -- 19 project(s) await a human decision (excluded from calibration until resolved):
   - PM Projects (271.6h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
   - Veterans College Math Readiness Course (108.83h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
   - Spectrum X Consultation (51.74h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
@@ -21,11 +23,13 @@ ACTION NEEDED -- 17 project(s) await a human decision (excluded from calibration
   - Sprint 2025: Statistics Flipped Class (33.34h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
   - Colin's Projects (20.85h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
   - Lawrence Time and Capacity Tracking Part 2 January 13 - 17 (19.08h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
+  - C2D: Cybertraining for Chemical Data scientists (16.5h): coverage drift: 1 task completion(s) more than 60d after last time entry (2026-04-09) -- demoted to partial; set force_coverage=full in the 
   - Sprint 2025: AI Tutor--Critical Thinking (12.75h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
   - Sprint 2025: Transforming FIN / MSBR Course (9.75h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
   - Detailed Time Tracking (8.83h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
   - Program for Inclusive Education (PIE) Videos (7.5h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
   - ACE Ascent Phase IV (7.08h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
+  - Maximizing Mendoza (6.5h): coverage drift: 1 task completion(s) more than 60d after last time entry (2026-05-21) -- demoted to partial; set force_coverage=full in the 
   - Sprint: Molecular Neuroscience (Branco) (4.52h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
   - Beginning Italian 1 (4.0h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
   Fix: add/update the row in project_registry.csv, then re-run refresh.
