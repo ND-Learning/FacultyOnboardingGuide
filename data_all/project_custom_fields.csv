@@ -1234,7 +1234,7 @@ project_gid,project_name,custom_field_gid,custom_field_name,resource_subtype,dis
 1214795652576790,Maximizing Mendoza,1207871566050150,NDL Project Status,enum,Project Initiated - ODL,,,Project Initiated - ODL,,,,
 1214795652576790,Maximizing Mendoza,1212955082668042,Impact Tracker Status,enum,Outdated,,,Outdated,,,,
 1214795652576790,Maximizing Mendoza,1216016157752497,Actual costs (total),number,0.00,,0,,,,,
-1214795652576790,Maximizing Mendoza,1216016157752503,Actual time (total),number,128h 05m,,7685,,,,,
+1214795652576790,Maximizing Mendoza,1216016157752503,Actual time (total),number,129h 05m,,7745,,,,,
 1214795652576790,Maximizing Mendoza,1216016157752493,Estimated costs (total),number,0.00,,0,,,,,
 1214795652576790,Maximizing Mendoza,1216016157752495,Estimated time (total),number,367h 00m,,22020,,,,,
 1215176396318246,Sprint - Lost in Transliteration,1206060337251839,Priority,enum,,,,,,,,

@@ -162,7 +162,7 @@
 1215664894792901  # ASCEND Program
 1215987458853792  # Flipped Classroom #1
 1215987566327904  # Flipped Classroom #2
-1215993168366996  # Brian - Course Trailer
+1215993168366996  # Brian - Course Trailer (Survivor)
 1215994490410552  # Flipped Classroom #3
 1216713304901433  # Job Fair
 1216740509061105  # I CAN HELP - Faculty Consultation
@@ -177,6 +177,8 @@
 1217502401824588  # Summer Online 2027
 1217548507286396  # ASCEND Architecture
 1217647455231140  # ODL Workflows
+1217688349350338  # Kate the Chemist (editing videos)
+1217688349350342  # Test Project
 1204789220328740  # College BouND
 1204818761552639  # DX Course Design
 1204843864198221  # Inclusivity Modules

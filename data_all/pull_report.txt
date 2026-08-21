@@ -1,11 +1,11 @@
 ODL Asana pull report
 =====================
-projects pulled        : 234
-tasks pulled           : 4686
+projects pulled        : 236
+tasks pulled           : 4687
 phase rows             : 752
 distinct sections      : 239
 project custom fields  : 43 distinct names (2037 values)
-task custom fields     : 155 distinct names (18055 values)
+task custom fields     : 155 distinct names (18066 values)
 time-tracking endpoint : AVAILABLE
 projects with logged hours : 71
 crosswalk applied      : NONE (raw section names used)
