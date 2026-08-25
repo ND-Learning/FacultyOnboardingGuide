@@ -1,4 +1,4 @@
-ODL estimator refresh -- 2026-08-24T12:31:15
+ODL estimator refresh -- 2026-08-25T12:34:49
 pull: ran | published to Canvas: no
 
 headline numbers (before -> after):
@@ -10,11 +10,13 @@ headline numbers (before -> after):
      video_blended_h: 11.8 -> 11.8
      full_course_median_weeks: 31.4 -> 31.4
 
+ACTION NEEDED -- the Canvas bundle CHANGED but was not auto-published (no Canvas token). Re-upload faculty_guide/canvas_upload/ODL_Faculty_Onboarding_Guide.html to Canvas Files with the SAME filename and choose Replace (~1 minute).
+
 ACTION NEEDED -- 19 project(s) await a human decision (excluded from calibration until resolved):
   - PM Projects (271.6h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
   - Veterans College Math Readiness Course (108.83h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
   - Spectrum X Consultation (51.74h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
-  - Business for Humans | Sheedy Family Program (47.75h): coverage drift: 7 task completion(s) more than 60d after last time entry (2026-05-29) -- demoted to partial; set force_coverage=full in the 
+  - Business for Humans | Sheedy Family Program (47.75h): coverage drift: 13 task completion(s) more than 60d after last time entry (2026-05-29) -- demoted to partial; set force_coverage=full in the
   - Force for Good Video Project (45.09h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
   - Lawrence Time and Capacity Tracking Part 1 (43.75h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
   - Sprint - Free-Body Diagram Visualization and Mastery (33.5h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv

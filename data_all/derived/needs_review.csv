@@ -2,7 +2,7 @@ gid,name,logged_hours,reason
 1209298165345682,PM Projects,271.6,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
 1211385006360353,Veterans College Math Readiness Course,108.83,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
 1210576824930050,Spectrum X Consultation,51.74,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
-1211653962736510,Business for Humans | Sheedy Family Program,47.75,coverage drift: 7 task completion(s) more than 60d after last time entry (2026-05-29) -- demoted to partial; set force_coverage=full in the registry to re-admit
+1211653962736510,Business for Humans | Sheedy Family Program,47.75,coverage drift: 13 task completion(s) more than 60d after last time entry (2026-05-29) -- demoted to partial; set force_coverage=full in the registry to re-admit
 1211154824956969,Force for Good Video Project,45.09,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
 1209103142080500,Lawrence Time and Capacity Tracking Part 1,43.75,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
 1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,33.5,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
