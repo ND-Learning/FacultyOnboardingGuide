@@ -224,6 +224,9 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 1208335647365619,Virtual Borders,1214759190562385,5/4 - 5/8,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-05-12,120.0,2.0
 1208335647365619,Virtual Borders,1214990150390732,5/18 - 5/22,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-05-19,75.0,1.25
 1208335647365619,Virtual Borders,1214990150390732,5/18 - 5/22,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-05-20,120.0,2.0
+1208335647365619,Virtual Borders,1217338957146684,8/24 - 8/28,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-08-24,60.0,1.0
+1208335647365619,Virtual Borders,1217338957146684,8/24 - 8/28,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-08-25,90.0,1.5
+1208335647365619,Virtual Borders,1217338957146684,8/24 - 8/28,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-08-26,195.0,3.25
 1208335647365619,Virtual Borders,1208337654431778,Determine Filming Specifics,Pre-Production,Pre-Production,,,Alyssa Neece,2025-01-21,90.0,1.5
 1208335647365619,Virtual Borders,1208337654431778,Determine Filming Specifics,Pre-Production,Pre-Production,,,Alyssa Neece,2025-01-24,30.0,0.5
 1208335647365619,Virtual Borders,1208337654431778,Determine Filming Specifics,Pre-Production,Pre-Production,,,Alyssa Neece,2025-01-29,135.0,2.25
@@ -837,12 +840,12 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 1209140307416568,Detailed Time Tracking,1209162974154345,Follow Up,3D Environments: Week of 1/13,3D Environments: Week of 1/13,,,Lawrence Greenspun,2025-01-16,15.0,0.25
 1209140307416568,Detailed Time Tracking,1209162974154345,Follow Up,3D Environments: Week of 1/13,3D Environments: Week of 1/13,,,Lawrence Greenspun,2025-01-19,10.0,0.167
 1209140307416568,Detailed Time Tracking,1209162974154345,Follow Up,3D Environments: Week of 1/13,3D Environments: Week of 1/13,,,Lawrence Greenspun,2025-01-19,10.0,0.167
-1209254874093285,Colin's Projects,1211653881574522,Project Kickoff,Untitled section,Untitled section,Michael Lerma,Project Manager,Michael Lerma,2026-04-29,60.0,1.0
-1209254874093285,Colin's Projects,1209255015735679,3D Enviroments,3 Title Cards,3 Title Cards,,,Colin Gallagher,2025-01-28,36.0,0.6
-1209254874093285,Colin's Projects,1209255015735679,3D Enviroments,3 Title Cards,3 Title Cards,,,Colin Gallagher,2025-01-28,165.0,2.75
-1209254874093285,Colin's Projects,1209255015735679,3D Enviroments,3 Title Cards,3 Title Cards,,,Colin Gallagher,2025-01-29,30.0,0.5
-1209254874093285,Colin's Projects,1210908973364732,Title Card,AI for the Notre Dame Community,AI for the Notre Dame Community,,,Colin Gallagher,2025-07-28,240.0,4.0
-1209254874093285,Colin's Projects,1210908973364739,Graphics,AI for the Notre Dame Community,AI for the Notre Dame Community,,,Colin Gallagher,2025-07-28,720.0,12.0
+1209254874093285,Colin's Projects,1210908973364739,Graphics,Finished tasks,Finished tasks,,,Colin Gallagher,2025-07-28,720.0,12.0
+1209254874093285,Colin's Projects,1210908973364732,Title Card,Finished tasks,Finished tasks,,,Colin Gallagher,2025-07-28,240.0,4.0
+1209254874093285,Colin's Projects,1209255015735679,3D Enviroments,Finished tasks,Finished tasks,,,Colin Gallagher,2025-01-28,36.0,0.6
+1209254874093285,Colin's Projects,1209255015735679,3D Enviroments,Finished tasks,Finished tasks,,,Colin Gallagher,2025-01-28,165.0,2.75
+1209254874093285,Colin's Projects,1209255015735679,3D Enviroments,Finished tasks,Finished tasks,,,Colin Gallagher,2025-01-29,30.0,0.5
+1209254874093285,Colin's Projects,1211653881574522,Project Kickoff,Finished tasks,Finished tasks,Michael Lerma,Project Manager,Michael Lerma,2026-04-29,60.0,1.0
 1209298164735103,AI for the Notre Dame Community,1209444813456552,1/27/25 - 1/31/25,PM Time Tracking,PM Time Tracking,Lawrence Greenspun,Project Manager,Lawrence Greenspun,2025-02-20,10.0,0.167
 1209298164735103,AI for the Notre Dame Community,1209444813456564,2/3/25 - 2/7/25,PM Time Tracking,PM Time Tracking,Lawrence Greenspun,Project Manager,Lawrence Greenspun,2025-02-20,90.0,1.5
 1209298164735103,AI for the Notre Dame Community,1209444813456570,2/10/25 - 2/14/25,PM Time Tracking,PM Time Tracking,Lawrence Greenspun,Project Manager,Lawrence Greenspun,2025-02-20,145.0,2.417

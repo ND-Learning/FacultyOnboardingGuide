@@ -1,8 +1,8 @@
 {
   "_provenance": {
-    "source": "data_all/time_entries.csv (3,350 entries, 2914.0h, 2024-07-10..2026-08-21, ODL staff time)",
+    "source": "data_all/time_entries.csv (3,353 entries, 2919.8h, 2024-07-10..2026-08-26, ODL staff time)",
     "calibration_set": "23 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 19 of them with >=10h non-PM logging",
-    "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 3038, 'task_name': 127, 'none': 185}",
+    "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 3041, 'task_name': 127, 'none': 185}",
     "no_guessing": "blocks state 'not_calibratable' where data is insufficient"
   },
   "archetype_effort_hours": {
@@ -25,7 +25,7 @@
       "projects": {
         "AI for the Notre Dame Community": 286.5,
         "Responsible and Ethical AI": 98.9,
-        "Virtual Borders": 148.2,
+        "Virtual Borders": 154.0,
         "ASCEND Engineering": 27.5,
         "ASCEND MCOB": 80.2,
         "The Qur’an and the Bible (Gabriel Reynolds)": 46.7,
@@ -329,13 +329,13 @@
     }
   },
   "full_course_phase_mix": {
-    "basis": "pooled non-PM hours of 12 full-coverage full_course projects (919.8h)",
+    "basis": "pooled non-PM hours of 12 full-coverage full_course projects (925.5h)",
     "share_pct": {
-      "Production": 34.8,
-      "Post-Production": 23.5,
-      "Development/Build": 20.4,
-      "Pre-Production": 11.4,
-      "Design": 8.2,
+      "Production": 35.2,
+      "Post-Production": 23.3,
+      "Development/Build": 20.3,
+      "Pre-Production": 11.3,
+      "Design": 8.1,
       "Other / unsorted": 1.4,
       "Discovery": 0.3
     }
@@ -1097,10 +1097,10 @@
         "ape_pct": 52.8
       },
       {
-        "actual": 148.2,
+        "actual": 154.0,
         "pred_p50": 46.7,
         "in_iqr": false,
-        "ape_pct": 68.5
+        "ape_pct": 69.7
       },
       {
         "actual": 286.5,

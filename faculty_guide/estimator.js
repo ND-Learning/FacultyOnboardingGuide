@@ -38,7 +38,7 @@
   // === BEGIN CALIBRATION (machine-generated — do not edit by hand) ==========
   var CALIBRATION =
   {
-    "provenance": "data_all/time_entries.csv (3,350 entries, 2914.0h, 2024-07-10..2026-08-21, ODL staff time) | 23 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 19 of them with >=10h non-PM logging",
+    "provenance": "data_all/time_entries.csv (3,353 entries, 2919.8h, 2024-07-10..2026-08-26, ODL staff time) | 23 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 19 of them with >=10h non-PM logging",
     "generated_from": "data_all/derived/calibration.json -- run inject_calibration.py to refresh",
     "archetypeEffort": {
       "course_redesign": {
@@ -117,15 +117,15 @@
     },
     "mediaSplitBasis": "pooled hours on per-video sections with full-coverage logging: 1 project(s) (Program for Inclusive Education (PIE) Video #2), 15.5h total",
     "coursePhaseMixPct": {
-      "Production": 34.8,
-      "Post-Production": 23.5,
-      "Development/Build": 20.4,
-      "Pre-Production": 11.4,
-      "Design": 8.2,
+      "Production": 35.2,
+      "Post-Production": 23.3,
+      "Development/Build": 20.3,
+      "Pre-Production": 11.3,
+      "Design": 8.1,
       "Other / unsorted": 1.4,
       "Discovery": 0.3
     },
-    "coursePhaseMixBasis": "pooled non-PM hours of 12 full-coverage full_course projects (919.8h)",
+    "coursePhaseMixBasis": "pooled non-PM hours of 12 full-coverage full_course projects (925.5h)",
     "calendarWeeks": {
       "consult_or_studio": {
         "n": 1,

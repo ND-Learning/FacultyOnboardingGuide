@@ -168,11 +168,8 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1206363761761978,Carbon Neutral,Lesson 5: Low Carbon Transportation / Diverse Mobility Methods,5,5,3,2024-03-14T12:44:06.290000+00:00,2024-04-25T15:21:09.019000+00:00,42,0.0,0.0,9,0,0,0.2
 1206363761761978,Carbon Neutral,Media Pre-Production,3,3,3,2024-02-12T20:04:16.557000+00:00,2024-04-04T14:12:35.736000+00:00,52,0.0,0.0,6,0,0,0.33
 1206363761761978,Carbon Neutral,Memory Palace: Interscene Environment,5,5,2,2024-02-08T14:07:41.745000+00:00,2024-04-25T15:13:28.900000+00:00,77,0.0,0.0,15,0,0,0.2
-1209254874093285,Colin's Projects,3 Title Cards,3,3,0,2025-01-31T20:52:18.303000+00:00,2025-01-31T20:52:19.964000+00:00,0,231.0,3.85,0,0,0,0.33
-1209254874093285,Colin's Projects,AI for the Notre Dame Community,2,0,0,,,,960.0,16.0,0,0,0,0.5
-1209254874093285,Colin's Projects,Final Report,2,0,0,,,,0.0,0.0,0,0,0,0.5
-1209254874093285,Colin's Projects,Graphics Toolkit,1,0,0,,,,0.0,0.0,0,0,0,1.0
-1209254874093285,Colin's Projects,Untitled section,1,1,1,2026-04-29T13:07:44.876000+00:00,2026-04-29T13:07:44.876000+00:00,0,60.0,1.0,0,0,0,1.0
+1209254874093285,Colin's Projects,Active Requests,1,0,1,,,,0.0,0.0,0,0,0,1.0
+1209254874093285,Colin's Projects,Finished tasks,9,4,1,2025-01-31T20:52:18.303000+00:00,2026-04-29T13:07:44.876000+00:00,453,1251.0,20.85,0,0,0,0.11
 1204789220328740,College BouND,To do,3,2,1,2023-06-08T18:59:11.377000+00:00,2023-06-08T18:59:11.870000+00:00,0,0.0,0.0,0,0,0,0.33
 1209111135522151,Commonalities in the Modern Irish and Jewish Experiences,Analysis,3,0,1,,,,0.0,0.0,0,0,0,0.33
 1209111135522151,Commonalities in the Modern Irish and Jewish Experiences,Design,4,0,1,,,,0.0,0.0,0,0,0,0.25
@@ -382,7 +379,7 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1207871566050072,NDL Project Tracking & Awareness,Create project - LAITL,8,8,1,2025-08-25T15:28:39.393000+00:00,2026-03-19T13:23:03.603000+00:00,206,0.0,0.0,0,0,0,0.12
 1207871566050072,NDL Project Tracking & Awareness,On Hold,3,0,1,,,,0.0,0.0,0,0,0,0.33
 1207871566050072,NDL Project Tracking & Awareness,Reached out - No response,2,2,1,2025-09-15T18:28:25.518000+00:00,2025-09-16T18:37:55.991000+00:00,1,0.0,0.0,0,0,0,0.5
-1207871566050072,NDL Project Tracking & Awareness,Received Requests - Triage Needed,2,0,1,,,,0.0,0.0,0,0,0,0.5
+1207871566050072,NDL Project Tracking & Awareness,Received Requests - Triage Needed,3,0,2,,,,0.0,0.0,0,0,0,0.33
 1207871566050072,NDL Project Tracking & Awareness,Resolved,7,7,2,2025-09-04T19:21:27.764000+00:00,2026-04-27T18:10:48.781000+00:00,235,0.0,0.0,0,0,0,0.14
 1207871566050072,NDL Project Tracking & Awareness,Under Review by Unit,3,0,1,,,,0.0,0.0,0,0,0,0.33
 1213292120696339,NEON - POLS 30022 (Poly Sci),Analysis,3,0,1,,,,0.0,0.0,0,0,0,0.33
@@ -733,7 +730,7 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1208335647365619,Virtual Borders,Design,6,6,1,2025-01-14T14:12:49.441000+00:00,2025-01-14T14:12:52.691000+00:00,0,0.0,0.0,10,0,0,0.17
 1208335647365619,Virtual Borders,Final Development,8,8,1,2026-07-27T17:17:10.022000+00:00,2026-08-21T14:34:32.214000+00:00,25,1905.0,31.75,0,0,0,0.12
 1208335647365619,Virtual Borders,Launch / Post-Launch,5,0,1,,,,0.0,0.0,0,0,0,0.2
-1208335647365619,Virtual Borders,Media Timetracking,10,0,0,,,,1110.0,18.5,0,0,0,0.1
+1208335647365619,Virtual Borders,Media Timetracking,10,0,0,,,,1455.0,24.25,0,0,0,0.1
 1207943893531837,Virtual Borders,Pre-Production,2,0,0,,,,0.0,0.0,4,0,0,0.5
 1208335647365619,Virtual Borders,Pre-Production,4,4,1,2025-02-10T18:00:52.129000+00:00,2026-07-27T15:41:43.938000+00:00,532,870.0,14.5,9,0,0,0.25
 1207943893531837,Virtual Borders,Production,2,0,0,,,,0.0,0.0,0,0,0,0.5
