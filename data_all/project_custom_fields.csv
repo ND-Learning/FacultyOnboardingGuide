@@ -964,7 +964,7 @@ project_gid,project_name,custom_field_gid,custom_field_name,resource_subtype,dis
 1212638028024693,Stata bootcamp modules,1212955082668042,Impact Tracker Status,enum,Up to date,,,Up to date,,,,
 1212638028024693,Stata bootcamp modules,1216016157752495,Estimated time (total),number,218h 00m,,13080,,,,,
 1212638028024693,Stata bootcamp modules,1216016157752497,Actual costs (total),number,0.00,,0,,,,,
-1212638028024693,Stata bootcamp modules,1216016157752503,Actual time (total),number,66h 02m,,3962,,,,,
+1212638028024693,Stata bootcamp modules,1216016157752503,Actual time (total),number,75h 32m,,4532,,,,,
 1212638028024693,Stata bootcamp modules,1216016157752493,Estimated costs (total),number,0.00,,0,,,,,
 1212638028070139,CIF Video,1206060337251839,Priority,enum,,,,,,,,
 1212638028070139,CIF Video,1209308807420092,Post-Project Status,enum,,,,,,,,
