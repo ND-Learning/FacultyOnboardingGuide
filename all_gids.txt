@@ -42,7 +42,7 @@
 1208106677387294  # AI-Assisted Class Prep
 1208134694786942  # Kaneb Center - Sprint Template
 1208228223654867  # Capacity Planning
-1208255134985033  # AR Math Visualizer (Summer 2025 Pilot)
+1208255134985033  # AR Math Visualizer (Summer 2026 Pilot)
 1208255134985064  # ODL Podcast
 1208335646825701  # Michael's PM Tasks
 1208335647365619  # Virtual Borders
@@ -180,6 +180,9 @@
 1217688349350338  # Kate the Chemist (editing videos)
 1217688349350342  # Test Project
 1217793330575939  # ASCEND Portfolio
+1218012805723892  # ODL Internal Canvas Site
+1218014833091965  # Tech Blitz partnership with TLT (Summer Online)
+1218014833091969  # Listening Session with Students
 1204789220328740  # College BouND
 1204818761552639  # DX Course Design
 1204843864198221  # Inclusivity Modules
