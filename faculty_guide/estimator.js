@@ -442,7 +442,7 @@
       },
       "records_with_assets": 32,
       "records_with_satisfaction": 24,
-      "matched_records": 53,
+      "matched_records": 54,
       "outcomes": {
         "faculty_satisfaction_index": {
           "n": 24,
