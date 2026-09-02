@@ -1092,7 +1092,7 @@ project_gid,project_name,custom_field_gid,custom_field_name,resource_subtype,dis
 1213292120696334,NEON - R&E AI,1216016157752493,Estimated costs (total),number,0.00,,0,,,,,
 1213292120696334,NEON - R&E AI,1216016157752495,Estimated time (total),number,167h 00m,,10020,,,,,
 1213292120696334,NEON - R&E AI,1216016157752497,Actual costs (total),number,0.00,,0,,,,,
-1213292120696334,NEON - R&E AI,1216016157752503,Actual time (total),number,117h 00m,,7020,,,,,
+1213292120696334,NEON - R&E AI,1216016157752503,Actual time (total),number,117h 30m,,7050,,,,,
 1213292120696339,NEON - POLS 30022 (Poly Sci),1206060337251839,Priority,enum,,,,,,,,
 1213292120696339,NEON - POLS 30022 (Poly Sci),1216016157752497,Actual costs (total),number,0.00,,0,,,,,
 1213292120696339,NEON - POLS 30022 (Poly Sci),1216016157752493,Estimated costs (total),number,0.00,,0,,,,,
