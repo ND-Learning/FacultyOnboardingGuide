@@ -309,8 +309,8 @@
       "available": true,
       "source": "data_all/task_custom_fields.csv",
       "metric_scope": "Impact Tracker board tasks only",
-      "value_count": 5624,
-      "field_count": 38,
+      "value_count": 5772,
+      "field_count": 39,
       "all_fields": [
         "Academic Department",
         "Additional Comments",
@@ -320,6 +320,7 @@
         "Faculty Collaborators",
         "Faculty Satisfaction Index",
         "Fees",
+        "Fiscal Year",
         "Google Drive Folder Title",
         "Graphics",
         "Handoff Document",
