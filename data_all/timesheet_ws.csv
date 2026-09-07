@@ -4918,6 +4918,8 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Yi Lu,2026-08-31,60,1.0
 ,,,,,,,,Kevin DeCloedt,2026-08-31,90,1.5
 ,,,,,,,,Kevin DeCloedt,2026-08-31,120,2.0
+,,,,,,,,Colin Gallagher,2026-08-31,120,2.0
+,,,,,,,,Colin Gallagher,2026-08-31,120,2.0
 ,,,,,,,,Annie Conaghan,2026-09-01,30,0.5
 ,,,,,,,,Annie Conaghan,2026-09-01,30,0.5
 ,,,,,,,,Annie Conaghan,2026-09-01,360,6.0
@@ -4942,6 +4944,7 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Matthew Simmons,2026-09-03,300,5.0
 ,,,,,,,,Yi Lu,2026-09-03,120,2.0
 ,,,,,,,,Kevin DeCloedt,2026-09-03,60,1.0
+,,,,,,,,Colin Gallagher,2026-09-03,180,3.0
 ,,,,,,,,Brianna Stines,2026-09-04,60,1.0
 ,,,,,,,,Brianna Stines,2026-09-04,120,2.0
 ,,,,,,,,Brianna Stines,2026-09-04,60,1.0
@@ -4949,3 +4952,5 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Kevin DeCloedt,2026-09-04,60,1.0
 ,,,,,,,,Kevin DeCloedt,2026-09-04,60,1.0
 ,,,,,,,,Kevin DeCloedt,2026-09-04,30,0.5
+,,,,,,,,Colin Gallagher,2026-09-04,120,2.0
+,,,,,,,,Colin Gallagher,2026-09-04,60,1.0
