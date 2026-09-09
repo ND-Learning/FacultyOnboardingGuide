@@ -2250,6 +2250,27 @@ Proposed project timeline:
 1207871566050072,NDL Project Tracking & Awareness,1210907694437230,[Converted to project] Fall 2025 Faculty AI in Teaching and Learning Needs Assessment,Create Project - Kaneb Center,Create Project - Kaneb Center,1210756427078203,Link to documentation,text,The current draft of the survey instrument is at https://docs.google.com/document/d/14RLt8s6gyKWH_SH0GSj9yce7WzM-NIgmexJ6_k77RjQ/edit?usp=sharing,The current draft of the survey instrument is at https://docs.google.com/document/d/14RLt8s6gyKWH_SH0GSj9yce7WzM-NIgmexJ6_k77RjQ/edit?usp=sharing,,,,,,
 1207871566050072,NDL Project Tracking & Awareness,1210907694437230,[Converted to project] Fall 2025 Faculty AI in Teaching and Learning Needs Assessment,Create Project - Kaneb Center,Create Project - Kaneb Center,1210850449329256,Fast Track,enum,No,,,No,,,,
 1207871566050072,NDL Project Tracking & Awareness,1210907694437230,[Converted to project] Fall 2025 Faculty AI in Teaching and Learning Needs Assessment,Create Project - Kaneb Center,Create Project - Kaneb Center,1210850449329262,Department Responsibility,enum,Kaneb Center,,,Kaneb Center,,,,
+1207871566050072,NDL Project Tracking & Awareness,1218334037328446,PhD Application Writing Sample,Consultations,Consultations,1207871566050120,Email Address,text,estabel@nd.edu,estabel@nd.edu,,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1218334037328446,PhD Application Writing Sample,Consultations,Consultations,1207871566050124,Description of Project,text,"Hi everyone,
+
+I need some assistance with my writing sample. My respective Professors are on Sabatical and cant healp me with this. Is it possible to get a feedback for 3 writing samples?
+
+My best,
+Lisa","Hi everyone,
+
+I need some assistance with my writing sample. My respective Professors are on Sabatical and cant healp me with this. Is it possible to get a feedback for 3 writing samples?
+
+My best,
+Lisa",,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1218334037328446,PhD Application Writing Sample,Consultations,Consultations,1207871566050147,Title,text,PhD Application Writing Sample,PhD Application Writing Sample,,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1218334037328446,PhD Application Writing Sample,Consultations,Consultations,1207871566050150,NDL Project Status,enum,Consultation,,,Consultation,,,,
+1207871566050072,NDL Project Tracking & Awareness,1218334037328446,PhD Application Writing Sample,Consultations,Consultations,1209314408320777,First Name,text,Elisabeth Stabel,Elisabeth Stabel,,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1218334037328446,PhD Application Writing Sample,Consultations,Consultations,1209314408320779,Last Name,text,Stabel,Stabel,,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1218334037328446,PhD Application Writing Sample,Consultations,Consultations,1209314408320781,Relevant,multi_enum,Assessment,,,,Assessment,,,
+1207871566050072,NDL Project Tracking & Awareness,1218334037328446,PhD Application Writing Sample,Consultations,Consultations,1209314408320799,College / School / Unit,enum,Keough School,,,Keough School,,,,
+1207871566050072,NDL Project Tracking & Awareness,1218334037328446,PhD Application Writing Sample,Consultations,Consultations,1210756427078203,Link to documentation,text,,,,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1218334037328446,PhD Application Writing Sample,Consultations,Consultations,1210850449329256,Fast Track,enum,,,,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1218334037328446,PhD Application Writing Sample,Consultations,Consultations,1210850449329262,Department Responsibility,enum,,,,,,,,
 1207871566050072,NDL Project Tracking & Awareness,1217883561803066,From Archive to Digital Edition,Consultations,Consultations,1207871566050120,Email Address,text,cjones23@nd.edu,cjones23@nd.edu,,,,,,
 1207871566050072,NDL Project Tracking & Awareness,1217883561803066,From Archive to Digital Edition,Consultations,Consultations,1207871566050124,Description of Project,text,"As part of a Research Collaborative co-funded by the Franco Institute and the Global Catholic Research Initiative, this semester I am teaching a course in which I am teaching the students to edit German-language handwritten materials that we own in the ND Archives, translate them into English, encode them in TEI mark-up, and create a web edition interface. I have been in touch with Dan Johnson about all of this, but I want to incorporate AI into the process of learning and he is not an expert in that. Please help me! The semester has already started...","As part of a Research Collaborative co-funded by the Franco Institute and the Global Catholic Research Initiative, this semester I am teaching a course in which I am teaching the students to edit German-language handwritten materials that we own in the ND Archives, translate them into English, encode them in TEI mark-up, and create a web edition interface. I have been in touch with Dan Johnson about all of this, but I want to incorporate AI into the process of learning and he is not an expert in that. Please help me! The semester has already started...",,,,,,
 1207871566050072,NDL Project Tracking & Awareness,1217883561803066,From Archive to Digital Edition,Consultations,Consultations,1207871566050147,Title,text,From Archive to Digital Edition,From Archive to Digital Edition,,,,,,
@@ -15720,7 +15741,7 @@ This project is part of the Strategic Framework Internal Seed Grants (SFISG). ",
 1215176396318246,Sprint - Lost in Transliteration,1215177672644681,Create Final Report,Post-Project Evaluation,Post-Project Evaluation,1203976499880499,Estimated time,number,,,,,,,,
 1215176396318246,Sprint - Lost in Transliteration,1215177672644681,Create Final Report,Post-Project Evaluation,Post-Project Evaluation,1215177622047126,Responsible Team,enum,Project Manager,,,Project Manager,,,,
 1217688349350342,Test Project,1217841853661983,TEST - Donut Course,Untitled section,Untitled section,1217698486937526,ID,text,NDL-1,NDL-1,,,,,,
-1217688349350342,Test Project,1217841853661983,TEST - Donut Course,Untitled section,Untitled section,1217688349350345,Workflow Status,enum,Retrospective Completed,,,Retrospective Completed,,,,
+1217688349350342,Test Project,1217841853661983,TEST - Donut Course,Untitled section,Untitled section,1217688349350345,Workflow Status,enum,Internal Meeting,,,Internal Meeting,,,,
 1217688349350342,Test Project,1217841853661983,TEST - Donut Course,Untitled section,Untitled section,1217841853661990,Drive Folder URL,text,https://drive.google.com/drive/folders/15X7R2wfQWHpLtnC5-yja1LsXDLXdaMIT,https://drive.google.com/drive/folders/15X7R2wfQWHpLtnC5-yja1LsXDLXdaMIT,,,,,,
 1217688349350342,Test Project,1217841853661987,New Course,Untitled section,Untitled section,1217698486937526,ID,text,NDL-3,NDL-3,,,,,,
 1217688349350342,Test Project,1217841853661987,New Course,Untitled section,Untitled section,1217688349350345,Workflow Status,enum,Project Initiated - ODL,,,Project Initiated - ODL,,,,
