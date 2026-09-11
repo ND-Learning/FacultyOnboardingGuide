@@ -16,5 +16,6 @@ gid,name,logged_hours,reason
 1207760971753624,Program for Inclusive Education (PIE) Videos,7.5,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
 1208031565604539,ACE Ascent Phase IV,7.08,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
 1214795652576790,Maximizing Mendoza,6.5,coverage drift: 1 task completion(s) more than 60d after last time entry (2026-05-21) -- demoted to partial; set force_coverage=full in the registry to re-admit
+1218406245983939,Kate the Chemist,5.0,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
 1207473416887619,Sprint: Molecular Neuroscience (Branco),4.52,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
 1213084870202768,Beginning Italian 1,4.0,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv

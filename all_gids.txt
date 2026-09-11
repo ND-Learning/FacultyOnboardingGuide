@@ -183,6 +183,8 @@
 1218012805723892  # ODL Internal Canvas Site
 1218014833091965  # Tech Blitz partnership with TLT (Summer Online)
 1218014833091969  # Listening Session with Students
+1218384372969057  # I-Lab Portal
+1218406245983939  # Kate the Chemist
 1204789220328740  # College BouND
 1204818761552639  # DX Course Design
 1204843864198221  # Inclusivity Modules

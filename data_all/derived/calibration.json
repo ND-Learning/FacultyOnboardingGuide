@@ -1,8 +1,8 @@
 {
   "_provenance": {
-    "source": "data_all/time_entries.csv (3,353 entries, 2919.8h, 2024-07-10..2026-08-26, ODL staff time)",
+    "source": "data_all/time_entries.csv (3,358 entries, 2927.8h, 2024-07-10..2026-09-11, ODL staff time)",
     "calibration_set": "23 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 19 of them with >=10h non-PM logging",
-    "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 3041, 'task_name': 127, 'none': 185}",
+    "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 3043, 'task_name': 127, 'none': 188}",
     "no_guessing": "blocks state 'not_calibratable' where data is insufficient"
   },
   "archetype_effort_hours": {
@@ -25,7 +25,7 @@
       "projects": {
         "AI for the Notre Dame Community": 286.5,
         "Responsible and Ethical AI": 98.9,
-        "Virtual Borders": 154.0,
+        "Virtual Borders": 155.0,
         "ASCEND Engineering": 27.5,
         "ASCEND MCOB": 80.2,
         "The Qur’an and the Bible (Gabriel Reynolds)": 46.7,
@@ -329,11 +329,11 @@
     }
   },
   "full_course_phase_mix": {
-    "basis": "pooled non-PM hours of 12 full-coverage full_course projects (925.5h)",
+    "basis": "pooled non-PM hours of 12 full-coverage full_course projects (926.5h)",
     "share_pct": {
-      "Production": 35.2,
+      "Production": 35.3,
       "Post-Production": 23.3,
-      "Development/Build": 20.3,
+      "Development/Build": 20.2,
       "Pre-Production": 11.3,
       "Design": 8.1,
       "Other / unsorted": 1.4,
@@ -498,11 +498,11 @@
   },
   "impact_tracker": {
     "field": "cf::Impact Tracker Status",
-    "basis": "data_all/projects.csv Asana project custom field across 240 pulled projects",
-    "total_projects": 240,
+    "basis": "data_all/projects.csv Asana project custom field across 242 pulled projects",
+    "total_projects": 242,
     "tracked_projects": 33,
-    "blank_projects": 207,
-    "coverage_pct": 13.8,
+    "blank_projects": 209,
+    "coverage_pct": 13.6,
     "status_counts": {
       "Outdated": 19,
       "Up to date": 14
@@ -1098,10 +1098,10 @@
         "ape_pct": 52.8
       },
       {
-        "actual": 154.0,
+        "actual": 155.0,
         "pred_p50": 46.7,
         "in_iqr": false,
-        "ape_pct": 69.7
+        "ape_pct": 69.9
       },
       {
         "actual": 286.5,

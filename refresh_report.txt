@@ -1,8 +1,8 @@
-ODL estimator refresh -- 2026-09-10T15:47:14
+ODL estimator refresh -- 2026-09-11T15:43:31
 pull: ran | published to Canvas: no
 
 headline numbers (before -> after):
-     total_logged_hours: 2919.8 -> 2919.8
+  -> total_logged_hours: 2919.8 -> 2927.8
      calibration_set: 23 -> 23
      full_course_p50_h: 48.0 -> 48.0
      full_course_n: 12 -> 12
@@ -10,7 +10,9 @@ headline numbers (before -> after):
      video_blended_h: 11.8 -> 11.8
      full_course_median_weeks: 31.4 -> 31.4
 
-ACTION NEEDED -- 19 project(s) await a human decision (excluded from calibration until resolved):
+ACTION NEEDED -- the Canvas bundle CHANGED but was not auto-published (no Canvas token). Re-upload faculty_guide/canvas_upload/ODL_Faculty_Onboarding_Guide.html to Canvas Files with the SAME filename and choose Replace (~1 minute).
+
+ACTION NEEDED -- 20 project(s) await a human decision (excluded from calibration until resolved):
   - PM Projects (271.6h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
   - Veterans College Math Readiness Course (108.83h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
   - Spectrum X Consultation (51.74h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
@@ -28,6 +30,7 @@ ACTION NEEDED -- 19 project(s) await a human decision (excluded from calibration
   - Program for Inclusive Education (PIE) Videos (7.5h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
   - ACE Ascent Phase IV (7.08h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
   - Maximizing Mendoza (6.5h): coverage drift: 1 task completion(s) more than 60d after last time entry (2026-05-21) -- demoted to partial; set force_coverage=full in the 
+  - Kate the Chemist (5.0h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
   - Sprint: Molecular Neuroscience (Branco) (4.52h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
   - Beginning Italian 1 (4.0h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
   Fix: add/update the row in project_registry.csv, then re-run refresh.

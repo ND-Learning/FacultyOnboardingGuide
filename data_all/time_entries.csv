@@ -181,6 +181,7 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 1208031566113859,FCTA - Calculus I,1210774346274895,Identifying big ideas,Goal development,Goal development,,,Kuangchen Hsu,2025-07-18,15.0,0.25
 1208255134985064,ODL Podcast,1212947637136936,1/19/26-1/23/26,Media Timetracking (Matthew),Media Timetracking (Matthew),Matthew Simmons,,Matthew Simmons,2026-01-23,90.0,1.5
 1208255134985064,ODL Podcast,1212980168825583,1/26/26 - 1/30/26,Media Timetracking (Matthew),Media Timetracking (Matthew),,,Matthew Simmons,2026-01-26,15.0,0.25
+1208255134985064,ODL Podcast,1218406227829240,9/7 - 9/11,Media Timetracking (Matthew),Media Timetracking (Matthew),,,Matthew Simmons,2026-09-10,120.0,2.0
 1208255134985064,ODL Podcast,1215431513606701,Rebecca Goldstein,Need to Book,Need to Book,,,Matthew Simmons,2026-06-04,20.0,0.333
 1208255134985064,ODL Podcast,1215431513606701,Rebecca Goldstein,Need to Book,Need to Book,,,Matthew Simmons,2026-06-04,45.0,0.75
 1208255134985064,ODL Podcast,1208719707524133,Rebecca Glazier,Released,Released,Ted Fox,,Alyssa Neece,2025-02-05,120.0,2.0
@@ -227,6 +228,7 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 1208335647365619,Virtual Borders,1217338957146684,8/24 - 8/28,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-08-24,60.0,1.0
 1208335647365619,Virtual Borders,1217338957146684,8/24 - 8/28,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-08-25,90.0,1.5
 1208335647365619,Virtual Borders,1217338957146684,8/24 - 8/28,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-08-26,195.0,3.25
+1208335647365619,Virtual Borders,1218190302076046,9/7 - 9/11,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-09-09,60.0,1.0
 1208335647365619,Virtual Borders,1208337654431778,Determine Filming Specifics,Pre-Production,Pre-Production,,,Alyssa Neece,2025-01-21,90.0,1.5
 1208335647365619,Virtual Borders,1208337654431778,Determine Filming Specifics,Pre-Production,Pre-Production,,,Alyssa Neece,2025-01-24,30.0,0.5
 1208335647365619,Virtual Borders,1208337654431778,Determine Filming Specifics,Pre-Production,Pre-Production,,,Alyssa Neece,2025-01-29,135.0,2.25
@@ -2464,6 +2466,9 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 1214795652576790,Maximizing Mendoza,1214795650627341,Develop Course Structure / Flow,Design,Design,Brianna Stines,Design,Brianna Stines,2026-05-19,60.0,1.0
 1214795652576790,Maximizing Mendoza,1215046555413004,Bri,Meetings,Meetings,,,Brianna Stines,2026-05-21,120.0,2.0
 1214795652576790,Maximizing Mendoza,1215046555413006,Annie,Meetings,Meetings,,,Brianna Stines,2026-05-21,120.0,2.0
+1218406245983939,Kate the Chemist,1218406227829216,9/7 - 9/11,Time Tracking,Time Tracking,,,Matthew Simmons,2026-09-09,120.0,2.0
+1218406245983939,Kate the Chemist,1218406227829216,9/7 - 9/11,Time Tracking,Time Tracking,,,Matthew Simmons,2026-09-10,120.0,2.0
+1218406245983939,Kate the Chemist,1218406227829216,9/7 - 9/11,Time Tracking,Time Tracking,,,Kevin DeCloedt,2026-09-11,60.0,1.0
 1207473416887619,Sprint: Molecular Neuroscience (Branco),1208066397045779,IVQs in Panopto videos,Development,Development,Brianna Stines,,Brianna Stines,2024-12-02,120.0,2.0
 1207473416887619,Sprint: Molecular Neuroscience (Branco),1208066397045777,Videos on platform (external tool assignments),Development,Development,Brianna Stines,,Brianna Stines,2024-12-02,60.0,1.0
 1207473416887619,Sprint: Molecular Neuroscience (Branco),1208885965211463,handoff document + video recording (in lieu of meeting),Implementation,Implementation,,,Brianna Stines,2024-12-02,1.0,0.017

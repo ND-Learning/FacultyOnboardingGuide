@@ -300,6 +300,8 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1212660246856608,Jim Lang Coursera Course,Production,1,0,1,,,,0.0,0.0,0,0,0,1.0
 1208134694786942,Kaneb Center - Sprint Template,Pre-Production,2,0,0,,,,0.0,0.0,4,0,0,0.5
 1208134694786942,Kaneb Center - Sprint Template,Production,2,0,0,,,,0.0,0.0,0,0,0,0.5
+1218406245983939,Kate the Chemist,Post-Production,5,0,0,,,,0.0,0.0,0,0,0,0.2
+1218406245983939,Kate the Chemist,Time Tracking,3,0,0,,,,300.0,5.0,0,0,0,0.33
 1213316231353035,LAITL Faculty Fellows,Untitled section,4,1,4,2025-10-06T14:03:36.469000+00:00,2025-10-06T14:03:36.469000+00:00,0,0.0,0.0,0,0,0,0.25
 1210951195644528,LD Projects,AI Working Group,18,18,1,2025-08-01T17:32:41.248000+00:00,2026-01-15T15:42:39.087000+00:00,167,0.0,0.0,63,0,0,0.06
 1209103142080500,Lawrence Time and Capacity Tracking Part 1,Daily Tracking,6,6,1,2025-01-14T13:52:28.690000+00:00,2025-01-19T15:38:08.135000+00:00,5,2625.0,43.75,0,0,0,0.17
@@ -408,7 +410,7 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1213551317973102,ODL Media Studio Sessions,Incoming Requests,1,0,0,,,,0.0,0.0,0,0,0,1.0
 1213551317973102,ODL Media Studio Sessions,Survey Response,3,0,0,,,,0.0,0.0,0,0,0,0.33
 1208255134985064,ODL Podcast,Launch,10,10,1,2024-09-19T13:17:44.154000+00:00,2024-11-01T15:49:05.104000+00:00,43,0.0,0.0,0,0,0,0.1
-1208255134985064,ODL Podcast,Media Timetracking (Matthew),4,0,1,,,,105.0,1.75,0,0,0,0.25
+1208255134985064,ODL Podcast,Media Timetracking (Matthew),6,0,1,,,,225.0,3.75,0,0,0,0.17
 1208255134985064,ODL Podcast,Need to Book,2,0,0,,,,65.0,1.08,16,0,0,0.5
 1208255134985064,ODL Podcast,Released,15,15,2,2025-01-09T15:56:29.710000+00:00,2026-05-04T15:05:14.625000+00:00,480,950.0,15.83,121,0,0,0.07
 1208740211406775,ODL Project Estimations,Animation & Graphic Design,11,0,0,,,,0.0,0.0,0,0,0,0.09
@@ -730,7 +732,7 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1208335647365619,Virtual Borders,Design,6,6,1,2025-01-14T14:12:49.441000+00:00,2025-01-14T14:12:52.691000+00:00,0,0.0,0.0,10,0,0,0.17
 1208335647365619,Virtual Borders,Final Development,8,8,1,2026-07-27T17:17:10.022000+00:00,2026-08-21T14:34:32.214000+00:00,25,1905.0,31.75,0,0,0,0.12
 1208335647365619,Virtual Borders,Launch / Post-Launch,5,0,1,,,,0.0,0.0,0,0,0,0.2
-1208335647365619,Virtual Borders,Media Timetracking,12,0,0,,,,1455.0,24.25,0,0,0,0.08
+1208335647365619,Virtual Borders,Media Timetracking,12,0,0,,,,1515.0,25.25,0,0,0,0.08
 1207943893531837,Virtual Borders,Pre-Production,2,0,0,,,,0.0,0.0,4,0,0,0.5
 1208335647365619,Virtual Borders,Pre-Production,4,4,1,2025-02-10T18:00:52.129000+00:00,2026-07-27T15:41:43.938000+00:00,532,870.0,14.5,9,0,0,0.25
 1207943893531837,Virtual Borders,Production,2,0,0,,,,0.0,0.0,0,0,0,0.5
