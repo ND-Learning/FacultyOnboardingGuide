@@ -279,7 +279,7 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1211900373500710,I CAN HELP Learning Modules,Post-Project Evaluation,4,0,0,,,,0.0,0.0,0,0,0,0.25
 1211900373500710,I CAN HELP Learning Modules,Pre-Production,1,0,0,,,,0.0,0.0,0,0,0,1.0
 1211900373500710,I CAN HELP Learning Modules,Untitled section,2,2,2,2025-10-16T17:28:24.775000+00:00,2025-10-16T17:41:20.406000+00:00,0,0.0,0.0,0,0,0,0.5
-1211592424221769,Impact Tracker,Untitled section,149,0,0,,,,0.0,0.0,0,0,0,0.01
+1211592424221769,Impact Tracker,Untitled section,150,0,0,,,,0.0,0.0,0,0,0,0.01
 1207817115500023,Innovation and Design Thinking XR,Post Production,9,9,0,2024-08-22T18:05:06.425000+00:00,2024-10-07T17:38:34+00:00,46,0.0,0.0,0,0,0,0.11
 1207817115500023,Innovation and Design Thinking XR,Regroup,2,2,1,2024-08-14T23:21:26.008000+00:00,2024-08-15T20:09:54.212000+00:00,1,0.0,0.0,0,0,0,0.5
 1207817115500023,Innovation and Design Thinking XR,Untitled section,1,1,1,2024-10-04T13:35:16.429000+00:00,2024-10-04T13:35:16.429000+00:00,0,0.0,0.0,0,0,0,1.0
@@ -335,10 +335,10 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1214795652576790,Maximizing Mendoza,Design,9,0,1,,,,150.0,2.5,0,0,0,0.11
 1214795652576790,Maximizing Mendoza,Design Development,5,0,0,,,,0.0,0.0,0,0,0,0.2
 1214795652576790,Maximizing Mendoza,Meetings,2,0,0,,,,240.0,4.0,0,0,0,0.5
-1214795652576790,Maximizing Mendoza,Post-Production,1,0,0,,,,0.0,0.0,0,0,0,1.0
+1214795652576790,Maximizing Mendoza,Post-Production,9,8,1,2026-09-14T17:32:04.217000+00:00,2026-09-14T17:32:04.504000+00:00,0,0.0,0.0,0,0,0,0.11
 1214795652576790,Maximizing Mendoza,Post-Project Evaluation,4,0,0,,,,0.0,0.0,0,0,0,0.25
-1214795652576790,Maximizing Mendoza,Pre-Production,6,1,0,2026-08-17T14:21:28.191000+00:00,2026-08-17T14:21:28.191000+00:00,0,0.0,0.0,0,0,0,0.17
-1214795652576790,Maximizing Mendoza,Production,2,0,0,,,,0.0,0.0,0,0,0,0.5
+1214795652576790,Maximizing Mendoza,Pre-Production,6,2,1,2026-08-17T14:21:28.191000+00:00,2026-09-14T17:32:23.373000+00:00,28,0.0,0.0,0,0,0,0.17
+1214795652576790,Maximizing Mendoza,Production,10,8,1,2026-09-14T17:27:14.629000+00:00,2026-09-14T17:27:14.935000+00:00,0,0.0,0.0,0,0,0,0.1
 1214795652576790,Maximizing Mendoza,Untitled section,4,4,4,2026-05-13T19:45:12.130000+00:00,2026-05-13T19:45:19.500000+00:00,0,0.0,0.0,0,0,0,0.25
 1207984230724300,Media Only Project,Analysis,5,0,0,,,,0.0,0.0,0,0,0,0.2
 1207984230724300,Media Only Project,Design,3,0,0,,,,0.0,0.0,0,0,0,0.33

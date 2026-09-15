@@ -144,12 +144,12 @@
         "note": "n<4 -- raw values shown; interpolated quartiles withheld"
       },
       "full_course": {
-        "n": 25,
+        "n": 26,
         "min": 0.5,
-        "p25": 17.2,
-        "p50": 31.4,
-        "p75": 42.0,
-        "p80": 49.8,
+        "p25": 17.3,
+        "p50": 28.9,
+        "p75": 41.9,
+        "p80": 49.7,
         "max": 95.4
       },
       "podcast": {
@@ -309,7 +309,7 @@
       "available": true,
       "source": "data_all/task_custom_fields.csv",
       "metric_scope": "Impact Tracker board tasks only",
-      "value_count": 5811,
+      "value_count": 5850,
       "field_count": 39,
       "all_fields": [
         "Academic Department",
@@ -352,7 +352,7 @@
         "Web Page Modules",
         "XR experiences"
       ],
-      "record_count": 149,
+      "record_count": 150,
       "detected_asset_fields": [
         "Canvas Courses",
         "Graphics",
@@ -394,7 +394,7 @@
           "max": 1.0
         },
         "Total Assets": {
-          "n": 149,
+          "n": 150,
           "min": 0.0,
           "p25": 0.0,
           "p50": 0.0,
@@ -443,7 +443,7 @@
       },
       "records_with_assets": 32,
       "records_with_satisfaction": 24,
-      "matched_records": 55,
+      "matched_records": 56,
       "outcomes": {
         "faculty_satisfaction_index": {
           "n": 24,
@@ -530,7 +530,7 @@
       "tracker_status_counts": {
         "Complete": 78,
         "No Documentation": 34,
-        "In Progress": 31,
+        "In Progress": 32,
         "On Hold": 4
       },
       "assets_produced_total": 359.0,
