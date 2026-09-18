@@ -229,6 +229,7 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 1208335647365619,Virtual Borders,1217338957146684,8/24 - 8/28,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-08-25,90.0,1.5
 1208335647365619,Virtual Borders,1217338957146684,8/24 - 8/28,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-08-26,195.0,3.25
 1208335647365619,Virtual Borders,1218190302076046,9/7 - 9/11,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-09-09,60.0,1.0
+1208335647365619,Virtual Borders,1218608321544608,9/14 - 9/18,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-09-14,30.0,0.5
 1208335647365619,Virtual Borders,1208337654431778,Determine Filming Specifics,Pre-Production,Pre-Production,,,Alyssa Neece,2025-01-21,90.0,1.5
 1208335647365619,Virtual Borders,1208337654431778,Determine Filming Specifics,Pre-Production,Pre-Production,,,Alyssa Neece,2025-01-24,30.0,0.5
 1208335647365619,Virtual Borders,1208337654431778,Determine Filming Specifics,Pre-Production,Pre-Production,,,Alyssa Neece,2025-01-29,135.0,2.25
@@ -2405,6 +2406,8 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 1212638027964018,Ultrasound Communication Video,1217338957146676,8/10 - 8/14,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-08-12,120.0,2.0
 1212638027964018,Ultrasound Communication Video,1217338957146676,8/10 - 8/14,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-08-13,420.0,7.0
 1212638027964018,Ultrasound Communication Video,1217338957146678,8/17 - 8/21,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-08-20,90.0,1.5
+1212638027964018,Ultrasound Communication Video,1218608321544617,9/14 - 9/18,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-09-14,90.0,1.5
+1212638027964018,Ultrasound Communication Video,1218608321544617,9/14 - 9/18,Media Timetracking,Media Timetracking,,,Matthew Simmons,2026-09-17,120.0,2.0
 1212638027964018,Ultrasound Communication Video,1212660352666713,Create Course Map Document,Design,Design,,Design,Brianna Stines,2026-04-30,30.0,0.5
 1212638027964018,Ultrasound Communication Video,1212638028068004,Develop Learning Objectives,Design,Design,,Design,Brianna Stines,2026-04-30,120.0,2.0
 1212638027964018,Ultrasound Communication Video,1212638028068011,Develop Course Structure / Flow,Design,Design,,Design,Brianna Stines,2026-04-30,120.0,2.0
@@ -2469,6 +2472,9 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 1218406245983939,Kate the Chemist,1218406227829216,9/7 - 9/11,Time Tracking,Time Tracking,,,Matthew Simmons,2026-09-09,120.0,2.0
 1218406245983939,Kate the Chemist,1218406227829216,9/7 - 9/11,Time Tracking,Time Tracking,,,Matthew Simmons,2026-09-10,120.0,2.0
 1218406245983939,Kate the Chemist,1218406227829216,9/7 - 9/11,Time Tracking,Time Tracking,,,Kevin DeCloedt,2026-09-11,60.0,1.0
+1218406245983939,Kate the Chemist,1218406227829218,9/14 - 9/18,Time Tracking,Time Tracking,,,Matthew Simmons,2026-09-14,45.0,0.75
+1218406245983939,Kate the Chemist,1218406227829218,9/14 - 9/18,Time Tracking,Time Tracking,,,Matthew Simmons,2026-09-16,150.0,2.5
+1218406245983939,Kate the Chemist,1218406227829218,9/14 - 9/18,Time Tracking,Time Tracking,,,Matthew Simmons,2026-09-17,120.0,2.0
 1207473416887619,Sprint: Molecular Neuroscience (Branco),1208066397045779,IVQs in Panopto videos,Development,Development,Brianna Stines,,Brianna Stines,2024-12-02,120.0,2.0
 1207473416887619,Sprint: Molecular Neuroscience (Branco),1208066397045777,Videos on platform (external tool assignments),Development,Development,Brianna Stines,,Brianna Stines,2024-12-02,60.0,1.0
 1207473416887619,Sprint: Molecular Neuroscience (Branco),1208885965211463,handoff document + video recording (in lieu of meeting),Implementation,Implementation,,,Brianna Stines,2024-12-02,1.0,0.017
