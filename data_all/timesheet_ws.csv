@@ -5007,24 +5007,58 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 1208335647365619,Virtual Borders,1218608321544608,9/14 - 9/18,,,,,Matthew Simmons,2026-09-14,30,0.5
 1212638027964018,Ultrasound Communication Video,1218608321544617,9/14 - 9/18,,,,,Matthew Simmons,2026-09-14,90,1.5
 1218406245983939,Kate the Chemist,1218406227829218,9/14 - 9/18,,,,,Matthew Simmons,2026-09-14,45,0.75
+,,,,,,,,Annie Conaghan,2026-09-14,240,4.0
+,,,,,,,,Annie Conaghan,2026-09-14,60,1.0
+,,,,,,,,Kevin DeCloedt,2026-09-14,60,1.0
+,,,,,,,,Kevin DeCloedt,2026-09-14,75,1.25
+,,,,,,,,Kevin DeCloedt,2026-09-14,120,2.0
+,,,,,,,,Brianna Stines,2026-09-14,15,0.25
 ,,,,,,,,Julia Leopard,2026-09-15,15,0.25
 ,,,,,,,,Julia Leopard,2026-09-15,30,0.5
 ,,,,,,,,Brianna Stines,2026-09-15,60,1.0
 ,,,,,,,,Brianna Stines,2026-09-15,45,0.75
 ,,,,,,,,Brianna Stines,2026-09-15,45,0.75
 ,,,,,,,,Matthew Simmons,2026-09-15,180,3.0
+,,,,,,,,Julia Leopard,2026-09-15,30,0.5
+,,,,,,,,Annie Conaghan,2026-09-15,240,4.0
+,,,,,,,,Annie Conaghan,2026-09-15,120,2.0
+,,,,,,,,Annie Conaghan,2026-09-15,60,1.0
+,,,,,,,,Kevin DeCloedt,2026-09-15,180,3.0
 ,,,,,,,,Brianna Stines,2026-09-16,15,0.25
 ,,,,,,,,Brianna Stines,2026-09-16,60,1.0
 ,,,,,,,,Brianna Stines,2026-09-16,15,0.25
 ,,,,,,,,Matthew Simmons,2026-09-16,75,1.25
 1218406245983939,Kate the Chemist,1218406227829218,9/14 - 9/18,,,,,Matthew Simmons,2026-09-16,150,2.5
+,,,,,,,,Annie Conaghan,2026-09-16,180,3.0
+,,,,,,,,Annie Conaghan,2026-09-16,120,2.0
+,,,,,,,,Annie Conaghan,2026-09-16,60,1.0
+,,,,,,,,Yi Lu,2026-09-16,180,3.0
+,,,,,,,,Kevin DeCloedt,2026-09-16,300,5.0
+,,,,,,,,Brianna Stines,2026-09-16,15,0.25
 ,,,,,,,,Brianna Stines,2026-09-17,30,0.5
 ,,,,,,,,Julia Leopard,2026-09-17,105,1.75
 ,,,,,,,,Brianna Stines,2026-09-17,15,0.25
 ,,,,,,,,Brianna Stines,2026-09-17,90,1.5
-,,,,,,,,Brianna Stines,2026-09-17,30,0.5
+,,,,,,,,Brianna Stines,2026-09-17,45,0.75
 ,,,,,,,,Matthew Simmons,2026-09-17,45,0.75
 1218406245983939,Kate the Chemist,1218406227829218,9/14 - 9/18,,,,,Matthew Simmons,2026-09-17,120,2.0
 1212638027964018,Ultrasound Communication Video,1218608321544617,9/14 - 9/18,,,,,Matthew Simmons,2026-09-17,120,2.0
+,,,,,,,,Julia Leopard,2026-09-17,60,1.0
+,,,,,,,,Annie Conaghan,2026-09-17,180,3.0
+,,,,,,,,Annie Conaghan,2026-09-17,30,0.5
+,,,,,,,,Annie Conaghan,2026-09-17,30,0.5
+,,,,,,,,Yi Lu,2026-09-17,360,6.0
+,,,,,,,,Yi Lu,2026-09-17,120,2.0
+,,,,,,,,Kevin DeCloedt,2026-09-17,240,4.0
+,,,,,,,,Kevin DeCloedt,2026-09-17,60,1.0
+,,,,,,,,Kevin DeCloedt,2026-09-17,60,1.0
 ,,,,,,,,Julia Leopard,2026-09-18,30,0.5
-,,,,,,,,Julia Leopard,2026-09-18,25,0.42
+,,,,,,,,Julia Leopard,2026-09-18,125,2.08
+,,,,,,,,Julia Leopard,2026-09-18,5,0.08
+,,,,,,,,Julia Leopard,2026-09-18,30,0.5
+,,,,,,,,Annie Conaghan,2026-09-18,240,4.0
+,,,,,,,,Yi Lu,2026-09-18,420,7.0
+,,,,,,,,Kevin DeCloedt,2026-09-18,180,3.0
+,,,,,,,,Brianna Stines,2026-09-18,15,0.25
+,,,,,,,,Brianna Stines,2026-09-18,30,0.5
+,,,,,,,,Brianna Stines,2026-09-18,60,1.0
