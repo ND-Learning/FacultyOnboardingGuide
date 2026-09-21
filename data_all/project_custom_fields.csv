@@ -933,7 +933,7 @@ project_gid,project_name,custom_field_gid,custom_field_name,resource_subtype,dis
 1212638027964018,Ultrasound Communication Video,1216016157752493,Estimated costs (total),number,0.00,,0,,,,,
 1212638027964018,Ultrasound Communication Video,1216016157752495,Estimated time (total),number,254h 00m,,15240,,,,,
 1212638027964018,Ultrasound Communication Video,1216016157752497,Actual costs (total),number,0.00,,0,,,,,
-1212638027964018,Ultrasound Communication Video,1216016157752503,Actual time (total),number,108h 45m,,6525,,,,,
+1212638027964018,Ultrasound Communication Video,1216016157752503,Actual time (total),number,111h 45m,,6705,,,,,
 1212638028024693,Stata bootcamp modules,1206060337251839,Priority,enum,,,,,,,,
 1212638028024693,Stata bootcamp modules,1208875849398993,ODL Project Status,enum,In Progress,,,In Progress,,,,
 1212638028024693,Stata bootcamp modules,1209399038539552,Type of Project,enum,New Course Design,,,New Course Design,,,,

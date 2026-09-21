@@ -5024,6 +5024,8 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Annie Conaghan,2026-09-15,120,2.0
 ,,,,,,,,Annie Conaghan,2026-09-15,60,1.0
 ,,,,,,,,Kevin DeCloedt,2026-09-15,180,3.0
+,,,,,,,,Colin Gallagher,2026-09-15,120,2.0
+,,,,,,,,Colin Gallagher,2026-09-15,120,2.0
 ,,,,,,,,Brianna Stines,2026-09-16,15,0.25
 ,,,,,,,,Brianna Stines,2026-09-16,60,1.0
 ,,,,,,,,Brianna Stines,2026-09-16,15,0.25
@@ -5052,6 +5054,7 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Kevin DeCloedt,2026-09-17,240,4.0
 ,,,,,,,,Kevin DeCloedt,2026-09-17,60,1.0
 ,,,,,,,,Kevin DeCloedt,2026-09-17,60,1.0
+,,,,,,,,Colin Gallagher,2026-09-17,120,2.0
 ,,,,,,,,Julia Leopard,2026-09-18,30,0.5
 ,,,,,,,,Julia Leopard,2026-09-18,125,2.08
 ,,,,,,,,Julia Leopard,2026-09-18,5,0.08
@@ -5062,3 +5065,5 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Brianna Stines,2026-09-18,15,0.25
 ,,,,,,,,Brianna Stines,2026-09-18,30,0.5
 ,,,,,,,,Brianna Stines,2026-09-18,60,1.0
+,,,,,,,,Colin Gallagher,2026-09-18,180,3.0
+,,,,,,,,Colin Gallagher,2026-09-18,60,1.0
