@@ -8,6 +8,7 @@ gid,name,logged_hours,reason
 1214783923511442,Sprint - Free-Body Diagram Visualization and Mastery,33.5,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
 1210202036254651,Sprint 2025: Statistics Flipped Class,33.34,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
 1209254874093285,Colin's Projects,20.85,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
+1214783923511446,Sprint - Unlocking Inaccessible Korean Heritage,19.5,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
 1209103283248265,Lawrence Time and Capacity Tracking Part 2 January 13 - 17,19.08,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
 1211900372320318,C2D: Cybertraining for Chemical Data scientists,16.5,coverage drift: 1 task completion(s) more than 60d after last time entry (2026-04-09) -- demoted to partial; set force_coverage=full in the registry to re-admit
 1210202036254727,Sprint 2025: AI Tutor--Critical Thinking,12.75,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv

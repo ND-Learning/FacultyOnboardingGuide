@@ -1,8 +1,8 @@
-ODL estimator refresh -- 2026-09-25T16:29:37
+ODL estimator refresh -- 2026-09-26T15:47:52
 pull: ran | published to Canvas: no
 
 headline numbers (before -> after):
-     total_logged_hours: 2942.0 -> 2942.0
+  -> total_logged_hours: 2942.0 -> 2961.5
      calibration_set: 23 -> 23
      full_course_p50_h: 48.0 -> 48.0
      full_course_n: 12 -> 12
@@ -10,7 +10,9 @@ headline numbers (before -> after):
      video_blended_h: 11.8 -> 11.8
      full_course_median_weeks: 28.9 -> 28.9
 
-ACTION NEEDED -- 20 project(s) await a human decision (excluded from calibration until resolved):
+ACTION NEEDED -- the Canvas bundle CHANGED but was not auto-published (no Canvas token). Re-upload faculty_guide/canvas_upload/ODL_Faculty_Onboarding_Guide.html to Canvas Files with the SAME filename and choose Replace (~1 minute).
+
+ACTION NEEDED -- 21 project(s) await a human decision (excluded from calibration until resolved):
   - PM Projects (271.6h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
   - Veterans College Math Readiness Course (108.83h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
   - Spectrum X Consultation (51.74h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
@@ -20,6 +22,7 @@ ACTION NEEDED -- 20 project(s) await a human decision (excluded from calibration
   - Sprint - Free-Body Diagram Visualization and Mastery (33.5h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
   - Sprint 2025: Statistics Flipped Class (33.34h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
   - Colin's Projects (20.85h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
+  - Sprint - Unlocking Inaccessible Korean Heritage (19.5h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
   - Lawrence Time and Capacity Tracking Part 2 January 13 - 17 (19.08h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
   - C2D: Cybertraining for Chemical Data scientists (16.5h): coverage drift: 1 task completion(s) more than 60d after last time entry (2026-04-09) -- demoted to partial; set force_coverage=full in the 
   - Sprint 2025: AI Tutor--Critical Thinking (12.75h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv

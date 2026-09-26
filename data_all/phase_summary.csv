@@ -565,7 +565,7 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1214783923511446,Sprint - Unlocking Inaccessible Korean Heritage,Post-Production,1,0,0,,,,0.0,0.0,0,0,0,1.0
 1214783923511446,Sprint - Unlocking Inaccessible Korean Heritage,Post-Project Evaluation,4,0,1,,,,0.0,0.0,0,0,0,0.25
 1214783923511446,Sprint - Unlocking Inaccessible Korean Heritage,Pre-Production,1,0,1,,,,0.0,0.0,0,0,0,1.0
-1214783923511446,Sprint - Unlocking Inaccessible Korean Heritage,Production,2,1,2,2026-08-13T18:37:37.865000+00:00,2026-08-13T18:37:37.865000+00:00,0,0.0,0.0,0,0,0,0.5
+1214783923511446,Sprint - Unlocking Inaccessible Korean Heritage,Production,2,1,2,2026-08-13T18:37:37.865000+00:00,2026-08-13T18:37:37.865000+00:00,0,1170.0,19.5,0,0,0,0.5
 1210225716846542,Sprint 2025 - Bringing Korean to Life - Yeonhee Yoon,Analysis,3,3,1,2025-05-19T13:21:49.623000+00:00,2025-06-17T19:56:03.457000+00:00,29,0.0,0.0,0,0,0,0.33
 1210225716846542,Sprint 2025 - Bringing Korean to Life - Yeonhee Yoon,Design,8,7,2,2025-07-11T20:13:52.870000+00:00,2025-08-11T13:08:25.893000+00:00,31,780.0,13.0,0,0,0,0.12
 1210225716846542,Sprint 2025 - Bringing Korean to Life - Yeonhee Yoon,Design Development,5,0,2,,,,360.0,6.0,0,0,0,0.2

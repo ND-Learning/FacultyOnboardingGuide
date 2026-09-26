@@ -38,7 +38,7 @@
   // === BEGIN CALIBRATION (machine-generated — do not edit by hand) ==========
   var CALIBRATION =
   {
-    "provenance": "data_all/time_entries.csv (3,367 entries, 2942.0h, 2024-07-10..2026-09-23, ODL staff time) | 23 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 19 of them with >=10h non-PM logging",
+    "provenance": "data_all/time_entries.csv (3,372 entries, 2961.5h, 2024-07-10..2026-09-25, ODL staff time) | 23 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 19 of them with >=10h non-PM logging",
     "generated_from": "data_all/derived/calibration.json -- run inject_calibration.py to refresh",
     "archetypeEffort": {
       "course_redesign": {
