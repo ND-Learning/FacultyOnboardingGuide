@@ -5013,6 +5013,10 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Kevin DeCloedt,2026-09-14,75,1.25
 ,,,,,,,,Kevin DeCloedt,2026-09-14,120,2.0
 ,,,,,,,,Brianna Stines,2026-09-14,15,0.25
+,,,,,,,,Michael Lerma,2026-09-14,60,1.0
+,,,,,,,,Michael Lerma,2026-09-14,60,1.0
+,,,,,,,,Michael Lerma,2026-09-14,60,1.0
+,,,,,,,,Michael Lerma,2026-09-14,60,1.0
 ,,,,,,,,Julia Leopard,2026-09-15,15,0.25
 ,,,,,,,,Julia Leopard,2026-09-15,30,0.5
 ,,,,,,,,Brianna Stines,2026-09-15,60,1.0
@@ -5026,6 +5030,9 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Kevin DeCloedt,2026-09-15,180,3.0
 ,,,,,,,,Colin Gallagher,2026-09-15,120,2.0
 ,,,,,,,,Colin Gallagher,2026-09-15,120,2.0
+,,,,,,,,Michael Lerma,2026-09-15,180,3.0
+,,,,,,,,Michael Lerma,2026-09-15,60,1.0
+,,,,,,,,Michael Lerma,2026-09-15,180,3.0
 ,,,,,,,,Brianna Stines,2026-09-16,15,0.25
 ,,,,,,,,Brianna Stines,2026-09-16,60,1.0
 ,,,,,,,,Brianna Stines,2026-09-16,15,0.25
@@ -5037,6 +5044,9 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Yi Lu,2026-09-16,180,3.0
 ,,,,,,,,Kevin DeCloedt,2026-09-16,300,5.0
 ,,,,,,,,Brianna Stines,2026-09-16,15,0.25
+,,,,,,,,Michael Lerma,2026-09-16,60,1.0
+,,,,,,,,Michael Lerma,2026-09-16,60,1.0
+,,,,,,,,Michael Lerma,2026-09-16,120,2.0
 ,,,,,,,,Brianna Stines,2026-09-17,30,0.5
 ,,,,,,,,Julia Leopard,2026-09-17,105,1.75
 ,,,,,,,,Brianna Stines,2026-09-17,15,0.25
@@ -5055,6 +5065,8 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Kevin DeCloedt,2026-09-17,60,1.0
 ,,,,,,,,Kevin DeCloedt,2026-09-17,60,1.0
 ,,,,,,,,Colin Gallagher,2026-09-17,120,2.0
+,,,,,,,,Michael Lerma,2026-09-17,30,0.5
+,,,,,,,,Michael Lerma,2026-09-17,60,1.0
 ,,,,,,,,Julia Leopard,2026-09-18,30,0.5
 ,,,,,,,,Julia Leopard,2026-09-18,125,2.08
 ,,,,,,,,Julia Leopard,2026-09-18,5,0.08
@@ -5067,6 +5079,10 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Brianna Stines,2026-09-18,60,1.0
 ,,,,,,,,Colin Gallagher,2026-09-18,180,3.0
 ,,,,,,,,Colin Gallagher,2026-09-18,60,1.0
+,,,,,,,,Michael Lerma,2026-09-18,60,1.0
+,,,,,,,,Michael Lerma,2026-09-18,120,2.0
+,,,,,,,,Michael Lerma,2026-09-18,120,2.0
+,,,,,,,,Michael Lerma,2026-09-18,60,1.0
 ,,,,,,,,Julia Leopard,2026-09-21,10,0.17
 ,,,,,,,,Julia Leopard,2026-09-21,30,0.5
 ,,,,,,,,Brianna Stines,2026-09-21,120,2.0
@@ -5096,6 +5112,8 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Annie Conaghan,2026-09-23,180,3.0
 ,,,,,,,,Annie Conaghan,2026-09-23,30,0.5
 ,,,,,,,,Colin Gallagher,2026-09-23,60,1.0
+,,,,,,,,Michael Lerma,2026-09-23,60,1.0
+,,,,,,,,Michael Lerma,2026-09-23,120,2.0
 ,,,,,,,,Brianna Stines,2026-09-24,60,1.0
 ,,,,,,,,Brianna Stines,2026-09-24,60,1.0
 ,,,,,,,,Brianna Stines,2026-09-24,90,1.5
@@ -5108,6 +5126,8 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Annie Conaghan,2026-09-24,150,2.5
 ,,,,,,,,Annie Conaghan,2026-09-24,15,0.25
 ,,,,,,,,Colin Gallagher,2026-09-24,180,3.0
+,,,,,,,,Michael Lerma,2026-09-24,120,2.0
+,,,,,,,,Michael Lerma,2026-09-24,60,1.0
 ,,,,,,,,Brianna Stines,2026-09-25,15,0.25
 ,,,,,,,,Brianna Stines,2026-09-25,30,0.5
 ,,,,,,,,Brianna Stines,2026-09-25,15,0.25
@@ -5120,4 +5140,14 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Annie Conaghan,2026-09-25,180,3.0
 ,,,,,,,,Annie Conaghan,2026-09-25,60,1.0
 ,,,,,,,,Colin Gallagher,2026-09-25,120,2.0
+,,,,,,,,Michael Lerma,2026-09-25,180,3.0
+,,,,,,,,Michael Lerma,2026-09-25,60,1.0
 ,,,,,,,,Julia Leopard,2026-09-28,60,1.0
+,,,,,,,,Brianna Stines,2026-09-28,120,2.0
+,,,,,,,,Brianna Stines,2026-09-29,90,1.5
+,,,,,,,,Brianna Stines,2026-09-29,30,0.5
+,,,,,,,,Brianna Stines,2026-09-29,15,0.25
+,,,,,,,,Brianna Stines,2026-09-29,90,1.5
+,,,,,,,,Julia Leopard,2026-09-29,240,4.0
+,,,,,,,,Julia Leopard,2026-09-29,30,0.5
+,,,,,,,,Brianna Stines,2026-09-30,30,0.5

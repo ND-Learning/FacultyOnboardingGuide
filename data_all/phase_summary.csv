@@ -408,7 +408,7 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1218012805723892,ODL Internal Canvas Site,Media Timetracking,2,0,0,,,,0.0,0.0,0,0,0,0.5
 1208659811898324,ODL Lookbook,Untitled section,4,4,1,2024-11-15T15:30:13.009000+00:00,2025-05-15T14:43:08.312000+00:00,181,1337.0,22.28,0,0,0,0.25
 1213551317973102,ODL Media Studio Sessions,Completed,1,0,0,,,,0.0,0.0,0,0,0,1.0
-1213551317973102,ODL Media Studio Sessions,Incoming Requests,1,0,0,,,,0.0,0.0,0,0,0,1.0
+1213551317973102,ODL Media Studio Sessions,Incoming Requests,2,0,0,,,,0.0,0.0,0,0,0,0.5
 1213551317973102,ODL Media Studio Sessions,Survey Response,3,0,0,,,,0.0,0.0,0,0,0,0.33
 1208255134985064,ODL Podcast,Launch,10,10,1,2024-09-19T13:17:44.154000+00:00,2024-11-01T15:49:05.104000+00:00,43,0.0,0.0,0,0,0,0.1
 1208255134985064,ODL Podcast,Media Timetracking (Matthew),8,0,1,,,,225.0,3.75,0,0,0,0.12
