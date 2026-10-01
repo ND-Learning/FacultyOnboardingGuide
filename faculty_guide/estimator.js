@@ -38,7 +38,7 @@
   // === BEGIN CALIBRATION (machine-generated — do not edit by hand) ==========
   var CALIBRATION =
   {
-    "provenance": "data_all/time_entries.csv (3,372 entries, 2961.5h, 2024-07-10..2026-09-25, ODL staff time) | 23 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 19 of them with >=10h non-PM logging",
+    "provenance": "data_all/time_entries.csv (3,376 entries, 2967.0h, 2024-07-10..2026-09-30, ODL staff time) | 23 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 19 of them with >=10h non-PM logging",
     "generated_from": "data_all/derived/calibration.json -- run inject_calibration.py to refresh",
     "archetypeEffort": {
       "course_redesign": {
@@ -64,7 +64,7 @@
         "values": [
           12.0,
           15.5,
-          55.8
+          59.2
         ],
         "p50": 15.5,
         "note": "n<4 -- raw values shown; interpolated quartiles withheld"
@@ -104,8 +104,8 @@
         "p25": 12.0,
         "p50": 13.7,
         "p75": 15.5,
-        "p80": 23.6,
-        "max": 55.8
+        "p80": 24.2,
+        "max": 59.2
       },
       "blendedGenericP50": 11.8,
       "shrinkageW": 0.62
@@ -125,7 +125,7 @@
       "Other / unsorted": 1.4,
       "Discovery": 0.3
     },
-    "coursePhaseMixBasis": "pooled non-PM hours of 12 full-coverage full_course projects (927.5h)",
+    "coursePhaseMixBasis": "pooled non-PM hours of 12 full-coverage full_course projects (928.0h)",
     "calendarWeeks": {
       "consult_or_studio": {
         "n": 1,
