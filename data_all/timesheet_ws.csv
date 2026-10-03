@@ -5144,6 +5144,7 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Michael Lerma,2026-09-25,60,1.0
 ,,,,,,,,Julia Leopard,2026-09-28,60,1.0
 ,,,,,,,,Brianna Stines,2026-09-28,120,2.0
+,,,,,,,,Kevin DeCloedt,2026-09-28,180,3.0
 ,,,,,,,,Brianna Stines,2026-09-29,90,1.5
 ,,,,,,,,Brianna Stines,2026-09-29,30,0.5
 ,,,,,,,,Brianna Stines,2026-09-29,15,0.25
@@ -5152,6 +5153,7 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Julia Leopard,2026-09-29,30,0.5
 1212638027964018,Ultrasound Communication Video,1218797168525454,9/28 - 10/2,,,,,Matthew Simmons,2026-09-29,120,2.0
 1208335647365619,Virtual Borders,1218797168525448,9/28 - 10/2,,,,,Matthew Simmons,2026-09-29,30,0.5
+,,,,,,,,Kevin DeCloedt,2026-09-29,240,4.0
 ,,,,,,,,Brianna Stines,2026-09-30,30,0.5
 ,,,,,,,,Brianna Stines,2026-09-30,75,1.25
 ,,,,,,,,Brianna Stines,2026-09-30,15,0.25
@@ -5159,12 +5161,22 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 1212638027964018,Ultrasound Communication Video,1218797168525454,9/28 - 10/2,,,,,Matthew Simmons,2026-09-30,90,1.5
 ,,,,,,,,Julia Leopard,2026-09-30,75,1.25
 ,,,,,,,,Julia Leopard,2026-09-30,45,0.75
+,,,,,,,,Brianna Stines,2026-09-30,90,1.5
 ,,,,,,,,Brianna Stines,2026-09-30,30,0.5
+,,,,,,,,Kevin DeCloedt,2026-09-30,60,1.0
 ,,,,,,,,Brianna Stines,2026-10-01,15,0.25
 ,,,,,,,,Brianna Stines,2026-10-01,90,1.5
 ,,,,,,,,Julia Leopard,2026-10-01,120,2.0
 ,,,,,,,,Brianna Stines,2026-10-01,15,0.25
+,,,,,,,,Brianna Stines,2026-10-01,60,1.0
+,,,,,,,,Brianna Stines,2026-10-01,15,0.25
+,,,,,,,,Kevin DeCloedt,2026-10-01,60,1.0
 ,,,,,,,,Julia Leopard,2026-10-02,65,1.08
+,,,,,,,,Julia Leopard,2026-10-02,45,0.75
+,,,,,,,,Julia Leopard,2026-10-02,45,0.75
 ,,,,,,,,Brianna Stines,2026-10-02,30,0.5
 ,,,,,,,,Brianna Stines,2026-10-02,45,0.75
+,,,,,,,,Brianna Stines,2026-10-02,15,0.25
+,,,,,,,,Brianna Stines,2026-10-02,30,0.5
 1212638027964018,Ultrasound Communication Video,1218797168525454,9/28 - 10/2,,,,,Matthew Simmons,2026-10-02,240,4.0
+,,,,,,,,Kevin DeCloedt,2026-10-02,240,4.0
