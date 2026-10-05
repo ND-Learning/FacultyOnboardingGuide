@@ -2132,17 +2132,43 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,custom_field
 1207833209424691,Military Testimonial,1208076857095642,Send Survey to Faculty Members,Launch / Evaluation,Launch / Evaluation,1201123044298911,Status,enum,,,,,,,,
 1207833209424691,Military Testimonial,1208076857095646,Collect data / Analyze Data ,Launch / Evaluation,Launch / Evaluation,1201123044298911,Status,enum,,,,,,,,
 1207833209424691,Military Testimonial,1208076857095650,Produce Report,Launch / Evaluation,Launch / Evaluation,1201123044298911,Status,enum,,,,,,,,
-1207871566050072,NDL Project Tracking & Awareness,1218168310567149,[no value],Received Requests - Triage Needed,Received Requests - Triage Needed,1207871566050120,Email Address,text,rklee2@nd.edu,rklee2@nd.edu,,,,,,
-1207871566050072,NDL Project Tracking & Awareness,1218168310567149,[no value],Received Requests - Triage Needed,Received Requests - Triage Needed,1207871566050124,Description of Project,text,"I wonder if the Reimagining Class Time grants are available to regular contingent faculty. I have taught with PLS and Theology since 2018 on campus, and as ND faculty with Moreau College at Westville Correctional (a joint ND-Holy Cross College initiative) since 2015.","I wonder if the Reimagining Class Time grants are available to regular contingent faculty. I have taught with PLS and Theology since 2018 on campus, and as ND faculty with Moreau College at Westville Correctional (a joint ND-Holy Cross College initiative) since 2015.",,,,,,
-1207871566050072,NDL Project Tracking & Awareness,1218168310567149,[no value],Received Requests - Triage Needed,Received Requests - Triage Needed,1207871566050147,Title,text,,,,,,,,
-1207871566050072,NDL Project Tracking & Awareness,1218168310567149,[no value],Received Requests - Triage Needed,Received Requests - Triage Needed,1207871566050150,NDL Project Status,enum,,,,,,,,
-1207871566050072,NDL Project Tracking & Awareness,1218168310567149,[no value],Received Requests - Triage Needed,Received Requests - Triage Needed,1209314408320777,First Name,text,Richard Klee,Richard Klee,,,,,,
-1207871566050072,NDL Project Tracking & Awareness,1218168310567149,[no value],Received Requests - Triage Needed,Received Requests - Triage Needed,1209314408320779,Last Name,text,Klee,Klee,,,,,,
-1207871566050072,NDL Project Tracking & Awareness,1218168310567149,[no value],Received Requests - Triage Needed,Received Requests - Triage Needed,1209314408320781,Relevant,multi_enum,Teaching Strategies,,,,Teaching Strategies,,,
-1207871566050072,NDL Project Tracking & Awareness,1218168310567149,[no value],Received Requests - Triage Needed,Received Requests - Triage Needed,1209314408320799,College / School / Unit,enum,Arts & Letters,,,Arts & Letters,,,,
-1207871566050072,NDL Project Tracking & Awareness,1218168310567149,[no value],Received Requests - Triage Needed,Received Requests - Triage Needed,1210756427078203,Link to documentation,text,,,,,,,,
-1207871566050072,NDL Project Tracking & Awareness,1218168310567149,[no value],Received Requests - Triage Needed,Received Requests - Triage Needed,1210850449329256,Fast Track,enum,,,,,,,,
-1207871566050072,NDL Project Tracking & Awareness,1218168310567149,[no value],Received Requests - Triage Needed,Received Requests - Triage Needed,1210850449329262,Department Responsibility,enum,,,,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1219178704744429,Faculty Idea Exchange: AI-Aware Teaching Practices or Faculty,Leadership Review or Approval Needed,Leadership Review or Approval Needed,1207871566050120,Email Address,text,showell3@nd.edu,showell3@nd.edu,,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1219178704744429,Faculty Idea Exchange: AI-Aware Teaching Practices or Faculty,Leadership Review or Approval Needed,Leadership Review or Approval Needed,1207871566050124,Description of Project,text,"THIS PROJECT WAS SUBMITTED UNDER THE LAITL WORKING GROUP, BUT IT IS BETTER CATEGORIZED AS A ND LEARNING PROJECT. 
+
+The Faculty Idea Exchange is an evidence-informed, faculty-centered professional learning initiative designed to create a structured but informal space for Notre Dame faculty to learn from one another about the evolving role of AI in teaching and learning. ND Learning will convene and facilitate the series, while faculty participants will shape the substance of each session through the practices and experiences they share. This approach aligns with emerging models of faculty AI development in higher education that emphasize ongoing faculty exchange and communities of practice as a way to support learning in a rapidly changing environment.
+
+Building on this approach, ND Learning will launch the Faculty Idea Exchange in the spring 2027 semester, with one session held each month for a total of four sessions. For the pilot, we will invite recipients of AI mini-grants to present their work. In so doing, we will amplify the work they have contributed to the AI Repository while providing a forum for faculty colleagues to discuss how these approaches are working in practice. Participation in the Exchange will also enable mini-grant recipients to fulfill their dissemination obligations.
+
+The series will be structured around the organizing themes in the AI Repository:
+
+AI (or NOT) for Assessment & Feedback 
+AI-Augmented Teaching Workflows
+Student AI Literacy & Engagement
+
+The final session will be an open lightning round, providing an opportunity for additional faculty to share work or questions that have emerged over the course of the semester.
+","THIS PROJECT WAS SUBMITTED UNDER THE LAITL WORKING GROUP, BUT IT IS BETTER CATEGORIZED AS A ND LEARNING PROJECT. 
+
+The Faculty Idea Exchange is an evidence-informed, faculty-centered professional learning initiative designed to create a structured but informal space for Notre Dame faculty to learn from one another about the evolving role of AI in teaching and learning. ND Learning will convene and facilitate the series, while faculty participants will shape the substance of each session through the practices and experiences they share. This approach aligns with emerging models of faculty AI development in higher education that emphasize ongoing faculty exchange and communities of practice as a way to support learning in a rapidly changing environment.
+
+Building on this approach, ND Learning will launch the Faculty Idea Exchange in the spring 2027 semester, with one session held each month for a total of four sessions. For the pilot, we will invite recipients of AI mini-grants to present their work. In so doing, we will amplify the work they have contributed to the AI Repository while providing a forum for faculty colleagues to discuss how these approaches are working in practice. Participation in the Exchange will also enable mini-grant recipients to fulfill their dissemination obligations.
+
+The series will be structured around the organizing themes in the AI Repository:
+
+AI (or NOT) for Assessment & Feedback 
+AI-Augmented Teaching Workflows
+Student AI Literacy & Engagement
+
+The final session will be an open lightning round, providing an opportunity for additional faculty to share work or questions that have emerged over the course of the semester.
+",,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1219178704744429,Faculty Idea Exchange: AI-Aware Teaching Practices or Faculty,Leadership Review or Approval Needed,Leadership Review or Approval Needed,1207871566050147,Title,text,Faculty Idea Exchange: AI-Aware Teaching Practices or Faculty,Faculty Idea Exchange: AI-Aware Teaching Practices or Faculty,,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1219178704744429,Faculty Idea Exchange: AI-Aware Teaching Practices or Faculty,Leadership Review or Approval Needed,Leadership Review or Approval Needed,1207871566050150,NDL Project Status,enum,,,,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1219178704744429,Faculty Idea Exchange: AI-Aware Teaching Practices or Faculty,Leadership Review or Approval Needed,Leadership Review or Approval Needed,1209314408320777,First Name,text,Sonia Howell,Sonia Howell,,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1219178704744429,Faculty Idea Exchange: AI-Aware Teaching Practices or Faculty,Leadership Review or Approval Needed,Leadership Review or Approval Needed,1209314408320779,Last Name,text,Howell,Howell,,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1219178704744429,Faculty Idea Exchange: AI-Aware Teaching Practices or Faculty,Leadership Review or Approval Needed,Leadership Review or Approval Needed,1209314408320781,Relevant,multi_enum,Artificial Intelligence (AI),,,,Artificial Intelligence (AI),,,
+1207871566050072,NDL Project Tracking & Awareness,1219178704744429,Faculty Idea Exchange: AI-Aware Teaching Practices or Faculty,Leadership Review or Approval Needed,Leadership Review or Approval Needed,1209314408320799,College / School / Unit,enum,ND Learning,,,ND Learning,,,,
+1207871566050072,NDL Project Tracking & Awareness,1219178704744429,Faculty Idea Exchange: AI-Aware Teaching Practices or Faculty,Leadership Review or Approval Needed,Leadership Review or Approval Needed,1210756427078203,Link to documentation,text,,,,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1219178704744429,Faculty Idea Exchange: AI-Aware Teaching Practices or Faculty,Leadership Review or Approval Needed,Leadership Review or Approval Needed,1210850449329256,Fast Track,enum,Yes,,,Yes,,,,
+1207871566050072,NDL Project Tracking & Awareness,1219178704744429,Faculty Idea Exchange: AI-Aware Teaching Practices or Faculty,Leadership Review or Approval Needed,Leadership Review or Approval Needed,1210850449329262,Department Responsibility,enum,LAITL Working Group,,,LAITL Working Group,,,,
 1207871566050072,NDL Project Tracking & Awareness,1217163495978864,Physical AI Simulations into a Mechanics II class,Under Review by Unit,Under Review by Unit,1207871566050120,Email Address,text,ebolivar@nd.edu,ebolivar@nd.edu,,,,,,
 1207871566050072,NDL Project Tracking & Awareness,1217163495978864,Physical AI Simulations into a Mechanics II class,Under Review by Unit,Under Review by Unit,1207871566050124,Description of Project,text,"I received a 2026 Faculty AI Mini Grant Award. I would like to use these resources to integrate Physical AI Simulations into a Mechanics II class to start next Spring 2027. The initial idea is to:
 - Create simulations that exemplify the main concepts in class (e.g., free body diagrams).
@@ -2764,6 +2790,17 @@ Throughout the semester, students will engage with the AI tutor to receive feedb
 1207871566050072,NDL Project Tracking & Awareness,1211071478002161,[Converted to project] Fall 2025 AI Coaching for Faculty Launch,Create Project - Fast Tracked,Create Project - Fast Tracked,1210756427078203,Link to documentation,text,,,,,,,,
 1207871566050072,NDL Project Tracking & Awareness,1211071478002161,[Converted to project] Fall 2025 AI Coaching for Faculty Launch,Create Project - Fast Tracked,Create Project - Fast Tracked,1210850449329256,Fast Track,enum,Yes,,,Yes,,,,
 1207871566050072,NDL Project Tracking & Awareness,1211071478002161,[Converted to project] Fall 2025 AI Coaching for Faculty Launch,Create Project - Fast Tracked,Create Project - Fast Tracked,1210850449329262,Department Responsibility,enum,LAITL Working Group,,,LAITL Working Group,,,,
+1207871566050072,NDL Project Tracking & Awareness,1218168310567149,[no value],Resolved,Resolved,1207871566050120,Email Address,text,rklee2@nd.edu,rklee2@nd.edu,,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1218168310567149,[no value],Resolved,Resolved,1207871566050124,Description of Project,text,"I wonder if the Reimagining Class Time grants are available to regular contingent faculty. I have taught with PLS and Theology since 2018 on campus, and as ND faculty with Moreau College at Westville Correctional (a joint ND-Holy Cross College initiative) since 2015.","I wonder if the Reimagining Class Time grants are available to regular contingent faculty. I have taught with PLS and Theology since 2018 on campus, and as ND faculty with Moreau College at Westville Correctional (a joint ND-Holy Cross College initiative) since 2015.",,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1218168310567149,[no value],Resolved,Resolved,1207871566050147,Title,text,,,,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1218168310567149,[no value],Resolved,Resolved,1207871566050150,NDL Project Status,enum,,,,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1218168310567149,[no value],Resolved,Resolved,1209314408320777,First Name,text,Richard Klee,Richard Klee,,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1218168310567149,[no value],Resolved,Resolved,1209314408320779,Last Name,text,Klee,Klee,,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1218168310567149,[no value],Resolved,Resolved,1209314408320781,Relevant,multi_enum,Teaching Strategies,,,,Teaching Strategies,,,
+1207871566050072,NDL Project Tracking & Awareness,1218168310567149,[no value],Resolved,Resolved,1209314408320799,College / School / Unit,enum,Arts & Letters,,,Arts & Letters,,,,
+1207871566050072,NDL Project Tracking & Awareness,1218168310567149,[no value],Resolved,Resolved,1210756427078203,Link to documentation,text,,,,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1218168310567149,[no value],Resolved,Resolved,1210850449329256,Fast Track,enum,,,,,,,,
+1207871566050072,NDL Project Tracking & Awareness,1218168310567149,[no value],Resolved,Resolved,1210850449329262,Department Responsibility,enum,,,,,,,,
 1207871566050072,NDL Project Tracking & Awareness,1214202775511820,NSF Data Management and Sharing Plan (DMSP) - Fluid Mechanics Proposal,Resolved,Resolved,1207871566050120,Email Address,text,bdaly1@nd.edu,bdaly1@nd.edu,,,,,,
 1207871566050072,NDL Project Tracking & Awareness,1214202775511820,NSF Data Management and Sharing Plan (DMSP) - Fluid Mechanics Proposal,Resolved,Resolved,1207871566050124,Description of Project,text,"I am working with a faculty member who is looking for guidance on an NSF Data Management and Sharing Plan (DMSP) for a Fluid Dynamics proposal, with a focus on options for sharing research data through a sustainable public resource. 
 
