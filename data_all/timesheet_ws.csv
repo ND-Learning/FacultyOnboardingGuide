@@ -4964,6 +4964,10 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Annie Conaghan,2026-09-08,240,4.0
 ,,,,,,,,Annie Conaghan,2026-09-08,60,1.0
 ,,,,,,,,Colin Gallagher,2026-09-08,120,2.0
+,,,,,,,,Michael Lerma,2026-09-08,120,2.0
+,,,,,,,,Michael Lerma,2026-09-08,60,1.0
+,,,,,,,,Michael Lerma,2026-09-08,60,1.0
+,,,,,,,,Michael Lerma,2026-09-08,120,2.0
 ,,,,,,,,Brianna Stines,2026-09-09,60,1.0
 ,,,,,,,,Brianna Stines,2026-09-09,30,0.5
 ,,,,,,,,Brianna Stines,2026-09-09,15,0.25
@@ -5002,6 +5006,9 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Brianna Stines,2026-09-11,30,0.5
 ,,,,,,,,Colin Gallagher,2026-09-11,120,2.0
 ,,,,,,,,Colin Gallagher,2026-09-11,240,4.0
+,,,,,,,,Michael Lerma,2026-09-11,120,2.0
+,,,,,,,,Michael Lerma,2026-09-11,120,2.0
+,,,,,,,,Michael Lerma,2026-09-11,120,2.0
 ,,,,,,,,Julia Leopard,2026-09-14,90,1.5
 ,,,,,,,,Brianna Stines,2026-09-14,150,2.5
 1208335647365619,Virtual Borders,1218608321544608,9/14 - 9/18,,,,,Matthew Simmons,2026-09-14,30,0.5
@@ -5145,6 +5152,8 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Julia Leopard,2026-09-28,60,1.0
 ,,,,,,,,Brianna Stines,2026-09-28,120,2.0
 ,,,,,,,,Kevin DeCloedt,2026-09-28,180,3.0
+,,,,,,,,Michael Lerma,2026-09-28,60,1.0
+,,,,,,,,Michael Lerma,2026-09-28,60,1.0
 ,,,,,,,,Brianna Stines,2026-09-29,90,1.5
 ,,,,,,,,Brianna Stines,2026-09-29,30,0.5
 ,,,,,,,,Brianna Stines,2026-09-29,15,0.25
@@ -5154,6 +5163,8 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 1212638027964018,Ultrasound Communication Video,1218797168525454,9/28 - 10/2,,,,,Matthew Simmons,2026-09-29,120,2.0
 1208335647365619,Virtual Borders,1218797168525448,9/28 - 10/2,,,,,Matthew Simmons,2026-09-29,30,0.5
 ,,,,,,,,Kevin DeCloedt,2026-09-29,240,4.0
+,,,,,,,,Michael Lerma,2026-09-29,60,1.0
+,,,,,,,,Michael Lerma,2026-09-29,60,1.0
 ,,,,,,,,Brianna Stines,2026-09-30,30,0.5
 ,,,,,,,,Brianna Stines,2026-09-30,75,1.25
 ,,,,,,,,Brianna Stines,2026-09-30,15,0.25
@@ -5164,6 +5175,9 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Brianna Stines,2026-09-30,90,1.5
 ,,,,,,,,Brianna Stines,2026-09-30,30,0.5
 ,,,,,,,,Kevin DeCloedt,2026-09-30,60,1.0
+,,,,,,,,Michael Lerma,2026-09-30,60,1.0
+,,,,,,,,Michael Lerma,2026-09-30,120,2.0
+,,,,,,,,Michael Lerma,2026-09-30,120,2.0
 ,,,,,,,,Brianna Stines,2026-10-01,15,0.25
 ,,,,,,,,Brianna Stines,2026-10-01,90,1.5
 ,,,,,,,,Julia Leopard,2026-10-01,120,2.0
@@ -5171,6 +5185,8 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Brianna Stines,2026-10-01,60,1.0
 ,,,,,,,,Brianna Stines,2026-10-01,15,0.25
 ,,,,,,,,Kevin DeCloedt,2026-10-01,60,1.0
+,,,,,,,,Michael Lerma,2026-10-01,60,1.0
+,,,,,,,,Michael Lerma,2026-10-01,300,5.0
 ,,,,,,,,Julia Leopard,2026-10-02,65,1.08
 ,,,,,,,,Julia Leopard,2026-10-02,45,0.75
 ,,,,,,,,Julia Leopard,2026-10-02,45,0.75
@@ -5181,10 +5197,19 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 1212638027964018,Ultrasound Communication Video,1218797168525454,9/28 - 10/2,,,,,Matthew Simmons,2026-10-02,240,4.0
 ,,,,,,,,Kevin DeCloedt,2026-10-02,240,4.0
 ,,,,,,,,Brianna Stines,2026-10-02,60,1.0
+,,,,,,,,Michael Lerma,2026-10-02,300,5.0
 ,,,,,,,,Colin Gallagher,2026-10-05,60,1.0
 ,,,,,,,,Colin Gallagher,2026-10-05,60,1.0
 ,,,,,,,,Julia Leopard,2026-10-05,45,0.75
+,,,,,,,,Brianna Stines,2026-10-05,120,2.0
 ,,,,,,,,Colin Gallagher,2026-10-06,60,1.0
 ,,,,,,,,Julia Leopard,2026-10-06,25,0.42
 ,,,,,,,,Julia Leopard,2026-10-06,60,1.0
+,,,,,,,,Brianna Stines,2026-10-06,30,0.5
+,,,,,,,,Brianna Stines,2026-10-06,15,0.25
+,,,,,,,,Brianna Stines,2026-10-06,15,0.25
 ,,,,,,,,Colin Gallagher,2026-10-07,120,2.0
+,,,,,,,,Brianna Stines,2026-10-07,30,0.5
+,,,,,,,,Colin Gallagher,2026-10-08,120,2.0
+,,,,,,,,Brianna Stines,2026-10-08,75,1.25
+,,,,,,,,Brianna Stines,2026-10-08,60,1.0
