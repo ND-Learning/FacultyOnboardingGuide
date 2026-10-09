@@ -1,8 +1,8 @@
 {
   "_provenance": {
-    "source": "data_all/time_entries.csv (3,377 entries, 2971.0h, 2024-07-10..2026-10-02, ODL staff time)",
+    "source": "data_all/time_entries.csv (3,380 entries, 2977.0h, 2024-07-10..2026-10-08, ODL staff time)",
     "calibration_set": "23 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 19 of them with >=10h non-PM logging",
-    "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 3059, 'task_name': 127, 'none': 191}",
+    "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 3062, 'task_name': 127, 'none': 191}",
     "no_guessing": "blocks state 'not_calibratable' where data is insufficient"
   },
   "archetype_effort_hours": {
@@ -48,7 +48,7 @@
     },
     "single_video": {
       "projects": {
-        "Ultrasound Communication Video": 63.2,
+        "Ultrasound Communication Video": 69.2,
         "Program for Inclusive Education (PIE) Video #2": 15.5,
         "Borgo Laudato Si' videos": 12.0
       },
@@ -57,7 +57,7 @@
         "values": [
           12.0,
           15.5,
-          63.2
+          69.2
         ],
         "p50": 15.5,
         "note": "n<4 -- raw values shown; interpolated quartiles withheld"
@@ -227,7 +227,7 @@
       {
         "project": "Ultrasound Communication Video",
         "video": "(whole project)",
-        "hours": 63.2
+        "hours": 69.2
       },
       {
         "project": "Borgo Laudato Si' videos",
@@ -253,8 +253,8 @@
       "p25": 12.0,
       "p50": 13.7,
       "p75": 15.5,
-      "p80": 25.0,
-      "max": 63.2
+      "p80": 26.2,
+      "max": 69.2
     },
     "observed_excluded_partial_coverage": [
       {
