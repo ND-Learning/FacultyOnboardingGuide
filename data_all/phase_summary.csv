@@ -556,7 +556,7 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1214783923511436,Sprint - Methods Applied: Proposal Scaffolded Support (MAPPS),Analysis,3,0,1,,,,0.0,0.0,0,0,0,0.33
 1214783923511436,Sprint - Methods Applied: Proposal Scaffolded Support (MAPPS),Design,10,0,3,,,,0.0,0.0,0,0,0,0.1
 1214783923511436,Sprint - Methods Applied: Proposal Scaffolded Support (MAPPS),Design Development,5,0,2,,,,0.0,0.0,0,0,0,0.2
-1214783923511436,Sprint - Methods Applied: Proposal Scaffolded Support (MAPPS),Post-Production,1,0,1,,,,0.0,0.0,0,0,0,1.0
+1214783923511436,Sprint - Methods Applied: Proposal Scaffolded Support (MAPPS),Post-Production,1,1,1,2026-10-12T14:24:35.657000+00:00,2026-10-12T14:24:35.657000+00:00,0,0.0,0.0,0,0,0,1.0
 1214783923511436,Sprint - Methods Applied: Proposal Scaffolded Support (MAPPS),Post-Project Evaluation,4,0,1,,,,0.0,0.0,0,0,0,0.25
 1214783923511436,Sprint - Methods Applied: Proposal Scaffolded Support (MAPPS),Pre-Production,6,5,2,2026-08-17T14:20:14.756000+00:00,2026-08-17T14:20:24.184000+00:00,0,0.0,0.0,0,0,0,0.17
 1214783923511436,Sprint - Methods Applied: Proposal Scaffolded Support (MAPPS),Production,2,1,2,2026-08-17T14:20:26.817000+00:00,2026-08-17T14:20:26.817000+00:00,0,0.0,0.0,0,0,0,0.5
