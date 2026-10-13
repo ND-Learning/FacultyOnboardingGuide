@@ -197,11 +197,11 @@
     },
     "impactTracker": {
       "field": "cf::Impact Tracker Status",
-      "basis": "data_all/projects.csv Asana project custom field across 243 pulled projects",
-      "total_projects": 243,
+      "basis": "data_all/projects.csv Asana project custom field across 244 pulled projects",
+      "total_projects": 244,
       "tracked_projects": 33,
-      "blank_projects": 210,
-      "coverage_pct": 13.6,
+      "blank_projects": 211,
+      "coverage_pct": 13.5,
       "status_counts": {
         "Outdated": 19,
         "Up to date": 14
@@ -309,7 +309,7 @@
       "available": true,
       "source": "data_all/task_custom_fields.csv",
       "metric_scope": "Impact Tracker board tasks only",
-      "value_count": 8268,
+      "value_count": 8307,
       "field_count": 39,
       "all_fields": [
         "Academic Department",
@@ -352,7 +352,7 @@
         "Web Page Modules",
         "XR experiences"
       ],
-      "record_count": 212,
+      "record_count": 213,
       "detected_asset_fields": [
         "Canvas Courses",
         "Graphics",
@@ -394,7 +394,7 @@
           "max": 1.0
         },
         "Total Assets": {
-          "n": 212,
+          "n": 213,
           "min": 0.0,
           "p25": 0.0,
           "p50": 0.0,
@@ -443,7 +443,7 @@
       },
       "records_with_assets": 32,
       "records_with_satisfaction": 24,
-      "matched_records": 117,
+      "matched_records": 118,
       "outcomes": {
         "faculty_satisfaction_index": {
           "n": 24,
@@ -530,7 +530,7 @@
       "tracker_status_counts": {
         "Complete": 123,
         "No Documentation": 34,
-        "In Progress": 27,
+        "In Progress": 28,
         "On Hold": 5
       },
       "assets_produced_total": 359.0,
