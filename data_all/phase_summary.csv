@@ -260,6 +260,7 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1213077276586762,FCTA - Physics II,Production,3,2,0,2026-02-02T03:52:47.797000+00:00,2026-02-02T03:52:48.617000+00:00,0,0.0,0.0,11,0,0,0.33
 1208712699269092,FINS (Research Video),Post Production,2,1,0,2025-04-02T16:44:13.294000+00:00,2025-04-02T16:44:13.294000+00:00,0,0.0,0.0,0,0,0,0.5
 1208712699269092,FINS (Research Video),Production,3,3,0,2025-03-24T16:34:36.536000+00:00,2025-06-11T15:51:49.228000+00:00,79,0.0,0.0,0,0,0,0.33
+1219515748522688,Faculty Idea Exchange: AI-Aware Teaching Practices or Faculty,Untitled section,4,0,4,,,,0.0,0.0,0,0,0,0.25
 1211154824956969,Force for Good Video Project,Analysis,3,3,1,2025-08-27T17:25:05.817000+00:00,2025-09-16T14:34:29.054000+00:00,20,0.0,0.0,0,0,0,0.33
 1211154824956969,Force for Good Video Project,Design,10,2,2,2025-09-25T19:21:25.063000+00:00,2025-09-25T19:21:31.528000+00:00,0,0.0,0.0,0,0,0,0.1
 1211154824956969,Force for Good Video Project,Design Development,5,0,1,,,,0.0,0.0,0,0,0,0.2
@@ -379,10 +380,9 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1207871566050072,NDL Project Tracking & Awareness,Create Project - Fast Tracked,1,1,1,2025-08-16T19:40:18.715000+00:00,2025-08-16T19:40:18.715000+00:00,0,0.0,0.0,0,0,0,1.0
 1207871566050072,NDL Project Tracking & Awareness,Create Project - Kaneb Center,1,1,1,2025-08-06T15:26:19.092000+00:00,2025-08-06T15:26:19.092000+00:00,0,0.0,0.0,0,0,0,1.0
 1207871566050072,NDL Project Tracking & Awareness,Create project - LAITL,8,8,1,2025-08-25T15:28:39.393000+00:00,2026-03-19T13:23:03.603000+00:00,206,0.0,0.0,0,0,0,0.12
-1207871566050072,NDL Project Tracking & Awareness,Leadership Review or Approval Needed,1,0,1,,,,0.0,0.0,4,0,0,1.0
 1207871566050072,NDL Project Tracking & Awareness,On Hold,3,0,1,,,,0.0,0.0,0,0,0,0.33
 1207871566050072,NDL Project Tracking & Awareness,Reached out - No response,2,2,1,2025-09-15T18:28:25.518000+00:00,2025-09-16T18:37:55.991000+00:00,1,0.0,0.0,0,0,0,0.5
-1207871566050072,NDL Project Tracking & Awareness,Received Requests - Triage Needed,1,0,1,,,,0.0,0.0,0,0,0,1.0
+1207871566050072,NDL Project Tracking & Awareness,Received Requests - Triage Needed,2,1,2,2026-10-14T17:36:37.926000+00:00,2026-10-14T17:36:37.926000+00:00,0,0.0,0.0,0,0,0,0.5
 1207871566050072,NDL Project Tracking & Awareness,Resolved,8,8,2,2025-09-04T19:21:27.764000+00:00,2026-09-04T14:34:59.131000+00:00,365,0.0,0.0,0,0,0,0.12
 1207871566050072,NDL Project Tracking & Awareness,Under Review by Unit,5,0,1,,,,0.0,0.0,0,0,0,0.2
 1213292120696339,NEON - POLS 30022 (Poly Sci),Analysis,3,0,1,,,,0.0,0.0,0,0,0,0.33
