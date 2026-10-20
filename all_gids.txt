@@ -160,10 +160,10 @@
 1215646180453827  # CAD 2026 - Stephen Blackburn Videos
 1215664894792864  # Time Off
 1215664894792901  # ASCEND Program
-1215987458853792  # Flipped Classroom #1
-1215987566327904  # Flipped Classroom #2
+1215987458853792  # Reimagined Class Time #1
+1215987566327904  # Reimagined Class Time #2
 1215993168366996  # Brian - Course Trailer (Survivor)
-1215994490410552  # Flipped Classroom #3
+1215994490410552  # Reimagined Class Time #3
 1216713304901433  # Job Fair
 1216740509061105  # I CAN HELP - Faculty Consultation
 1216740509061115  # CHEM 10171 FA26 intro video
@@ -188,6 +188,7 @@
 1218524434604030  # FCTA Writing and Rhetoric
 1219455486433710  # Workshops, Conferences and Consultations
 1219515748522688  # Faculty Idea Exchange: AI-Aware Teaching Practices or Faculty
+1219695752745866  # Reimagined Class Time #4
 1204789220328740  # College BouND
 1204818761552639  # DX Course Design
 1204843864198221  # Inclusivity Modules
