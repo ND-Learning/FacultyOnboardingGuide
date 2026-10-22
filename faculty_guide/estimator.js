@@ -38,7 +38,7 @@
   // === BEGIN CALIBRATION (machine-generated — do not edit by hand) ==========
   var CALIBRATION =
   {
-    "provenance": "data_all/time_entries.csv (3,382 entries, 2983.0h, 2024-07-10..2026-10-15, ODL staff time) | 23 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 19 of them with >=10h non-PM logging",
+    "provenance": "data_all/time_entries.csv (3,385 entries, 2986.0h, 2024-07-10..2026-10-21, ODL staff time) | 23 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 19 of them with >=10h non-PM logging",
     "generated_from": "data_all/derived/calibration.json -- run inject_calibration.py to refresh",
     "archetypeEffort": {
       "course_redesign": {
@@ -117,15 +117,15 @@
     },
     "mediaSplitBasis": "pooled hours on per-video sections with full-coverage logging: 1 project(s) (Program for Inclusive Education (PIE) Video #2), 15.5h total",
     "coursePhaseMixPct": {
-      "Production": 35.4,
-      "Post-Production": 23.3,
+      "Production": 35.5,
+      "Post-Production": 23.2,
       "Development/Build": 20.2,
       "Pre-Production": 11.3,
       "Design": 8.1,
       "Other / unsorted": 1.4,
       "Discovery": 0.3
     },
-    "coursePhaseMixBasis": "pooled non-PM hours of 12 full-coverage full_course projects (928.0h)",
+    "coursePhaseMixBasis": "pooled non-PM hours of 12 full-coverage full_course projects (929.0h)",
     "calendarWeeks": {
       "consult_or_studio": {
         "n": 1,
@@ -197,11 +197,11 @@
     },
     "impactTracker": {
       "field": "cf::Impact Tracker Status",
-      "basis": "data_all/projects.csv Asana project custom field across 246 pulled projects",
-      "total_projects": 246,
+      "basis": "data_all/projects.csv Asana project custom field across 254 pulled projects",
+      "total_projects": 254,
       "tracked_projects": 33,
-      "blank_projects": 213,
-      "coverage_pct": 13.4,
+      "blank_projects": 221,
+      "coverage_pct": 13.0,
       "status_counts": {
         "Outdated": 19,
         "Up to date": 14
