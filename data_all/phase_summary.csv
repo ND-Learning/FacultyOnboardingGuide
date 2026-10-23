@@ -699,7 +699,7 @@ project_gid,project_name,canonical_phase,n_tasks,n_completed,n_assignees,first_c
 1209092823113258,Test 14,Production,2,0,0,,,,0.0,0.0,0,0,0,0.5
 1207872746390731,Test 5,Pre-Production,2,0,0,,,,0.0,0.0,4,0,0,0.5
 1207872746390731,Test 5,Production,2,0,0,,,,0.0,0.0,0,0,0,0.5
-1217688349350342,Test Project,Untitled section,3,0,0,,,,0.0,0.0,0,0,0,0.33
+1217688349350342,Test Project,Untitled section,4,0,0,,,,0.0,0.0,0,0,0,0.25
 1208255134984932,The Qur’an and the Bible (Gabriel Reynolds),Consutlation,1,0,0,,,,0.0,0.0,0,0,0,1.0
 1208255134984932,The Qur’an and the Bible (Gabriel Reynolds),Course Map,5,5,1,2024-12-20T15:05:21.956000+00:00,2025-05-13T14:43:25.186000+00:00,144,0.0,0.0,0,0,0,0.2
 1208255134984932,The Qur’an and the Bible (Gabriel Reynolds),Coursera Site,2,1,1,2025-05-16T13:43:25.921000+00:00,2025-05-16T13:43:25.921000+00:00,0,0.0,0.0,0,0,0,0.5
