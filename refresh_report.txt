@@ -1,16 +1,19 @@
-ODL estimator refresh -- 2026-10-23T16:31:03
+ODL estimator refresh -- 2026-10-24T15:19:05
 pull: ran | published to Canvas: no
 
 headline numbers (before -> after):
      total_logged_hours: 2986.0 -> 2986.0
-     calibration_set: 23 -> 23
-     full_course_p50_h: 48.0 -> 48.0
-     full_course_n: 12 -> 12
+  -> calibration_set: 23 -> 22
+  -> full_course_p50_h: 48.0 -> 46.7
+  -> full_course_n: 12 -> 11
      pm_p50_h_per_wk: 0.8 -> 0.8
      video_blended_h: 11.8 -> 11.8
      full_course_median_weeks: 28.9 -> 28.9
 
-ACTION NEEDED -- 21 project(s) await a human decision (excluded from calibration until resolved):
+ACTION NEEDED -- the Canvas bundle CHANGED but was not auto-published (no Canvas token). Re-upload faculty_guide/canvas_upload/ODL_Faculty_Onboarding_Guide.html to Canvas Files with the SAME filename and choose Replace (~1 minute).
+
+ACTION NEEDED -- 22 project(s) await a human decision (excluded from calibration until resolved):
+  - Responsible and Ethical AI (278.63h): coverage drift: 1 task completion(s) more than 60d after last time entry (2025-12-26) -- demoted to partial; set force_coverage=full in the 
   - PM Projects (271.6h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
   - Veterans College Math Readiness Course (108.83h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
   - Spectrum X Consultation (51.74h): NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv

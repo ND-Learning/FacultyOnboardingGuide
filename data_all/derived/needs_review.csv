@@ -1,4 +1,5 @@
 gid,name,logged_hours,reason
+1208963580488220,Responsible and Ethical AI,278.63,coverage drift: 1 task completion(s) more than 60d after last time entry (2025-12-26) -- demoted to partial; set force_coverage=full in the registry to re-admit
 1209298165345682,PM Projects,271.6,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
 1211385006360353,Veterans College Math Readiness Course,108.83,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv
 1210576824930050,Spectrum X Consultation,51.74,NEW project with logged time but no registry row -- add archetype + is_course_dev to project_registry.csv

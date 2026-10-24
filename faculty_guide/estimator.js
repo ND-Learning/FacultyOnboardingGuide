@@ -38,7 +38,7 @@
   // === BEGIN CALIBRATION (machine-generated — do not edit by hand) ==========
   var CALIBRATION =
   {
-    "provenance": "data_all/time_entries.csv (3,385 entries, 2986.0h, 2024-07-10..2026-10-21, ODL staff time) | 23 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 19 of them with >=10h non-PM logging",
+    "provenance": "data_all/time_entries.csv (3,385 entries, 2986.0h, 2024-07-10..2026-10-21, ODL staff time) | 22 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 18 of them with >=10h non-PM logging",
     "generated_from": "data_all/derived/calibration.json -- run inject_calibration.py to refresh",
     "archetypeEffort": {
       "course_redesign": {
@@ -51,12 +51,12 @@
         "note": "n<4 -- raw values shown; interpolated quartiles withheld"
       },
       "full_course": {
-        "n": 12,
+        "n": 11,
         "min": 15.7,
-        "p25": 32.5,
-        "p50": 48.0,
-        "p75": 84.9,
-        "p80": 95.2,
+        "p25": 30.9,
+        "p50": 46.7,
+        "p75": 75.7,
+        "p80": 80.2,
         "max": 286.5
       },
       "single_video": {
@@ -85,7 +85,7 @@
       "p25": 0.6,
       "p50": 0.8,
       "p75": 1.6,
-      "p80": 2.0,
+      "p80": 1.8,
       "max": 3.9
     },
     "pmSharePctWhereBothLogged": {
@@ -117,15 +117,15 @@
     },
     "mediaSplitBasis": "pooled hours on per-video sections with full-coverage logging: 1 project(s) (Program for Inclusive Education (PIE) Video #2), 15.5h total",
     "coursePhaseMixPct": {
-      "Production": 35.5,
-      "Post-Production": 23.2,
-      "Development/Build": 20.2,
+      "Production": 35.9,
+      "Post-Production": 25.2,
+      "Development/Build": 20.0,
       "Pre-Production": 11.3,
-      "Design": 8.1,
-      "Other / unsorted": 1.4,
-      "Discovery": 0.3
+      "Design": 5.8,
+      "Other / unsorted": 1.5,
+      "Discovery": 0.4
     },
-    "coursePhaseMixBasis": "pooled non-PM hours of 12 full-coverage full_course projects (929.0h)",
+    "coursePhaseMixBasis": "pooled non-PM hours of 11 full-coverage full_course projects (830.2h)",
     "calendarWeeks": {
       "consult_or_studio": {
         "n": 1,
@@ -680,15 +680,16 @@
         "basis": "Tracker 'Total Hours' field vs hours actually logged in Asana time entries for the same project (matched by GID or unique normalized name)."
       },
       "asset_hours_per_asset": {
-        "usable_for_estimation": true,
+        "usable_for_estimation": false,
         "hours_per_asset": {
-          "n": 4,
-          "min": 0.9,
-          "p25": 2.0,
-          "p50": 2.5,
-          "p75": 5.9,
-          "p80": 7.9,
-          "max": 15.8
+          "n": 3,
+          "values": [
+            2.4,
+            2.6,
+            15.8
+          ],
+          "p50": 2.6,
+          "note": "n<4 -- raw values shown; interpolated quartiles withheld"
         },
         "matched_full_coverage_projects": [
           {
@@ -697,13 +698,6 @@
             "asset_total": 27.0,
             "non_pm_hours": 71.1,
             "hours_per_asset": 2.63
-          },
-          {
-            "project": "Responsible and Ethical AI",
-            "project_gid": "1208963580488220",
-            "asset_total": 114.0,
-            "non_pm_hours": 98.9,
-            "hours_per_asset": 0.87
           },
           {
             "project": "ACE Assessment Course Redesign",
@@ -721,7 +715,7 @@
           }
         ],
         "basis": "Impact Tracker asset-count fields joined to full-coverage Asana time entries by project GID or normalized project/task name.",
-        "note": null
+        "note": "Need at least 4 matched full-coverage projects with asset counts before this can adjust displayed hour estimates."
       }
     },
     "notCalibratable": {
@@ -734,8 +728,8 @@
       "per_module_rate": "module counts exist for only 5 of 19 course projects and mean different things (AI for ND 57h/module vs R&E AI 7.6h/week-unit vs Virtual Borders 25h/module) -- logging is not at module granularity yet. Effort stays archetype-level until the new per-task tracking accumulates."
     },
     "backtest": {
-      "median_ape_pct": 48.3,
-      "iqr_coverage_pct": 41.7,
+      "median_ape_pct": 44.8,
+      "iqr_coverage_pct": 45.5,
       "reading": "wide APE is expected -- it is the honest spread of a point guess; this is WHY the estimator must quote P25-P80 ranges, not points."
     }
   };

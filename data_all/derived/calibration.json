@@ -1,7 +1,7 @@
 {
   "_provenance": {
     "source": "data_all/time_entries.csv (3,385 entries, 2986.0h, 2024-07-10..2026-10-21, ODL staff time)",
-    "calibration_set": "23 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 19 of them with >=10h non-PM logging",
+    "calibration_set": "22 full-coverage course-dev projects >=10h (derived/ground_truth.csv); production rates from the 18 of them with >=10h non-PM logging",
     "phase_mapping": "ordered keyword rules on section, task-name fallback for uninformative sections; basis counts: {'section': 3067, 'task_name': 127, 'none': 191}",
     "no_guessing": "blocks state 'not_calibratable' where data is insufficient"
   },
@@ -24,7 +24,6 @@
     "full_course": {
       "projects": {
         "AI for the Notre Dame Community": 286.5,
-        "Responsible and Ethical AI": 98.9,
         "Virtual Borders": 157.5,
         "ASCEND Engineering": 27.5,
         "ASCEND MCOB": 80.2,
@@ -37,12 +36,12 @@
         "Travel Safety 101": 15.7
       },
       "production_hours": {
-        "n": 12,
+        "n": 11,
         "min": 15.7,
-        "p25": 32.5,
-        "p50": 48.0,
-        "p75": 84.9,
-        "p80": 95.2,
+        "p25": 30.9,
+        "p50": 46.7,
+        "p75": 75.7,
+        "p80": 80.2,
         "max": 286.5
       }
     },
@@ -85,8 +84,8 @@
       {
         "project": "Responsible and Ethical AI",
         "pm_hours": 179.8,
-        "span_weeks": 50.1,
-        "pm_per_week": 3.59
+        "span_weeks": 91.7,
+        "pm_per_week": 1.96
       },
       {
         "project": "AI for the Notre Dame Community",
@@ -173,7 +172,7 @@
       "p25": 0.6,
       "p50": 0.8,
       "p75": 1.6,
-      "p80": 2.0,
+      "p80": 1.8,
       "max": 3.9
     },
     "pm_share_where_both_logged": [
@@ -329,15 +328,15 @@
     }
   },
   "full_course_phase_mix": {
-    "basis": "pooled non-PM hours of 12 full-coverage full_course projects (929.0h)",
+    "basis": "pooled non-PM hours of 11 full-coverage full_course projects (830.2h)",
     "share_pct": {
-      "Production": 35.5,
-      "Post-Production": 23.2,
-      "Development/Build": 20.2,
+      "Production": 35.9,
+      "Post-Production": 25.2,
+      "Development/Build": 20.0,
       "Pre-Production": 11.3,
-      "Design": 8.1,
-      "Other / unsorted": 1.4,
-      "Discovery": 0.3
+      "Design": 5.8,
+      "Other / unsorted": 1.5,
+      "Discovery": 0.4
     }
   },
   "calendar": {
@@ -464,7 +463,7 @@
         "p50": 50.9,
         "p75": 93.6,
         "p80": 99.2,
-        "max": 302.0
+        "max": 512.9
       },
       "Pre-Production": {
         "n": 18,
@@ -981,15 +980,16 @@
       "basis": "Tracker 'Total Hours' field vs hours actually logged in Asana time entries for the same project (matched by GID or unique normalized name)."
     },
     "asset_hours_per_asset": {
-      "usable_for_estimation": true,
+      "usable_for_estimation": false,
       "hours_per_asset": {
-        "n": 4,
-        "min": 0.9,
-        "p25": 2.0,
-        "p50": 2.5,
-        "p75": 5.9,
-        "p80": 7.9,
-        "max": 15.8
+        "n": 3,
+        "values": [
+          2.4,
+          2.6,
+          15.8
+        ],
+        "p50": 2.6,
+        "note": "n<4 -- raw values shown; interpolated quartiles withheld"
       },
       "matched_full_coverage_projects": [
         {
@@ -998,13 +998,6 @@
           "asset_total": 27.0,
           "non_pm_hours": 71.1,
           "hours_per_asset": 2.63
-        },
-        {
-          "project": "Responsible and Ethical AI",
-          "project_gid": "1208963580488220",
-          "asset_total": 114.0,
-          "non_pm_hours": 98.9,
-          "hours_per_asset": 0.87
         },
         {
           "project": "ACE Assessment Course Redesign",
@@ -1022,7 +1015,7 @@
         }
       ],
       "basis": "Impact Tracker asset-count fields joined to full-coverage Asana time entries by project GID or normalized project/task name.",
-      "note": null
+      "note": "Need at least 4 matched full-coverage projects with asset counts before this can adjust displayed hour estimates."
     }
   },
   "not_calibratable": {
@@ -1039,79 +1032,73 @@
     "rows": [
       {
         "actual": 15.7,
-        "pred_p50": 49.2,
+        "pred_p50": 48.0,
         "in_iqr": false,
-        "ape_pct": 213.4
+        "ape_pct": 205.4
       },
       {
         "actual": 19.5,
-        "pred_p50": 49.2,
+        "pred_p50": 48.0,
         "in_iqr": false,
-        "ape_pct": 152.3
+        "ape_pct": 145.9
       },
       {
         "actual": 27.5,
-        "pred_p50": 49.2,
+        "pred_p50": 48.0,
         "in_iqr": false,
-        "ape_pct": 78.9
+        "ape_pct": 74.4
       },
       {
         "actual": 34.2,
-        "pred_p50": 49.2,
-        "in_iqr": false,
-        "ape_pct": 43.9
+        "pred_p50": 48.0,
+        "in_iqr": true,
+        "ape_pct": 40.2
       },
       {
         "actual": 41.9,
-        "pred_p50": 49.2,
+        "pred_p50": 48.0,
         "in_iqr": true,
-        "ape_pct": 17.4
+        "ape_pct": 14.4
       },
       {
         "actual": 46.7,
-        "pred_p50": 49.2,
+        "pred_p50": 45.5,
         "in_iqr": true,
-        "ape_pct": 5.4
+        "ape_pct": 2.5
       },
       {
         "actual": 49.2,
-        "pred_p50": 46.7,
+        "pred_p50": 44.3,
         "in_iqr": true,
-        "ape_pct": 5.1
+        "ape_pct": 10.0
       },
       {
         "actual": 71.1,
-        "pred_p50": 46.7,
+        "pred_p50": 44.3,
         "in_iqr": true,
-        "ape_pct": 34.3
+        "ape_pct": 37.7
       },
       {
         "actual": 80.2,
-        "pred_p50": 46.7,
-        "in_iqr": true,
-        "ape_pct": 41.8
-      },
-      {
-        "actual": 98.9,
-        "pred_p50": 46.7,
+        "pred_p50": 44.3,
         "in_iqr": false,
-        "ape_pct": 52.8
+        "ape_pct": 44.8
       },
       {
         "actual": 157.5,
-        "pred_p50": 46.7,
+        "pred_p50": 44.3,
         "in_iqr": false,
-        "ape_pct": 70.3
+        "ape_pct": 71.9
       },
       {
         "actual": 286.5,
-        "pred_p50": 46.7,
+        "pred_p50": 44.3,
         "in_iqr": false,
-        "ape_pct": 83.7
+        "ape_pct": 84.5
       }
     ],
-    "median_ape_pct": 48.3,
-    "iqr_coverage_pct": 41.7,
+    "median_ape_pct": 44.8,
+    "iqr_coverage_pct": 45.5,
     "reading": "wide APE is expected -- it is the honest spread of a point guess; this is WHY the estimator must quote P25-P80 ranges, not points."
   }
 }
