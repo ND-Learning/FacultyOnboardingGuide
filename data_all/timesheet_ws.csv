@@ -5323,6 +5323,7 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Matthew Simmons,2026-10-19,60,1.0
 ,,,,,,,,Annie Conaghan,2026-10-19,180,3.0
 ,,,,,,,,Yi Lu,2026-10-19,120,2.0
+,,,,,,,,Colin Gallagher,2026-10-19,60,1.0
 ,,,,,,,,Julia Leopard,2026-10-20,30,0.5
 ,,,,,,,,Julia Leopard,2026-10-20,60,1.0
 ,,,,,,,,Brianna Stines,2026-10-20,240,4.0
@@ -5334,6 +5335,7 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Yi Lu,2026-10-20,120,2.0
 ,,,,,,,,Yi Lu,2026-10-20,180,3.0
 ,,,,,,,,Yi Lu,2026-10-20,120,2.0
+,,,,,,,,Colin Gallagher,2026-10-20,180,3.0
 ,,,,,,,,Julia Leopard,2026-10-21,45,0.75
 ,,,,,,,,Julia Leopard,2026-10-21,15,0.25
 ,,,,,,,,Brianna Stines,2026-10-21,20,0.33
@@ -5350,6 +5352,7 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Yi Lu,2026-10-21,60,1.0
 ,,,,,,,,Yi Lu,2026-10-21,60,1.0
 ,,,,,,,,Yi Lu,2026-10-21,120,2.0
+,,,,,,,,Colin Gallagher,2026-10-21,180,3.0
 ,,,,,,,,Julia Leopard,2026-10-22,90,1.5
 ,,,,,,,,Julia Leopard,2026-10-22,75,1.25
 ,,,,,,,,Annie Conaghan,2026-10-22,60,1.0
@@ -5359,9 +5362,11 @@ project_gid,project_name,task_gid,task_name,section,canonical_phase,assignee,res
 ,,,,,,,,Kevin DeCloedt,2026-10-22,60,1.0
 ,,,,,,,,Yi Lu,2026-10-22,240,4.0
 ,,,,,,,,Yi Lu,2026-10-22,60,1.0
+,,,,,,,,Colin Gallagher,2026-10-22,240,4.0
 ,,,,,,,,Annie Conaghan,2026-10-23,15,0.25
 ,,,,,,,,Annie Conaghan,2026-10-23,180,3.0
 ,,,,,,,,Brianna Stines,2026-10-23,60,1.0
 ,,,,,,,,Brianna Stines,2026-10-23,15,0.25
 ,,,,,,,,Yi Lu,2026-10-23,240,4.0
 ,,,,,,,,Yi Lu,2026-10-23,120,2.0
+1215186457850692,Intern/Student Worker Supervising,1219779218669594,Week of 10/26,,,,,Matthew Simmons,2026-10-26,45,0.75
